@@ -1,160 +1,486 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FON&SАN | Fontanería y Saneamiento</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<title>FON&SАN | Fontanería y Saneamiento</title>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #222;
-      background: #fff;
-    }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263238;
+    background: #ffffff;
+}
+
+/* CABECERA */
+header {
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid #e8eef2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    max-width: 190px;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+nav a {
+    color: #0758b5;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #159447;
+}
+
+/* PORTADA */
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f7fbff, #eef8f3);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: #0758b5;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #159447;
+}
+
+.hero h2 {
+    font-size: 25px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 22px;
+    color: #159447;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.boton {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.azul {
+    background: #0758b5;
+}
+
+.verde {
+    background: #159447;
+}
+
+/* SECCIONES */
+section {
+    padding: 75px 7%;
+}
+
+.titulo {
+    text-align: center;
+    color: #0758b5;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #69757c;
+    margin-bottom: 45px;
+}
+
+/* SERVICIOS */
+.servicios {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.servicio {
+    background: white;
+    border: 1px solid #e1e9ee;
+    border-radius: 18px;
+    padding: 35px 22px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: transform 0.2s;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+}
+
+.icono {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.servicio h3 {
+    color: #0758b5;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.servicio p {
+    color: #66737b;
+    line-height: 1.5;
+}
+
+/* CONTACTO */
+.contacto {
+    background: #f2f8fc;
+    text-align: center;
+}
+
+.contacto p {
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.email {
+    color: #0758b5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* REDES */
+.redes {
+    text-align: center;
+    background: white;
+}
+
+.redes-botones {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.red {
+    min-width: 190px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.instagram {
+    background: #0758b5;
+}
+
+.facebook {
+    background: #159447;
+}
+
+/* PIE */
+footer {
+    background: #0758b5;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    line-height: 1.7;
+}
+
+/* MÓVIL */
+@media (max-width: 850px) {
 
     header {
-      padding: 25px;
-      text-align: center;
-      background: white;
-    }
-
-    header img {
-      max-width: 650px;
-      width: 90%;
-      height: auto;
-    }
-
-    nav {
-      background: #005baa;
-      padding: 15px;
-      text-align: center;
+        flex-direction: column;
+        gap: 15px;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 70px 20px;
-      background: #f2f7fa;
-    }
-
-    .hero h1 {
-      font-size: 42px;
-      color: #005baa;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 20px;
-    }
-
-    .boton {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 28px;
-      background: #39a935;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 50px 20px;
-      text-align: center;
+        margin: 0 8px;
     }
 
     .servicios {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .servicio {
-      width: 280px;
-      padding: 25px;
-      border-radius: 10px;
-      background: #f5f5f5;
+    .hero h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .servicios {
+        grid-template-columns: 1fr;
     }
 
-    .servicio h3 {
-      color: #005baa;
+    nav {
+        text-align: center;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #005baa;
-      color: white;
+    nav a {
+        font-size: 14px;
     }
-  </style>
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <img src="b522c989-4f05-4b47-9100-eade1348da74.jpg" alt="FON&SАN Fontanería y Saneamiento">
-  </header>
+<!-- CABECERA -->
+<header>
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+    <img
+        class="logo"
+        src="b522c989-4f05-4b47-9100-eade1348da74.jpg"
+        alt="FON&SАN">
 
-  <div class="hero" id="inicio">
-    <h1>FON&SАN</h1>
-    <p>Fontanería y Saneamiento</p>
-    <p><strong>Soluciones que fluyen</strong></p>
-    <a class="boton" href="#contacto">Contacta con nosotros</a>
-  </div>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 
-  <section id="servicios">
-    <h2>Nuestros servicios</h2>
+</header>
+
+
+<!-- PORTADA -->
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <h1>FON&<span>SАN</span></h1>
+
+        <h2>FONTANERÍA Y SANEAMIENTO</h2>
+
+        <p>Soluciones que fluyen</p>
+
+        <div class="botones">
+
+            <a
+                class="boton azul"
+                href="mailto:fonysan.comercial@outlook.es">
+                ✉️ Solicitar presupuesto
+            </a>
+
+            <a
+                class="boton verde"
+                href="https://wa.me/34677449457"
+                target="_blank">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICIOS -->
+<section id="servicios">
+
+    <h2 class="titulo">Nuestros servicios</h2>
+
+    <p class="subtitulo">
+        Soluciones profesionales para tus instalaciones
+    </p>
 
     <div class="servicios">
-      <div class="servicio">
-        <h3>Fontanería</h3>
-        <p>Instalaciones y reparaciones de fontanería.</p>
-      </div>
 
-      <div class="servicio">
-        <h3>Saneamiento</h3>
-        <p>Soluciones para instalaciones y redes de saneamiento.</p>
-      </div>
+        <div class="servicio">
 
-      <div class="servicio">
-        <h3>Reparaciones</h3>
-        <p>Atención y solución de averías.</p>
-      </div>
+            <div class="icono">🔧</div>
+
+            <h3>Instalaciones de fontanería</h3>
+
+            <p>
+                Instalaciones de fontanería adaptadas
+                a cada necesidad.
+            </p>
+
+        </div>
+
+
+        <div class="servicio">
+
+            <div class="icono">💧</div>
+
+            <h3>Saneamiento y desagües</h3>
+
+            <p>
+                Soluciones para saneamiento,
+                desagües y evacuación de aguas.
+            </p>
+
+        </div>
+
+
+        <div class="servicio">
+
+            <div class="icono">🛠️</div>
+
+            <h3>Mantenimiento y reparaciones</h3>
+
+            <p>
+                Mantenimiento y reparación
+                de instalaciones.
+            </p>
+
+        </div>
+
+
+        <div class="servicio">
+
+            <div class="icono">⚡</div>
+
+            <h3>Soluciones eficientes</h3>
+
+            <p>
+                Soluciones prácticas y eficientes
+                para cada proyecto.
+            </p>
+
+        </div>
+
     </div>
-  </section>
 
-  <section id="contacto">
-    <h2>Contacta con FON&SАN</h2>
-    <p>Estamos preparados para ayudarte.</p>
+</section>
 
-    <a class="boton" href="tel:+34000000000">
-      Llamar ahora
-    </a>
-  </section>
 
-  <footer>
-    © 2026 FON&SАN — Fontanería y Saneamiento
-  </footer>
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+
+    <h2 class="titulo">Contacta con nosotros</h2>
+
+    <p>
+        <strong>Pedro Sanabria — Técnico</strong>
+    </p>
+
+    <p>
+        📞
+        <a
+            class="email"
+            href="tel:+34677449457">
+            +34 677449457
+        </a>
+    </p>
+
+    <p>
+        ✉️
+        <a
+            class="email"
+            href="mailto:fonysan.comercial@outlook.es">
+            fonysan.comercial@outlook.es
+        </a>
+    </p>
+
+    <div class="botones">
+
+        <a
+            class="boton verde"
+            href="https://wa.me/+34 677 44 94 57"
+            target="_blank" +34 677 44 94 57 >
+            💬 Contactar por WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- REDES SOCIALES -->
+<section class="redes">
+
+    <h2 class="titulo">Síguenos en redes sociales</h2>
+
+    <p class="subtitulo">
+        Conoce nuestros trabajos y novedades.
+    </p>
+
+    <div class="redes-botones">
+
+        <a
+            class="red instagram"
+            href="https://www.instagram.com/fonysan_es/"
+            target="_blank">
+            📷 Instagram
+        </a>
+
+        <a
+            class="red facebook"
+            href="https://www.facebook.com/profile.php?id=61592791922836"
+            target="_blank">
+            f &nbsp; Facebook
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- PIE DE PÁGINA -->
+<footer>
+
+    <strong>FON&SАN</strong><br>
+
+    Fontanería y Saneamiento<br>
+
+    Soluciones que fluyen<br><br>
+
+    © 2026 FON&SАN. Todos los derechos reservados.
+
+</footer>
 
 </body>
 </html>
