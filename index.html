@@ -1,486 +1,623 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FON&SАN | Fontanería y Saneamiento</title>
+    <title>FON&S​AN | Fontanería y Saneamiento</title>
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    <meta name="description" content="FON&S​AN - Fontanería, saneamiento, reparaciones y soluciones eficientes.">
 
-html {
-    scroll-behavior: smooth;
-}
+    <style>
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #263238;
-    background: #ffffff;
-}
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================= */
 
-/* CABECERA */
-header {
-    padding: 22px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    border-bottom: 1px solid #e8eef2;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.logo {
-    max-width: 190px;
-    max-height: 75px;
-    object-fit: contain;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-nav a {
-    color: #0758b5;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 25px;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #12345a;
+            background: white;
+            line-height: 1.5;
+        }
 
-nav a:hover {
-    color: #159447;
-}
+        a {
+            text-decoration: none;
+        }
 
-/* PORTADA */
-.hero {
-    min-height: 570px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #f7fbff, #eef8f3);
-}
 
-.hero-content {
-    max-width: 850px;
-}
+        /* =========================
+           CABECERA / LOGO
+        ========================= */
 
-.hero h1 {
-    font-size: 60px;
-    color: #0758b5;
-    margin-bottom: 10px;
-}
+        header {
+            background: #f1f8fc;
+            text-align: center;
+            padding: 30px 20px 35px;
+        }
 
-.hero h1 span {
-    color: #159447;
-}
+        .logo {
+            width: 350px;
+            max-width: 90%;
+            height: auto;
+            display: block;
+            margin: 0 auto 25px;
+        }
 
-.hero h2 {
-    font-size: 25px;
-    color: #555;
-    margin-bottom: 15px;
-}
+        .botones-header {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
-.hero p {
-    font-size: 22px;
-    color: #159447;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
 
-.botones {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+        /* =========================
+           BOTONES
+        ========================= */
 
-.boton {
-    display: inline-block;
-    padding: 15px 28px;
-    border-radius: 30px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .btn {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 25px;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.azul {
-    background: #0758b5;
-}
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
 
-.verde {
-    background: #159447;
-}
+        .btn-presupuesto {
+            background: #075eb8;
+        }
 
-/* SECCIONES */
-section {
-    padding: 75px 7%;
-}
+        .btn-whatsapp {
+            background: #159447;
+        }
 
-.titulo {
-    text-align: center;
-    color: #0758b5;
-    font-size: 36px;
-    margin-bottom: 15px;
-}
 
-.subtitulo {
-    text-align: center;
-    color: #69757c;
-    margin-bottom: 45px;
-}
+        /* =========================
+           SERVICIOS
+        ========================= */
 
-/* SERVICIOS */
-.servicios {
-    max-width: 1150px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-}
+        .servicios {
+            padding: 55px 20px;
+            text-align: center;
+            background: white;
+        }
 
-.servicio {
-    background: white;
-    border: 1px solid #e1e9ee;
-    border-radius: 18px;
-    padding: 35px 22px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-    transition: transform 0.2s;
-}
+        .titulo-seccion {
+            color: #075eb8;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
 
-.servicio:hover {
-    transform: translateY(-5px);
-}
+        .subtitulo {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
 
-.icono {
-    font-size: 42px;
-    margin-bottom: 18px;
-}
+        .servicios-grid {
+            max-width: 1000px;
+            margin: 0 auto;
 
-.servicio h3 {
-    color: #0758b5;
-    font-size: 20px;
-    margin-bottom: 12px;
-}
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
 
-.servicio p {
-    color: #66737b;
-    line-height: 1.5;
-}
+        .servicio {
+            background: white;
+            border: 1px solid #dbe5ec;
+            border-radius: 12px;
+            padding: 25px 15px;
 
-/* CONTACTO */
-.contacto {
-    background: #f2f8fc;
-    text-align: center;
-}
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 
-.contacto p {
-    font-size: 19px;
-    margin: 12px 0;
-}
+            transition: 0.3s;
+        }
 
-.email {
-    color: #0758b5;
-    font-weight: bold;
-    text-decoration: none;
-}
+        .servicio:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
 
-/* REDES */
-.redes {
-    text-align: center;
-    background: white;
-}
+        .emoji {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
 
-.redes-botones {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
+        .servicio h3 {
+            color: #075eb8;
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
 
-.red {
-    min-width: 190px;
-    padding: 15px 25px;
-    border-radius: 30px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .servicio p {
+            color: #666;
+            font-size: 13px;
+        }
 
-.instagram {
-    background: #0758b5;
-}
 
-.facebook {
-    background: #159447;
-}
+        /* =========================
+           CONTACTO
+        ========================= */
 
-/* PIE */
-footer {
-    background: #0758b5;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    line-height: 1.7;
-}
+        .contacto {
+            background: #f1f8fc;
+            padding: 55px 20px;
+            text-align: center;
+        }
 
-/* MÓVIL */
-@media (max-width: 850px) {
+        .contacto h2 {
+            color: #075eb8;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
 
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
+        .contacto-info {
+            max-width: 500px;
+            margin: 0 auto;
+        }
 
-    nav a {
-        margin: 0 8px;
-    }
+        .dato {
+            margin: 12px 0;
+            font-size: 16px;
+        }
 
-    .servicios {
-        grid-template-columns: 1fr 1fr;
-    }
+        .dato strong {
+            color: #075eb8;
+        }
 
-    .hero h1 {
-        font-size: 45px;
-    }
-}
+        .dato a {
+            color: #12345a;
+            font-weight: bold;
+        }
 
-@media (max-width: 550px) {
+        .whatsapp-contacto {
+            margin-top: 25px;
+        }
 
-    .servicios {
-        grid-template-columns: 1fr;
-    }
+        .whatsapp-contacto a {
+            display: inline-block;
+            background: #159447;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    nav {
-        text-align: center;
-    }
+        .whatsapp-contacto a:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
 
-    nav a {
-        font-size: 14px;
-    }
 
-    .hero h1 {
-        font-size: 38px;
-    }
+        /* =========================
+           REDES SOCIALES
+        ========================= */
 
-    .hero h2 {
-        font-size: 20px;
-    }
-}
-</style>
+        .redes {
+            padding: 50px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .redes h2 {
+            color: #075eb8;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .redes p {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .redes-botones {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .instagram {
+            background: #075eb8;
+        }
+
+        .facebook {
+            background: #159447;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #075eb8;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        footer p {
+            font-size: 12px;
+            margin: 3px 0;
+        }
+
+        .copyright {
+            margin-top: 15px;
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           MÓVIL
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .logo {
+                width: 300px;
+            }
+
+            .servicios-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            header {
+                padding: 25px 15px 30px;
+            }
+
+            .logo {
+                width: 280px;
+            }
+
+            .titulo-seccion,
+            .contacto h2,
+            .redes h2 {
+                font-size: 24px;
+            }
+
+            .servicios-grid {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+            }
+
+            .servicio {
+                padding: 25px 20px;
+            }
+
+            .btn {
+                font-size: 13px;
+                padding: 10px 17px;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<!-- CABECERA -->
-<header>
 
-    <img
-        class="logo"
-        src="b522c989-4f05-4b47-9100-eade1348da74.jpg"
-        alt="FON&SАN">
+    <!-- =========================
+         CABECERA
+    ========================== -->
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+    <header>
 
-</header>
+        <!--
+            IMPORTANTE:
+            Pon tu logo en la misma carpeta que este archivo
+            y llámalo "logo.png"
+        -->
 
+        <img
+            src="logo.png"
+            alt="FON&S​AN Fontanería y Saneamiento"
+            class="logo"
+        >
 
-<!-- PORTADA -->
-<section class="hero" id="inicio">
-
-    <div class="hero-content">
-
-        <h1>FON&<span>SАN</span></h1>
-
-        <h2>FONTANERÍA Y SANEAMIENTO</h2>
-
-        <p>Soluciones que fluyen</p>
-
-        <div class="botones">
+        <div class="botones-header">
 
             <a
-                class="boton azul"
-                href="mailto:fonysan.comercial@outlook.es">
-                ✉️ Solicitar presupuesto
+                href="#contacto"
+                class="btn btn-presupuesto"
+            >
+                📋 Solicitar presupuesto
             </a>
 
             <a
-                class="boton verde"
-                href="https://wa.me/34677449457"
-                target="_blank">
+                href="https://wa.me/34677444547"
+                target="_blank"
+                class="btn btn-whatsapp"
+            >
                 💬 WhatsApp
             </a>
 
         </div>
 
-    </div>
-
-</section>
+    </header>
 
 
-<!-- SERVICIOS -->
-<section id="servicios">
 
-    <h2 class="titulo">Nuestros servicios</h2>
+    <!-- =========================
+         SERVICIOS
+    ========================== -->
 
-    <p class="subtitulo">
-        Soluciones profesionales para tus instalaciones
-    </p>
+    <section class="servicios" id="servicios">
 
-    <div class="servicios">
+        <h2 class="titulo-seccion">
+            Nuestros servicios
+        </h2>
 
-        <div class="servicio">
+        <p class="subtitulo">
+            Soluciones profesionales para tus instalaciones
+        </p>
 
-            <div class="icono">🔧</div>
 
-            <h3>Instalaciones de fontanería</h3>
+        <div class="servicios-grid">
 
-            <p>
-                Instalaciones de fontanería adaptadas
-                a cada necesidad.
-            </p>
+
+            <!-- SERVICIO 1 -->
+
+            <div class="servicio">
+
+                <div class="emoji">
+                    🔧
+                </div>
+
+                <h3>
+                    Instalaciones de fontanería
+                </h3>
+
+                <p>
+                    Instalaciones de fontanería
+                    adaptadas a cada necesidad.
+                </p>
+
+            </div>
+
+
+            <!-- SERVICIO 2 -->
+
+            <div class="servicio">
+
+                <div class="emoji">
+                    💧
+                </div>
+
+                <h3>
+                    Saneamiento y desagües
+                </h3>
+
+                <p>
+                    Soluciones para saneamiento,
+                    desagües y evacuación de aguas.
+                </p>
+
+            </div>
+
+
+            <!-- SERVICIO 3 -->
+
+            <div class="servicio">
+
+                <div class="emoji">
+                    🛠️
+                </div>
+
+                <h3>
+                    Mantenimiento y reparaciones
+                </h3>
+
+                <p>
+                    Mantenimiento y reparación
+                    de instalaciones.
+                </p>
+
+            </div>
+
+
+            <!-- SERVICIO 4 -->
+
+            <div class="servicio">
+
+                <div class="emoji">
+                    ⚡
+                </div>
+
+                <h3>
+                    Soluciones eficientes
+                </h3>
+
+                <p>
+                    Soluciones prácticas y eficientes
+                    para cada proyecto.
+                </p>
+
+            </div>
+
 
         </div>
 
+    </section>
 
-        <div class="servicio">
 
-            <div class="icono">💧</div>
 
-            <h3>Saneamiento y desagües</h3>
+    <!-- =========================
+         CONTACTO
+    ========================== -->
 
-            <p>
-                Soluciones para saneamiento,
-                desagües y evacuación de aguas.
-            </p>
+    <section class="contacto" id="contacto">
+
+        <h2>
+            Contacta con nosotros
+        </h2>
+
+        <div class="contacto-info">
+
+
+            <div class="dato">
+                👨‍🔧
+                <strong>
+                    Pedro Sanabria — Técnico
+                </strong>
+            </div>
+
+
+            <div class="dato">
+
+                📞
+
+                <strong>
+                    Teléfono:
+                </strong>
+
+                <a href="tel:+34677444547">
+                    +34 677 444 547
+                </a>
+
+            </div>
+
+
+            <div class="dato">
+
+                📧
+
+                <strong>
+                    Email:
+                </strong>
+
+                <a href="mailto:fonsan.comercial@outlook.es">
+                    fonsan.comercial@outlook.es
+                </a>
+
+            </div>
+
+
+            <div class="whatsapp-contacto">
+
+                <a
+                    href="https://wa.me/34677444547"
+                    target="_blank"
+                >
+                    💬 Contactar por WhatsApp
+                </a>
+
+            </div>
+
 
         </div>
 
+    </section>
 
-        <div class="servicio">
 
-            <div class="icono">🛠️</div>
 
-            <h3>Mantenimiento y reparaciones</h3>
+    <!-- =========================
+         REDES SOCIALES
+    ========================== -->
 
-            <p>
-                Mantenimiento y reparación
-                de instalaciones.
-            </p>
+    <section class="redes">
+
+        <h2>
+            Síguenos en redes sociales
+        </h2>
+
+        <p>
+            Conoce nuestros trabajos y novedades.
+        </p>
+
+
+        <div class="redes-botones">
+
+
+            <!--
+                CAMBIA "#" POR EL ENLACE
+                REAL DE VUESTRO INSTAGRAM
+            -->
+
+            <a
+                href="#"
+                target="_blank"
+                class="btn instagram"
+            >
+                📸 Instagram
+            </a>
+
+
+            <!--
+                CAMBIA "#" POR EL ENLACE
+                REAL DE VUESTRO FACEBOOK
+            -->
+
+            <a
+                href="#"
+                target="_blank"
+                class="btn facebook"
+            >
+                👍 Facebook
+            </a>
+
 
         </div>
 
-
-        <div class="servicio">
-
-            <div class="icono">⚡</div>
-
-            <h3>Soluciones eficientes</h3>
-
-            <p>
-                Soluciones prácticas y eficientes
-                para cada proyecto.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- CONTACTO -->
-<section class="contacto" id="contacto">
 
-    <h2 class="titulo">Contacta con nosotros</h2>
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
 
-    <p>
-        <strong>Pedro Sanabria — Técnico</strong>
-    </p>
+    <footer>
 
-    <p>
-        📞
-        <a
-            class="email"
-            href="tel:+34677449457">
-            +34 677449457
-        </a>
-    </p>
+        <h3>
+            FON&S​AN
+        </h3>
 
-    <p>
-        ✉️
-        <a
-            class="email"
-            href="mailto:fonysan.comercial@outlook.es">
-            fonysan.comercial@outlook.es
-        </a>
-    </p>
+        <p>
+            Fontanería y Saneamiento
+        </p>
 
-    <div class="botones">
+        <p>
+            Soluciones que fluyen
+        </p>
 
-        <a
-            class="boton verde"
-            href="https://wa.me/+34 677 44 94 57"
-            target="_blank" +34 677 44 94 57 >
-            💬 Contactar por WhatsApp
-        </a>
+        <p class="copyright">
+            © 2026 FON&S​AN. Todos los derechos reservados.
+        </p>
 
-    </div>
+    </footer>
 
-</section>
-
-
-<!-- REDES SOCIALES -->
-<section class="redes">
-
-    <h2 class="titulo">Síguenos en redes sociales</h2>
-
-    <p class="subtitulo">
-        Conoce nuestros trabajos y novedades.
-    </p>
-
-    <div class="redes-botones">
-
-        <a
-            class="red instagram"
-            href="https://www.instagram.com/fonysan_es/"
-            target="_blank">
-            📷 Instagram
-        </a>
-
-        <a
-            class="red facebook"
-            href="https://www.facebook.com/profile.php?id=61592791922836"
-            target="_blank">
-            f &nbsp; Facebook
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- PIE DE PÁGINA -->
-<footer>
-
-    <strong>FON&SАN</strong><br>
-
-    Fontanería y Saneamiento<br>
-
-    Soluciones que fluyen<br><br>
-
-    © 2026 FON&SАN. Todos los derechos reservados.
-
-</footer>
 
 </body>
 </html>
