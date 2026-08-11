@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FON&amp;SAN | Fontanería y Saneamiento</title>
+    <title>FON&S​AN | Fontanería y Saneamiento</title>
 
     <meta
         name="description"
-        content="FON&amp;SAN - Fontanería, saneamiento, mantenimiento y reparaciones."
+        content="FON&S​AN - Fontanería, saneamiento, mantenimiento y reparaciones."
     >
 
     <style>
-
-        /* ================================
-           CONFIGURACIÓN GENERAL
-        ================================= */
 
         * {
             margin: 0;
@@ -40,30 +35,28 @@
         }
 
 
-        /* ================================
-           CABECERA
-        ================================= */
+        /* =========================
+           CABECERA Y LOGO
+        ========================= */
 
         header {
             background: #f1f8fc;
             text-align: center;
-            padding: 30px 20px 40px;
+            padding: 35px 20px 40px;
         }
-
-        /* LOGO GRANDE */
 
         .logo {
             width: 500px;
-            max-width: 90%;
+            max-width: 92%;
             height: auto;
             display: block;
             margin: 0 auto 25px;
         }
 
 
-        /* ================================
-           BOTONES DE CABECERA
-        ================================= */
+        /* =========================
+           BOTONES
+        ========================= */
 
         .botones-header {
             display: flex;
@@ -78,9 +71,9 @@
             color: white;
             font-size: 14px;
             font-weight: bold;
-            padding: 11px 20px;
+            padding: 12px 22px;
             border-radius: 25px;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         .btn:hover {
@@ -97,9 +90,9 @@
         }
 
 
-        /* ================================
+        /* =========================
            SERVICIOS
-        ================================= */
+        ========================= */
 
         .servicios {
             background: white;
@@ -115,7 +108,7 @@
 
         .subtitulo {
             color: #777;
-            font-size: 14px;
+            font-size: 15px;
             margin-bottom: 35px;
         }
 
@@ -130,40 +123,30 @@
 
         .servicio {
             background: white;
-
             border: 1px solid #dce5eb;
-            border-radius: 12px;
-
+            border-radius: 14px;
             padding: 30px 18px;
-
-            min-height: 280px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            min-height: 270px;
 
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         .servicio:hover {
             transform: translateY(-5px);
-
-            box-shadow:
-                0 10px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
 
         .emoji {
             font-size: 48px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .servicio h3 {
             color: #075eb8;
             font-size: 17px;
             margin-bottom: 12px;
-            line-height: 1.35;
         }
 
         .servicio p {
@@ -173,9 +156,9 @@
         }
 
 
-        /* ================================
+        /* =========================
            CONTACTO
-        ================================= */
+        ========================= */
 
         .contacto {
             background: #f1f8fc;
@@ -190,12 +173,12 @@
         }
 
         .contacto-info {
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
         }
 
         .dato {
-            margin: 14px 0;
+            margin: 15px 0;
             font-size: 16px;
         }
 
@@ -213,9 +196,9 @@
         }
 
 
-        /* ================================
+        /* =========================
            WHATSAPP
-        ================================= */
+        ========================= */
 
         .whatsapp-contacto {
             margin-top: 30px;
@@ -223,17 +206,12 @@
 
         .whatsapp-contacto a {
             display: inline-block;
-
             background: #159447;
             color: white;
-
-            padding: 13px 26px;
-
+            padding: 13px 27px;
             border-radius: 25px;
-
             font-weight: bold;
-
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         .whatsapp-contacto a:hover {
@@ -242,9 +220,9 @@
         }
 
 
-        /* ================================
+        /* =========================
            REDES SOCIALES
-        ================================= */
+        ========================= */
 
         .redes {
             background: white;
@@ -260,7 +238,7 @@
 
         .redes p {
             color: #777;
-            font-size: 14px;
+            font-size: 15px;
             margin-bottom: 28px;
         }
 
@@ -281,9 +259,9 @@
         }
 
 
-        /* ================================
+        /* =========================
            PIE DE PÁGINA
-        ================================= */
+        ========================= */
 
         footer {
             background: #075eb8;
@@ -293,42 +271,42 @@
         }
 
         footer h3 {
-            font-size: 19px;
-            margin-bottom: 5px;
+            font-size: 20px;
+            margin-bottom: 6px;
         }
 
         footer p {
-            font-size: 12px;
+            font-size: 13px;
             margin: 3px 0;
         }
 
         .copyright {
             margin-top: 18px;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: bold;
         }
 
 
-        /* ================================
+        /* =========================
            TABLET
-        ================================= */
+        ========================= */
 
         @media (max-width: 900px) {
 
             .logo {
-                width: 430px;
+                width: 450px;
             }
 
             .servicios-grid {
                 grid-template-columns: repeat(2, 1fr);
-                max-width: 700px;
+                max-width: 720px;
             }
         }
 
 
-        /* ================================
+        /* =========================
            MÓVIL
-        ================================= */
+        ========================= */
 
         @media (max-width: 550px) {
 
@@ -337,8 +315,18 @@
             }
 
             .logo {
-                width: 340px;
+                width: 350px;
                 max-width: 95%;
+            }
+
+            .servicios-grid {
+                grid-template-columns: 1fr;
+                max-width: 380px;
+            }
+
+            .servicio {
+                min-height: auto;
+                padding: 30px 20px;
             }
 
             .titulo-seccion,
@@ -347,59 +335,34 @@
                 font-size: 25px;
             }
 
-            .servicios-grid {
-                grid-template-columns: 1fr;
-                max-width: 370px;
-            }
-
-            .servicio {
-                min-height: auto;
-                padding: 28px 20px;
-            }
-
-            .emoji {
-                font-size: 44px;
+            .dato {
+                font-size: 14px;
             }
 
             .btn {
                 font-size: 13px;
                 padding: 10px 17px;
             }
-
-            .dato {
-                font-size: 14px;
-            }
         }
 
     </style>
-
 </head>
 
 
 <body>
 
 
-    <!-- =================================
-         CABECERA
-    ================================== -->
+    <!-- =========================
+         LOGO
+    ========================= -->
 
     <header>
 
-        <!--
-            LOGO
-
-            El archivo debe estar en la misma
-            carpeta que index.html y llamarse:
-
-            logo.jpg
-        -->
-
         <img
             src="./logo.jpg"
-            alt="FON&SAN Fontanería y Saneamiento"
+            alt="FON&S​AN Fontanería y Saneamiento"
             class="logo"
         >
-
 
         <div class="botones-header">
 
@@ -409,7 +372,6 @@
             >
                 📋 Solicitar presupuesto
             </a>
-
 
             <a
                 href="https://wa.me/34677444547"
@@ -425,10 +387,9 @@
     </header>
 
 
-
-    <!-- =================================
+    <!-- =========================
          SERVICIOS
-    ================================== -->
+    ========================= -->
 
     <section
         class="servicios"
@@ -447,13 +408,9 @@
         <div class="servicios-grid">
 
 
-            <!-- FONTANERÍA -->
-
             <div class="servicio">
 
-                <div class="emoji">
-                    🔧
-                </div>
+                <div class="emoji">🔧</div>
 
                 <h3>
                     Instalaciones de fontanería
@@ -467,14 +424,9 @@
             </div>
 
 
-
-            <!-- SANEAMIENTO -->
-
             <div class="servicio">
 
-                <div class="emoji">
-                    💧
-                </div>
+                <div class="emoji">💧</div>
 
                 <h3>
                     Saneamiento y desagües
@@ -488,14 +440,9 @@
             </div>
 
 
-
-            <!-- REPARACIONES -->
-
             <div class="servicio">
 
-                <div class="emoji">
-                    🛠️
-                </div>
+                <div class="emoji">🛠️</div>
 
                 <h3>
                     Mantenimiento y reparaciones
@@ -509,14 +456,9 @@
             </div>
 
 
-
-            <!-- SOLUCIONES -->
-
             <div class="servicio">
 
-                <div class="emoji">
-                    ⚡
-                </div>
+                <div class="emoji">⚡</div>
 
                 <h3>
                     Soluciones eficientes
@@ -535,10 +477,9 @@
     </section>
 
 
-
-    <!-- =================================
+    <!-- =========================
          CONTACTO
-    ================================== -->
+    ========================= -->
 
     <section
         class="contacto"
@@ -549,26 +490,20 @@
             Contacta con nosotros
         </h2>
 
-
         <div class="contacto-info">
 
 
             <div class="dato">
-
                 👨‍🔧
-
                 <strong>
                     Pedro Sanabria — Técnico
                 </strong>
-
             </div>
-
 
 
             <div class="dato">
 
                 📞
-
                 <strong>
                     Teléfono:
                 </strong>
@@ -580,11 +515,9 @@
             </div>
 
 
-
             <div class="dato">
 
                 📧
-
                 <strong>
                     Email:
                 </strong>
@@ -596,11 +529,10 @@
             </div>
 
 
-
             <div class="whatsapp-contacto">
 
                 <a
-                    href="https://wa.me/34677444547"
+                    href="https://wa.me/+34677444547"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -615,10 +547,9 @@
     </section>
 
 
-
-    <!-- =================================
+    <!-- =========================
          REDES SOCIALES
-    ================================== -->
+    ========================= -->
 
     <section class="redes">
 
@@ -633,9 +564,6 @@
 
         <div class="redes-botones">
 
-
-            <!-- INSTAGRAM -->
-
             <a
                 href="https://www.instagram.com/fonysan_es/"
                 target="_blank"
@@ -646,9 +574,6 @@
             </a>
 
 
-
-            <!-- FACEBOOK -->
-
             <a
                 href="https://www.facebook.com/profile.php?id=61592791922836"
                 target="_blank"
@@ -658,21 +583,19 @@
                 👍 Facebook
             </a>
 
-
         </div>
 
     </section>
 
 
-
-    <!-- =================================
+    <!-- =========================
          PIE DE PÁGINA
-    ================================== -->
+    ========================= -->
 
     <footer>
 
         <h3>
-            FON&SAN
+            FON&S​AN
         </h3>
 
         <p>
@@ -684,12 +607,11 @@
         </p>
 
         <p class="copyright">
-            © 2026 FON&SAN. Todos los derechos reservados.
+            © 2026 FON&S​AN. Todos los derechos reservados.
         </p>
 
     </footer>
 
 
 </body>
-
 </html>
