@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FON&S​AN | Fontanería y Saneamiento</title>
+    <title>FON&amp;SAN | Fontanería y Saneamiento</title>
 
-    <meta name="description" content="FON&S​AN - Fontanería, saneamiento, reparaciones y soluciones eficientes.">
+    <meta
+        name="description"
+        content="FON&amp;SAN - Fontanería, saneamiento, mantenimiento y reparaciones."
+    >
 
     <style>
 
         /* =========================
-           CONFIGURACIÓN GENERAL
+           AJUSTES GENERALES
         ========================= */
 
         * {
@@ -27,7 +31,7 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             color: #12345a;
-            background: white;
+            background: #ffffff;
             line-height: 1.5;
         }
 
@@ -37,17 +41,17 @@
 
 
         /* =========================
-           CABECERA / LOGO
+           CABECERA - LOGO GRANDE
         ========================= */
 
         header {
             background: #f1f8fc;
             text-align: center;
-            padding: 30px 20px 35px;
+            padding: 35px 20px 40px;
         }
 
         .logo {
-            width: 350px;
+            width: 430px;
             max-width: 90%;
             height: auto;
             display: block;
@@ -57,7 +61,8 @@
         .botones-header {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            align-items: center;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
@@ -68,12 +73,12 @@
 
         .btn {
             display: inline-block;
-            padding: 11px 20px;
-            border-radius: 25px;
             color: white;
             font-size: 14px;
             font-weight: bold;
-            transition: 0.3s;
+            padding: 11px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
         }
 
         .btn:hover {
@@ -81,11 +86,11 @@
             opacity: 0.9;
         }
 
-        .btn-presupuesto {
+        .btn-azul {
             background: #075eb8;
         }
 
-        .btn-whatsapp {
+        .btn-verde {
             background: #159447;
         }
 
@@ -95,9 +100,9 @@
         ========================= */
 
         .servicios {
-            padding: 55px 20px;
-            text-align: center;
             background: white;
+            text-align: center;
+            padding: 55px 20px;
         }
 
         .titulo-seccion {
@@ -107,7 +112,7 @@
         }
 
         .subtitulo {
-            color: #666;
+            color: #777;
             font-size: 14px;
             margin-bottom: 30px;
         }
@@ -123,18 +128,18 @@
 
         .servicio {
             background: white;
-            border: 1px solid #dbe5ec;
+            border: 1px solid #dce5eb;
             border-radius: 12px;
             padding: 25px 15px;
 
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 
-            transition: 0.3s;
+            transition: all 0.3s ease;
         }
 
         .servicio:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.13);
         }
 
         .emoji {
@@ -144,7 +149,7 @@
 
         .servicio h3 {
             color: #075eb8;
-            font-size: 17px;
+            font-size: 16px;
             margin-bottom: 10px;
         }
 
@@ -160,8 +165,8 @@
 
         .contacto {
             background: #f1f8fc;
-            padding: 55px 20px;
             text-align: center;
+            padding: 55px 20px;
         }
 
         .contacto h2 {
@@ -171,7 +176,7 @@
         }
 
         .contacto-info {
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
         }
 
@@ -200,7 +205,7 @@
             padding: 12px 25px;
             border-radius: 25px;
             font-weight: bold;
-            transition: 0.3s;
+            transition: all 0.3s ease;
         }
 
         .whatsapp-contacto a:hover {
@@ -214,9 +219,9 @@
         ========================= */
 
         .redes {
-            padding: 50px 20px;
-            text-align: center;
             background: white;
+            text-align: center;
+            padding: 55px 20px;
         }
 
         .redes h2 {
@@ -226,9 +231,9 @@
         }
 
         .redes p {
-            color: #666;
-            margin-bottom: 25px;
+            color: #777;
             font-size: 14px;
+            margin-bottom: 25px;
         }
 
         .redes-botones {
@@ -248,7 +253,7 @@
 
 
         /* =========================
-           FOOTER
+           PIE DE PÁGINA
         ========================= */
 
         footer {
@@ -269,19 +274,20 @@
         }
 
         .copyright {
-            margin-top: 15px;
+            margin-top: 18px;
             font-size: 11px;
+            font-weight: bold;
         }
 
 
         /* =========================
-           MÓVIL
+           TABLET
         ========================= */
 
         @media (max-width: 800px) {
 
             .logo {
-                width: 300px;
+                width: 350px;
             }
 
             .servicios-grid {
@@ -290,6 +296,10 @@
         }
 
 
+        /* =========================
+           MÓVIL
+        ========================= */
+
         @media (max-width: 500px) {
 
             header {
@@ -297,7 +307,8 @@
             }
 
             .logo {
-                width: 280px;
+                width: 300px;
+                max-width: 95%;
             }
 
             .titulo-seccion,
@@ -308,7 +319,7 @@
 
             .servicios-grid {
                 grid-template-columns: 1fr;
-                max-width: 350px;
+                max-width: 360px;
             }
 
             .servicio {
@@ -318,6 +329,10 @@
             .btn {
                 font-size: 13px;
                 padding: 10px 17px;
+            }
+
+            .dato {
+                font-size: 14px;
             }
         }
 
@@ -336,13 +351,15 @@
 
         <!--
             IMPORTANTE:
-            Pon tu logo en la misma carpeta que este archivo
-            y llámalo "logo.png"
+            Guarda el logo en la misma carpeta que index.html
+            y ponle exactamente este nombre:
+
+            logo.png
         -->
 
         <img
             src="logo.png"
-            alt="FON&S​AN Fontanería y Saneamiento"
+            alt="FON&amp;SAN Fontanería y Saneamiento"
             class="logo"
         >
 
@@ -350,7 +367,7 @@
 
             <a
                 href="#contacto"
-                class="btn btn-presupuesto"
+                class="btn btn-azul"
             >
                 📋 Solicitar presupuesto
             </a>
@@ -358,7 +375,8 @@
             <a
                 href="https://wa.me/34677444547"
                 target="_blank"
-                class="btn btn-whatsapp"
+                rel="noopener noreferrer"
+                class="btn btn-verde"
             >
                 💬 WhatsApp
             </a>
@@ -366,7 +384,6 @@
         </div>
 
     </header>
-
 
 
     <!-- =========================
@@ -387,7 +404,7 @@
         <div class="servicios-grid">
 
 
-            <!-- SERVICIO 1 -->
+            <!-- 1 -->
 
             <div class="servicio">
 
@@ -407,7 +424,7 @@
             </div>
 
 
-            <!-- SERVICIO 2 -->
+            <!-- 2 -->
 
             <div class="servicio">
 
@@ -427,7 +444,7 @@
             </div>
 
 
-            <!-- SERVICIO 3 -->
+            <!-- 3 -->
 
             <div class="servicio">
 
@@ -447,7 +464,7 @@
             </div>
 
 
-            <!-- SERVICIO 4 -->
+            <!-- 4 -->
 
             <div class="servicio">
 
@@ -470,7 +487,6 @@
         </div>
 
     </section>
-
 
 
     <!-- =========================
@@ -529,6 +545,7 @@
                 <a
                     href="https://wa.me/34677444547"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     💬 Contactar por WhatsApp
                 </a>
@@ -539,7 +556,6 @@
         </div>
 
     </section>
-
 
 
     <!-- =========================
@@ -560,28 +576,20 @@
         <div class="redes-botones">
 
 
-            <!--
-                CAMBIA "#" POR EL ENLACE
-                REAL DE VUESTRO INSTAGRAM
-            -->
-
             <a
-                href="#"
+                href="https://www.instagram.com/fonysan_es/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn instagram"
             >
                 📸 Instagram
             </a>
 
 
-            <!--
-                CAMBIA "#" POR EL ENLACE
-                REAL DE VUESTRO FACEBOOK
-            -->
-
             <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61592791922836"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn facebook"
             >
                 👍 Facebook
@@ -593,7 +601,6 @@
     </section>
 
 
-
     <!-- =========================
          PIE DE PÁGINA
     ========================== -->
@@ -601,7 +608,7 @@
     <footer>
 
         <h3>
-            FON&S​AN
+            FON&amp;SAN
         </h3>
 
         <p>
@@ -613,7 +620,7 @@
         </p>
 
         <p class="copyright">
-            © 2026 FON&S​AN. Todos los derechos reservados.
+            © 2026 FON&amp;SAN. Todos los derechos reservados.
         </p>
 
     </footer>
