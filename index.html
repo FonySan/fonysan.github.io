@@ -7,10 +7,8 @@
 
     <title>FON&SAN | Fontanería y Saneamiento</title>
 
-    <meta
-        name="description"
-        content="FON&SAN - Fontanería, saneamiento, mantenimiento y reparaciones."
-    >
+    <meta name="description"
+          content="FON&SAN - Fontanería, saneamiento, mantenimiento y reparaciones.">
 
     <style>
 
@@ -36,14 +34,14 @@
         }
 
 
-        /* =====================================
+        /* =========================================
            CABECERA
-        ===================================== */
+        ========================================= */
 
         header {
             background: #f1f8fc;
             text-align: center;
-            padding: 25px 20px 40px;
+            padding: 30px 20px 40px;
         }
 
         .logo-container {
@@ -52,9 +50,7 @@
             margin-bottom: 25px;
         }
 
-        /* LOGO GRANDE */
-
-        .logo {https://raw.githubusercontent.com/FonySan/fonysan.github.io/main/logo.jpg
+        .logo {
             width: 650px;
             max-width: 95%;
             height: auto;
@@ -62,12 +58,11 @@
         }
 
 
-        /* =====================================
+        /* =========================================
            BOTONES
-        ===================================== */
+        ========================================= */
 
-        .botones-header,
-        .redes-botones {
+        .botones-header {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -99,12 +94,12 @@
         }
 
 
-        /* =====================================
+        /* =========================================
            SERVICIOS
-        ===================================== */
+        ========================================= */
 
         .servicios {
-            background: #ffffff;
+            background: white;
             text-align: center;
             padding: 65px 20px;
         }
@@ -123,7 +118,7 @@
 
         .servicios-grid {
             max-width: 1050px;
-            margin: auto;
+            margin: 0 auto;
 
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -132,8 +127,7 @@
         }
 
         .servicio {
-            background: #ffffff;
-
+            background: white;
             border: 1px solid #dce5eb;
             border-radius: 14px;
 
@@ -148,9 +142,7 @@
 
         .servicio:hover {
             transform: translateY(-5px);
-
-            box-shadow:
-                0 10px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
 
         .emoji {
@@ -171,9 +163,9 @@
         }
 
 
-        /* =====================================
+        /* =========================================
            CONTACTO
-        ===================================== */
+        ========================================= */
 
         .contacto {
             background: #f1f8fc;
@@ -181,8 +173,7 @@
             padding: 65px 20px;
         }
 
-        .contacto h2,
-        .redes h2 {
+        .contacto h2 {
             color: #075eb8;
             font-size: 32px;
             margin-bottom: 25px;
@@ -190,7 +181,7 @@
 
         .contacto-info {
             max-width: 650px;
-            margin: auto;
+            margin: 0 auto;
         }
 
         .dato {
@@ -211,24 +202,25 @@
             color: #075eb8;
         }
 
-
-        /* =====================================
-           WHATSAPP
-        ===================================== */
-
         .whatsapp {
             margin-top: 30px;
         }
 
 
-        /* =====================================
+        /* =========================================
            REDES SOCIALES
-        ===================================== */
+        ========================================= */
 
         .redes {
-            background: #ffffff;
+            background: white;
             text-align: center;
             padding: 65px 20px;
+        }
+
+        .redes h2 {
+            color: #075eb8;
+            font-size: 32px;
+            margin-bottom: 10px;
         }
 
         .redes p {
@@ -237,10 +229,18 @@
             margin-bottom: 28px;
         }
 
+        .redes-botones {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
 
-        /* =====================================
+
+        /* =========================================
            PIE DE PÁGINA
-        ===================================== */
+        ========================================= */
 
         footer {
             background: #075eb8;
@@ -266,9 +266,9 @@
         }
 
 
-        /* =====================================
+        /* =========================================
            TABLET
-        ===================================== */
+        ========================================= */
 
         @media (max-width: 900px) {
 
@@ -283,9 +283,9 @@
         }
 
 
-        /* =====================================
+        /* =========================================
            MÓVIL
-        ===================================== */
+        ========================================= */
 
         @media (max-width: 550px) {
 
@@ -327,16 +327,17 @@
 <body>
 
 
-    <!-- =====================================
-         CABECERA Y LOGO
-    ===================================== -->
+    <!-- =========================================
+         CABECERA
+    ========================================= -->
 
     <header>
 
         <div class="logo-container">
 
+            <!-- LOGO -->
             <img
-                src="https://raw.githubusercontent.com/FonySan/fonysan.github.io/main/logo.jpg?v=3"
+                src="/logo.jpg"
                 alt="FON&SAN Fontanería y Saneamiento"
                 class="logo"
             >
@@ -369,9 +370,9 @@
 
 
 
-    <!-- =====================================
+    <!-- =========================================
          SERVICIOS
-    ===================================== -->
+    ========================================= -->
 
     <section
         class="servicios"
@@ -389,8 +390,6 @@
 
         <div class="servicios-grid">
 
-
-            <!-- SERVICIO 1 -->
 
             <div class="servicio">
 
@@ -410,7 +409,6 @@
             </div>
 
 
-            <!-- SERVICIO 2 -->
 
             <div class="servicio">
 
@@ -430,7 +428,6 @@
             </div>
 
 
-            <!-- SERVICIO 3 -->
 
             <div class="servicio">
 
@@ -450,7 +447,6 @@
             </div>
 
 
-            <!-- SERVICIO 4 -->
 
             <div class="servicio">
 
@@ -476,9 +472,9 @@
 
 
 
-    <!-- =====================================
+    <!-- =========================================
          CONTACTO
-    ===================================== -->
+    ========================================= -->
 
     <section
         class="contacto"
@@ -554,9 +550,9 @@
 
 
 
-    <!-- =====================================
+    <!-- =========================================
          REDES SOCIALES
-    ===================================== -->
+    ========================================= -->
 
     <section class="redes">
 
@@ -598,9 +594,9 @@
 
 
 
-    <!-- =====================================
+    <!-- =========================================
          PIE DE PÁGINA
-    ===================================== -->
+    ========================================= -->
 
     <footer>
 
@@ -626,3 +622,4 @@
 </body>
 
 </html>
+
