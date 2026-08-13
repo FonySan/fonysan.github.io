@@ -1,618 +1,1124 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>FONYSAN | Fontanería y Saneamiento</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-
-<style>
-
-:root{
-
---azul:#031a46;
---azul2:#0b3c8c;
---verde:#27ae60;
---blanco:#ffffff;
---gris:#f7f8fa;
---texto:#1b2b45;
-
-}
-
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
-}
-
-html{
-
-scroll-behavior:smooth;
-
-}
-
-body{
-
-font-family:'Inter',sans-serif;
-background:white;
-color:var(--texto);
-
-}
-
-/* NAV */
-
-header{
-
-position:fixed;
-top:0;
-width:100%;
-background:linear-gradient(90deg,#02122f,#05235c);
-z-index:999;
-box-shadow:0 4px 20px rgba(0,0,0,.25);
-
-}
-
-.nav{
-
-max-width:1300px;
-margin:auto;
-padding:15px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-}
-
-.logo img{
-
-height:55px;
-
-}
-
-.menu{
-
-display:flex;
-gap:35px;
-
-}
-
-.menu a{
-
-color:white;
-text-decoration:none;
-font-size:14px;
-font-weight:600;
-letter-spacing:.6px;
-
-}
-
-.menu a:hover{
-
-color:#5ea4ff;
-
-}
-
-.ctas{
-
-display:flex;
-gap:12px;
-
-}
-
-.btn{
-
-padding:11px 20px;
-border-radius:8px;
-text-decoration:none;
-font-size:14px;
-font-weight:600;
-transition:.3s;
-
-}
-
-.btn-outline{
-
-border:1px solid rgba(255,255,255,.4);
-color:white;
-
-}
-
-.btn-blue{
-
-background:#1e73ff;
-color:white;
-
-}
-
-.btn-green{
-
-background:var(--verde);
-color:white;
-
-}
-
-/* HERO */
-
-.hero{
-
-padding-top:90px;
-background:white;
-
-}
-
-.hero-wrap{
-
-max-width:1400px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center;
-
-}
-
-.hero-left{
-
-padding:40px;
-
-}
-
-.hero-left img{
-
-width:100%;
-
-}
-
-.hero-right{
-
-padding:60px;
-background:url("images/water.jpg") right center/cover no-repeat;
-min-height:520px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-
-}
-
-.hero-right h1{
-
-font-family:'Cormorant Garamond',serif;
-font-size:60px;
-line-height:1.05;
-color:var(--azul);
-
-}
-
-.line{
-
-width:70px;
-height:4px;
-background:#1e73ff;
-margin:25px 0;
-
-}
-
-.hero-right p{
-
-font-size:18px;
-max-width:500px;
-line-height:1.8;
-
-}
-
-/* TITULOS */
-
-.title{
-
-text-align:center;
-font-family:'Cormorant Garamond',serif;
-font-size:42px;
-color:var(--azul);
-margin-bottom:12px;
-
-}
-
-.subtitle{
-
-text-align:center;
-color:#667;
-margin-bottom:55px;
-
-}
-
-/* SERVICIOS */
-
-.services{
-
-padding:90px 30px;
-background:white;
-
-}
-
-.grid{
-
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:28px;
-
-}
-
-.card{
-
-background:white;
-padding:38px 30px;
-border-radius:16px;
-box-shadow:0 10px 35px rgba(0,0,0,.08);
-text-align:center;
-transition:.35s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.card i{
-
-font-size:42px;
-color:#3d7eff;
-margin-bottom:22px;
-
-}
-
-.card h3{
-
-font-family:'Cormorant Garamond',serif;
-font-size:28px;
-margin-bottom:15px;
-color:var(--azul);
-
-}
-
-.card p{
-
-line-height:1.7;
-color:#555;
-
-}
-
-/* CONTACTO */
-
-.contact{
-
-background:
-linear-gradient(rgba(3,26,70,.88),rgba(3,26,70,.88)),
-url("images/water.jpg") center/cover;
-
-padding:80px 20px;
-color:white;
-text-align:center;
-
-}
-
-.contact h2{
-
-font-family:'Cormorant Garamond',serif;
-font-size:44px;
-margin-bottom:35px;
-
-}
-
-.info{
-
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:35px;
-margin-bottom:35px;
-
-}
-
-.info div{
-
-display:flex;
-align-items:center;
-gap:10px;
-
-}
-
-.info i{
-
-color:#5ea4ff;
-
-}
-
-/* REDES */
-
-.social{
-
-padding:80px 20px;
-text-align:center;
-background:white;
-
-}
-
-.social-buttons{
-
-display:flex;
-justify-content:center;
-gap:18px;
-margin-top:30px;
-
-}
-
-/* FOOTER */
-
-footer{
-
-background:linear-gradient(90deg,#02122f,#031a46);
-color:white;
-text-align:center;
-padding:45px 20px;
-
-}
-
-footer h3{
-
-font-family:'Cormorant Garamond',serif;
-font-size:34px;
-margin-bottom:8px;
-
-}
-
-footer p{
-
-opacity:.9;
-margin:6px 0;
-
-}
-
-/* RESPONSIVE */
-
-@media(max-width:980px){
-
-.hero-wrap{
-
-grid-template-columns:1fr;
-
-}
-
-.grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.menu{
-
-display:none;
-
-}
-
-.ctas{
-
-display:none;
-
-}
-
-.hero-right{
-
-min-height:420px;
-
-}
-
-.hero-right h1{
-
-font-size:46px;
-
-}
-
-}
-
-@media(max-width:640px){
-
-.grid{
-
-grid-template-columns:1fr;
-
-}
-
-.logo img{
-
-height:48px;
-
-}
-
-.hero-right{
-
-padding:35px;
-
-}
-
-.hero-right h1{
-
-font-size:38px;
-
-}
-
-}
-
-</style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="FON&SАN Fontanería y Saneamiento. Soluciones profesionales para tus instalaciones.">
+
+    <title>FON&SАN | Fontanería y Saneamiento</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =====================================================
+           CONFIGURACIÓN GENERAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #071d38;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           CABECERA
+        ===================================================== */
+
+        header {
+            width: 100%;
+            height: 72px;
+            background: #031a35;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .header-inner {
+            width: 92%;
+            max-width: 1250px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* LOGO SUPERIOR */
+
+        .header-logo {
+            width: 135px;
+            height: auto;
+            object-fit: contain;
+        }
+
+
+        /* =====================================================
+           MENÚ
+        ===================================================== */
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 38px;
+            margin-left: auto;
+            margin-right: 30px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            position: relative;
+            transition: 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            left: 0;
+            bottom: -7px;
+            background: #3c91e6;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4c9ce8;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =====================================================
+           BOTONES CABECERA
+        ===================================================== */
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .header-btn {
+            height: 36px;
+            padding: 0 17px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            font-size: 11px;
+            font-weight: 600;
+            transition: 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .whatsapp-header {
+            color: white;
+            border: 1px solid rgba(255,255,255,0.55);
+            background: transparent;
+        }
+
+        .whatsapp-header:hover {
+            background: #20bd5a;
+            border-color: #20bd5a;
+        }
+
+        .phone-header {
+            color: white;
+            background: #1476dc;
+            border: 1px solid #1476dc;
+        }
+
+        .phone-header:hover {
+            background: #0d60b7;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            width: 100%;
+            min-height: 335px;
+            position: relative;
+            overflow: hidden;
+            background: #f5f9fc;
+        }
+
+        .hero-water {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 56%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(248,251,253,1) 0%,
+                    rgba(248,251,253,0.98) 39%,
+                    rgba(248,251,253,0.70) 56%,
+                    rgba(248,251,253,0.10) 78%,
+                    rgba(248,251,253,0) 100%
+                );
+            z-index: 2;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 3;
+            width: 92%;
+            max-width: 1150px;
+            min-height: 335px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-left {
+            width: 48%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-logo {
+            width: 360px;
+            max-width: 90%;
+            height: auto;
+        }
+
+        .hero-right {
+            width: 43%;
+            margin-left: 20px;
+            padding-left: 25px;
+        }
+
+        .hero-right h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 31px;
+            line-height: 1.18;
+            font-weight: 500;
+            color: #102b4d;
+            margin-bottom: 13px;
+        }
+
+        .blue-line {
+            width: 30px;
+            height: 3px;
+            background: #1976d2;
+            margin-bottom: 13px;
+        }
+
+        .hero-right p {
+            font-family: Georgia, serif;
+            color: #24364b;
+            font-size: 12px;
+            line-height: 1.7;
+            max-width: 330px;
+        }
+
+
+        /* =====================================================
+           SERVICIOS
+        ===================================================== */
+
+        .services {
+            background: #ffffff;
+            padding: 22px 20px 24px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            color: #153253;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 9px;
+        }
+
+        .section-line {
+            width: 28px;
+            height: 3px;
+            background: #398ee0;
+            margin: 0 auto 14px;
+        }
+
+        .services-grid {
+            width: 100%;
+            max-width: 1070px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 17px;
+        }
+
+        .service-card {
+            min-height: 120px;
+            padding: 12px 14px;
+            background: #ffffff;
+            border: 1px solid #f0f2f5;
+            box-shadow: 0 3px 13px rgba(0,0,0,0.10);
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+        }
+
+        .service-icon {
+            color: #277ed4;
+            font-size: 28px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        .service-card h3 {
+            font-family: Georgia, serif;
+            color: #183556;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .service-card p {
+            font-family: Georgia, serif;
+            color: #39495a;
+            font-size: 8.5px;
+            line-height: 1.45;
+        }
+
+
+        /* =====================================================
+           CONTACTO
+        ===================================================== */
+
+        .contact {
+            min-height: 98px;
+            background:
+                linear-gradient(
+                    rgba(2,24,48,0.91),
+                    rgba(2,24,48,0.91)
+                ),
+                url("Fuente. Azul.png");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+        }
+
+        .contact h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 27px;
+            flex-wrap: wrap;
+            font-size: 9px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+        }
+
+        .contact-item i {
+            color: #2585df;
+            font-size: 12px;
+        }
+
+        .whatsapp-contact {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            background: #19b94e;
+            color: white;
+            padding: 7px 16px;
+            border-radius: 5px;
+            margin-top: 8px;
+            font-size: 9px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-contact:hover {
+            background: #0e9b3f;
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           REDES SOCIALES
+        ===================================================== */
+
+        .social {
+            background: #ffffff;
+            padding: 13px 20px 16px;
+            text-align: center;
+        }
+
+        .social h2 {
+            font-family: 'Playfair Display', serif;
+            color: #193758;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .social p {
+            color: #34475c;
+            font-family: Georgia, serif;
+            font-size: 8.5px;
+            margin-bottom: 8px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-btn {
+            min-width: 82px;
+            padding: 7px 13px;
+            background: #061d39;
+            color: white;
+            border-radius: 4px;
+            font-size: 9px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            transition: 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background: #176fc2;
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #021a34;
+            color: white;
+            text-align: center;
+            padding: 10px 20px 13px;
+        }
+
+        footer h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 11px;
+            margin-bottom: 2px;
+        }
+
+        footer p {
+            font-family: Georgia, serif;
+            color: #d9e3ef;
+            font-size: 7.5px;
+            line-height: 1.5;
+        }
+
+        .copyright {
+            margin-top: 5px;
+            color: #9fb3c9;
+        }
+
+
+        /* =====================================================
+           MENÚ MÓVIL
+        ===================================================== */
+
+        .mobile-menu {
+            display: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE TABLET
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            header {
+                height: 65px;
+            }
+
+            .header-logo {
+                width: 115px;
+            }
+
+            nav {
+                gap: 18px;
+                margin-right: 15px;
+            }
+
+            nav a {
+                font-size: 9px;
+            }
+
+            .header-btn {
+                padding: 0 10px;
+                font-size: 9px;
+            }
+
+            .hero {
+                min-height: 300px;
+            }
+
+            .hero-inner {
+                min-height: 300px;
+            }
+
+            .hero-logo {
+                width: 290px;
+            }
+
+            .hero-right h1 {
+                font-size: 26px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 700px;
+            }
+        }
+
+
+        /* =====================================================
+           RESPONSIVE MÓVIL
+        ===================================================== */
+
+        @media (max-width: 650px) {
+
+            header {
+                height: 64px;
+            }
+
+            .header-inner {
+                width: 90%;
+            }
+
+            .header-logo {
+                width: 110px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .header-buttons {
+                margin-left: auto;
+                margin-right: 12px;
+            }
+
+            .whatsapp-header {
+                display: none;
+            }
+
+            .phone-header {
+                height: 32px;
+                padding: 0 11px;
+                font-size: 9px;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+
+            /* HERO */
+
+            .hero {
+                min-height: 570px;
+            }
+
+            .hero-water {
+                width: 100%;
+                height: 48%;
+                top: auto;
+                bottom: 0;
+                object-position: center;
+            }
+
+            .hero-overlay {
+                background:
+                    linear-gradient(
+                        180deg,
+                        rgba(248,251,253,1) 0%,
+                        rgba(248,251,253,0.98) 52%,
+                        rgba(248,251,253,0.30) 80%,
+                        rgba(248,251,253,0) 100%
+                    );
+            }
+
+            .hero-inner {
+                width: 90%;
+                min-height: 570px;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 35px;
+            }
+
+            .hero-left {
+                width: 100%;
+            }
+
+            .hero-logo {
+                width: 300px;
+                max-width: 92%;
+            }
+
+            .hero-right {
+                width: 100%;
+                margin: 25px 0 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            .hero-right h1 {
+                font-size: 27px;
+            }
+
+            .blue-line {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-right p {
+                margin: auto;
+                font-size: 11px;
+            }
+
+
+            /* SERVICIOS */
+
+            .services {
+                padding: 25px 15px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                gap: 15px;
+            }
+
+            .service-card {
+                min-height: 130px;
+                padding: 15px;
+            }
+
+            .service-card h3 {
+                font-size: 13px;
+            }
+
+            .service-card p {
+                font-size: 9px;
+            }
+
+
+            /* CONTACTO */
+
+            .contact {
+                padding: 20px 15px;
+            }
+
+            .contact h2 {
+                font-size: 19px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 9px;
+            }
+
+
+            /* REDES */
+
+            .social {
+                padding: 20px 15px;
+            }
+
+            .social h2 {
+                font-size: 19px;
+            }
+        }
+
+
+        /* =====================================================
+           PANTALLAS GRANDES
+        ===================================================== */
+
+        @media (min-width: 1500px) {
+
+            .header-inner,
+            .hero-inner,
+            .services-grid {
+                max-width: 1300px;
+            }
+
+            .hero {
+                min-height: 370px;
+            }
+
+            .hero-inner {
+                min-height: 370px;
+            }
+
+            .hero-logo {
+                width: 420px;
+            }
+
+            .hero-right h1 {
+                font-size: 36px;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
+
+<!-- =========================================================
+     CABECERA
+========================================================= -->
+
 <header>
 
-<div class="nav">
+    <div class="header-inner">
 
-<a class="logo" href="#">
-<img src="logo.jpg" alt="FONYSAN">
-</a>
+        <a href="#inicio">
+            <img
+                src="LOGO FONDO TRASNPARENTE.png"
+                alt="FON&SАN Fontanería y Saneamiento"
+                class="header-logo"
+            >
+        </a>
 
-<nav class="menu">
-<a href="#">INICIO</a>
-<a href="#servicios">SERVICIOS</a>
-<a href="#contacto">CONTACTO</a>
-<a href="#redes">REDES</a>
-</nav>
 
-<div class="ctas">
-<a class="btn btn-outline" href="https://wa.me/34677449457"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-<a class="btn btn-blue" href="tel:677449457"><i class="fa-solid fa-phone"></i> 677 44 94 57</a>
-</div>
+        <nav>
 
-</div>
+            <a href="#inicio">Inicio</a>
+
+            <a href="#servicios">Servicios</a>
+
+            <a href="#nosotros">Nosotros</a>
+
+            <a href="#contacto">Contacto</a>
+
+        </nav>
+
+
+        <div class="header-buttons">
+
+            <a
+                href="https://wa.me/34677449457"
+                target="_blank"
+                class="header-btn whatsapp-header"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp
+            </a>
+
+
+            <a
+                href="tel:677449457"
+                class="header-btn phone-header"
+            >
+                <i class="fa-solid fa-phone"></i>
+                677 44 94 57
+            </a>
+
+        </div>
+
+
+        <div class="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </div>
 
 </header>
 
-<section class="hero">
 
-<div class="hero-wrap">
 
-<div class="hero-left">
+<!-- =========================================================
+     PORTADA
+========================================================= -->
 
-<img src="logo.jpg" alt="Fonysan">
+<section class="hero" id="inicio">
 
-</div>
+    <img
+        src="Foto agua portada.png"
+        alt="Agua"
+        class="hero-water"
+    >
 
-<div class="hero-right">
+    <div class="hero-overlay"></div>
 
-<h1>Soluciones profesionales para tus instalaciones</h1>
 
-<div class="line"></div>
+    <div class="hero-inner">
 
-<p>En Fonysan ofrecemos servicios de fontanería y saneamiento con máxima calidad, seguridad y eficiencia para viviendas, negocios y comunidades.</p>
+        <div class="hero-left">
 
-</div>
+            <img
+                src="LOGO FONDO TRASNPARENTE.png"
+                alt="FON&SАN"
+                class="hero-logo"
+            >
 
-</div>
+        </div>
 
-</section>
 
-<section id="servicios" class="services">
+        <div class="hero-right">
 
-<h2 class="title">Nuestros Servicios</h2>
+            <h1>
+                Soluciones profesionales
+                <br>
+                para tus instalaciones
+            </h1>
 
-<p class="subtitle">Profesionalidad, rapidez y confianza.</p>
+            <div class="blue-line"></div>
 
-<div class="grid">
+            <p>
+                En Fonysan ofrecemos servicios de fontanería
+                y saneamiento con la máxima calidad,
+                seguridad y eficiencia.
+            </p>
 
-<div class="card">
+        </div>
 
-<i class="fa-solid fa-faucet-drip"></i>
-
-<h3>Instalaciones</h3>
-
-<p>Montaje de sistemas de agua fría y caliente.</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-droplet"></i>
-
-<h3>Saneamiento</h3>
-
-<p>Desatascos y reparación de desagües.</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-wrench"></i>
-
-<h3>Reparaciones</h3>
-
-<p>Mantenimiento preventivo y averías.</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-bolt"></i>
-
-<h3>Soluciones eficientes</h3>
-
-<p>Instalaciones modernas y ahorro de agua.</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<section id="contacto" class="contact">
 
-<h2>Contacta con nosotros</h2>
 
-<div class="info">
+<!-- =========================================================
+     SERVICIOS
+========================================================= -->
 
-<div><i class="fa-solid fa-user"></i> Pedro Sanabria — Técnico</div>
+<section class="services" id="servicios">
 
-<div><i class="fa-solid fa-phone"></i> 677 44 94 57</div>
+    <h2 class="section-title">
+        NUESTROS SERVICIOS
+    </h2>
 
-<div><i class="fa-solid fa-envelope"></i> fonysan.comercial@outlook.es</div>
+    <div class="section-line"></div>
 
-</div>
 
-<a class="btn btn-green" href="https://wa.me/34677449457">
+    <div class="services-grid">
 
-<i class="fab fa-whatsapp"></i>
 
-Contactar por WhatsApp
+        <!-- SERVICIO 1 -->
 
-</a>
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class="fa-solid fa-faucet-drip"></i>
+            </div>
+
+            <h3>
+                Instalaciones de fontanería
+            </h3>
+
+            <p>
+                Soluciones en sistemas de agua
+                fría y caliente para viviendas,
+                negocios y comunidades.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICIO 2 -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <h3>
+                Saneamiento y desagües
+            </h3>
+
+            <p>
+                Solucionamos problemas de
+                desagües y saneamiento
+                con rapidez y eficacia.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICIO 3 -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class="fa-solid fa-wrench"></i>
+            </div>
+
+            <h3>
+                Mantenimiento y reparaciones
+            </h3>
+
+            <p>
+                Mantenimiento preventivo
+                y reparaciones de todo tipo
+                de instalaciones.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICIO 4 -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+
+            <h3>
+                Soluciones eficientes
+            </h3>
+
+            <p>
+                Trabajamos con soluciones modernas
+                y eficientes para un consumo
+                responsable.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section id="redes" class="social">
 
-<h2 class="title">Síguenos en Redes Sociales</h2>
 
-<p>Conoce nuestros trabajos y novedades.</p>
+<!-- =========================================================
+     NOSOTROS / CONTACTO
+========================================================= -->
 
-<div class="social-buttons">
+<section class="contact" id="contacto">
 
-<a class="btn btn-outline" style="background:#031a46;color:white;border:none;" href="https://www.instagram.com/fonysan_es/" target="_blank">
+    <h2>
+        CONTACTA CON NOSOTROS
+    </h2>
 
-<i class="fab fa-instagram"></i> Instagram
 
-</a>
+    <div class="contact-info">
 
-<a class="btn btn-outline" style="background:#031a46;color:white;border:none;" href="https://www.facebook.com/profile.php?id=61592791922836" target="_blank">
 
-<i class="fab fa-facebook-f"></i> Facebook
+        <div class="contact-item">
 
-</a>
+            <i class="fa-solid fa-user"></i>
 
-</div>
+            <span>
+                Pedro Sanabria – Técnico
+            </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <span>
+                677 44 94 57
+            </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <span>
+                fonysan.comercial@outlook.es
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="https://wa.me/34677449457"
+        target="_blank"
+        class="whatsapp-contact"
+    >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        Contactar por WhatsApp
+
+    </a>
 
 </section>
+
+
+
+<!-- =========================================================
+     REDES SOCIALES
+========================================================= -->
+
+<section class="social">
+
+    <h2>
+        SÍGUENOS EN REDES SOCIALES
+    </h2>
+
+
+    <p>
+        Conoce nuestros trabajos y novedades.
+    </p>
+
+
+    <div class="social-buttons">
+
+
+        <a
+            href="https://www.instagram.com/fonysan_es/"
+            target="_blank"
+            class="social-btn"
+        >
+
+            <i class="fa-brands fa-instagram"></i>
+
+            Instagram
+
+        </a>
+
+
+        <a
+            href="https://www.facebook.com/profile.php?id=61592791922836"
+            target="_blank"
+            class="social-btn"
+        >
+
+            <i class="fa-brands fa-facebook-f"></i>
+
+            Facebook
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PIE DE PÁGINA
+========================================================= -->
 
 <footer>
 
-<h3>FONYSAN</h3>
+    <h3>
+        FONYSAN
+    </h3>
 
-<p>Fontanería y Saneamiento</p>
+    <p>
+        Fontanería y Saneamiento
+    </p>
 
-<p><em>Soluciones que fluyen</em></p>
+    <p>
+        Soluciones que fluyen
+    </p>
 
-<p style="margin-top:18px;">© 2025 FONYSAN. Todos los derechos reservados.</p>
+    <p class="copyright">
+        © 2026 FONYSAN. Todos los derechos reservados.
+    </p>
 
 </footer>
+
 
 </body>
 </html>
