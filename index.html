@@ -6,7 +6,7 @@
 
 <title>Fonysan | Fontanería Profesional</title>
 
-<meta name="description" content="Fonysan - Fontanería profesional, instalaciones, reparaciones, saneamiento y mantenimiento en Castilla y León.">
+<meta name="description" content="Fonysan - Soluciones profesionales de fontanería, instalaciones, reparaciones, saneamiento y mantenimiento en Castilla y León.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,1109 +15,1290 @@
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:'Inter',Arial,sans-serif;
-    background:#f7fbff;
-    color:#123b72;
-    overflow-x:hidden;
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #f5faff;
+    color: #123b70;
+    overflow-x: hidden;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-img{
-    max-width:100%;
-    display:block;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-:root{
-    --azul:#0649a8;
-    --azul-oscuro:#063b80;
-    --verde:#168c45;
-    --verde-claro:#eaf8ef;
-    --texto:#173b69;
-    --gris:#68798d;
-    --blanco:#fff;
-}
-
-
-/* =========================================
-   NAVBAR
-========================================= */
-
-header{
-    width:100%;
-    padding:14px 0;
-    position:relative;
-    z-index:50;
-}
-
-.navbar{
-    width:min(1180px,92%);
-    min-height:72px;
-    margin:auto;
-
-    background:rgba(255,255,255,.98);
-
-    border-radius:20px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:8px 13px 8px 24px;
-
-    box-shadow:0 8px 30px rgba(30,75,120,.10);
-}
-
-.logo{
-    width:145px;
-}
-
-.logo img{
-    width:145px;
-    height:auto;
-    object-fit:contain;
-}
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:30px;
-}
-
-nav a{
-    font-size:10px;
-    font-weight:700;
-    color:#273f5c;
-    padding:12px 0;
-    position:relative;
-}
-
-nav a:first-child{
-    color:var(--azul);
-}
-
-nav a:first-child::after{
-    content:"";
-    position:absolute;
-    width:27px;
-    height:3px;
-    background:var(--azul);
-    border-radius:20px;
-    left:50%;
-    bottom:2px;
-    transform:translateX(-50%);
-}
-
-.header-phone{
-    background:#148c45;
-    color:white;
-    padding:10px 17px;
-    border-radius:20px;
-    font-size:10px;
-    font-weight:700;
-    transition:.25s;
-}
-
-.header-phone:hover{
-    background:#107338;
-    transform:translateY(-2px);
+:root {
+    --blue: #0752ad;
+    --blue-dark: #063d83;
+    --blue-light: #eaf4ff;
+    --green: #168d45;
+    --green-light: #eaf8ef;
+    --text: #153d70;
+    --gray: #6d7d91;
+    --white: #ffffff;
 }
 
 
-/* =========================================
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    width: 100%;
+    padding: 14px 0;
+    position: relative;
+    z-index: 100;
+}
+
+.navbar {
+    width: min(1180px, 92%);
+    min-height: 74px;
+    margin: auto;
+
+    background: #ffffff;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 12px 8px 24px;
+
+    box-shadow: 0 8px 28px rgba(30, 75, 120, 0.10);
+}
+
+.logo {
+    width: 145px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 145px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    position: relative;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #263f5e;
+
+    padding: 12px 0;
+}
+
+nav a:first-child {
+    color: var(--blue);
+}
+
+nav a:first-child::after {
+    content: "";
+
+    position: absolute;
+
+    width: 28px;
+    height: 3px;
+
+    background: var(--blue);
+
+    border-radius: 10px;
+
+    left: 50%;
+    bottom: 1px;
+
+    transform: translateX(-50%);
+}
+
+.header-phone {
+    background: var(--green);
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition: .25s;
+}
+
+.header-phone:hover {
+    background: #107539;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
    HERO
-========================================= */
+===================================================== */
 
-.hero{
-    width:min(1180px,92%);
-    min-height:490px;
-    margin:20px auto 0;
+.hero {
+    width: min(1180px, 92%);
+    min-height: 490px;
 
-    position:relative;
-    overflow:hidden;
+    margin: 18px auto 0;
 
-    border-radius:25px;
+    position: relative;
+    overflow: hidden;
 
-    display:grid;
-    grid-template-columns:53% 47%;
+    display: grid;
+    grid-template-columns: 53% 47%;
+
+    border-radius: 26px;
 
     background:
-        radial-gradient(circle at 74% 55%,#d9efff 0%,transparent 32%),
-        linear-gradient(135deg,#ffffff,#f7fbff);
+        radial-gradient(
+            circle at 73% 55%,
+            #d9efff 0%,
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f6fbff 100%
+        );
 
-    box-shadow:0 10px 35px rgba(20,70,120,.07);
+    box-shadow: 0 10px 35px rgba(25, 75, 120, .07);
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
+.hero::before {
+    content: "";
 
-    width:520px;
-    height:520px;
+    position: absolute;
 
-    right:-190px;
-    top:-120px;
+    width: 520px;
+    height: 520px;
 
-    background:rgba(211,235,255,.6);
+    right: -180px;
+    top: -110px;
 
-    border-radius:50%;
+    background: rgba(211, 235, 255, .65);
+
+    border-radius: 50%;
 }
 
-.hero-content{
-    position:relative;
-    z-index:3;
+.hero-content {
+    position: relative;
+    z-index: 5;
 
-    padding:65px 20px 55px 45px;
+    padding: 65px 25px 55px 45px;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.eyebrow{
-    color:var(--verde);
-    font-size:10px;
-    font-weight:800;
-    margin-bottom:13px;
+.eyebrow {
+    color: var(--green);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    margin-bottom: 13px;
 }
 
-.hero h1{
-    color:var(--azul-oscuro);
+.hero h1 {
+    color: var(--blue-dark);
 
-    font-size:clamp(34px,4vw,55px);
+    font-size: clamp(36px, 4vw, 56px);
 
-    line-height:1.08;
+    line-height: 1.08;
 
-    letter-spacing:-2px;
+    letter-spacing: -2px;
 
-    margin-bottom:18px;
+    margin-bottom: 19px;
 
-    max-width:610px;
+    max-width: 620px;
 }
 
-.hero h1 .green{
-    color:var(--verde);
+.hero h1 .green {
+    color: var(--green);
 }
 
-.hero-description{
-    color:#53657a;
+.hero-description {
+    color: #53667c;
 
-    font-size:13px;
+    font-size: 14px;
 
-    line-height:1.65;
+    line-height: 1.65;
 
-    max-width:430px;
+    max-width: 430px;
 
-    margin-bottom:24px;
+    margin-bottom: 25px;
 }
 
-.buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
+.buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
-.btn-primary{
-    background:var(--azul);
-    color:white;
+.btn-primary {
+    background: var(--blue);
+    color: white;
 
-    padding:13px 20px;
+    padding: 13px 21px;
 
-    border-radius:7px;
+    border-radius: 7px;
 
-    font-size:10px;
-    font-weight:700;
+    font-size: 11px;
+    font-weight: 700;
 
-    transition:.25s;
+    transition: .25s;
 }
 
-.btn-primary:hover{
-    background:var(--azul-oscuro);
-    transform:translateY(-2px);
+.btn-primary:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
 }
 
-.btn-whatsapp{
-    background:white;
+.btn-whatsapp {
+    background: white;
 
-    color:var(--verde);
+    color: var(--green);
 
-    border:1.5px solid #65b987;
+    border: 1.5px solid #65b987;
 
-    padding:12px 20px;
+    padding: 12px 21px;
 
-    border-radius:7px;
+    border-radius: 7px;
 
-    font-size:10px;
-    font-weight:700;
+    font-size: 11px;
+    font-weight: 700;
 
-    transition:.25s;
+    transition: .25s;
 }
 
-.btn-whatsapp:hover{
-    background:var(--verde-claro);
+.btn-whatsapp:hover {
+    background: var(--green-light);
 }
 
-.hero-image{
-    position:relative;
-    z-index:2;
+.hero-image {
+    position: relative;
+    z-index: 3;
 
-    height:100%;
+    width: 100%;
+    height: 100%;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    overflow: hidden;
 
-    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero-image img{
-    width:100%;
-    height:100%;
+.hero-image img {
+    width: 100%;
+    height: 100%;
 
-    object-fit:cover;
+    object-fit: cover;
 
-    object-position:center;
+    object-position: center;
 
-    mix-blend-mode:multiply;
-}
-
-
-/* =========================================
-   TARJETAS SUPERIORES
-========================================= */
-
-.advantages{
-    width:min(1180px,92%);
-
-    margin:16px auto 0;
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:10px;
-}
-
-.advantage{
-    background:white;
-
-    min-height:136px;
-
-    padding:20px 15px;
-
-    text-align:center;
-
-    border-radius:12px;
-
-    box-shadow:0 5px 25px rgba(35,75,110,.07);
-
-    transition:.25s;
-}
-
-.advantage:hover{
-    transform:translateY(-3px);
-}
-
-.advantage-icon{
-    width:39px;
-    height:39px;
-
-    margin:0 auto 10px;
-
-    border:2px solid var(--azul);
-
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:18px;
-
-    color:var(--azul);
-}
-
-.advantage h3{
-    font-size:10px;
-
-    color:#1d3759;
-
-    margin-bottom:7px;
-}
-
-.advantage p{
-    font-size:8px;
-
-    color:#718095;
-
-    line-height:1.55;
+    mix-blend-mode: multiply;
 }
 
 
-/* =========================================
-   BANNER AZUL + BAÑO
-========================================= */
+/* =====================================================
+   TARJETAS DE VENTAJAS
+===================================================== */
 
-.blue-banner{
-    width:min(1180px,92%);
+.advantages {
+    width: min(1180px, 92%);
 
-    height:120px;
+    margin: 18px auto 0;
 
-    margin:16px auto;
+    display: grid;
 
-    border-radius:14px;
+    grid-template-columns: repeat(4, 1fr);
 
-    overflow:hidden;
-
-    position:relative;
-
-    background:#0752ad;
+    gap: 12px;
 }
 
-.banner-content{
-    width:52%;
+.advantage {
+    min-height: 155px;
 
-    height:100%;
+    background: white;
 
-    padding:20px 38px;
+    border-radius: 14px;
 
-    position:relative;
+    padding: 22px 20px;
 
-    z-index:3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    color:white;
+    text-align: center;
 
-    background:#0752ad;
+    box-shadow: 0 6px 25px rgba(35, 75, 110, .07);
 
-    clip-path:polygon(
+    transition: .25s;
+}
+
+.advantage:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 30px rgba(35, 75, 110, .11);
+}
+
+
+/* ICONOS */
+
+.line-icon {
+    width: 48px;
+    height: 48px;
+
+    border: 2px solid var(--blue);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 14px;
+
+    color: var(--blue);
+}
+
+.line-icon svg {
+    width: 25px;
+    height: 25px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.advantage h3 {
+    color: #173b68;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.advantage p {
+    color: #718096;
+
+    font-size: 9px;
+
+    line-height: 1.55;
+
+    max-width: 230px;
+}
+
+
+/* =====================================================
+   BANNER BAÑO
+===================================================== */
+
+.blue-banner {
+    width: min(1180px, 92%);
+
+    height: 150px;
+
+    margin: 18px auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: var(--blue);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 4;
+
+    width: 53%;
+    height: 100%;
+
+    padding: 20px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: white;
+
+    background: var(--blue);
+
+    clip-path: polygon(
         0 0,
-        94% 0,
-        83% 100%,
+        95% 0,
+        82% 100%,
         0 100%
     );
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
 }
 
-.banner-icon{
-    font-size:27px;
-    margin-bottom:3px;
+.banner-drop {
+    width: 37px;
+    height: 37px;
+
+    margin-bottom: 5px;
 }
 
-.banner-content h2{
-    font-size:15px;
-    line-height:1.25;
+.banner-drop svg {
+    width: 100%;
+    height: 100%;
 
-    margin-bottom:5px;
+    fill: none;
+
+    stroke: #ffffff;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
-.banner-content p{
-    font-size:9px;
-    line-height:1.5;
+.banner-content h2 {
+    font-size: 18px;
 
-    color:rgba(255,255,255,.85);
+    line-height: 1.2;
+
+    margin-bottom: 7px;
 }
 
-.banner-image{
-    position:absolute;
+.banner-content p {
+    font-size: 11px;
 
-    right:0;
-    top:0;
-
-    width:48%;
-    height:100%;
+    color: rgba(255,255,255,.85);
 }
 
-.banner-image img{
-    width:100%;
-    height:100%;
+.banner-image {
+    position: absolute;
 
-    object-fit:cover;
+    right: 0;
+    top: 0;
+
+    width: 51%;
+    height: 100%;
+}
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
 }
 
 
-/* =========================================
+/* =====================================================
    SERVICIOS
-========================================= */
+===================================================== */
 
-.services{
-    width:min(1180px,92%);
+.services {
+    width: min(1180px, 92%);
 
-    margin:auto;
+    min-height: 180px;
 
-    min-height:145px;
+    margin: 0 auto;
 
-    display:grid;
+    position: relative;
 
-    grid-template-columns:repeat(4,1fr);
+    overflow: hidden;
 
-    overflow:hidden;
+    display: grid;
 
-    border-radius:0 0 14px 14px;
+    grid-template-columns: repeat(4, 1fr);
 
-    background:#062f63;
+    border-radius: 0 0 15px 15px;
 
-    position:relative;
+    background: #0a386c;
 }
 
-.services::before{
-    content:"";
+.services::before {
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    inset:0;
+    inset: 0;
 
     background:
         linear-gradient(
-            rgba(3,40,82,.82),
-            rgba(3,40,82,.92)
+            rgba(5, 49, 96, .82),
+            rgba(5, 49, 96, .92)
         ),
-        url("FOTO INFERIOR AGUA.png") center/cover;
+        url("FOTO INFERIOR AGUA.png") center / cover;
 
-    opacity:.95;
-
-    z-index:0;
+    z-index: 0;
 }
 
-.service{
-    position:relative;
-    z-index:2;
+.service {
+    position: relative;
+    z-index: 2;
 
-    min-height:145px;
+    min-height: 180px;
 
-    padding:22px 17px;
+    padding: 25px 22px 20px;
 
-    text-align:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    color:white;
+    text-align: center;
 
-    border-right:1px solid rgba(255,255,255,.15);
+    color: white;
+
+    border-right: 1px solid rgba(255,255,255,.18);
 }
 
-.service:last-child{
-    border-right:none;
-}
-
-.service-icon{
-    font-size:28px;
-    margin-bottom:8px;
-}
-
-.service h3{
-    font-size:10px;
-
-    margin-bottom:7px;
-}
-
-.service p{
-    font-size:8px;
-
-    line-height:1.55;
-
-    color:rgba(255,255,255,.78);
+.service:last-child {
+    border-right: none;
 }
 
 
-/* =========================================
+/* ICONOS DE SERVICIOS */
+
+.service-icon {
+    width: 45px;
+    height: 45px;
+
+    margin-bottom: 10px;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon svg {
+    width: 38px;
+    height: 38px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.service h3 {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 9px;
+}
+
+.service p {
+    max-width: 245px;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    color: rgba(255,255,255,.82);
+}
+
+
+/* =====================================================
    SOBRE NOSOTROS
-========================================= */
+===================================================== */
 
-.about{
-    width:min(1180px,92%);
+.about {
+    width: min(1180px, 92%);
 
-    margin:35px auto;
+    min-height: 320px;
 
-    min-height:300px;
+    margin: 40px auto;
 
-    background:white;
+    background: white;
 
-    border-radius:17px;
+    border-radius: 18px;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:50% 50%;
+    grid-template-columns: 50% 50%;
 
-    box-shadow:0 7px 30px rgba(25,70,120,.06);
+    box-shadow: 0 7px 30px rgba(25,70,120,.06);
 }
 
-.about-content{
-    padding:38px 40px;
+.about-content {
+    padding: 42px;
 }
 
-.section-label{
-    color:var(--verde);
+.section-label {
+    color: var(--green);
 
-    font-size:10px;
+    font-size: 11px;
 
-    font-weight:800;
+    font-weight: 800;
 
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
-.about h2{
-    color:var(--azul-oscuro);
+.about h2 {
+    color: var(--blue-dark);
 
-    font-size:26px;
+    font-size: 29px;
 
-    line-height:1.28;
+    line-height: 1.25;
 
-    margin-bottom:15px;
+    letter-spacing: -.6px;
+
+    margin-bottom: 16px;
 }
 
-.about h2 .green{
-    color:var(--verde);
+.about h2 .green {
+    color: var(--green);
 }
 
-.about-text{
-    color:#69798d;
+.about-text {
+    color: #69798d;
 
-    font-size:10px;
+    font-size: 11px;
 
-    line-height:1.7;
+    line-height: 1.7;
 
-    max-width:480px;
+    max-width: 480px;
 
-    margin-bottom:23px;
+    margin-bottom: 25px;
 }
 
-.stats{
-    display:flex;
+.stats {
+    display: flex;
 
-    gap:32px;
+    gap: 32px;
 }
 
-.stat{
-    display:flex;
+.stat {
+    min-width: 90px;
 
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 
-    gap:3px;
+    gap: 4px;
 }
 
-.stat strong{
-    color:var(--azul);
+.stat-icon {
+    width: 25px;
+    height: 25px;
 
-    font-size:19px;
+    color: var(--blue);
+
+    margin-bottom: 2px;
 }
 
-.stat span{
-    color:#7a8999;
+.stat-icon svg {
+    width: 100%;
+    height: 100%;
 
-    font-size:7px;
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
-.about-image{
-    position:relative;
+.stat strong {
+    color: var(--blue);
 
-    min-height:300px;
+    font-size: 20px;
 
-    overflow:hidden;
+    line-height: 1;
 }
 
-.about-image::after{
-    content:"";
+.stat span {
+    color: #7a8999;
 
-    position:absolute;
-
-    left:-35px;
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:70px;
-    height:330px;
-
-    border-radius:50%;
-
-    background:white;
-
-    border-right:5px solid var(--verde);
+    font-size: 8px;
 }
 
-.about-image img{
-    width:100%;
-    height:100%;
+.about-image {
+    min-height: 320px;
 
-    object-fit:cover;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.about-image::after {
+    content: "";
+
+    position: absolute;
+
+    left: -42px;
+    top: 50%;
+
+    width: 82px;
+    height: 360px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: white;
+
+    border-right: 5px solid var(--green);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
 }
 
 
-/* =========================================
+/* =====================================================
    CONTACTO
-========================================= */
+===================================================== */
 
-.contact{
-    width:min(1180px,92%);
+.contact {
+    width: min(1180px, 92%);
 
-    min-height:90px;
+    min-height: 105px;
 
-    margin:15px auto;
+    margin: 15px auto;
 
-    background:white;
+    background: white;
 
-    border-radius:13px;
+    border-radius: 14px;
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:1.45fr 1fr 1.15fr 1.2fr;
+    grid-template-columns: 1.5fr 1fr 1.25fr 1.2fr;
 
-    align-items:center;
+    align-items: center;
 
-    box-shadow:0 6px 25px rgba(25,70,120,.06);
+    overflow: hidden;
 
-    overflow:hidden;
+    box-shadow: 0 6px 25px rgba(25,70,120,.06);
 }
 
-.contact-intro{
-    padding:17px 28px;
+.contact-intro {
+    padding: 20px 30px;
 }
 
-.contact-intro small{
-    color:var(--verde);
+.contact-intro small {
+    color: var(--green);
 
-    font-size:8px;
+    font-size: 9px;
 
-    font-weight:800;
+    font-weight: 800;
 }
 
-.contact-intro h2{
-    color:var(--azul-oscuro);
+.contact-intro h2 {
+    color: var(--blue-dark);
 
-    font-size:17px;
+    font-size: 19px;
 
-    margin:3px 0;
+    margin: 4px 0;
 }
 
-.contact-intro p{
-    color:#78889a;
+.contact-intro p {
+    color: #78889a;
 
-    font-size:8px;
+    font-size: 9px;
 }
 
-.contact-item{
-    min-height:70px;
+.contact-item {
+    min-height: 75px;
 
-    padding:12px 17px;
+    padding: 15px 18px;
 
-    border-left:1px solid #e5edf3;
+    border-left: 1px solid #e5edf3;
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:9px;
+    gap: 10px;
 }
 
-.contact-icon{
-    min-width:33px;
+.contact-icon {
+    width: 37px;
+    height: 37px;
 
-    height:33px;
+    flex-shrink: 0;
 
-    border:1px solid #65b987;
+    border: 1px solid #65b987;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    display:flex;
+    color: var(--green);
 
-    align-items:center;
-
-    justify-content:center;
-
-    color:var(--verde);
-
-    font-size:14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.contact-item strong{
-    display:block;
+.contact-icon svg {
+    width: 19px;
+    height: 19px;
 
-    color:#264362;
+    fill: none;
 
-    font-size:8px;
+    stroke: currentColor;
 
-    margin-bottom:3px;
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
-.contact-item span{
-    color:#7b8b9b;
+.contact-item strong {
+    display: block;
 
-    font-size:7px;
+    color: #264362;
+
+    font-size: 9px;
+
+    margin-bottom: 3px;
 }
 
-.contact-button{
-    padding:15px;
+.contact-item span {
+    color: #7b8b9b;
+
+    font-size: 8px;
 }
 
-.contact-button a{
-    display:block;
-
-    background:#108b43;
-
-    color:white;
-
-    text-align:center;
-
-    padding:12px 8px;
-
-    border-radius:6px;
-
-    font-size:9px;
-
-    font-weight:700;
-
-    transition:.25s;
+.contact-button {
+    padding: 17px;
 }
 
-.contact-button a:hover{
-    background:#0c7136;
+.contact-button a {
+    display: block;
+
+    background: #108b43;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 13px 8px;
+
+    border-radius: 6px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    transition: .25s;
+}
+
+.contact-button a:hover {
+    background: #0c7136;
 }
 
 
-/* =========================================
+/* =====================================================
    FRANJA INFERIOR
-========================================= */
+===================================================== */
 
-.trust{
-    width:min(1180px,92%);
+.trust {
+    width: min(1180px, 92%);
 
-    min-height:80px;
+    min-height: 90px;
 
-    margin:10px auto 30px;
+    margin: 10px auto 30px;
 
-    border-radius:14px;
+    border-radius: 14px;
 
-    background:linear-gradient(110deg,#0648a3,#073b80);
+    background: linear-gradient(
+        110deg,
+        #0649a5,
+        #073b80
+    );
 
-    display:grid;
+    color: white;
 
-    grid-template-columns:repeat(4,1fr);
+    display: grid;
 
-    overflow:hidden;
+    grid-template-columns: repeat(4, 1fr);
 
-    color:white;
+    overflow: hidden;
 }
 
-.trust-item{
-    padding:16px 22px;
+.trust-item {
+    padding: 18px 25px;
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:13px;
+    gap: 13px;
 
-    border-right:1px solid rgba(255,255,255,.2);
+    border-right: 1px solid rgba(255,255,255,.2);
 }
 
-.trust-item:last-child{
-    border-right:none;
+.trust-item:last-child {
+    border-right: none;
 }
 
-.trust-icon{
-    font-size:26px;
+.trust-icon {
+    width: 35px;
+    height: 35px;
 
-    min-width:32px;
-
-    text-align:center;
+    flex-shrink: 0;
 }
 
-.trust-item h3{
-    font-size:9px;
+.trust-icon svg {
+    width: 100%;
+    height: 100%;
 
-    margin-bottom:4px;
+    fill: none;
+
+    stroke: white;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
-.trust-item p{
-    font-size:7px;
+.trust-item h3 {
+    font-size: 9px;
 
-    line-height:1.5;
+    margin-bottom: 4px;
+}
 
-    color:rgba(255,255,255,.75);
+.trust-item p {
+    font-size: 7.5px;
+
+    line-height: 1.5;
+
+    color: rgba(255,255,255,.78);
 }
 
 
-/* =========================================
+/* =====================================================
    FOOTER
-========================================= */
+===================================================== */
 
-footer{
-    background:#062e61;
+footer {
+    background: #062e61;
 
-    padding:25px 20px;
+    padding: 28px 20px;
 
-    text-align:center;
+    text-align: center;
 
-    color:white;
+    color: white;
 }
 
-footer img{
-    width:120px;
+footer img {
+    width: 120px;
 
-    margin:0 auto 10px;
+    margin: 0 auto 10px;
 }
 
-footer p{
-    color:rgba(255,255,255,.7);
+footer p {
+    font-size: 8px;
 
-    font-size:8px;
+    color: rgba(255,255,255,.7);
 }
 
-.social{
-    display:flex;
+.social {
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    gap:10px;
+    gap: 10px;
 
-    margin-top:12px;
+    margin-top: 13px;
 }
 
-.social a{
-    width:29px;
-    height:29px;
+.social a {
+    width: 30px;
+    height: 30px;
 
-    border:1px solid rgba(255,255,255,.3);
+    border: 1px solid rgba(255,255,255,.3);
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    display:flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:9px;
-}
-
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media(max-width:900px){
-
-    nav{
-        gap:16px;
-    }
-
-    .hero{
-        grid-template-columns:1fr;
-    }
-
-    .hero-content{
-        padding:45px 30px 25px;
-    }
-
-    .hero-image{
-        min-height:330px;
-    }
-
-    .advantages{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .services{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .about{
-        grid-template-columns:1fr;
-    }
-
-    .about-image{
-        min-height:320px;
-    }
-
-    .contact{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .contact-intro{
-        grid-column:span 2;
-    }
-
-    .contact-button{
-        grid-column:span 2;
-    }
-
-    .trust{
-        grid-template-columns:repeat(2,1fr);
-    }
+    font-size: 9px;
 }
 
 
-@media(max-width:620px){
+/* =====================================================
+   TABLET
+===================================================== */
 
-    header{
-        padding:8px 0;
+@media (max-width: 900px) {
+
+    nav {
+        gap: 16px;
     }
 
-    .navbar{
-        width:94%;
+    .hero {
+        grid-template-columns: 1fr;
+    }
 
-        flex-wrap:wrap;
+    .hero-content {
+        padding: 45px 35px 30px;
+    }
 
-        padding:9px 13px;
+    .hero-image {
+        min-height: 340px;
+    }
+
+    .advantages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        min-height: 330px;
+    }
+
+    .contact {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-intro {
+        grid-column: span 2;
+    }
+
+    .contact-button {
+        grid-column: span 2;
+    }
+
+    .trust {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 620px) {
+
+    header {
+        padding: 8px 0;
+    }
+
+    .navbar {
+        width: 94%;
+
+        flex-wrap: wrap;
+
+        padding: 9px 13px;
     }
 
     .logo,
-    .logo img{
-        width:120px;
+    .logo img {
+        width: 120px;
     }
 
-    .header-phone{
-        font-size:8px;
+    .header-phone {
+        font-size: 8px;
 
-        padding:8px 11px;
+        padding: 8px 11px;
     }
 
-    nav{
-        order:3;
+    nav {
+        order: 3;
 
-        width:100%;
+        width: 100%;
 
-        justify-content:center;
+        justify-content: center;
 
-        gap:15px;
+        gap: 14px;
 
-        border-top:1px solid #edf1f5;
+        border-top: 1px solid #edf1f5;
 
-        padding-top:7px;
+        padding-top: 7px;
     }
 
-    nav a{
-        font-size:7px;
+    nav a {
+        font-size: 7px;
     }
 
-    .hero{
-        width:94%;
+    .hero {
+        width: 94%;
 
-        margin-top:10px;
+        margin-top: 10px;
     }
 
-    .hero-content{
-        padding:40px 23px 25px;
+    .hero-content {
+        padding: 40px 23px 25px;
     }
 
-    .hero h1{
-        font-size:34px;
+    .hero h1 {
+        font-size: 34px;
 
-        letter-spacing:-1.5px;
+        letter-spacing: -1.5px;
     }
 
-    .hero-description{
-        font-size:11px;
+    .hero-description {
+        font-size: 11px;
     }
 
-    .hero-image{
-        min-height:270px;
+    .hero-image {
+        min-height: 280px;
     }
 
-    .advantages{
-        width:94%;
+    .advantages {
+        width: 94%;
 
-        grid-template-columns:1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .advantage{
-        min-height:130px;
+    .advantage {
+        min-height: 145px;
 
-        padding:17px 9px;
+        padding: 17px 10px;
     }
 
-    .advantage h3{
-        font-size:9px;
+    .line-icon {
+        width: 42px;
+        height: 42px;
     }
 
-    .blue-banner{
-        width:94%;
-
-        height:145px;
+    .advantage h3 {
+        font-size: 9px;
     }
 
-    .banner-content{
-        width:68%;
-
-        padding:18px;
+    .advantage p {
+        font-size: 8px;
     }
 
-    .banner-content h2{
-        font-size:13px;
+    .blue-banner {
+        width: 94%;
+
+        height: 145px;
     }
 
-    .banner-image{
-        width:48%;
+    .banner-content {
+        width: 68%;
+
+        padding: 18px 20px;
     }
 
-    .services{
-        width:94%;
-
-        grid-template-columns:1fr 1fr;
+    .banner-content h2 {
+        font-size: 14px;
     }
 
-    .service{
-        min-height:145px;
+    .banner-content p {
+        font-size: 9px;
     }
 
-    .about{
-        width:94%;
+    .banner-image {
+        width: 48%;
     }
 
-    .about-content{
-        padding:28px 22px;
+    .services {
+        width: 94%;
+
+        grid-template-columns: 1fr 1fr;
     }
 
-    .about h2{
-        font-size:22px;
+    .service {
+        min-height: 165px;
+
+        padding: 20px 10px;
     }
 
-    .stats{
-        gap:20px;
+    .service h3 {
+        font-size: 9px;
     }
 
-    .contact{
-        width:94%;
+    .service p {
+        font-size: 8px;
+    }
 
-        grid-template-columns:1fr;
+    .about {
+        width: 94%;
+    }
+
+    .about-content {
+        padding: 30px 23px;
+    }
+
+    .about h2 {
+        font-size: 23px;
+    }
+
+    .stats {
+        gap: 18px;
+    }
+
+    .contact {
+        width: 94%;
+
+        grid-template-columns: 1fr;
     }
 
     .contact-intro,
-    .contact-button{
-        grid-column:span 1;
+    .contact-button {
+        grid-column: span 1;
     }
 
-    .contact-item{
-        border-left:none;
+    .contact-item {
+        border-left: none;
 
-        border-top:1px solid #e5edf3;
+        border-top: 1px solid #e5edf3;
     }
 
-    .trust{
-        width:94%;
+    .trust {
+        width: 94%;
 
-        grid-template-columns:1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .trust-item{
-        padding:14px 11px;
+    .trust-item {
+        padding: 14px 11px;
     }
 
 }
@@ -1129,9 +1310,9 @@ footer p{
 <body>
 
 
-<!-- =========================================
-     CABECERA
-========================================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
@@ -1164,7 +1345,7 @@ href="https://wa.me/34677449457"
 target="_blank"
 class="header-phone">
 
-◉ &nbsp; 677 44 94 57
+677 44 94 57
 
 </a>
 
@@ -1174,9 +1355,9 @@ class="header-phone">
 
 
 
-<!-- =========================================
+<!-- =====================================================
      HERO
-========================================= -->
+===================================================== -->
 
 <section class="hero" id="inicio">
 
@@ -1223,7 +1404,7 @@ href="https://wa.me/34677449457"
 target="_blank"
 class="btn-whatsapp">
 
-◉ &nbsp; 677 44 94 57
+677 44 94 57
 
 </a>
 
@@ -1244,17 +1425,29 @@ alt="Fontanería Fonysan">
 
 
 
-<!-- =========================================
+<!-- =====================================================
      VENTAJAS
-========================================= -->
+===================================================== -->
 
 <section class="advantages">
 
 
+<!-- PROFESIONALES -->
+
 <div class="advantage">
 
-<div class="advantage-icon">
-♢
+<div class="line-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 3l3 3-3 3-3-3 3-3z"/>
+
+<path d="M12 9v9"/>
+
+<path d="M8 21h8"/>
+
+</svg>
+
 </div>
 
 <h3>
@@ -1270,10 +1463,20 @@ el mejor servicio.
 
 
 
+<!-- ATENCIÓN -->
+
 <div class="advantage">
 
-<div class="advantage-icon">
-◷
+<div class="line-icon">
+
+<svg viewBox="0 0 24 24">
+
+<circle cx="12" cy="12" r="8.5"/>
+
+<path d="M12 7v5l3 2"/>
+
+</svg>
+
 </div>
 
 <h3>
@@ -1289,10 +1492,20 @@ tu problema cuanto antes.
 
 
 
+<!-- CALIDAD -->
+
 <div class="advantage">
 
-<div class="advantage-icon">
-✓
+<div class="line-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 3l2 2.2 3-.2.7 3 2.3 2-1.4 2.7.4 3-3 .4-2.3-1.8-2.7 1.8-3-.4.4-3-1.4-2.7 2.3-2 .7-3 3 .2L12 3z"/>
+
+<path d="M9 12l2 2 4-4"/>
+
+</svg>
+
 </div>
 
 <h3>
@@ -1308,10 +1521,24 @@ para asegurar resultados duraderos.
 
 
 
+<!-- PRECIOS -->
+
 <div class="advantage">
 
-<div class="advantage-icon">
-▢
+<div class="line-icon">
+
+<svg viewBox="0 0 24 24">
+
+<rect x="7" y="5" width="10" height="14" rx="2"/>
+
+<path d="M9 8h6"/>
+
+<path d="M9 12h6"/>
+
+<path d="M9 16h4"/>
+
+</svg>
+
 </div>
 
 <h3>
@@ -1328,18 +1555,25 @@ Presupuestos claros.
 
 
 
-<!-- =========================================
+<!-- =====================================================
      BANNER
-========================================= -->
+===================================================== -->
 
 <section class="blue-banner">
 
 
 <div class="banner-content">
 
-<div class="banner-icon">
-💧
+<div class="banner-drop">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 3s-5 6.2-5 10a5 5 0 0 0 10 0c0-3.8-5-10-5-10z"/>
+
+</svg>
+
 </div>
+
 
 <h2>
 RÁPIDOS, LIMPIOS<br>
@@ -1357,7 +1591,7 @@ Tu tranquilidad es nuestra prioridad.
 
 <img
 src="FOTO BAÑO IZQ.png"
-alt="Baño y fontanería">
+alt="Baño Fonysan">
 
 </div>
 
@@ -1365,17 +1599,37 @@ alt="Baño y fontanería">
 
 
 
-<!-- =========================================
+<!-- =====================================================
      SERVICIOS
-========================================= -->
+===================================================== -->
 
 <section class="services" id="servicios">
 
 
+<!-- INSTALACIONES -->
+
 <div class="service">
 
 <div class="service-icon">
-🚰
+
+<svg viewBox="0 0 24 24">
+
+<path d="M4 7h7v4H4z"/>
+
+<path d="M11 9h4"/>
+
+<path d="M15 9v5"/>
+
+<path d="M15 14h5"/>
+
+<path d="M20 14v4"/>
+
+<path d="M7 11v7"/>
+
+<path d="M4 18h6"/>
+
+</svg>
+
 </div>
 
 <h3>
@@ -1391,10 +1645,18 @@ grifos, sanitarios y más.
 
 
 
+<!-- REPARACIONES -->
+
 <div class="service">
 
 <div class="service-icon">
-🔧
+
+<svg viewBox="0 0 24 24">
+
+<path d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
+
+</svg>
+
 </div>
 
 <h3>
@@ -1411,10 +1673,18 @@ de instalaciones.
 
 
 
+<!-- SANEAMIENTO -->
+
 <div class="service">
 
 <div class="service-icon">
-💧
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 3s-5 6.2-5 10a5 5 0 0 0 10 0c0-3.8-5-10-5-10z"/>
+
+</svg>
+
 </div>
 
 <h3>
@@ -1430,10 +1700,26 @@ de tuberías.
 
 
 
+<!-- MANTENIMIENTO -->
+
 <div class="service">
 
 <div class="service-icon">
-🏠
+
+<svg viewBox="0 0 24 24">
+
+<path d="M3 11h12v7H3z"/>
+
+<path d="M15 13h3l3 3v2h-6z"/>
+
+<circle cx="7" cy="20" r="1.5"/>
+
+<circle cx="18" cy="20" r="1.5"/>
+
+<path d="M6 11V8h5v3"/>
+
+</svg>
+
 </div>
 
 <h3>
@@ -1451,15 +1737,14 @@ de instalaciones de fontanería.
 
 
 
-<!-- =========================================
+<!-- =====================================================
      SOBRE NOSOTROS
-========================================= -->
+===================================================== -->
 
 <section class="about" id="nosotros">
 
 
 <div class="about-content">
-
 
 <div class="section-label">
 SOBRE NOSOTROS
@@ -1491,9 +1776,29 @@ con la máxima calidad.
 <div class="stats">
 
 
+<!-- CLIENTES -->
+
 <div class="stat">
 
-<strong>+500</strong>
+<div class="stat-icon">
+
+<svg viewBox="0 0 24 24">
+
+<circle cx="12" cy="12" r="8.5"/>
+
+<circle cx="9" cy="10" r=".7"/>
+
+<circle cx="15" cy="10" r=".7"/>
+
+<path d="M8.5 14.5c2 1.7 5 1.7 7 0"/>
+
+</svg>
+
+</div>
+
+<strong>
++500
+</strong>
 
 <span>
 Clientes satisfechos
@@ -1502,9 +1807,24 @@ Clientes satisfechos
 </div>
 
 
+
+<!-- TRABAJOS -->
+
 <div class="stat">
 
-<strong>+1.000</strong>
+<div class="stat-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
+
+</svg>
+
+</div>
+
+<strong>
++1.000
+</strong>
 
 <span>
 Trabajos realizados
@@ -1513,9 +1833,26 @@ Trabajos realizados
 </div>
 
 
+
+<!-- EXPERIENCIA -->
+
 <div class="stat">
 
-<strong>+10</strong>
+<div class="stat-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 3l2 2.2 3-.2.7 3 2.3 2-1.4 2.7.4 3-3 .4-2.3-1.8-2.7 1.8-3-.4.4-3-1.4-2.7 2.3-2 .7-3 3 .2L12 3z"/>
+
+<path d="M9 12l2 2 4-4"/>
+
+</svg>
+
+</div>
+
+<strong>
++10
+</strong>
 
 <span>
 Años de experiencia
@@ -1523,11 +1860,9 @@ Años de experiencia
 
 </div>
 
-
 </div>
 
 </div>
-
 
 
 <div class="about-image">
@@ -1542,9 +1877,9 @@ alt="Fontanero trabajando">
 
 
 
-<!-- =========================================
+<!-- =====================================================
      CONTACTO
-========================================= -->
+===================================================== -->
 
 <section class="contact">
 
@@ -1566,11 +1901,16 @@ Contacta con Fonysan y cuéntanos qué necesitas.
 </div>
 
 
-
 <div class="contact-item">
 
 <div class="contact-icon">
-☎
+
+<svg viewBox="0 0 24 24">
+
+<path d="M5 4h3l2 5-2 2a15 15 0 0 0 5 5l2-2 5 2v3c0 1-1 2-2 2C10 20 4 14 4 6c0-1 0-2 1-2z"/>
+
+</svg>
+
 </div>
 
 <div>
@@ -1588,11 +1928,18 @@ Llámanos o escríbenos
 </div>
 
 
-
 <div class="contact-item">
 
 <div class="contact-icon">
-✉
+
+<svg viewBox="0 0 24 24">
+
+<rect x="3" y="5" width="18" height="14" rx="2"/>
+
+<path d="M4 7l8 6 8-6"/>
+
+</svg>
+
 </div>
 
 <div>
@@ -1610,14 +1957,13 @@ Respondemos a la brevedad
 </div>
 
 
-
 <div class="contact-button">
 
 <a
 href="https://wa.me/34677449457"
 target="_blank">
 
-◉ &nbsp; ESCRÍBEME POR WHATSAPP
+ESCRÍBEME POR WHATSAPP
 
 </a>
 
@@ -1627,17 +1973,27 @@ target="_blank">
 
 
 
-<!-- =========================================
-     FRANJA INFERIOR
-========================================= -->
+<!-- =====================================================
+     CONFIANZA
+===================================================== -->
 
 <section class="trust">
 
 
+<!-- CONFIANZA -->
+
 <div class="trust-item">
 
 <div class="trust-icon">
-🛡️
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 3l8 3v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3z"/>
+
+<path d="M8.5 12l2.3 2.3 4.7-5"/>
+
+</svg>
+
 </div>
 
 <div>
@@ -1657,10 +2013,20 @@ en cada trabajo.
 
 
 
+<!-- DISPONIBILIDAD -->
+
 <div class="trust-item">
 
 <div class="trust-icon">
-◷
+
+<svg viewBox="0 0 24 24">
+
+<circle cx="12" cy="12" r="8.5"/>
+
+<path d="M12 7v5l3 2"/>
+
+</svg>
+
 </div>
 
 <div>
@@ -1679,10 +2045,20 @@ Atención rápida y disponibilidad flexible.
 
 
 
+<!-- GARANTÍA -->
+
 <div class="trust-item">
 
 <div class="trust-icon">
-🛠
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 3l7 3v5c0 4.5-2.7 7.7-7 10-4.3-2.3-7-5.5-7-10V6l7-3z"/>
+
+<path d="M9 12l2 2 4-4"/>
+
+</svg>
+
 </div>
 
 <div>
@@ -1702,10 +2078,20 @@ y con respaldo.
 
 
 
+<!-- COBERTURA -->
+
 <div class="trust-item">
 
 <div class="trust-icon">
-📍
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z"/>
+
+<circle cx="12" cy="10" r="2.5"/>
+
+</svg>
+
 </div>
 
 <div>
@@ -1726,9 +2112,9 @@ Castilla y León.
 
 
 
-<!-- =========================================
+<!-- =====================================================
      FOOTER
-========================================= -->
+===================================================== -->
 
 <footer>
 
@@ -1740,7 +2126,6 @@ alt="Fonysan">
 © 2026 Fonysan. Todos los derechos reservados.
 </p>
 
-
 <div class="social">
 
 <a
@@ -1749,13 +2134,11 @@ target="_blank">
 IG
 </a>
 
-
 <a
 href="https://www.facebook.com/profile.php?id=61592791922836"
 target="_blank">
 FB
 </a>
-
 
 <a
 href="https://wa.me/34677449457"
