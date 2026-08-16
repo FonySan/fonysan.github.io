@@ -15,9 +15,9 @@
 
 <style>
 
-/* =====================================================
+/* =========================================================
    VARIABLES
-===================================================== */
+========================================================= */
 
 :root {
     --azul: #0754ad;
@@ -31,9 +31,9 @@
 }
 
 
-/* =====================================================
+/* =========================================================
    RESET
-===================================================== */
+========================================================= */
 
 * {
     margin: 0;
@@ -48,12 +48,11 @@ html {
 body {
     margin: 0;
     font-family: "Inter", Arial, sans-serif;
-    background:
-        linear-gradient(
-            180deg,
-            #f4faff 0%,
-            #f8fcff 100%
-        );
+    background: linear-gradient(
+        180deg,
+        #f4faff 0%,
+        #f8fcff 100%
+    );
     color: var(--azul-oscuro);
     overflow-x: hidden;
 }
@@ -68,9 +67,9 @@ a {
 }
 
 
-/* =====================================================
-   CABECERA
-===================================================== */
+/* =========================================================
+   HEADER
+========================================================= */
 
 header {
     width: 100%;
@@ -87,28 +86,28 @@ header {
     padding: 5px 20px 5px 25px;
 
     background: #ffffff;
-
     border-radius: 21px;
 
     display: flex;
     align-items: center;
 
-    box-shadow:
-        0 7px 28px rgba(24, 74, 120, 0.09);
+    box-shadow: 0 7px 28px rgba(24, 74, 120, 0.09);
 }
 
 
-/* =====================================================
-   LOGO SUPERIOR
-===================================================== */
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo {
-    width: 340px;
+    width: 390px;
     height: 86px;
 
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+
+    padding-left: 75px;
 
     flex-shrink: 0;
 }
@@ -118,13 +117,13 @@ header {
     height: 84px;
 
     object-fit: contain;
-    object-position: left center;
+    object-position: center;
 }
 
 
-/* =====================================================
-   NAVEGACIÓN — GRANDE
-===================================================== */
+/* =========================================================
+   NAV
+========================================================= */
 
 nav {
     flex: 1;
@@ -135,7 +134,7 @@ nav {
 
     gap: 38px;
 
-    margin-left: 20px;
+    margin-left: 10px;
     margin-right: 25px;
 }
 
@@ -145,7 +144,6 @@ nav a {
     color: #173d67;
 
     font-size: 16px;
-
     font-weight: 900;
 
     padding: 19px 22px;
@@ -153,8 +151,6 @@ nav a {
     white-space: nowrap;
 
     border-radius: 13px;
-
-    letter-spacing: -0.2px;
 
     transition:
         color .2s ease,
@@ -164,18 +160,12 @@ nav a {
 
 nav a:hover {
     color: var(--azul);
-
     background: #f1f7fd;
-
     transform: translateY(-1px);
 }
 
-
-/* INICIO */
-
 nav a:first-child {
     color: var(--azul);
-
     background: #f1f7fd;
 }
 
@@ -198,9 +188,9 @@ nav a:first-child::after {
 }
 
 
-/* =====================================================
-   BOTÓN CONTACTO GRANDE
-===================================================== */
+/* =========================================================
+   CONTACTO HEADER
+========================================================= */
 
 .header-contact {
     width: 210px;
@@ -215,13 +205,11 @@ nav a:first-child::after {
     color: var(--verde);
 
     border: 2px solid #72b991;
-
     border-radius: 30px;
 
     background: #ffffff;
 
     font-size: 14px;
-
     font-weight: 900;
 
     white-space: nowrap;
@@ -241,7 +229,6 @@ nav a:first-child::after {
     height: 19px;
 
     fill: none;
-
     stroke: currentColor;
 
     stroke-width: 1.8;
@@ -251,9 +238,9 @@ nav a:first-child::after {
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .hero {
     width: min(1380px, 94%);
@@ -272,35 +259,20 @@ nav a:first-child::after {
 
     grid-template-columns: 52% 48%;
 
-    background:
-        radial-gradient(
-            circle at 73% 48%,
-            #d7edff 0%,
-            rgba(235,247,255,.4) 29%,
-            transparent 50%
-        ),
-        #ffffff;
+    background: #ffffff;
 
     box-shadow:
         0 12px 38px rgba(31,77,120,.09);
 }
 
-
-/* =====================================================
-   TEXTO HERO
-===================================================== */
-
 .hero-content {
     position: relative;
-
     z-index: 3;
 
     padding: 60px 50px 55px 65px;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 }
 
@@ -308,18 +280,12 @@ nav a:first-child::after {
     color: var(--verde);
 
     font-size: 12px;
-
     font-weight: 900;
 
     letter-spacing: .4px;
 
     margin-bottom: 16px;
 }
-
-
-/* =====================================================
-   TITULAR PRINCIPAL
-===================================================== */
 
 .hero h1 {
     margin: 0 0 22px;
@@ -341,7 +307,6 @@ nav a:first-child::after {
 
 .hero h1 .verde {
     color: var(--verde);
-    font-weight: 900;
 }
 
 .hero-description {
@@ -357,44 +322,59 @@ nav a:first-child::after {
 }
 
 
-/* =====================================================
+/* =========================================================
    BOTONES HERO
-===================================================== */
+========================================================= */
 
 .hero-buttons {
     display: flex;
-
     align-items: center;
 
     gap: 14px;
 }
 
-.btn-services {
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
+.btn-services,
+.btn-whatsapp {
     min-height: 49px;
 
-    padding: 0 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     border-radius: 8px;
 
-    background: var(--azul);
-
-    color: white;
-
     font-size: 11px;
-
     font-weight: 800;
 
     transition: .2s ease;
 }
 
+.btn-services {
+    padding: 0 25px;
+
+    background: var(--azul);
+    color: white;
+}
+
 .btn-services:hover {
     background: var(--azul-oscuro);
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+    padding: 0 25px;
+
+    gap: 8px;
+
+    background: white;
+
+    border: 1.5px solid #73ba92;
+
+    color: var(--verde);
+}
+
+.btn-whatsapp:hover {
+    background: var(--verde-claro);
     transform: translateY(-2px);
 }
 
@@ -405,7 +385,6 @@ nav a:first-child::after {
     margin-right: 8px;
 
     fill: none;
-
     stroke: currentColor;
 
     stroke-width: 1.8;
@@ -414,43 +393,10 @@ nav a:first-child::after {
     stroke-linejoin: round;
 }
 
-.btn-whatsapp {
-    min-height: 49px;
 
-    padding: 0 25px;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 8px;
-
-    border-radius: 8px;
-
-    background: #ffffff;
-
-    border: 1.5px solid #73ba92;
-
-    color: var(--verde);
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    transition: .2s ease;
-}
-
-.btn-whatsapp:hover {
-    background: var(--verde-claro);
-    transform: translateY(-2px);
-}
-
-
-/* =====================================================
-   IMAGEN HERO
-===================================================== */
+/* =========================================================
+   HERO IMAGE
+========================================================= */
 
 .hero-image {
     min-height: 525px;
@@ -465,14 +411,13 @@ nav a:first-child::after {
     height: 100%;
 
     object-fit: cover;
-
     object-position: center;
 }
 
 
-/* =====================================================
+/* =========================================================
    VENTAJAS
-===================================================== */
+========================================================= */
 
 .advantages {
     width: min(1380px, 94%);
@@ -496,11 +441,8 @@ nav a:first-child::after {
     border-radius: 16px;
 
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
@@ -522,13 +464,10 @@ nav a:first-child::after {
     margin-bottom: 13px;
 
     border: 2px solid var(--azul);
-
     border-radius: 50%;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     color: var(--azul);
@@ -539,7 +478,6 @@ nav a:first-child::after {
     height: 25px;
 
     fill: none;
-
     stroke: currentColor;
 
     stroke-width: 1.65;
@@ -556,7 +494,6 @@ nav a:first-child::after {
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 13px;
-
     font-weight: 800;
 }
 
@@ -571,41 +508,41 @@ nav a:first-child::after {
 }
 
 
-/* =====================================================
-   BANNER
-===================================================== */
+/* =========================================================
+   BANNER RÁPIDOS
+   AHORA MÁS SEPARADO
+========================================================= */
 
 .blue-banner {
     width: min(1380px, 94%);
 
     height: 175px;
 
-    margin: 42px auto 0;
+    margin: 52px auto 0;
 
     position: relative;
 
     overflow: hidden;
 
-    border-radius: 17px;
+    border-radius: 18px;
 
     background: var(--azul);
+
+    box-shadow:
+        0 9px 28px rgba(25,70,120,.08);
 }
 
 .banner-blue {
     position: relative;
-
     z-index: 2;
 
     width: 56%;
-
     height: 100%;
 
     padding: 25px 55px;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 
     color: white;
@@ -632,7 +569,6 @@ nav a:first-child::after {
     height: 100%;
 
     fill: none;
-
     stroke: white;
 
     stroke-width: 1.7;
@@ -647,7 +583,6 @@ nav a:first-child::after {
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 23px;
-
     line-height: 1.12;
 
     font-weight: 900;
@@ -677,16 +612,17 @@ nav a:first-child::after {
 }
 
 
-/* =====================================================
+/* =========================================================
    SERVICIOS
-===================================================== */
+   AHORA SEPARADOS DEL BANNER
+========================================================= */
 
 .services {
     width: min(1380px, 94%);
 
     min-height: 205px;
 
-    margin: 0 auto;
+    margin: 18px auto 0;
 
     position: relative;
 
@@ -696,9 +632,12 @@ nav a:first-child::after {
 
     grid-template-columns: repeat(4, 1fr);
 
-    border-radius: 0 0 18px 18px;
+    border-radius: 18px;
 
     background: #0a396d;
+
+    box-shadow:
+        0 8px 28px rgba(25,70,120,.07);
 }
 
 .services::before {
@@ -722,7 +661,6 @@ nav a:first-child::after {
     min-height: 205px;
 
     position: relative;
-
     z-index: 2;
 
     padding: 28px 22px;
@@ -732,6 +670,8 @@ nav a:first-child::after {
     flex-direction: column;
 
     align-items: center;
+
+    justify-content: center;
 
     text-align: center;
 
@@ -755,7 +695,6 @@ nav a:first-child::after {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 }
 
@@ -764,7 +703,6 @@ nav a:first-child::after {
     height: 39px;
 
     fill: none;
-
     stroke: currentColor;
 
     stroke-width: 1.6;
@@ -781,7 +719,6 @@ nav a:first-child::after {
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 13px;
-
     font-weight: 800;
 }
 
@@ -796,9 +733,9 @@ nav a:first-child::after {
 }
 
 
-/* =====================================================
+/* =========================================================
    SOBRE NOSOTROS
-===================================================== */
+========================================================= */
 
 .about {
     width: min(1380px, 94%);
@@ -831,7 +768,6 @@ nav a:first-child::after {
     color: var(--verde);
 
     font-size: 11px;
-
     font-weight: 900;
 }
 
@@ -845,7 +781,6 @@ nav a:first-child::after {
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 36px;
-
     line-height: 1.2;
 
     letter-spacing: -1px;
@@ -860,7 +795,7 @@ nav a:first-child::after {
 .about-text {
     max-width: 550px;
 
-    margin-bottom: 30px;
+    margin-bottom: 34px;
 
     color: #6d7d90;
 
@@ -870,27 +805,34 @@ nav a:first-child::after {
 }
 
 
-/* =====================================================
+/* =========================================================
    ESTADÍSTICAS
-===================================================== */
+   MUCHO MÁS GRANDES Y SEPARADAS
+========================================================= */
 
 .stats {
-    display: flex;
+    width: 100%;
 
-    gap: 60px;
+    display: grid;
 
-    margin-top: 10px;
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 48px;
+
+    margin-top: 18px;
 }
 
 .stat {
-    min-width: 145px;
+    min-width: 0;
+
+    padding: 10px 18px 5px 0;
 }
 
 .stat-icon {
-    width: 33px;
-    height: 33px;
+    width: 36px;
+    height: 36px;
 
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 
     color: var(--azul);
 }
@@ -900,7 +842,6 @@ nav a:first-child::after {
     height: 100%;
 
     fill: none;
-
     stroke: currentColor;
 
     stroke-width: 1.7;
@@ -909,6 +850,9 @@ nav a:first-child::after {
     stroke-linejoin: round;
 }
 
+
+/* NÚMEROS GRANDES */
+
 .stat strong {
     display: block;
 
@@ -916,31 +860,36 @@ nav a:first-child::after {
 
     font-family: "Montserrat", Arial, sans-serif;
 
-    font-size: 38px;
+    font-size: 48px;
 
-    line-height: 1;
+    line-height: .95;
 
     font-weight: 900;
 
-    letter-spacing: -1px;
+    letter-spacing: -2px;
 
-    margin-top: 4px;
+    margin: 0 0 10px;
 }
+
+
+/* TEXTO MÁS GRANDE */
 
 .stat span {
     display: block;
 
-    margin-top: 8px;
+    color: #65788e;
 
-    color: #758497;
+    font-size: 12px;
 
-    font-size: 10px;
+    line-height: 1.4;
+
+    font-weight: 500;
 }
 
 
-/* =====================================================
+/* =========================================================
    FOTO FONTANERO
-===================================================== */
+========================================================= */
 
 .about-image {
     position: relative;
@@ -967,7 +916,6 @@ nav a:first-child::after {
     top: 50%;
 
     width: 90px;
-
     height: 450px;
 
     transform: translateY(-50%);
@@ -982,9 +930,9 @@ nav a:first-child::after {
 }
 
 
-/* =====================================================
+/* =========================================================
    CONTACTO
-===================================================== */
+========================================================= */
 
 .contact {
     width: min(1380px, 94%);
@@ -1021,7 +969,6 @@ nav a:first-child::after {
     color: var(--verde);
 
     font-size: 10px;
-
     font-weight: 900;
 }
 
@@ -1072,7 +1019,6 @@ nav a:first-child::after {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 }
 
@@ -1081,7 +1027,6 @@ nav a:first-child::after {
     height: 20px;
 
     fill: none;
-
     stroke: currentColor;
 
     stroke-width: 1.6;
@@ -1114,7 +1059,6 @@ nav a:first-child::after {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     min-height: 50px;
@@ -1126,7 +1070,6 @@ nav a:first-child::after {
     color: white;
 
     font-size: 10px;
-
     font-weight: 800;
 
     transition: .2s ease;
@@ -1139,9 +1082,9 @@ nav a:first-child::after {
 }
 
 
-/* =====================================================
+/* =========================================================
    FRANJA FINAL
-===================================================== */
+========================================================= */
 
 .trust {
     width: min(1380px, 94%);
@@ -1201,7 +1144,6 @@ nav a:first-child::after {
     height: 100%;
 
     fill: none;
-
     stroke: white;
 
     stroke-width: 1.6;
@@ -1216,10 +1158,7 @@ nav a:first-child::after {
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 13px;
-
     font-weight: 900;
-
-    letter-spacing: .2px;
 }
 
 .trust-item p {
@@ -1233,9 +1172,9 @@ nav a:first-child::after {
 }
 
 
-/* =====================================================
+/* =========================================================
    FOOTER
-===================================================== */
+========================================================= */
 
 footer {
     min-height: 200px;
@@ -1301,7 +1240,6 @@ footer p {
     color: white;
 
     font-size: 10px;
-
     font-weight: 700;
 
     transition: .2s ease;
@@ -1314,14 +1252,15 @@ footer p {
 }
 
 
-/* =====================================================
+/* =========================================================
    TABLET
-===================================================== */
+========================================================= */
 
 @media (max-width: 1200px) {
 
     .logo {
-        width: 260px;
+        width: 290px;
+        padding-left: 45px;
     }
 
     .logo img {
@@ -1343,24 +1282,35 @@ footer p {
         width: 165px;
         font-size: 11px;
     }
+
+    .stats {
+        column-gap: 25px;
+    }
+
+    .stat strong {
+        font-size: 42px;
+    }
 }
 
 
-/* =====================================================
+/* =========================================================
    TABLET PEQUEÑO
-===================================================== */
+========================================================= */
 
 @media (max-width: 950px) {
 
     .navbar {
         height: auto;
         min-height: 90px;
+
         flex-wrap: wrap;
+
         padding: 8px 18px;
     }
 
     .logo {
         width: 270px;
+        padding-left: 35px;
     }
 
     .logo img {
@@ -1373,10 +1323,15 @@ footer p {
 
     nav {
         order: 3;
+
         width: 100%;
+
         margin: 8px 0 0;
+
         padding-top: 8px;
+
         border-top: 1px solid #edf1f5;
+
         gap: 15px;
     }
 
@@ -1405,6 +1360,14 @@ footer p {
         min-height: 400px;
     }
 
+    .stats {
+        column-gap: 35px;
+    }
+
+    .stat strong {
+        font-size: 44px;
+    }
+
     .contact {
         grid-template-columns: 1fr 1fr;
     }
@@ -1423,9 +1386,9 @@ footer p {
 }
 
 
-/* =====================================================
+/* =========================================================
    MÓVIL
-===================================================== */
+========================================================= */
 
 @media (max-width: 650px) {
 
@@ -1435,13 +1398,18 @@ footer p {
 
     .navbar {
         width: 94%;
+
         min-height: 80px;
+
         padding: 7px 12px;
     }
 
     .logo {
         width: 165px;
+
         height: 60px;
+
+        padding-left: 10px;
     }
 
     .logo img {
@@ -1452,16 +1420,19 @@ footer p {
     .header-contact {
         width: 120px;
         height: 43px;
+
         font-size: 9px;
     }
 
     nav {
         gap: 3px;
+
         justify-content: space-between;
     }
 
     nav a {
         font-size: 8px;
+
         padding: 9px 6px;
     }
 
@@ -1498,12 +1469,15 @@ footer p {
 
     .advantages {
         width: 94%;
+
         grid-template-columns: 1fr 1fr;
+
         gap: 10px;
     }
 
     .advantage {
         min-height: 145px;
+
         padding: 16px 8px;
     }
 
@@ -1522,12 +1496,15 @@ footer p {
 
     .blue-banner {
         width: 94%;
+
         height: 155px;
-        margin-top: 28px;
+
+        margin-top: 34px;
     }
 
     .banner-blue {
         width: 68%;
+
         padding: 18px 20px;
     }
 
@@ -1545,11 +1522,15 @@ footer p {
 
     .services {
         width: 94%;
+
         grid-template-columns: 1fr 1fr;
+
+        margin-top: 14px;
     }
 
     .service {
         min-height: 165px;
+
         padding: 20px 9px;
     }
 
@@ -1563,6 +1544,7 @@ footer p {
 
     .about {
         width: 94%;
+
         margin-top: 30px;
     }
 
@@ -1575,20 +1557,33 @@ footer p {
     }
 
     .stats {
-        gap: 18px;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(3, 1fr);
+
+        column-gap: 10px;
     }
 
     .stat {
-        min-width: 100px;
+        min-width: 0;
+        padding-right: 0;
+    }
+
+    .stat-icon {
+        width: 30px;
+        height: 30px;
     }
 
     .stat strong {
-        font-size: 27px;
+        font-size: 29px;
+        letter-spacing: -1px;
+    }
+
+    .stat span {
+        font-size: 9px;
     }
 
     .contact {
         width: 94%;
+
         grid-template-columns: 1fr;
     }
 
@@ -1604,14 +1599,19 @@ footer p {
 
     .trust {
         width: 94%;
+
         min-height: auto;
+
         grid-template-columns: 1fr 1fr;
+
         margin-top: 25px;
     }
 
     .trust-item {
         min-height: 120px;
+
         padding: 18px 12px;
+
         gap: 10px;
     }
 
@@ -1634,15 +1634,18 @@ footer p {
 }
 
 
-/* =====================================================
+/* =========================================================
    MÓVIL PEQUEÑO
-===================================================== */
+========================================================= */
 
 @media (max-width: 430px) {
 
     .logo {
         width: 145px;
+
         height: 55px;
+
+        padding-left: 5px;
     }
 
     .logo img {
@@ -1660,15 +1663,15 @@ footer p {
     }
 
     .stats {
-        gap: 12px;
-    }
-
-    .stat {
-        min-width: 85px;
+        gap: 8px;
     }
 
     .stat strong {
-        font-size: 24px;
+        font-size: 25px;
+    }
+
+    .stat span {
+        font-size: 8px;
     }
 
     .trust {
@@ -1687,14 +1690,13 @@ footer p {
 <body>
 
 
-<!-- =====================================================
-     CABECERA
-===================================================== -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header>
 
 <div class="navbar">
-
 
 <a href="#inicio" class="logo">
 
@@ -1707,21 +1709,13 @@ alt="Fonysan">
 
 <nav>
 
-<a href="#inicio">
-INICIO
-</a>
+<a href="#inicio">INICIO</a>
 
-<a href="#servicios">
-SERVICIOS
-</a>
+<a href="#servicios">SERVICIOS</a>
 
-<a href="#nosotros">
-SOBRE NOSOTROS
-</a>
+<a href="#nosotros">SOBRE NOSOTROS</a>
 
-<a href="#trabajos">
-TRABAJOS
-</a>
+<a href="#trabajos">TRABAJOS</a>
 
 </nav>
 
@@ -1752,12 +1746,11 @@ CONTÁCTANOS
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
 
 <section class="hero" id="inicio">
-
 
 <div class="hero-content">
 
@@ -1765,27 +1758,19 @@ CONTÁCTANOS
 SOLUCIONES QUE FLUYEN
 </div>
 
-
 <h1>
 
-<span class="verde">
-PRECISIÓN
-</span>
-
+<span class="verde">PRECISIÓN</span>
 EN CADA
 INSTALACIÓN.
 
 <br>
 
-<span class="verde">
-EXCELENCIA
-</span>
-
+<span class="verde">EXCELENCIA</span>
 EN CADA
 SERVICIO.
 
 </h1>
-
 
 <p class="hero-description">
 
@@ -1794,17 +1779,11 @@ con calidad y confianza.
 
 </p>
 
-
 <div class="hero-buttons">
 
+<a class="btn-services" href="#servicios">
 
-<a
-class="btn-services"
-href="#servicios">
-
-<svg
-class="wrench-icon"
-viewBox="0 0 24 24">
+<svg class="wrench-icon" viewBox="0 0 24 24">
 
 <path d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
 
@@ -1820,16 +1799,6 @@ class="btn-whatsapp"
 href="https://wa.me/34677449457"
 target="_blank"
 rel="noopener">
-
-<svg
-class="whatsapp-icon"
-viewBox="0 0 24 24">
-
-<path d="M20 11.5a8 8 0 0 1-11.8 7l-3.2.9.9-3.1A8 8 0 1 1 20 11.5z"/>
-
-<path d="M8.8 8.4c.2-.3.4-.3.7-.3h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.7 1.2 1.6 2.1 2.8 2.8l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3-.1.5-.3.7-.3.3-.8.5-1.3.5-2.5-.2-5.2-2.8-6.7-4.5-.8-.9-1.7-2.2-1.8-3.5-.1-.5.1-1 .4-1.4z"/>
-
-</svg>
 
 677 44 94 57
 
@@ -1852,9 +1821,9 @@ alt="Llave de agua Fonysan">
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      VENTAJAS
-===================================================== -->
+========================================================= -->
 
 <section class="advantages">
 
@@ -1865,17 +1834,16 @@ alt="Llave de agua Fonysan">
 
 <svg viewBox="0 0 24 24">
 
-<path d="M12 3l3 3-3 3-3-3 3-3z"/>
-<path d="M12 9v8"/>
-<path d="M8 21h8"/>
+<circle cx="12" cy="12" r="8.5"/>
+<circle cx="9" cy="10" r=".7"/>
+<circle cx="15" cy="10" r=".7"/>
+<path d="M8.5 14.5c2 1.7 5 1.7 7 0"/>
 
 </svg>
 
 </div>
 
-<h3>
-Profesionales cualificados
-</h3>
+<h3>Profesionales cualificados</h3>
 
 <p>
 Experiencia y formación para garantizar
@@ -1898,9 +1866,7 @@ el mejor servicio.
 
 </div>
 
-<h3>
-Atención rápida
-</h3>
+<h3>Atención rápida</h3>
 
 <p>
 Respondemos rápido para resolver
@@ -1923,9 +1889,7 @@ tu problema cuanto antes.
 
 </div>
 
-<h3>
-Calidad garantizada
-</h3>
+<h3>Calidad garantizada</h3>
 
 <p>
 Trabajamos con materiales de primera
@@ -1950,9 +1914,7 @@ para asegurar resultados duraderos.
 
 </div>
 
-<h3>
-Precios justos
-</h3>
+<h3>Precios justos</h3>
 
 <p>
 Presupuestos claros.
@@ -1964,9 +1926,9 @@ Presupuestos claros.
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      BANNER
-===================================================== -->
+========================================================= -->
 
 <section class="blue-banner">
 
@@ -2007,9 +1969,9 @@ alt="Baño">
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      SERVICIOS
-===================================================== -->
+========================================================= -->
 
 <section
 class="services"
@@ -2034,9 +1996,7 @@ id="servicios">
 
 </div>
 
-<h3>
-INSTALACIONES
-</h3>
+<h3>INSTALACIONES</h3>
 
 <p>
 Montaje y renovación de tuberías,
@@ -2058,9 +2018,7 @@ grifos, sanitarios y más.
 
 </div>
 
-<h3>
-REPARACIONES
-</h3>
+<h3>REPARACIONES</h3>
 
 <p>
 Soluciones integrales para fugas,
@@ -2083,9 +2041,7 @@ de instalaciones.
 
 </div>
 
-<h3>
-SANEAMIENTO
-</h3>
+<h3>SANEAMIENTO</h3>
 
 <p>
 Instalación y renovación
@@ -2111,9 +2067,7 @@ de tuberías.
 
 </div>
 
-<h3>
-MANTENIMIENTO
-</h3>
+<h3>MANTENIMIENTO</h3>
 
 <p>
 Mantenimiento preventivo y correctivo
@@ -2126,14 +2080,13 @@ de instalaciones de fontanería.
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      SOBRE NOSOTROS
-===================================================== -->
+========================================================= -->
 
 <section
 class="about"
 id="nosotros">
-
 
 <div class="about-content">
 
@@ -2145,12 +2098,9 @@ SOBRE NOSOTROS
 
 Atención profesional,
 resultados que inspiran
-<span class="verde">
-seguridad
-</span>.
+<span class="verde">seguridad</span>.
 
 </h2>
-
 
 <p class="about-text">
 
@@ -2164,6 +2114,8 @@ con la máxima calidad.
 
 </p>
 
+
+<!-- ESTADÍSTICAS GRANDES -->
 
 <div class="stats">
 
@@ -2183,9 +2135,7 @@ con la máxima calidad.
 
 </div>
 
-<strong>
-+500
-</strong>
+<strong>+500</strong>
 
 <span>
 Clientes satisfechos
@@ -2206,9 +2156,7 @@ Clientes satisfechos
 
 </div>
 
-<strong>
-+1.000
-</strong>
+<strong>+1.000</strong>
 
 <span>
 Trabajos realizados
@@ -2230,15 +2178,14 @@ Trabajos realizados
 
 </div>
 
-<strong>
-+10
-</strong>
+<strong>+10</strong>
 
 <span>
 Años de experiencia
 </span>
 
 </div>
+
 
 </div>
 
@@ -2257,9 +2204,9 @@ alt="Fontanero trabajando">
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      CONTACTO
-===================================================== -->
+========================================================= -->
 
 <section
 class="contact"
@@ -2297,9 +2244,7 @@ Contacta con Fonysan y cuéntanos qué necesitas.
 
 <div>
 
-<strong>
-677 44 94 57
-</strong>
+<strong>677 44 94 57</strong>
 
 <span>
 Llámanos o escríbenos
@@ -2355,9 +2300,9 @@ ESCRÍBENOS POR WHATSAPP
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      FRANJA FINAL
-===================================================== -->
+========================================================= -->
 
 <section class="trust">
 
@@ -2377,9 +2322,7 @@ ESCRÍBENOS POR WHATSAPP
 
 <div>
 
-<h3>
-CONFIANZA
-</h3>
+<h3>CONFIANZA</h3>
 
 <p>
 Transparentes y honestos
@@ -2406,9 +2349,7 @@ en cada trabajo.
 
 <div>
 
-<h3>
-DISPONIBILIDAD
-</h3>
+<h3>DISPONIBILIDAD</h3>
 
 <p>
 Atención rápida y disponibilidad
@@ -2435,9 +2376,7 @@ flexible.
 
 <div>
 
-<h3>
-GARANTÍA
-</h3>
+<h3>GARANTÍA</h3>
 
 <p>
 Trabajos garantizados
@@ -2464,9 +2403,7 @@ y con respaldo.
 
 <div>
 
-<h3>
-COBERTURA
-</h3>
+<h3>COBERTURA</h3>
 
 <p>
 Castilla y León.
@@ -2480,9 +2417,9 @@ Castilla y León.
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
 
@@ -2493,7 +2430,6 @@ alt="Fonysan">
 <p>
 © 2026 Fonysan. Todos los derechos reservados.
 </p>
-
 
 <div class="social">
 
