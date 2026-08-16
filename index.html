@@ -8,19 +8,21 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-    --blue:#07519f;
-    --blue-dark:#063c78;
+    --blue:#0d4f93;
+    --blue-dark:#083b70;
+    --blue-light:#1766bd;
     --green:#079447;
-    --green-light:#12a653;
+    --green-dark:#057a3a;
+    --bg:#eef7fc;
     --white:#ffffff;
-    --bg:#f1f8fc;
-    --text:#083f7d;
-    --gray:#71849b;
+    --text:#0b3564;
+    --gray:#667f9b;
 }
 
 *{
@@ -34,15 +36,10 @@ html{
 }
 
 body{
-    font-family:'Montserrat',sans-serif;
+    font-family:'Montserrat',Arial,sans-serif;
     background:var(--bg);
     color:var(--text);
     overflow-x:hidden;
-}
-
-img{
-    max-width:100%;
-    display:block;
 }
 
 a{
@@ -50,113 +47,149 @@ a{
     color:inherit;
 }
 
+img{
+    max-width:100%;
+    display:block;
+}
+
 /* =========================
    CONTENEDOR GENERAL
 ========================= */
 
 .container{
-    width:calc(100% - 80px);
-    max-width:1500px;
-    margin:auto;
+    width:calc(100% - 70px);
+    max-width:1380px;
+    margin:0 auto;
 }
 
 /* =========================
-   NAVBAR
+   HEADER
 ========================= */
 
+header{
+    padding:18px 0;
+    background:var(--bg);
+}
+
 .navbar{
+    height:82px;
     background:#fff;
-    height:96px;
-    margin:18px auto 0;
-    width:calc(100% - 80px);
-    max-width:1500px;
-    border-radius:22px;
+    border-radius:20px;
     display:flex;
     align-items:center;
-    padding:0 30px;
-    box-shadow:0 8px 30px rgba(7,65,120,.08);
-    position:relative;
-    z-index:20;
+    padding:0 26px;
+    box-shadow:0 8px 28px rgba(22,73,119,.08);
 }
+
+/* LOGO */
 
 .logo{
-    width:150px;
-    height:auto;
-    object-fit:contain;
-    margin-left:5px;
-}
-
-.nav-links{
-    margin-left:auto;
+    width:180px;
+    height:65px;
     display:flex;
     align-items:center;
-    gap:48px;
+    justify-content:flex-start;
+    flex-shrink:0;
+}
+
+.logo img{
+    width:175px;
+    height:auto;
+    object-fit:contain;
+}
+
+/* NAV */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:52px;
+    flex:1;
+    margin-left:80px;
 }
 
 .nav-links a{
-    font-size:14px;
+    font-size:15px;
     font-weight:800;
-    color:#092f5d;
-    transition:.2s;
+    color:#092f59;
+    position:relative;
+    padding:15px 0;
+    transition:.25s;
 }
 
 .nav-links a:hover{
     color:var(--green);
 }
 
-.nav-button{
-    margin-left:42px;
-    padding:19px 32px;
-    border:1.5px solid var(--green);
-    border-radius:40px;
-    color:var(--green);
+.nav-links a.active{
+    color:var(--blue);
+}
+
+.nav-links a.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:4px;
+    height:3px;
+    background:var(--blue);
+    border-radius:5px;
+}
+
+.header-button{
+    background:var(--green);
+    color:#fff;
+    padding:17px 30px;
+    border-radius:35px;
     font-size:13px;
     font-weight:800;
     white-space:nowrap;
-    transition:.2s;
+    transition:.25s;
 }
 
-.nav-button:hover{
-    background:var(--green);
-    color:white;
+.header-button:hover{
+    background:var(--green-dark);
+    transform:translateY(-2px);
 }
 
 /* =========================
-   PORTADA
+   HERO
 ========================= */
 
 .hero{
-    width:calc(100% - 80px);
-    max-width:1500px;
-    min-height:560px;
-    margin:28px auto 0;
-    background:white;
-    border-radius:24px;
+    min-height:610px;
+    background:#fff;
+    border-radius:25px;
     overflow:hidden;
     display:grid;
-    grid-template-columns:46% 54%;
-    box-shadow:0 12px 35px rgba(5,61,110,.07);
+    grid-template-columns:47% 53%;
+    box-shadow:0 10px 35px rgba(25,80,120,.07);
 }
 
+/* TEXTO HERO */
+
 .hero-content{
-    padding:65px 60px;
+    padding:72px 58px 65px;
     display:flex;
     flex-direction:column;
     justify-content:center;
+    position:relative;
+    z-index:2;
 }
 
 .eyebrow{
     color:var(--green);
     font-size:13px;
     font-weight:900;
-    margin-bottom:20px;
+    margin-bottom:22px;
     text-transform:uppercase;
 }
 
 .hero-title{
-    font-size:clamp(42px,4.3vw,74px);
-    line-height:.98;
-    letter-spacing:-2.8px;
+    font-size:59px;
+    line-height:.99;
+    letter-spacing:-2.5px;
     font-weight:900;
     color:var(--blue);
     text-transform:uppercase;
@@ -167,50 +200,74 @@ a{
 }
 
 .hero-description{
-    margin-top:25px;
-    max-width:650px;
-    font-size:16px;
+    margin-top:28px;
+    max-width:590px;
+    font-size:17px;
     line-height:1.7;
-    color:#668099;
+    color:#66809d;
     font-weight:500;
 }
 
 .hero-buttons{
     display:flex;
-    gap:14px;
+    gap:15px;
     margin-top:30px;
-}
-
-.btn-primary,
-.btn-secondary{
-    padding:18px 28px;
-    border-radius:6px;
-    font-size:12px;
-    font-weight:900;
-    text-transform:uppercase;
 }
 
 .btn-primary{
     background:var(--blue);
     color:white;
+    padding:18px 29px;
+    border-radius:7px;
+    font-size:13px;
+    font-weight:900;
 }
 
 .btn-secondary{
-    border:1.5px solid var(--green);
     color:var(--green);
+    border:1.5px solid var(--green);
+    padding:18px 29px;
+    border-radius:7px;
+    font-size:13px;
+    font-weight:900;
 }
 
+.btn-primary:hover{
+    background:var(--blue-dark);
+}
+
+.btn-secondary:hover{
+    background:var(--green);
+    color:white;
+}
+
+/* IMAGEN HERO */
+
 .hero-image{
-    height:100%;
-    min-height:560px;
+    position:relative;
+    min-height:610px;
     overflow:hidden;
+    background:#dcecf9;
+}
+
+.hero-image::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.65) 0%,
+        rgba(255,255,255,.15) 18%,
+        transparent 40%
+    );
+    z-index:1;
 }
 
 .hero-image img{
     width:100%;
     height:100%;
     object-fit:cover;
-    object-position:center;
+    object-position:center center;
 }
 
 /* =========================
@@ -218,30 +275,28 @@ a{
 ========================= */
 
 .benefits{
-    width:calc(100% - 80px);
-    max-width:1500px;
-    margin:22px auto 0;
+    margin-top:18px;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:14px;
 }
 
 .benefit{
-    background:white;
-    min-height:155px;
-    border-radius:18px;
-    padding:24px 22px;
+    background:#fff;
+    min-height:145px;
+    border-radius:17px;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     text-align:center;
-    box-shadow:0 8px 25px rgba(5,61,110,.05);
+    padding:22px 18px;
+    box-shadow:0 7px 24px rgba(25,80,120,.06);
 }
 
 .symbol{
-    width:52px;
-    height:52px;
+    width:55px;
+    height:55px;
     border:2px solid var(--blue);
     border-radius:50%;
     display:flex;
@@ -249,74 +304,88 @@ a{
     justify-content:center;
     color:var(--blue);
     font-size:25px;
-    margin-bottom:13px;
-    font-weight:700;
+    font-weight:800;
+    margin-bottom:12px;
 }
 
 .benefit h3{
-    font-size:14px;
+    font-size:15px;
     font-weight:900;
-    color:#083f7d;
+    color:#083d76;
 }
 
 .benefit p{
-    font-size:10px;
-    line-height:1.5;
-    color:#8494a7;
     margin-top:7px;
-    max-width:220px;
+    color:#7b8fa6;
+    font-size:11px;
+    line-height:1.45;
+    max-width:210px;
 }
 
 /* =========================
    BLOQUE RAPIDOS
 ========================= */
 
-.quick-section{
-    width:calc(100% - 80px);
-    max-width:1500px;
-    margin:28px auto 0;
+.fast-section{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns:44% 56%;
+    min-height:285px;
     border-radius:22px;
     overflow:hidden;
-    display:grid;
-    grid-template-columns:43% 57%;
-    min-height:340px;
 }
 
-.quick-text{
-    background:var(--blue);
-    color:white;
-    padding:55px 55px;
+.fast-text{
+    background:var(--blue-light);
+    color:#fff;
+    padding:50px 48px;
     display:flex;
     flex-direction:column;
     justify-content:center;
+    position:relative;
 }
 
-.quick-symbol{
-    font-size:48px;
-    line-height:1;
+.fast-text::after{
+    content:"";
+    position:absolute;
+    right:-55px;
+    top:0;
+    width:100px;
+    height:100%;
+    background:var(--blue-light);
+    clip-path:polygon(55% 0,100% 0,100% 100%,0 100%);
+}
+
+.fast-symbol{
+    font-size:42px;
     margin-bottom:18px;
+    position:relative;
+    z-index:2;
 }
 
-.quick-text h2{
-    font-size:clamp(30px,3vw,48px);
-    line-height:.98;
+.fast-title{
+    position:relative;
+    z-index:2;
+    font-size:34px;
+    line-height:1;
     font-weight:900;
     text-transform:uppercase;
-    letter-spacing:-1px;
-    max-width:430px;
 }
 
-.quick-text p{
-    margin-top:16px;
+.fast-subtitle{
+    position:relative;
+    z-index:2;
     font-size:13px;
-    font-weight:600;
+    margin-top:13px;
+    font-weight:500;
 }
 
-.quick-image{
-    min-height:340px;
+.fast-image{
+    min-height:285px;
+    position:relative;
 }
 
-.quick-image img{
+.fast-image img{
     width:100%;
     height:100%;
     object-fit:cover;
@@ -327,26 +396,24 @@ a{
 ========================= */
 
 .services{
-    width:calc(100% - 80px);
-    max-width:1500px;
-    margin:0 auto;
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    background:var(--blue-dark);
+    background:#124c82;
     border-radius:0 0 20px 20px;
     overflow:hidden;
 }
 
 .service{
-    min-height:210px;
-    padding:35px 25px;
+    min-height:190px;
+    padding:35px 22px;
+    text-align:center;
+    color:#fff;
+    border-right:1px solid rgba(255,255,255,.18);
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    text-align:center;
-    border-right:1px solid rgba(255,255,255,.22);
-    color:white;
+    position:relative;
 }
 
 .service:last-child{
@@ -354,26 +421,25 @@ a{
 }
 
 .service-symbol{
-    font-size:47px;
-    height:60px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:17px;
+    font-size:48px;
+    line-height:1;
+    margin-bottom:18px;
+    color:white;
+    font-weight:400;
 }
 
 .service h3{
-    font-size:16px;
+    font-size:17px;
     font-weight:900;
     text-transform:uppercase;
 }
 
 .service p{
-    margin-top:10px;
+    margin-top:11px;
     font-size:11px;
-    line-height:1.55;
-    max-width:220px;
-    color:#e7f0f8;
+    line-height:1.5;
+    max-width:230px;
+    color:#dbe9f7;
 }
 
 /* =========================
@@ -381,20 +447,17 @@ a{
 ========================= */
 
 .about{
-    width:calc(100% - 80px);
-    max-width:1500px;
-    margin:38px auto 0;
-    min-height:520px;
-    background:white;
-    border-radius:24px;
+    margin-top:20px;
+    min-height:500px;
+    background:#fff;
+    border-radius:23px;
     overflow:hidden;
     display:grid;
-    grid-template-columns:50% 50%;
-    box-shadow:0 10px 30px rgba(5,61,110,.06);
+    grid-template-columns:52% 48%;
 }
 
 .about-content{
-    padding:60px;
+    padding:58px 55px;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -402,78 +465,77 @@ a{
 
 .about-label{
     color:var(--green);
-    font-size:13px;
+    font-size:12px;
     font-weight:900;
-    text-transform:uppercase;
     margin-bottom:18px;
+    text-transform:uppercase;
 }
 
 .about-title{
-    font-size:clamp(38px,3.5vw,60px);
-    line-height:1.02;
-    letter-spacing:-2px;
-    font-weight:900;
+    font-size:43px;
+    line-height:1.04;
+    letter-spacing:-1.5px;
     color:var(--blue);
+    font-weight:900;
+    max-width:650px;
 }
 
-.about-title span{
+.about-title .green{
     color:var(--green);
 }
 
 .about-description{
-    margin-top:23px;
-    font-size:14px;
-    line-height:1.75;
-    color:#657d96;
+    color:#6b829c;
+    font-size:15px;
+    line-height:1.65;
+    margin-top:25px;
     max-width:650px;
 }
-
-/* ESTADÍSTICAS */
 
 .stats{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    margin-top:40px;
+    gap:25px;
+    margin-top:38px;
 }
 
 .stat{
-    text-align:center;
+    text-align:left;
 }
 
 .stat-symbol{
-    font-size:43px;
-    height:58px;
+    font-size:38px;
+    color:var(--blue);
+    height:50px;
     display:flex;
     align-items:center;
-    justify-content:center;
-    color:var(--blue);
-    margin-bottom:8px;
 }
 
 .stat-number{
-    font-size:clamp(34px,3.5vw,54px);
-    line-height:1;
-    color:var(--blue);
+    color:#075ab5;
+    font-size:42px;
     font-weight:900;
-    letter-spacing:-2px;
+    line-height:1;
+    margin-top:7px;
 }
 
 .stat-label{
-    margin-top:8px;
-    font-size:11px;
-    color:#657d96;
+    margin-top:9px;
+    font-size:12px;
+    color:#58718d;
     font-weight:600;
 }
 
 .about-image{
-    min-height:520px;
+    min-height:500px;
+    overflow:hidden;
 }
 
 .about-image img{
     width:100%;
     height:100%;
     object-fit:cover;
+    object-position:center;
 }
 
 /* =========================
@@ -481,42 +543,46 @@ a{
 ========================= */
 
 .contact{
-    width:calc(100% - 80px);
-    max-width:1500px;
-    margin:24px auto 0;
-    background:white;
+    margin-top:18px;
+    background:#fff;
+    min-height:135px;
     border-radius:20px;
-    min-height:150px;
     display:grid;
-    grid-template-columns:1.1fr 1fr 1fr 1.1fr;
+    grid-template-columns:1.05fr 1fr 1.2fr 1fr;
     align-items:center;
-    padding:25px 30px;
-    box-shadow:0 8px 25px rgba(5,61,110,.05);
+    padding:22px 25px;
+    gap:20px;
+    box-shadow:0 7px 25px rgba(25,80,120,.05);
 }
 
-.contact-title small{
+.contact-intro{
+    padding-left:8px;
+}
+
+.contact-label{
     color:var(--green);
-    font-size:10px;
+    font-size:11px;
     font-weight:900;
+    text-transform:uppercase;
 }
 
-.contact-title h2{
-    margin-top:7px;
-    font-size:23px;
+.contact-title{
+    margin-top:8px;
+    font-size:20px;
     font-weight:900;
     color:var(--blue);
 }
 
-.contact-title p{
+.contact-small{
     margin-top:5px;
-    color:#8494a7;
+    color:#7890a8;
     font-size:10px;
 }
 
 .contact-item{
-    min-height:80px;
-    padding:0 30px;
-    border-left:1px solid #dbe4ec;
+    min-height:85px;
+    border-left:1px solid #dce4eb;
+    padding-left:25px;
     display:flex;
     align-items:center;
     gap:15px;
@@ -532,78 +598,86 @@ a{
     align-items:center;
     justify-content:center;
     color:var(--green);
-    font-size:20px;
+    font-size:21px;
 }
 
-.contact-item strong{
+.contact-info strong{
+    display:block;
+    color:#073b73;
     font-size:16px;
-    color:var(--blue);
     font-weight:900;
 }
 
-.contact-item span{
+.contact-info span{
     display:block;
-    margin-top:7px;
+    color:#8497aa;
     font-size:10px;
-    color:#8494a7;
+    margin-top:7px;
 }
 
 .whatsapp{
-    margin-left:25px;
-    background:#079447;
-    color:white;
-    padding:19px 24px;
-    border-radius:6px;
-    text-align:center;
-    font-size:11px;
+    background:var(--green);
+    color:#fff;
+    min-height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:7px;
+    font-size:12px;
     font-weight:900;
+    padding:10px 15px;
+    text-align:center;
+}
+
+.whatsapp:hover{
+    background:var(--green-dark);
 }
 
 /* =========================
-   CONFIANZA
+   GARANTIAS
 ========================= */
 
-.trust{
-    width:calc(100% - 240px);
-    max-width:1300px;
-    margin:20px auto 0;
+.guarantees{
+    margin:18px auto 25px;
+    width:90%;
     background:var(--blue-dark);
-    border-radius:18px;
+    border-radius:17px;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     overflow:hidden;
 }
 
-.trust-item{
-    min-height:135px;
-    padding:25px 30px;
+.guarantee{
+    min-height:105px;
+    padding:22px 25px;
+    color:#fff;
     display:flex;
     align-items:center;
     gap:16px;
-    color:white;
     border-right:1px solid rgba(255,255,255,.2);
 }
 
-.trust-item:last-child{
-    border:none;
+.guarantee:last-child{
+    border-right:none;
 }
 
-.trust-icon{
-    font-size:42px;
-    min-width:48px;
+.guarantee-symbol{
+    font-size:35px;
+    min-width:40px;
+    text-align:center;
 }
 
-.trust-item h3{
-    font-size:14px;
+.guarantee h3{
+    font-size:13px;
     font-weight:900;
     text-transform:uppercase;
 }
 
-.trust-item p{
-    font-size:9px;
-    line-height:1.5;
+.guarantee p{
     margin-top:6px;
-    color:#e5eef7;
+    color:#d8e6f4;
+    font-size:9px;
+    line-height:1.4;
 }
 
 /* =========================
@@ -611,18 +685,45 @@ a{
 ========================= */
 
 footer{
-    margin-top:35px;
-    background:#063768;
-    min-height:90px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    background:#07386d;
+    padding:24px;
+    text-align:center;
+    color:#fff;
 }
 
 .footer-logo{
     width:150px;
-    max-height:55px;
-    object-fit:contain;
+    margin:0 auto 10px;
+    filter:brightness(0) invert(1);
+}
+
+footer p{
+    font-size:10px;
+    color:#c7d9ec;
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+.hero,
+.benefit,
+.fast-section,
+.about,
+.contact,
+.guarantees{
+    animation:fadeUp .6s ease both;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 /* =========================
@@ -631,70 +732,50 @@ footer{
 
 @media(max-width:1000px){
 
-    .container,
-    .navbar,
-    .hero,
-    .benefits,
-    .quick-section,
-    .services,
-    .about,
-    .contact{
-        width:calc(100% - 40px);
+    .container{
+        width:calc(100% - 35px);
     }
 
     .nav-links{
-        gap:20px;
+        gap:25px;
+        margin-left:25px;
     }
 
-    .nav-button{
-        margin-left:20px;
-        padding:15px 20px;
+    .nav-links a{
+        font-size:11px;
     }
 
-    .hero{
-        grid-template-columns:1fr 1fr;
-        min-height:470px;
-    }
-
-    .hero-image{
-        min-height:470px;
-    }
-
-    .hero-content{
-        padding:40px;
+    .header-button{
+        padding:14px 18px;
+        font-size:10px;
     }
 
     .hero-title{
-        font-size:42px;
+        font-size:43px;
     }
 
-    .about-content{
-        padding:40px;
+    .hero-content{
+        padding:45px 35px;
     }
 
-    .about{
-        min-height:450px;
+    .benefits{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .about-image{
-        min-height:450px;
+    .about-title{
+        font-size:35px;
     }
 
     .contact{
         grid-template-columns:1fr 1fr;
-        gap:15px;
     }
 
-    .contact-title{
-        padding:15px;
+    .contact-item:nth-child(3){
+        border-left:none;
     }
 
-    .whatsapp{
-        margin-left:0;
-    }
-
-    .trust{
-        width:calc(100% - 80px);
+    .guarantees{
+        width:100%;
     }
 }
 
@@ -704,142 +785,181 @@ footer{
 
 @media(max-width:700px){
 
-    .navbar{
+    .container{
         width:calc(100% - 24px);
+    }
+
+    header{
+        padding:10px 0;
+    }
+
+    .navbar{
         height:auto;
-        min-height:82px;
-        margin-top:12px;
-        padding:15px 20px;
-        border-radius:18px;
+        min-height:85px;
+        padding:12px 17px;
+        flex-wrap:wrap;
         justify-content:center;
+        gap:8px;
     }
 
     .logo{
-        width:145px;
-        margin:0 auto;
+        width:100%;
+        height:55px;
+        justify-content:center;
     }
 
-    .nav-links,
-    .nav-button{
-        display:none;
+    .logo img{
+        width:165px;
     }
 
-    .hero,
-    .benefits,
-    .quick-section,
-    .services,
-    .about,
-    .contact{
-        width:calc(100% - 24px);
+    .nav-links{
+        order:3;
+        width:100%;
+        margin:0;
+        gap:19px;
+        justify-content:center;
+    }
+
+    .nav-links a{
+        font-size:9px;
+        padding:8px 0;
+    }
+
+    .header-button{
+        position:absolute;
+        right:17px;
+        top:17px;
+        padding:9px 12px;
+        font-size:8px;
     }
 
     /* HERO */
 
     .hero{
-        margin-top:14px;
         grid-template-columns:1fr;
         min-height:auto;
-        border-radius:18px;
+        border-radius:17px;
     }
 
     .hero-content{
-        padding:40px 28px;
+        padding:40px 27px 35px;
+    }
+
+    .eyebrow{
+        font-size:9px;
+        margin-bottom:14px;
     }
 
     .hero-title{
-        font-size:39px;
-        letter-spacing:-1.8px;
+        font-size:36px;
+        line-height:1;
+        letter-spacing:-1.2px;
     }
 
     .hero-description{
-        font-size:13px;
+        font-size:12px;
         line-height:1.6;
-    }
-
-    .hero-image{
-        min-height:300px;
-        height:300px;
+        margin-top:18px;
     }
 
     .hero-buttons{
+        margin-top:20px;
         flex-wrap:wrap;
     }
 
-    /* BENEFICIOS */
+    .btn-primary,
+    .btn-secondary{
+        padding:13px 17px;
+        font-size:9px;
+    }
+
+    .hero-image{
+        min-height:290px;
+    }
+
+    .hero-image img{
+        object-fit:contain;
+        background:#e6f2fa;
+    }
+
+    /* BENEFITS */
 
     .benefits{
         grid-template-columns:1fr 1fr;
-        gap:10px;
-        margin-top:14px;
+        gap:9px;
     }
 
     .benefit{
-        min-height:145px;
-        padding:18px 12px;
+        min-height:125px;
+        padding:15px 10px;
+    }
+
+    .symbol{
+        width:45px;
+        height:45px;
+        font-size:20px;
     }
 
     .benefit h3{
-        font-size:12px;
+        font-size:10px;
     }
 
-    /* RAPIDOS */
+    .benefit p{
+        font-size:8px;
+    }
 
-    .quick-section{
-        margin-top:18px;
+    /* FAST */
+
+    .fast-section{
         grid-template-columns:1fr;
         min-height:auto;
-        border-radius:18px;
     }
 
-    .quick-text{
-        min-height:270px;
+    .fast-text{
+        min-height:230px;
         padding:38px 30px;
     }
 
-    .quick-text h2{
-        font-size:34px;
+    .fast-text::after{
+        display:none;
     }
 
-    .quick-image{
-        min-height:260px;
-        height:260px;
+    .fast-title{
+        font-size:31px;
     }
 
-    /* SERVICIOS */
+    .fast-image{
+        min-height:230px;
+    }
+
+    /* SERVICES */
 
     .services{
         grid-template-columns:1fr 1fr;
-        border-radius:0 0 18px 18px;
     }
 
     .service{
-        min-height:190px;
-        padding:25px 15px;
-    }
-
-    .service:nth-child(2){
-        border-right:none;
-    }
-
-    .service:nth-child(-n+2){
-        border-bottom:1px solid rgba(255,255,255,.2);
+        min-height:165px;
+        padding:25px 12px;
     }
 
     .service-symbol{
-        font-size:42px;
+        font-size:39px;
     }
 
     .service h3{
-        font-size:13px;
+        font-size:11px;
     }
 
-    /* SOBRE NOSOTROS */
+    .service p{
+        font-size:8px;
+    }
+
+    /* ABOUT */
 
     .about{
-        margin-top:22px;
         grid-template-columns:1fr;
         min-height:auto;
-        border-radius:18px;
     }
 
     .about-content{
@@ -847,147 +967,191 @@ footer{
     }
 
     .about-title{
-        font-size:38px;
-        letter-spacing:-1.5px;
+        font-size:31px;
+        letter-spacing:-1px;
     }
 
     .about-description{
-        font-size:12px;
+        font-size:11px;
         line-height:1.65;
     }
 
     .stats{
-        gap:8px;
-        margin-top:30px;
+        gap:10px;
+        margin-top:25px;
+    }
+
+    .stat{
+        text-align:center;
     }
 
     .stat-symbol{
-        font-size:37px;
-    }
-
-    .stat-number{
+        justify-content:center;
         font-size:34px;
     }
 
+    .stat-number{
+        font-size:31px;
+    }
+
     .stat-label{
-        font-size:9px;
+        font-size:8px;
     }
 
     .about-image{
-        height:330px;
-        min-height:330px;
+        min-height:290px;
     }
 
-    /* CONTACTO */
+    /* CONTACT */
 
     .contact{
         grid-template-columns:1fr;
-        padding:25px 20px;
         gap:0;
+        padding:18px;
+    }
+
+    .contact-intro{
+        padding:10px 5px 18px;
     }
 
     .contact-title{
-        padding:10px 0 22px;
-    }
-
-    .contact-title h2{
-        font-size:25px;
+        font-size:19px;
     }
 
     .contact-item{
         border-left:none;
-        border-top:1px solid #dbe4ec;
-        padding:20px 0;
+        border-top:1px solid #dce4eb;
+        padding:17px 5px;
     }
 
-    .contact-item strong{
-        font-size:15px;
+    .contact-info strong{
+        font-size:14px;
     }
 
     .whatsapp{
-        margin:10px 0 0;
+        margin-top:12px;
     }
 
-    /* CONFIANZA */
+    /* GUARANTEES */
 
-    .trust{
-        width:calc(100% - 40px);
+    .guarantees{
         grid-template-columns:1fr 1fr;
-        border-radius:16px;
+        width:100%;
     }
 
-    .trust-item{
-        min-height:140px;
-        padding:20px 16px;
+    .guarantee{
+        min-height:120px;
+        padding:20px 14px;
         gap:9px;
-    }
-
-    .trust-item:nth-child(2){
-        border-right:none;
-    }
-
-    .trust-item:nth-child(-n+2){
         border-bottom:1px solid rgba(255,255,255,.2);
     }
 
-    .trust-icon{
-        font-size:32px;
-        min-width:34px;
+    .guarantee:nth-child(2){
+        border-right:none;
     }
 
-    .trust-item h3{
-        font-size:10px;
+    .guarantee-symbol{
+        font-size:27px;
+        min-width:30px;
     }
 
-    .trust-item p{
-        font-size:8px;
+    .guarantee h3{
+        font-size:9px;
+    }
+
+    .guarantee p{
+        font-size:7px;
     }
 
     footer{
-        margin-top:25px;
+        padding:18px;
+    }
+}
+
+/* =========================
+   MOVIL PEQUEÑO
+========================= */
+
+@media(max-width:400px){
+
+    .hero-title{
+        font-size:31px;
     }
 
-    .footer-logo{
-        width:130px;
+    .nav-links{
+        gap:12px;
     }
 
+    .nav-links a{
+        font-size:8px;
+    }
+
+    .header-button{
+        display:none;
+    }
+
+    .service{
+        min-height:150px;
+    }
+
+    .about-title{
+        font-size:27px;
+    }
+
+    .stat-number{
+        font-size:27px;
+    }
 }
 
 </style>
 </head>
 
+
 <body>
 
 <!-- =========================
-     NAVBAR
+     HEADER
 ========================= -->
 
-<header class="navbar">
+<header>
 
-    <img
-        class="logo"
-        src="LOGO FONDO TRASNPARENTE.png"
-        alt="Fonysan">
+<div class="container">
 
-    <nav class="nav-links">
-        <a href="#inicio">INICIO</a>
+<nav class="navbar">
+
+    <a href="#inicio" class="logo">
+        <img src="LOGO FONDO TRASNPARENTE.png" alt="Fonysan">
+    </a>
+
+    <div class="nav-links">
+
+        <a href="#inicio" class="active">INICIO</a>
         <a href="#servicios">SERVICIOS</a>
         <a href="#nosotros">SOBRE NOSOTROS</a>
         <a href="#trabajos">TRABAJOS</a>
-    </nav>
 
-    <a class="nav-button" href="#contacto">
+    </div>
+
+    <a href="#contacto" class="header-button">
         CONTACTAR
     </a>
+
+</nav>
+
+</div>
 
 </header>
 
 
+<main>
+
 <!-- =========================
-     PORTADA
+     HERO
 ========================= -->
 
-<section class="hero" id="inicio">
+<section id="inicio" class="container">
+
+<div class="hero">
 
     <div class="hero-content">
 
@@ -1027,10 +1191,12 @@ footer{
     <div class="hero-image">
 
         <img
-            src="FOTO LLAVE AGUA PORTADA.png"
-            alt="Fontanería Fonysan">
+        src="FOTO LLAVE AGUA PORTADA.png"
+        alt="Fontanería profesional">
 
     </div>
+
+</div>
 
 </section>
 
@@ -1039,16 +1205,19 @@ footer{
      BENEFICIOS
 ========================= -->
 
-<section class="benefits">
+<section class="container">
+
+<div class="benefits">
 
     <div class="benefit">
 
-        <div class="symbol">◉</div>
+        <div class="symbol">✓</div>
 
         <h3>Profesionales cualificados</h3>
 
         <p>
-            Experiencia y formación para garantizar el mejor servicio.
+            Experiencia y formación para garantizar
+            el mejor servicio.
         </p>
 
     </div>
@@ -1061,7 +1230,8 @@ footer{
         <h3>Atención rápida</h3>
 
         <p>
-            Respondemos rápido para resolver tu problema.
+            Respondemos rápido para resolver
+            tu problema cuanto antes.
         </p>
 
     </div>
@@ -1074,7 +1244,8 @@ footer{
         <h3>Calidad garantizada</h3>
 
         <p>
-            Trabajamos con materiales de primera para asegurar resultados duraderos.
+            Trabajamos con materiales de primera
+            para asegurar resultados duraderos.
         </p>
 
     </div>
@@ -1082,7 +1253,7 @@ footer{
 
     <div class="benefit">
 
-        <div class="symbol">▤</div>
+        <div class="symbol">▣</div>
 
         <h3>Presupuestos claros</h3>
 
@@ -1092,6 +1263,8 @@ footer{
 
     </div>
 
+</div>
+
 </section>
 
 
@@ -1099,85 +1272,89 @@ footer{
      RAPIDOS
 ========================= -->
 
-<section class="quick-section" id="trabajos">
+<section id="trabajos" class="container">
 
-    <div class="quick-text">
+<div class="fast-section">
 
-        <div class="quick-symbol">◇</div>
+    <div class="fast-text">
 
-        <h2>
+        <div class="fast-symbol">◇</div>
+
+        <h2 class="fast-title">
             RÁPIDOS,<br>
             LIMPIOS<br>
             Y EFICIENTES
         </h2>
 
-        <p>
+        <p class="fast-subtitle">
             Tu tranquilidad es nuestra prioridad.
         </p>
 
     </div>
 
-    <div class="quick-image">
+
+    <div class="fast-image">
 
         <img
-            src="FOTO BAÑO IZQ.png"
-            alt="Trabajo de fontanería">
+        src="FOTO BAÑO IZQ.png"
+        alt="Baño y trabajos de fontanería">
 
     </div>
 
-</section>
+</div>
 
 
 <!-- =========================
      SERVICIOS
 ========================= -->
 
-<section class="services" id="servicios">
+<div id="servicios" class="services">
 
-    <article class="service">
+    <div class="service">
 
         <div class="service-symbol">⌘</div>
 
         <h3>Instalaciones</h3>
 
         <p>
-            Montaje y renovación de tuberías, grifos,
-            sanitarios y más.
+            Montaje y renovación de tuberías,
+            grifos, sanitarios y más.
         </p>
 
-    </article>
+    </div>
 
 
-    <article class="service">
+    <div class="service">
 
-        <div class="service-symbol">⚒</div>
+        <div class="service-symbol">⌕</div>
 
         <h3>Reparaciones</h3>
 
         <p>
-            Soluciones integrales para fugas, atascos,
-            averías y renovación de instalaciones.
+            Soluciones integrales para fugas,
+            atascos, averías y renovación.
         </p>
 
-    </article>
+    </div>
 
 
-    <article class="service">
+    <div class="service">
 
         <div class="service-symbol">◇</div>
 
         <h3>Saneamiento</h3>
 
         <p>
-            Instalación y renovación de tuberías.
+            Instalación y renovación
+            de tuberías.
         </p>
 
-    </article>
+    </div>
 
 
-    <article class="service">
+    <div class="service">
 
-        <div class="service-symbol">▣</div>
+        <div class="service-symbol">▱</div>
 
         <h3>Mantenimiento</h3>
 
@@ -1186,7 +1363,9 @@ footer{
             de instalaciones de fontanería.
         </p>
 
-    </article>
+    </div>
+
+</div>
 
 </section>
 
@@ -1195,7 +1374,9 @@ footer{
      SOBRE NOSOTROS
 ========================= -->
 
-<section class="about" id="nosotros">
+<section id="nosotros" class="container">
+
+<div class="about">
 
     <div class="about-content">
 
@@ -1204,16 +1385,19 @@ footer{
         </div>
 
         <h2 class="about-title">
-            Atención profesional,<br>
-            resultados que inspiran<br>
-            <span>seguridad.</span>
+            Atención profesional,
+            resultados que inspiran
+            <span class="green">
+                seguridad.
+            </span>
         </h2>
 
         <p class="about-description">
-            En Fonysan trabajamos para ofrecer soluciones profesionales
-            de fontanería con precisión, compromiso y atención al detalle.
-            Nuestro objetivo es que cada instalación, reparación o
-            mantenimiento quede realizado con la máxima calidad.
+            En Fonysan trabajamos para ofrecer soluciones
+            profesionales de fontanería con precisión,
+            compromiso y atención al detalle. Nuestro objetivo
+            es que cada instalación, reparación o mantenimiento
+            quede realizado con la máxima calidad.
         </p>
 
 
@@ -1221,7 +1405,9 @@ footer{
 
             <div class="stat">
 
-                <div class="stat-symbol">☺</div>
+                <div class="stat-symbol">
+                    ☺
+                </div>
 
                 <div class="stat-number">
                     +500
@@ -1236,7 +1422,9 @@ footer{
 
             <div class="stat">
 
-                <div class="stat-symbol">⚒</div>
+                <div class="stat-symbol">
+                    ⌁
+                </div>
 
                 <div class="stat-number">
                     +1.000
@@ -1251,7 +1439,9 @@ footer{
 
             <div class="stat">
 
-                <div class="stat-symbol">◇</div>
+                <div class="stat-symbol">
+                    ◇
+                </div>
 
                 <div class="stat-number">
                     +10
@@ -1271,10 +1461,12 @@ footer{
     <div class="about-image">
 
         <img
-            src="FOTO FONTANERO.png"
-            alt="Fontanero trabajando">
+        src="FOTO FONTANERO.png"
+        alt="Fontanero profesional">
 
     </div>
+
+</div>
 
 </section>
 
@@ -1283,21 +1475,23 @@ footer{
      CONTACTO
 ========================= -->
 
-<section class="contact" id="contacto">
+<section id="contacto" class="container">
 
-    <div class="contact-title">
+<div class="contact">
 
-        <small>
+    <div class="contact-intro">
+
+        <div class="contact-label">
             ¿NECESITAS AYUDA?
-        </small>
+        </div>
 
-        <h2>
+        <div class="contact-title">
             Estamos listos para ayudarte
-        </h2>
+        </div>
 
-        <p>
+        <div class="contact-small">
             Contacta con Fonysan y cuéntanos qué necesitas.
-        </p>
+        </div>
 
     </div>
 
@@ -1308,7 +1502,7 @@ footer{
             ☎
         </div>
 
-        <div>
+        <div class="contact-info">
 
             <strong>
                 677 44 94 57
@@ -1329,7 +1523,7 @@ footer{
             ✉
         </div>
 
-        <div>
+        <div class="contact-info">
 
             <strong>
                 fonysan.comercial@outlook.es
@@ -1347,24 +1541,27 @@ footer{
     <a
         class="whatsapp"
         href="https://wa.me/34677449457"
-        target="_blank">
-
+        target="_blank"
+    >
         ESCRÍBENOS POR WHATSAPP
-
     </a>
+
+</div>
 
 </section>
 
 
 <!-- =========================
-     CONFIANZA
+     GARANTIAS
 ========================= -->
 
-<section class="trust">
+<section class="container">
 
-    <div class="trust-item">
+<div class="guarantees">
 
-        <div class="trust-icon">
+    <div class="guarantee">
+
+        <div class="guarantee-symbol">
             ◇
         </div>
 
@@ -1375,7 +1572,8 @@ footer{
             </h3>
 
             <p>
-                Transparentes y honestos en cada trabajo.
+                Transparentes y honestos
+                en cada trabajo.
             </p>
 
         </div>
@@ -1383,9 +1581,9 @@ footer{
     </div>
 
 
-    <div class="trust-item">
+    <div class="guarantee">
 
-        <div class="trust-icon">
+        <div class="guarantee-symbol">
             ◷
         </div>
 
@@ -1396,7 +1594,8 @@ footer{
             </h3>
 
             <p>
-                Atención rápida y disponibilidad flexible.
+                Atención rápida y
+                disponibilidad flexible.
             </p>
 
         </div>
@@ -1404,9 +1603,9 @@ footer{
     </div>
 
 
-    <div class="trust-item">
+    <div class="guarantee">
 
-        <div class="trust-icon">
+        <div class="guarantee-symbol">
             ◇
         </div>
 
@@ -1417,7 +1616,8 @@ footer{
             </h3>
 
             <p>
-                Trabajos garantizados y con respaldo.
+                Trabajos garantizados
+                y con respaldo.
             </p>
 
         </div>
@@ -1425,9 +1625,9 @@ footer{
     </div>
 
 
-    <div class="trust-item">
+    <div class="guarantee">
 
-        <div class="trust-icon">
+        <div class="guarantee-symbol">
             ⌖
         </div>
 
@@ -1438,14 +1638,19 @@ footer{
             </h3>
 
             <p>
-                Servicio en Castilla y León.
+                Servicio en Castilla
+                y León.
             </p>
 
         </div>
 
     </div>
 
+</div>
+
 </section>
+
+</main>
 
 
 <!-- =========================
@@ -1457,7 +1662,13 @@ footer{
     <img
         class="footer-logo"
         src="logo.jpg"
-        alt="Fonysan">
+        alt="Fonysan"
+    >
+
+    <p>
+        © 2026 Fonysan · Fontanería y Saneamiento ·
+        Todos los derechos reservados.
+    </p>
 
 </footer>
 
