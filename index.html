@@ -4,37 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fonysan | Fontanería Profesional</title>
-
-<meta name="description"
-content="Fonysan - Fontanería profesional, instalaciones, reparaciones, saneamiento y mantenimiento en Castilla y León.">
+<title>Fonysan | Fontanería y Saneamiento</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
-/* =========================================================
-   VARIABLES
-========================================================= */
-
 :root{
-    --azul:#0754ad;
-    --azul-oscuro:#063d80;
-    --azul-texto:#123f76;
-    --verde:#138b45;
-    --verde-claro:#eaf7ef;
-    --fondo:#f4faff;
-    --gris:#64788f;
-    --blanco:#fff;
+    --blue:#07519f;
+    --blue-dark:#063c78;
+    --green:#079447;
+    --green-light:#12a653;
+    --white:#ffffff;
+    --bg:#f1f8fc;
+    --text:#083f7d;
+    --gray:#71849b;
 }
-
-
-/* =========================================================
-   RESET
-========================================================= */
 
 *{
     margin:0;
@@ -47,20 +34,15 @@ html{
 }
 
 body{
-    font-family:"Inter",Arial,sans-serif;
-    background:
-        linear-gradient(
-            180deg,
-            #f3faff 0%,
-            #f8fcff 100%
-        );
-    color:var(--azul-texto);
+    font-family:'Montserrat',sans-serif;
+    background:var(--bg);
+    color:var(--text);
     overflow-x:hidden;
 }
 
 img{
-    display:block;
     max-width:100%;
+    display:block;
 }
 
 a{
@@ -68,1372 +50,771 @@ a{
     color:inherit;
 }
 
+/* =========================
+   CONTENEDOR GENERAL
+========================= */
 
-/* =========================================================
-   HEADER
-========================================================= */
-
-header{
-    width:100%;
-    padding:12px 0 8px;
-    position:relative;
-    z-index:100;
+.container{
+    width:calc(100% - 80px);
+    max-width:1500px;
+    margin:auto;
 }
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar{
-    width:min(1240px,94%);
-    min-height:76px;
-    margin:auto;
-
-    padding:7px 18px 7px 28px;
-
     background:#fff;
-    border-radius:20px;
-
+    height:96px;
+    margin:18px auto 0;
+    width:calc(100% - 80px);
+    max-width:1500px;
+    border-radius:22px;
     display:flex;
     align-items:center;
-
-    box-shadow:
-        0 8px 30px rgba(24,74,120,.09);
+    padding:0 30px;
+    box-shadow:0 8px 30px rgba(7,65,120,.08);
+    position:relative;
+    z-index:20;
 }
-
-
-/* LOGO */
 
 .logo{
-    width:180px;
-    flex-shrink:0;
-
-    display:flex;
-    align-items:center;
-}
-
-.logo img{
-    width:165px;
+    width:150px;
     height:auto;
     object-fit:contain;
+    margin-left:5px;
 }
 
-
-/* NAV */
-
-nav{
-    flex:1;
-
+.nav-links{
+    margin-left:auto;
     display:flex;
     align-items:center;
-    justify-content:center;
-
     gap:48px;
-    margin-left:30px;
 }
 
-nav a{
-    position:relative;
-
-    color:#183c67;
-
-    font-size:12px;
+.nav-links a{
+    font-size:14px;
     font-weight:800;
+    color:#092f5d;
+    transition:.2s;
+}
 
-    letter-spacing:.1px;
+.nav-links a:hover{
+    color:var(--green);
+}
 
-    padding:19px 3px;
-
+.nav-button{
+    margin-left:42px;
+    padding:19px 32px;
+    border:1.5px solid var(--green);
+    border-radius:40px;
+    color:var(--green);
+    font-size:13px;
+    font-weight:800;
     white-space:nowrap;
-
-    transition:.2s ease;
+    transition:.2s;
 }
 
-nav a:hover{
-    color:var(--azul);
+.nav-button:hover{
+    background:var(--green);
+    color:white;
 }
 
-nav a:first-child{
-    color:var(--azul);
-}
-
-nav a:first-child::after{
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-    bottom:7px;
-
-    width:34px;
-    height:3px;
-
-    border-radius:10px;
-
-    background:var(--azul);
-
-    transform:translateX(-50%);
-}
-
-
-/* BOTÓN HEADER */
-
-.header-contact{
-    min-width:145px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    gap:8px;
-
-    padding:13px 18px;
-
-    color:var(--verde);
-
-    border:1.5px solid #78bd96;
-    border-radius:25px;
-
-    background:#fff;
-
-    font-size:11px;
-    font-weight:800;
-
-    transition:.2s ease;
-
-    flex-shrink:0;
-}
-
-.header-contact:hover{
-    background:var(--verde-claro);
-    transform:translateY(-1px);
-}
-
-
-/* =========================================================
-   ICONOS SVG
-========================================================= */
-
-svg{
-    fill:none;
-    stroke:currentColor;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
+/* =========================
+   PORTADA
+========================= */
 
 .hero{
-    width:min(1240px,94%);
-    height:500px;
-
-    margin:18px auto 0;
-
+    width:calc(100% - 80px);
+    max-width:1500px;
+    min-height:560px;
+    margin:28px auto 0;
+    background:white;
     border-radius:24px;
     overflow:hidden;
-
-    position:relative;
-
     display:grid;
-    grid-template-columns:52% 48%;
-
-    background:#fff;
-
-    box-shadow:
-        0 10px 35px rgba(31,77,120,.08);
+    grid-template-columns:46% 54%;
+    box-shadow:0 12px 35px rgba(5,61,110,.07);
 }
 
-
-/* CONTENIDO */
-
 .hero-content{
-    position:relative;
-    z-index:3;
-
-    padding:55px 45px 45px 55px;
-
+    padding:65px 60px;
     display:flex;
     flex-direction:column;
     justify-content:center;
-
-    background:
-        linear-gradient(
-            100deg,
-            #ffffff 0%,
-            #ffffff 70%,
-            rgba(255,255,255,.96) 100%
-        );
 }
 
 .eyebrow{
-    color:var(--verde);
-
-    font-size:11px;
+    color:var(--green);
+    font-size:13px;
     font-weight:900;
-
-    letter-spacing:.15px;
-
-    margin-bottom:14px;
-}
-
-
-/* TITULAR */
-
-.hero h1{
-    max-width:610px;
-
     margin-bottom:20px;
+    text-transform:uppercase;
+}
 
-    color:var(--azul-oscuro);
-
-    font-size:clamp(42px,4.2vw,58px);
-
-    line-height:1.02;
-
-    letter-spacing:-2px;
-
+.hero-title{
+    font-size:clamp(42px,4.3vw,74px);
+    line-height:.98;
+    letter-spacing:-2.8px;
     font-weight:900;
+    color:var(--blue);
+    text-transform:uppercase;
 }
 
-.hero h1 .verde{
-    color:var(--verde);
+.hero-title .green{
+    color:var(--green);
 }
-
-
-/* DESCRIPCIÓN */
 
 .hero-description{
-    max-width:510px;
-
-    margin-bottom:25px;
-
-    color:#60758c;
-
-    font-size:13px;
-    line-height:1.65;
-
+    margin-top:25px;
+    max-width:650px;
+    font-size:16px;
+    line-height:1.7;
+    color:#668099;
     font-weight:500;
 }
 
-
-/* BOTONES */
-
 .hero-buttons{
     display:flex;
-    align-items:center;
-    gap:12px;
+    gap:14px;
+    margin-top:30px;
 }
 
-.btn-services,
-.btn-whatsapp{
-    min-height:45px;
-
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:0 22px;
-
-    border-radius:7px;
-
-    font-size:10px;
+.btn-primary,
+.btn-secondary{
+    padding:18px 28px;
+    border-radius:6px;
+    font-size:12px;
     font-weight:900;
-
-    transition:.2s ease;
+    text-transform:uppercase;
 }
 
-.btn-services{
-    background:var(--azul);
-    color:#fff;
+.btn-primary{
+    background:var(--blue);
+    color:white;
 }
 
-.btn-services:hover{
-    background:var(--azul-oscuro);
-    transform:translateY(-2px);
+.btn-secondary{
+    border:1.5px solid var(--green);
+    color:var(--green);
 }
-
-.btn-whatsapp{
-    gap:8px;
-
-    background:#fff;
-
-    border:1.5px solid #73ba92;
-
-    color:var(--verde);
-}
-
-.btn-whatsapp:hover{
-    background:var(--verde-claro);
-}
-
-.btn-whatsapp svg{
-    width:16px;
-    height:16px;
-
-    stroke-width:1.8;
-}
-
-
-/* IMAGEN HERO */
 
 .hero-image{
-    position:relative;
-
     height:100%;
-
+    min-height:560px;
     overflow:hidden;
-}
-
-.hero-image::after{
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.95) 0%,
-            rgba(255,255,255,.55) 6%,
-            rgba(255,255,255,0) 25%
-        );
-
-    pointer-events:none;
 }
 
 .hero-image img{
     width:100%;
     height:100%;
-
-    object-fit:cover;
-
-    object-position:center center;
-}
-
-
-/* =========================================================
-   VENTAJAS
-========================================================= */
-
-.advantages{
-    width:min(1240px,94%);
-
-    margin:14px auto 0;
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-
-    gap:12px;
-}
-
-.advantage{
-    min-height:125px;
-
-    padding:18px 18px;
-
-    background:#fff;
-
-    border-radius:14px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-
-    box-shadow:
-        0 6px 24px rgba(35,76,112,.06);
-}
-
-.circle-icon{
-    width:42px;
-    height:42px;
-
-    margin-bottom:9px;
-
-    border:2px solid var(--azul);
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:var(--azul);
-}
-
-.circle-icon svg{
-    width:21px;
-    height:21px;
-
-    stroke-width:1.7;
-}
-
-.advantage h3{
-    margin-bottom:5px;
-
-    color:#173d6d;
-
-    font-size:11px;
-    font-weight:800;
-}
-
-.advantage p{
-    max-width:230px;
-
-    color:#78899c;
-
-    font-size:8.5px;
-    line-height:1.5;
-}
-
-
-/* =========================================================
-   BANNER BAÑO
-========================================================= */
-
-.blue-banner{
-    width:min(1240px,94%);
-    height:155px;
-
-    margin:16px auto 0;
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:16px;
-
-    background:var(--azul);
-}
-
-.banner-blue{
-    position:relative;
-    z-index:2;
-
-    width:55%;
-    height:100%;
-
-    padding:20px 45px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-
-    color:#fff;
-
-    background:var(--azul);
-
-    clip-path:polygon(
-        0 0,
-        93% 0,
-        81% 100%,
-        0 100%
-    );
-}
-
-.drop-icon{
-    width:27px;
-    height:27px;
-
-    margin-bottom:5px;
-}
-
-.drop-icon svg{
-    width:100%;
-    height:100%;
-
-    stroke:#fff;
-    stroke-width:1.7;
-}
-
-.banner-blue h2{
-    margin-bottom:6px;
-
-    font-size:22px;
-    line-height:1.05;
-
-    font-weight:900;
-
-    letter-spacing:-.5px;
-}
-
-.banner-blue p{
-    color:rgba(255,255,255,.88);
-
-    font-size:9px;
-    font-weight:500;
-}
-
-.banner-photo{
-    position:absolute;
-
-    right:0;
-    top:0;
-
-    width:56%;
-    height:100%;
-}
-
-.banner-photo img{
-    width:100%;
-    height:100%;
-
     object-fit:cover;
     object-position:center;
 }
 
+/* =========================
+   BENEFICIOS
+========================= */
 
-/* =========================================================
-   SERVICIOS
-========================================================= */
-
-.services{
-    width:min(1240px,94%);
-
-    min-height:170px;
-
-    margin:0 auto;
-
+.benefits{
+    width:calc(100% - 80px);
+    max-width:1500px;
+    margin:22px auto 0;
     display:grid;
     grid-template-columns:repeat(4,1fr);
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:0 0 16px 16px;
-
-    background:#0a396d;
+    gap:14px;
 }
 
-.services::before{
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    background:
-        linear-gradient(
-            rgba(5,49,95,.84),
-            rgba(5,49,95,.92)
-        ),
-        url("FOTO INFERIOR AGUA.png") center/cover;
-
-    z-index:0;
-}
-
-.service{
-    min-height:170px;
-
-    position:relative;
-    z-index:2;
-
-    padding:20px 18px;
-
+.benefit{
+    background:white;
+    min-height:155px;
+    border-radius:18px;
+    padding:24px 22px;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-
     text-align:center;
+    box-shadow:0 8px 25px rgba(5,61,110,.05);
+}
 
-    color:#fff;
+.symbol{
+    width:52px;
+    height:52px;
+    border:2px solid var(--blue);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--blue);
+    font-size:25px;
+    margin-bottom:13px;
+    font-weight:700;
+}
 
-    border-right:1px solid rgba(255,255,255,.18);
+.benefit h3{
+    font-size:14px;
+    font-weight:900;
+    color:#083f7d;
+}
+
+.benefit p{
+    font-size:10px;
+    line-height:1.5;
+    color:#8494a7;
+    margin-top:7px;
+    max-width:220px;
+}
+
+/* =========================
+   BLOQUE RAPIDOS
+========================= */
+
+.quick-section{
+    width:calc(100% - 80px);
+    max-width:1500px;
+    margin:28px auto 0;
+    border-radius:22px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:43% 57%;
+    min-height:340px;
+}
+
+.quick-text{
+    background:var(--blue);
+    color:white;
+    padding:55px 55px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.quick-symbol{
+    font-size:48px;
+    line-height:1;
+    margin-bottom:18px;
+}
+
+.quick-text h2{
+    font-size:clamp(30px,3vw,48px);
+    line-height:.98;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:-1px;
+    max-width:430px;
+}
+
+.quick-text p{
+    margin-top:16px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.quick-image{
+    min-height:340px;
+}
+
+.quick-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.services{
+    width:calc(100% - 80px);
+    max-width:1500px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:var(--blue-dark);
+    border-radius:0 0 20px 20px;
+    overflow:hidden;
+}
+
+.service{
+    min-height:210px;
+    padding:35px 25px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    border-right:1px solid rgba(255,255,255,.22);
+    color:white;
 }
 
 .service:last-child{
     border-right:none;
 }
 
-
-/* ICONOS SERVICIOS */
-
-.service-icon{
-    width:58px;
-    height:58px;
-
-    margin-bottom:9px;
-
+.service-symbol{
+    font-size:47px;
+    height:60px;
     display:flex;
     align-items:center;
     justify-content:center;
-
-    color:#fff;
-}
-
-.service-icon svg{
-    width:48px;
-    height:48px;
-
-    stroke-width:1.65;
+    margin-bottom:17px;
 }
 
 .service h3{
-    margin-bottom:7px;
-
-    color:#fff;
-
-    font-size:12px;
+    font-size:16px;
     font-weight:900;
+    text-transform:uppercase;
 }
 
 .service p{
-    max-width:245px;
-
-    color:rgba(255,255,255,.86);
-
-    font-size:8.5px;
-    line-height:1.5;
+    margin-top:10px;
+    font-size:11px;
+    line-height:1.55;
+    max-width:220px;
+    color:#e7f0f8;
 }
 
-
-/* =========================================================
+/* =========================
    SOBRE NOSOTROS
-========================================================= */
+========================= */
 
 .about{
-    width:min(1240px,94%);
-
-    min-height:390px;
-
-    margin:28px auto 14px;
-
+    width:calc(100% - 80px);
+    max-width:1500px;
+    margin:38px auto 0;
+    min-height:520px;
+    background:white;
+    border-radius:24px;
+    overflow:hidden;
     display:grid;
     grid-template-columns:50% 50%;
-
-    overflow:hidden;
-
-    border-radius:20px;
-
-    background:#fff;
-
-    box-shadow:
-        0 7px 28px rgba(25,70,120,.06);
+    box-shadow:0 10px 30px rgba(5,61,110,.06);
 }
 
 .about-content{
-    padding:42px 45px;
-
+    padding:60px;
     display:flex;
     flex-direction:column;
     justify-content:center;
 }
 
 .about-label{
-    margin-bottom:8px;
-
-    color:var(--verde);
-
-    font-size:10px;
+    color:var(--green);
+    font-size:13px;
     font-weight:900;
+    text-transform:uppercase;
+    margin-bottom:18px;
 }
 
-.about h2{
-    max-width:560px;
-
-    margin-bottom:16px;
-
-    color:var(--azul-oscuro);
-
-    font-size:31px;
-
-    line-height:1.15;
-
-    letter-spacing:-.8px;
-
+.about-title{
+    font-size:clamp(38px,3.5vw,60px);
+    line-height:1.02;
+    letter-spacing:-2px;
     font-weight:900;
+    color:var(--blue);
 }
 
-.about h2 .verde{
-    color:var(--verde);
+.about-title span{
+    color:var(--green);
 }
 
-.about-text{
-    max-width:530px;
-
-    margin-bottom:26px;
-
-    color:#687c92;
-
-    font-size:11px;
-
-    line-height:1.7;
-
-    font-weight:500;
+.about-description{
+    margin-top:23px;
+    font-size:14px;
+    line-height:1.75;
+    color:#657d96;
+    max-width:650px;
 }
-
 
 /* ESTADÍSTICAS */
 
 .stats{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-
-    gap:28px;
+    gap:30px;
+    margin-top:40px;
 }
 
 .stat{
+    text-align:center;
+}
+
+.stat-symbol{
+    font-size:43px;
+    height:58px;
     display:flex;
-    flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
+    justify-content:center;
+    color:var(--blue);
+    margin-bottom:8px;
 }
 
-.stat-icon{
-    width:40px;
-    height:40px;
-
-    margin-bottom:5px;
-
-    color:var(--azul);
-}
-
-.stat-icon svg{
-    width:100%;
-    height:100%;
-
-    stroke-width:1.7;
-}
-
-.stat strong{
-    display:block;
-
-    color:var(--azul);
-
-    font-size:35px;
-
+.stat-number{
+    font-size:clamp(34px,3.5vw,54px);
     line-height:1;
-
+    color:var(--blue);
     font-weight:900;
-
-    letter-spacing:-1px;
+    letter-spacing:-2px;
 }
 
-.stat span{
-    display:block;
-
-    margin-top:6px;
-
-    color:#6d8095;
-
-    font-size:9px;
-
+.stat-label{
+    margin-top:8px;
+    font-size:11px;
+    color:#657d96;
     font-weight:600;
 }
 
-
-/* FOTO FONTANERO */
-
 .about-image{
-    position:relative;
-
-    min-height:390px;
-
-    overflow:hidden;
+    min-height:520px;
 }
 
 .about-image img{
     width:100%;
     height:100%;
-
     object-fit:cover;
-
-    object-position:center;
 }
 
-.about-image::before{
-    content:"";
-
-    position:absolute;
-
-    left:-45px;
-    top:50%;
-
-    width:88px;
-    height:430px;
-
-    transform:translateY(-50%);
-
-    border-radius:50%;
-
-    background:#fff;
-
-    border-right:5px solid var(--verde);
-
-    z-index:3;
-}
-
-
-/* =========================================================
+/* =========================
    CONTACTO
-========================================================= */
+========================= */
 
 .contact{
-    width:min(1240px,94%);
-
-    min-height:110px;
-
-    margin:0 auto 12px;
-
+    width:calc(100% - 80px);
+    max-width:1500px;
+    margin:24px auto 0;
+    background:white;
+    border-radius:20px;
+    min-height:150px;
     display:grid;
-
-    grid-template-columns:1.35fr 1fr 1.45fr 1.05fr;
-
+    grid-template-columns:1.1fr 1fr 1fr 1.1fr;
     align-items:center;
-
-    overflow:hidden;
-
-    border-radius:15px;
-
-    background:#fff;
-
-    box-shadow:
-        0 6px 25px rgba(25,70,120,.055);
+    padding:25px 30px;
+    box-shadow:0 8px 25px rgba(5,61,110,.05);
 }
 
-.contact-intro{
-    padding:18px 25px;
-}
-
-.contact-intro small{
-    color:var(--verde);
-
-    font-size:8px;
-    font-weight:900;
-}
-
-.contact-intro h2{
-    margin:4px 0;
-
-    color:var(--azul-oscuro);
-
-    font-size:18px;
-    font-weight:900;
-}
-
-.contact-intro p{
-    color:#7a8b9c;
-
-    font-size:8px;
-}
-
-
-/* CONTACT ITEMS */
-
-.contact-item{
-    min-height:75px;
-
-    padding:14px 22px;
-
-    border-left:1px solid #e3eaf0;
-
-    display:flex;
-    align-items:center;
-
-    gap:12px;
-}
-
-.contact-icon{
-    width:42px;
-    height:42px;
-
-    flex-shrink:0;
-
-    border:1.5px solid #70b991;
-    border-radius:50%;
-
-    color:var(--verde);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.contact-icon svg{
-    width:20px;
-    height:20px;
-
-    stroke-width:1.7;
-}
-
-.contact-item strong{
-    display:block;
-
-    margin-bottom:4px;
-
-    color:#183f6c;
-
-    font-size:11px;
-
-    font-weight:900;
-
-    white-space:nowrap;
-}
-
-.contact-item span{
-    color:#7b8b9b;
-
-    font-size:8px;
-}
-
-
-/* WHATSAPP */
-
-.contact-button{
-    padding:18px 20px;
-
-    border-left:1px solid #e3eaf0;
-}
-
-.contact-button a{
-    min-height:44px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:7px;
-
-    background:var(--verde);
-
-    color:#fff;
-
-    font-size:9px;
-    font-weight:900;
-
-    transition:.2s ease;
-}
-
-.contact-button a:hover{
-    background:#0d783a;
-}
-
-
-/* =========================================================
-   FRANJA FINAL
-========================================================= */
-
-.trust{
-    width:min(1120px,88%);
-
-    min-height:100px;
-
-    margin:0 auto 25px;
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            110deg,
-            #0752ad,
-            #073d80
-        );
-
-    color:#fff;
-}
-
-.trust-item{
-    padding:18px 22px;
-
-    display:flex;
-    align-items:center;
-
-    gap:14px;
-
-    border-right:1px solid rgba(255,255,255,.2);
-}
-
-.trust-item:last-child{
-    border-right:none;
-}
-
-.trust-icon{
-    width:42px;
-    height:42px;
-
-    flex-shrink:0;
-}
-
-.trust-icon svg{
-    width:100%;
-    height:100%;
-
-    stroke:#fff;
-
-    stroke-width:1.6;
-}
-
-.trust-item h3{
-    margin-bottom:4px;
-
+.contact-title small{
+    color:var(--green);
     font-size:10px;
     font-weight:900;
 }
 
-.trust-item p{
-    max-width:160px;
-
-    color:rgba(255,255,255,.82);
-
-    font-size:8px;
-    line-height:1.45;
+.contact-title h2{
+    margin-top:7px;
+    font-size:23px;
+    font-weight:900;
+    color:var(--blue);
 }
 
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-    padding:25px 20px;
-
-    text-align:center;
-
-    background:#062f62;
-
-    color:#fff;
+.contact-title p{
+    margin-top:5px;
+    color:#8494a7;
+    font-size:10px;
 }
 
-footer img{
-    width:125px;
-
-    margin:0 auto 10px;
-}
-
-footer p{
-    color:rgba(255,255,255,.7);
-
-    font-size:8px;
-}
-
-.social{
-    margin-top:12px;
-
+.contact-item{
+    min-height:80px;
+    padding:0 30px;
+    border-left:1px solid #dbe4ec;
     display:flex;
-    justify-content:center;
-
-    gap:9px;
+    align-items:center;
+    gap:15px;
 }
 
-.social a{
-    width:29px;
-    height:29px;
-
+.contact-icon{
+    width:48px;
+    height:48px;
+    min-width:48px;
+    border:1.5px solid var(--green);
+    border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-
-    border:1px solid rgba(255,255,255,.3);
-
-    border-radius:50%;
-
-    color:#fff;
-
-    font-size:8px;
+    color:var(--green);
+    font-size:20px;
 }
 
+.contact-item strong{
+    font-size:16px;
+    color:var(--blue);
+    font-weight:900;
+}
 
-/* =========================================================
+.contact-item span{
+    display:block;
+    margin-top:7px;
+    font-size:10px;
+    color:#8494a7;
+}
+
+.whatsapp{
+    margin-left:25px;
+    background:#079447;
+    color:white;
+    padding:19px 24px;
+    border-radius:6px;
+    text-align:center;
+    font-size:11px;
+    font-weight:900;
+}
+
+/* =========================
+   CONFIANZA
+========================= */
+
+.trust{
+    width:calc(100% - 240px);
+    max-width:1300px;
+    margin:20px auto 0;
+    background:var(--blue-dark);
+    border-radius:18px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    overflow:hidden;
+}
+
+.trust-item{
+    min-height:135px;
+    padding:25px 30px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    color:white;
+    border-right:1px solid rgba(255,255,255,.2);
+}
+
+.trust-item:last-child{
+    border:none;
+}
+
+.trust-icon{
+    font-size:42px;
+    min-width:48px;
+}
+
+.trust-item h3{
+    font-size:14px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.trust-item p{
+    font-size:9px;
+    line-height:1.5;
+    margin-top:6px;
+    color:#e5eef7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    margin-top:35px;
+    background:#063768;
+    min-height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.footer-logo{
+    width:150px;
+    max-height:55px;
+    object-fit:contain;
+}
+
+/* =========================
    TABLET
-========================================================= */
+========================= */
 
 @media(max-width:1000px){
 
-    .navbar{
-        padding-left:18px;
+    .container,
+    .navbar,
+    .hero,
+    .benefits,
+    .quick-section,
+    .services,
+    .about,
+    .contact{
+        width:calc(100% - 40px);
     }
 
-    .logo{
-        width:150px;
+    .nav-links{
+        gap:20px;
     }
 
-    .logo img{
-        width:140px;
-    }
-
-    nav{
-        gap:24px;
-        margin-left:12px;
-    }
-
-    nav a{
-        font-size:9px;
-    }
-
-    .header-contact{
-        min-width:115px;
-        padding:10px 12px;
-        font-size:9px;
+    .nav-button{
+        margin-left:20px;
+        padding:15px 20px;
     }
 
     .hero{
-        height:460px;
+        grid-template-columns:1fr 1fr;
+        min-height:470px;
+    }
+
+    .hero-image{
+        min-height:470px;
     }
 
     .hero-content{
-        padding-left:40px;
+        padding:40px;
     }
 
-    .hero h1{
+    .hero-title{
         font-size:42px;
     }
 
-    .about h2{
-        font-size:27px;
+    .about-content{
+        padding:40px;
     }
 
-    .stats{
-        gap:15px;
+    .about{
+        min-height:450px;
     }
 
-    .stat strong{
-        font-size:29px;
+    .about-image{
+        min-height:450px;
     }
 
     .contact{
-        grid-template-columns:1.2fr 1fr 1.3fr;
+        grid-template-columns:1fr 1fr;
+        gap:15px;
     }
 
-    .contact-button{
-        grid-column:3;
+    .contact-title{
+        padding:15px;
+    }
+
+    .whatsapp{
+        margin-left:0;
+    }
+
+    .trust{
+        width:calc(100% - 80px);
     }
 }
 
-
-/* =========================================================
-   MÓVIL
-========================================================= */
+/* =========================
+   MOVIL
+========================= */
 
 @media(max-width:700px){
 
-    header{
-        padding-top:7px;
-    }
-
     .navbar{
-        width:94%;
-
-        min-height:68px;
-
-        padding:8px 12px;
-
-        flex-wrap:wrap;
-
+        width:calc(100% - 24px);
+        height:auto;
+        min-height:82px;
+        margin-top:12px;
+        padding:15px 20px;
+        border-radius:18px;
         justify-content:center;
     }
 
     .logo{
-        width:100%;
-
-        justify-content:center;
-
-        order:1;
-    }
-
-    .logo img{
         width:145px;
+        margin:0 auto;
     }
 
-    .header-contact{
-        order:2;
-
-        min-width:125px;
-
-        padding:9px 12px;
-
-        font-size:8px;
+    .nav-links,
+    .nav-button{
+        display:none;
     }
 
-    nav{
-        order:3;
-
-        width:100%;
-
-        margin:5px 0 0;
-
-        padding-top:7px;
-
-        border-top:1px solid #edf1f5;
-
-        gap:18px;
-
-        justify-content:center;
+    .hero,
+    .benefits,
+    .quick-section,
+    .services,
+    .about,
+    .contact{
+        width:calc(100% - 24px);
     }
-
-    nav a{
-        font-size:8px;
-        padding:6px 0;
-    }
-
-    nav a:first-child::after{
-        bottom:0;
-    }
-
 
     /* HERO */
 
     .hero{
-        width:94%;
-
-        height:auto;
-
-        min-height:0;
-
-        margin-top:12px;
-
-        display:flex;
-        flex-direction:column;
-
+        margin-top:14px;
+        grid-template-columns:1fr;
+        min-height:auto;
         border-radius:18px;
     }
 
     .hero-content{
-        order:1;
-
-        padding:35px 25px 30px;
+        padding:40px 28px;
     }
 
-    .eyebrow{
-        font-size:9px;
-        margin-bottom:10px;
-    }
-
-    .hero h1{
-        max-width:100%;
-
-        font-size:36px;
-
-        line-height:1.04;
-
-        letter-spacing:-1.3px;
+    .hero-title{
+        font-size:39px;
+        letter-spacing:-1.8px;
     }
 
     .hero-description{
-        font-size:10px;
-        margin-bottom:18px;
+        font-size:13px;
+        line-height:1.6;
+    }
+
+    .hero-image{
+        min-height:300px;
+        height:300px;
     }
 
     .hero-buttons{
         flex-wrap:wrap;
     }
 
-    .btn-services,
-    .btn-whatsapp{
-        min-height:42px;
+    /* BENEFICIOS */
 
-        padding:0 16px;
-
-        font-size:9px;
-    }
-
-    .hero-image{
-        order:2;
-
-        height:290px;
-
-        min-height:290px;
-    }
-
-    .hero-image img{
-        object-fit:cover;
-        object-position:center;
-    }
-
-    .hero-image::after{
-        background:
-            linear-gradient(
-                180deg,
-                rgba(255,255,255,.08),
-                transparent 25%
-            );
-    }
-
-
-    /* VENTAJAS */
-
-    .advantages{
-        width:94%;
-
+    .benefits{
         grid-template-columns:1fr 1fr;
-
-        gap:8px;
-
-        margin-top:10px;
+        gap:10px;
+        margin-top:14px;
     }
 
-    .advantage{
-        min-height:125px;
-
-        padding:14px 8px;
+    .benefit{
+        min-height:145px;
+        padding:18px 12px;
     }
 
-    .circle-icon{
-        width:38px;
-        height:38px;
+    .benefit h3{
+        font-size:12px;
     }
 
-    .circle-icon svg{
-        width:19px;
-        height:19px;
+    /* RAPIDOS */
+
+    .quick-section{
+        margin-top:18px;
+        grid-template-columns:1fr;
+        min-height:auto;
+        border-radius:18px;
     }
 
-    .advantage h3{
-        font-size:9px;
+    .quick-text{
+        min-height:270px;
+        padding:38px 30px;
     }
 
-    .advantage p{
-        font-size:7px;
+    .quick-text h2{
+        font-size:34px;
     }
 
-
-    /* BANNER */
-
-    .blue-banner{
-        width:94%;
-
-        height:145px;
-
-        margin-top:12px;
+    .quick-image{
+        min-height:260px;
+        height:260px;
     }
-
-    .banner-blue{
-        width:65%;
-
-        padding:15px 20px;
-    }
-
-    .banner-blue h2{
-        font-size:17px;
-    }
-
-    .banner-blue p{
-        font-size:7.5px;
-    }
-
-    .banner-photo{
-        width:53%;
-    }
-
 
     /* SERVICIOS */
 
     .services{
-        width:94%;
-
         grid-template-columns:1fr 1fr;
-
-        min-height:300px;
+        border-radius:0 0 18px 18px;
     }
 
     .service{
-        min-height:150px;
-
-        padding:17px 8px;
+        min-height:190px;
+        padding:25px 15px;
     }
 
     .service:nth-child(2){
@@ -1441,158 +822,103 @@ footer p{
     }
 
     .service:nth-child(-n+2){
-        border-bottom:1px solid rgba(255,255,255,.18);
+        border-bottom:1px solid rgba(255,255,255,.2);
     }
 
-    .service-icon{
-        width:48px;
-        height:48px;
-    }
-
-    .service-icon svg{
-        width:40px;
-        height:40px;
+    .service-symbol{
+        font-size:42px;
     }
 
     .service h3{
-        font-size:9px;
+        font-size:13px;
     }
-
-    .service p{
-        font-size:7px;
-    }
-
 
     /* SOBRE NOSOTROS */
 
     .about{
-        width:94%;
-
-        margin-top:18px;
-
+        margin-top:22px;
         grid-template-columns:1fr;
-
-        min-height:0;
+        min-height:auto;
+        border-radius:18px;
     }
 
     .about-content{
-        padding:30px 23px;
+        padding:38px 27px;
     }
 
-    .about-label{
-        font-size:8px;
+    .about-title{
+        font-size:38px;
+        letter-spacing:-1.5px;
     }
 
-    .about h2{
-        font-size:25px;
-
-        line-height:1.15;
-    }
-
-    .about-text{
-        font-size:9px;
-
-        margin-bottom:22px;
+    .about-description{
+        font-size:12px;
+        line-height:1.65;
     }
 
     .stats{
-        gap:10px;
+        gap:8px;
+        margin-top:30px;
     }
 
-    .stat{
-        align-items:center;
-        text-align:center;
+    .stat-symbol{
+        font-size:37px;
     }
 
-    .stat-icon{
-        width:37px;
-        height:37px;
+    .stat-number{
+        font-size:34px;
     }
 
-    .stat strong{
-        font-size:27px;
-    }
-
-    .stat span{
-        font-size:7px;
+    .stat-label{
+        font-size:9px;
     }
 
     .about-image{
-        min-height:270px;
-        height:270px;
+        height:330px;
+        min-height:330px;
     }
-
-    .about-image::before{
-        display:none;
-    }
-
 
     /* CONTACTO */
 
     .contact{
-        width:94%;
-
-        margin-top:12px;
-
         grid-template-columns:1fr;
-
-        min-height:0;
+        padding:25px 20px;
+        gap:0;
     }
 
-    .contact-intro{
-        padding:20px;
+    .contact-title{
+        padding:10px 0 22px;
     }
 
-    .contact-intro h2{
-        font-size:18px;
-    }
-
-    .contact-intro p{
-        font-size:8px;
+    .contact-title h2{
+        font-size:25px;
     }
 
     .contact-item{
-        min-height:75px;
-
         border-left:none;
-
-        border-top:1px solid #e4ebf2;
-
-        padding:14px 20px;
+        border-top:1px solid #dbe4ec;
+        padding:20px 0;
     }
 
     .contact-item strong{
-        font-size:10px;
-
-        white-space:normal;
+        font-size:15px;
     }
 
-    .contact-button{
-        border-left:none;
-
-        border-top:1px solid #e4ebf2;
-
-        padding:15px 20px;
+    .whatsapp{
+        margin:10px 0 0;
     }
 
-
-    /* FRANJA */
+    /* CONFIANZA */
 
     .trust{
-        width:94%;
-
+        width:calc(100% - 40px);
         grid-template-columns:1fr 1fr;
-
-        min-height:0;
-
-        margin-top:12px;
+        border-radius:16px;
     }
 
     .trust-item{
-        min-height:95px;
-
-        padding:14px 12px;
-
+        min-height:140px;
+        padding:20px 16px;
         gap:9px;
     }
 
@@ -1605,982 +931,533 @@ footer p{
     }
 
     .trust-icon{
-        width:34px;
-        height:34px;
+        font-size:32px;
+        min-width:34px;
     }
 
     .trust-item h3{
-        font-size:8px;
+        font-size:10px;
     }
 
     .trust-item p{
-        font-size:6.5px;
+        font-size:8px;
     }
-
 
     footer{
-        padding:20px;
-    }
-}
-
-
-/* =========================================================
-   MÓVILES PEQUEÑOS
-========================================================= */
-
-@media(max-width:420px){
-
-    .logo img{
-        width:135px;
+        margin-top:25px;
     }
 
-    nav{
-        gap:13px;
+    .footer-logo{
+        width:130px;
     }
 
-    nav a{
-        font-size:7px;
-    }
-
-    .hero h1{
-        font-size:31px;
-    }
-
-    .hero-image{
-        height:245px;
-        min-height:245px;
-    }
-
-    .banner-blue h2{
-        font-size:15px;
-    }
-
-    .service{
-        min-height:145px;
-    }
-
-    .about h2{
-        font-size:22px;
-    }
-
-    .stat strong{
-        font-size:24px;
-    }
-
-    .trust-item{
-        min-height:100px;
-        padding:12px 8px;
-    }
 }
 
 </style>
 </head>
 
-
 <body>
 
+<!-- =========================
+     NAVBAR
+========================= -->
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<header class="navbar">
 
-<header>
-
-<div class="navbar">
-
-<a href="#inicio" class="logo">
     <img
+        class="logo"
         src="LOGO FONDO TRASNPARENTE.png"
         alt="Fonysan">
-</a>
 
+    <nav class="nav-links">
+        <a href="#inicio">INICIO</a>
+        <a href="#servicios">SERVICIOS</a>
+        <a href="#nosotros">SOBRE NOSOTROS</a>
+        <a href="#trabajos">TRABAJOS</a>
+    </nav>
 
-<nav>
-
-<a href="#inicio">
-    INICIO
-</a>
-
-<a href="#servicios">
-    SERVICIOS
-</a>
-
-<a href="#nosotros">
-    SOBRE NOSOTROS
-</a>
-
-<a href="#trabajos">
-    TRABAJOS
-</a>
-
-</nav>
-
-
-<a
-class="header-contact"
-href="https://wa.me/34677449457"
-target="_blank"
-rel="noopener">
-
-<svg
-viewBox="0 0 24 24"
-width="16"
-height="16">
-
-<path
-d="M20 11.5a8 8 0 1 1-15 4l-.9 3.1 3.2-.9A8 8 0 0 1 20 11.5z"/>
-
-<path
-d="M8.8 8.4h.8l.8 1.8-.6.7a7 7 0 0 0 2.9 2.8l.6-.5 1.8.7v.8c0 .5-.4.9-.9.9-2.9-.2-6.3-3.4-6.5-6.3 0-.5.4-.9.9-.9z"/>
-
-</svg>
-
-CONTÁCTANOS
-
-</a>
-
-</div>
+    <a class="nav-button" href="#contacto">
+        CONTACTAR
+    </a>
 
 </header>
 
 
+<!-- =========================
+     PORTADA
+========================= -->
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<section class="hero" id="inicio">
 
-<section
-class="hero"
-id="inicio">
+    <div class="hero-content">
 
+        <div class="eyebrow">
+            SOLUCIONES QUE FLUYEN
+        </div>
 
-<div class="hero-content">
+        <h1 class="hero-title">
+            PRECISIÓN EN CADA<br>
+            INSTALACIÓN.<br>
 
-<div class="eyebrow">
-    SOLUCIONES QUE FLUYEN
-</div>
+            <span class="green">
+                EXCELENCIA EN<br>
+                CADA SERVICIO.
+            </span>
+        </h1>
 
+        <p class="hero-description">
+            Ofrecemos soluciones profesionales de fontanería y
+            saneamiento con calidad, precisión y confianza.
+        </p>
 
-<h1>
+        <div class="hero-buttons">
 
-<span class="verde">
-    PRECISIÓN
-</span>
+            <a href="#contacto" class="btn-primary">
+                SOLICITAR PRESUPUESTO
+            </a>
 
-EN CADA<br>
+            <a href="#servicios" class="btn-secondary">
+                VER SERVICIOS
+            </a>
 
-INSTALACIÓN.
+        </div>
 
-<br>
+    </div>
 
-<span class="verde">
-    EXCELENCIA
-</span>
+    <div class="hero-image">
 
-EN CADA<br>
+        <img
+            src="FOTO LLAVE AGUA PORTADA.png"
+            alt="Fontanería Fonysan">
 
-SERVICIO.
-
-</h1>
-
-
-<p class="hero-description">
-
-Ofrecemos soluciones profesionales de
-fontanería y saneamiento con calidad,
-precisión y confianza.
-
-</p>
-
-
-<div class="hero-buttons">
-
-<a
-class="btn-services"
-href="#servicios">
-
-NUESTROS SERVICIOS
-
-</a>
-
-
-<a
-class="btn-whatsapp"
-href="https://wa.me/34677449457"
-target="_blank"
-rel="noopener">
-
-<svg viewBox="0 0 24 24">
-
-<path d="M20 11.5a8 8 0 1 1-15 4l-.9 3.1 3.2-.9A8 8 0 0 1 20 11.5z"/>
-
-<path d="M8.8 8.4h.8l.8 1.8-.6.7a7 7 0 0 0 2.9 2.8l.6-.5 1.8.7v.8c0 .5-.4.9-.9.9-2.9-.2-6.3-3.4-6.5-6.3 0-.5.4-.9.9-.9z"/>
-
-</svg>
-
-677 44 94 57
-
-</a>
-
-</div>
-
-</div>
-
-
-<div class="hero-image">
-
-<img
-src="FOTO LLAVE AGUA PORTADA.png"
-alt="Llave de agua Fonysan">
-
-</div>
+    </div>
 
 </section>
 
 
+<!-- =========================
+     BENEFICIOS
+========================= -->
 
-<!-- =====================================================
-     VENTAJAS
-===================================================== -->
+<section class="benefits">
 
-<section class="advantages">
+    <div class="benefit">
 
+        <div class="symbol">◉</div>
 
-<div class="advantage">
+        <h3>Profesionales cualificados</h3>
 
-<div class="circle-icon">
+        <p>
+            Experiencia y formación para garantizar el mejor servicio.
+        </p>
 
-<svg viewBox="0 0 24 24">
-
-<circle cx="12" cy="12" r="8.5"/>
-<circle cx="9" cy="10" r=".7"/>
-<circle cx="15" cy="10" r=".7"/>
-<path d="M8.5 14.5c2 1.7 5 1.7 7 0"/>
-
-</svg>
-
-</div>
-
-<h3>
-PROFESIONALES CUALIFICADOS
-</h3>
-
-<p>
-Experiencia y formación para garantizar
-el mejor servicio.
-</p>
-
-</div>
+    </div>
 
 
+    <div class="benefit">
 
-<div class="advantage">
+        <div class="symbol">◷</div>
 
-<div class="circle-icon">
+        <h3>Atención rápida</h3>
 
-<svg viewBox="0 0 24 24">
+        <p>
+            Respondemos rápido para resolver tu problema.
+        </p>
 
-<circle cx="12" cy="12" r="8.5"/>
-<path d="M12 7v5l3 2"/>
-
-</svg>
-
-</div>
-
-<h3>
-ATENCIÓN RÁPIDA
-</h3>
-
-<p>
-Respondemos rápido para resolver
-tu problema cuanto antes.
-</p>
-
-</div>
+    </div>
 
 
+    <div class="benefit">
 
-<div class="advantage">
+        <div class="symbol">◇</div>
 
-<div class="circle-icon">
+        <h3>Calidad garantizada</h3>
 
-<svg viewBox="0 0 24 24">
+        <p>
+            Trabajamos con materiales de primera para asegurar resultados duraderos.
+        </p>
 
-<path d="M12 3l2 2.2 3-.2.7 3 2.3 2-1.4 2.7 1.8 3-.4.4-3-1.4-2.7 1.8-3-.4-3 .7-2.7-2-2.3 2.3-2 .7-3 3 .2L12 3z"/>
-
-<path d="M9 12l2 2 4-4"/>
-
-</svg>
-
-</div>
-
-<h3>
-CALIDAD GARANTIZADA
-</h3>
-
-<p>
-Trabajamos con materiales de primera
-para asegurar resultados duraderos.
-</p>
-
-</div>
+    </div>
 
 
+    <div class="benefit">
 
-<div class="advantage">
+        <div class="symbol">▤</div>
 
-<div class="circle-icon">
+        <h3>Presupuestos claros</h3>
 
-<svg viewBox="0 0 24 24">
+        <p>
+            Presupuestos claros y sin sorpresas.
+        </p>
 
-<rect x="6.5" y="4" width="11" height="16" rx="2"/>
-
-<path d="M9 8h6"/>
-<path d="M9 12h6"/>
-<path d="M9 16h4"/>
-
-</svg>
-
-</div>
-
-<h3>
-PRECIOS JUSTOS
-</h3>
-
-<p>
-Presupuestos claros.
-</p>
-
-</div>
+    </div>
 
 </section>
 
 
+<!-- =========================
+     RAPIDOS
+========================= -->
 
-<!-- =====================================================
-     BANNER
-===================================================== -->
+<section class="quick-section" id="trabajos">
 
-<section class="blue-banner">
+    <div class="quick-text">
 
+        <div class="quick-symbol">◇</div>
 
-<div class="banner-blue">
+        <h2>
+            RÁPIDOS,<br>
+            LIMPIOS<br>
+            Y EFICIENTES
+        </h2>
 
-<div class="drop-icon">
+        <p>
+            Tu tranquilidad es nuestra prioridad.
+        </p>
 
-<svg viewBox="0 0 24 24">
+    </div>
 
-<path
-d="M12 3s-5 6.2-5 10a5 5 0 0 0 10 0c0-3.8-5-10-5-10z"/>
+    <div class="quick-image">
 
-</svg>
+        <img
+            src="FOTO BAÑO IZQ.png"
+            alt="Trabajo de fontanería">
 
-</div>
-
-
-<h2>
-RÁPIDOS, LIMPIOS<br>
-Y EFICIENTES
-</h2>
-
-
-<p>
-Tu tranquilidad es nuestra prioridad.
-</p>
-
-</div>
-
-
-<div class="banner-photo">
-
-<img
-src="FOTO BAÑO IZQ.png"
-alt="Baño">
-
-</div>
+    </div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================
      SERVICIOS
-===================================================== -->
+========================= -->
 
-<section
-class="services"
-id="servicios">
+<section class="services" id="servicios">
 
+    <article class="service">
 
-<!-- INSTALACIONES -->
+        <div class="service-symbol">⌘</div>
 
-<div class="service">
+        <h3>Instalaciones</h3>
 
-<div class="service-icon">
+        <p>
+            Montaje y renovación de tuberías, grifos,
+            sanitarios y más.
+        </p>
 
-<svg viewBox="0 0 24 24">
-
-<path d="M4 7h7v4H4z"/>
-<path d="M11 9h4"/>
-<path d="M15 9v5"/>
-<path d="M15 14h5"/>
-<path d="M20 14v4"/>
-<path d="M7 11v7"/>
-<path d="M4 18h6"/>
-
-</svg>
-
-</div>
-
-<h3>
-INSTALACIONES
-</h3>
-
-<p>
-Montaje y renovación de tuberías,
-grifos, sanitarios y más.
-</p>
-
-</div>
+    </article>
 
 
+    <article class="service">
 
-<!-- REPARACIONES -->
+        <div class="service-symbol">⚒</div>
 
-<div class="service">
+        <h3>Reparaciones</h3>
 
-<div class="service-icon">
+        <p>
+            Soluciones integrales para fugas, atascos,
+            averías y renovación de instalaciones.
+        </p>
 
-<svg viewBox="0 0 24 24">
-
-<path
-d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
-
-</svg>
-
-</div>
-
-<h3>
-REPARACIONES
-</h3>
-
-<p>
-Soluciones integrales para fugas,
-atascos, averías y renovación
-de instalaciones.
-</p>
-
-</div>
+    </article>
 
 
+    <article class="service">
 
-<!-- SANEAMIENTO -->
+        <div class="service-symbol">◇</div>
 
-<div class="service">
+        <h3>Saneamiento</h3>
 
-<div class="service-icon">
+        <p>
+            Instalación y renovación de tuberías.
+        </p>
 
-<svg viewBox="0 0 24 24">
-
-<path
-d="M12 3s-5 6.2-5 10a5 5 0 0 0 10 0c0-3.8-5-10-5-10z"/>
-
-<path
-d="M8 17h8"/>
-
-</svg>
-
-</div>
-
-<h3>
-SANEAMIENTO
-</h3>
-
-<p>
-Instalación y renovación
-de tuberías.
-</p>
-
-</div>
+    </article>
 
 
+    <article class="service">
 
-<!-- MANTENIMIENTO -->
+        <div class="service-symbol">▣</div>
 
-<div
-class="service"
-id="trabajos">
+        <h3>Mantenimiento</h3>
 
-<div class="service-icon">
+        <p>
+            Mantenimiento preventivo y correctivo
+            de instalaciones de fontanería.
+        </p>
 
-<svg viewBox="0 0 24 24">
-
-<path d="M12 3a7 7 0 0 0 0 14"/>
-<path d="M12 7v5l3 2"/>
-<path d="M18 15l3 3"/>
-<path d="M19 18l-2 2"/>
-<path d="M20 13h2"/>
-
-</svg>
-
-</div>
-
-<h3>
-MANTENIMIENTO
-</h3>
-
-<p>
-Mantenimiento preventivo y correctivo
-de instalaciones de fontanería.
-</p>
-
-</div>
+    </article>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================
      SOBRE NOSOTROS
-===================================================== -->
+========================= -->
 
-<section
-class="about"
-id="nosotros">
+<section class="about" id="nosotros">
 
+    <div class="about-content">
 
-<div class="about-content">
+        <div class="about-label">
+            SOBRE NOSOTROS
+        </div>
 
-<div class="about-label">
-SOBRE NOSOTROS
-</div>
+        <h2 class="about-title">
+            Atención profesional,<br>
+            resultados que inspiran<br>
+            <span>seguridad.</span>
+        </h2>
 
-
-<h2>
-
-Atención profesional,
-resultados que inspiran
-<span class="verde">seguridad</span>.
-
-</h2>
-
-
-<p class="about-text">
-
-En Fonysan trabajamos para ofrecer soluciones
-profesionales de fontanería con precisión,
-compromiso y atención al detalle.
-
-Nuestro objetivo es que cada instalación,
-reparación o mantenimiento quede realizado
-con la máxima calidad.
-
-</p>
+        <p class="about-description">
+            En Fonysan trabajamos para ofrecer soluciones profesionales
+            de fontanería con precisión, compromiso y atención al detalle.
+            Nuestro objetivo es que cada instalación, reparación o
+            mantenimiento quede realizado con la máxima calidad.
+        </p>
 
 
-<div class="stats">
+        <div class="stats">
+
+            <div class="stat">
+
+                <div class="stat-symbol">☺</div>
+
+                <div class="stat-number">
+                    +500
+                </div>
+
+                <div class="stat-label">
+                    Clientes satisfechos
+                </div>
+
+            </div>
 
 
-<div class="stat">
+            <div class="stat">
 
-<div class="stat-icon">
+                <div class="stat-symbol">⚒</div>
 
-<svg viewBox="0 0 24 24">
+                <div class="stat-number">
+                    +1.000
+                </div>
 
-<circle cx="12" cy="12" r="8.5"/>
-<circle cx="9" cy="10" r=".7"/>
-<circle cx="15" cy="10" r=".7"/>
-<path d="M8.5 14.5c2 1.7 5 1.7 7 0"/>
+                <div class="stat-label">
+                    Trabajos realizados
+                </div>
 
-</svg>
-
-</div>
-
-<strong>
-+500
-</strong>
-
-<span>
-Clientes satisfechos
-</span>
-
-</div>
+            </div>
 
 
+            <div class="stat">
 
-<div class="stat">
+                <div class="stat-symbol">◇</div>
 
-<div class="stat-icon">
+                <div class="stat-number">
+                    +10
+                </div>
 
-<svg viewBox="0 0 24 24">
+                <div class="stat-label">
+                    Años de experiencia
+                </div>
 
-<path
-d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
+            </div>
 
-</svg>
+        </div>
 
-</div>
-
-<strong>
-+1.000
-</strong>
-
-<span>
-Trabajos realizados
-</span>
-
-</div>
+    </div>
 
 
+    <div class="about-image">
 
-<div class="stat">
+        <img
+            src="FOTO FONTANERO.png"
+            alt="Fontanero trabajando">
 
-<div class="stat-icon">
-
-<svg viewBox="0 0 24 24">
-
-<path
-d="M12 3l2 2.2 3-.2.7 3 2.3 2-1.4 2.7 1.8 3-.4-3-.4.4-3-1.4-2.7 1.8-3-.4-3 .7-2.7-2-2.3 2.3-2 .7-3 3 .2L12 3z"/>
-
-<path d="M9 12l2 2 4-4"/>
-
-</svg>
-
-</div>
-
-<strong>
-+10
-</strong>
-
-<span>
-Años de experiencia
-</span>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<div class="about-image">
-
-<img
-src="FOTO FONTANERO.png"
-alt="Fontanero trabajando">
-
-</div>
+    </div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================
      CONTACTO
-===================================================== -->
+========================= -->
 
-<section
-class="contact"
-id="contacto">
+<section class="contact" id="contacto">
 
+    <div class="contact-title">
 
-<div class="contact-intro">
+        <small>
+            ¿NECESITAS AYUDA?
+        </small>
 
-<small>
-¿NECESITAS AYUDA?
-</small>
+        <h2>
+            Estamos listos para ayudarte
+        </h2>
 
-<h2>
-Estamos listos para ayudarte
-</h2>
+        <p>
+            Contacta con Fonysan y cuéntanos qué necesitas.
+        </p>
 
-<p>
-Contacta con Fonysan y cuéntanos qué necesitas.
-</p>
-
-</div>
+    </div>
 
 
+    <div class="contact-item">
 
-<!-- TELÉFONO -->
+        <div class="contact-icon">
+            ☎
+        </div>
 
-<div class="contact-item">
+        <div>
 
-<div class="contact-icon">
+            <strong>
+                677 44 94 57
+            </strong>
 
-<svg viewBox="0 0 24 24">
+            <span>
+                Llámanos o escríbenos
+            </span>
 
-<path
-d="M5 4h3l2 5-2 2a15 15 0 0 0 5 5l2-2 5 2v3c0 1-1 2-2 2C10 20 4 14 4 6c0-1 0-2 1-2z"/>
+        </div>
 
-</svg>
-
-</div>
-
-
-<div>
-
-<strong>
-677 44 94 57
-</strong>
-
-<span>
-Llámanos o escríbenos
-</span>
-
-</div>
-
-</div>
+    </div>
 
 
+    <div class="contact-item">
 
-<!-- EMAIL -->
+        <div class="contact-icon">
+            ✉
+        </div>
 
-<div class="contact-item">
+        <div>
 
-<div class="contact-icon">
+            <strong>
+                fonysan.comercial@outlook.es
+            </strong>
 
-<svg viewBox="0 0 24 24">
+            <span>
+                Respondemos a la brevedad
+            </span>
 
-<rect
-x="3"
-y="5"
-width="18"
-height="14"
-rx="2"/>
+        </div>
 
-<path
-d="M4 7l8 6 8-6"/>
-
-</svg>
-
-</div>
+    </div>
 
 
-<div>
+    <a
+        class="whatsapp"
+        href="https://wa.me/34677449457"
+        target="_blank">
 
-<strong>
-fonysan.comercial@outlook.es
-</strong>
+        ESCRÍBENOS POR WHATSAPP
 
-<span>
-Respondemos a la brevedad
-</span>
-
-</div>
-
-</div>
-
-
-
-<!-- WHATSAPP -->
-
-<div class="contact-button">
-
-<a
-href="https://wa.me/34677449457"
-target="_blank"
-rel="noopener">
-
-ESCRÍBENOS POR WHATSAPP
-
-</a>
-
-</div>
+    </a>
 
 </section>
 
 
-
-<!-- =====================================================
-     CONFIANZA / DISPONIBILIDAD / GARANTÍA / COBERTURA
-===================================================== -->
+<!-- =========================
+     CONFIANZA
+========================= -->
 
 <section class="trust">
 
+    <div class="trust-item">
 
-<!-- CONFIANZA -->
+        <div class="trust-icon">
+            ◇
+        </div>
 
-<div class="trust-item">
+        <div>
 
-<div class="trust-icon">
+            <h3>
+                Confianza
+            </h3>
 
-<svg viewBox="0 0 24 24">
+            <p>
+                Transparentes y honestos en cada trabajo.
+            </p>
 
-<path
-d="M12 3l8 3v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3z"/>
+        </div>
 
-<path
-d="M8.5 12l2.3 2.3 4.7-5"/>
-
-</svg>
-
-</div>
-
-
-<div>
-
-<h3>
-CONFIANZA
-</h3>
-
-<p>
-Transparentes y honestos
-en cada trabajo.
-</p>
-
-</div>
-
-</div>
+    </div>
 
 
+    <div class="trust-item">
 
-<!-- DISPONIBILIDAD -->
+        <div class="trust-icon">
+            ◷
+        </div>
 
-<div class="trust-item">
+        <div>
 
-<div class="trust-icon">
+            <h3>
+                Disponibilidad
+            </h3>
 
-<svg viewBox="0 0 24 24">
+            <p>
+                Atención rápida y disponibilidad flexible.
+            </p>
 
-<circle cx="12" cy="12" r="8.5"/>
+        </div>
 
-<path d="M12 7v5l3 2"/>
-
-</svg>
-
-</div>
-
-
-<div>
-
-<h3>
-DISPONIBILIDAD
-</h3>
-
-<p>
-Atención rápida y disponibilidad flexible.
-</p>
-
-</div>
-
-</div>
+    </div>
 
 
+    <div class="trust-item">
 
-<!-- GARANTÍA -->
+        <div class="trust-icon">
+            ◇
+        </div>
 
-<div class="trust-item">
+        <div>
 
-<div class="trust-icon">
+            <h3>
+                Garantía
+            </h3>
 
-<svg viewBox="0 0 24 24">
+            <p>
+                Trabajos garantizados y con respaldo.
+            </p>
 
-<path
-d="M12 3l7 3v5c0 4.5-2.7 7.7-7 10-4.3-2.3-7-5.5-7-10V6l7-3z"/>
+        </div>
 
-<path
-d="M9 12l2 2 4-4"/>
-
-</svg>
-
-</div>
-
-
-<div>
-
-<h3>
-GARANTÍA
-</h3>
-
-<p>
-Trabajos garantizados
-y con respaldo.
-</p>
-
-</div>
-
-</div>
+    </div>
 
 
+    <div class="trust-item">
 
-<!-- COBERTURA -->
+        <div class="trust-icon">
+            ⌖
+        </div>
 
-<div class="trust-item">
+        <div>
 
-<div class="trust-icon">
+            <h3>
+                Cobertura
+            </h3>
 
-<svg viewBox="0 0 24 24">
+            <p>
+                Servicio en Castilla y León.
+            </p>
 
-<path
-d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z"/>
+        </div>
 
-<circle
-cx="12"
-cy="10"
-r="2.5"/>
-
-</svg>
-
-</div>
-
-
-<div>
-
-<h3>
-COBERTURA
-</h3>
-
-<p>
-Servicio en Castilla y León.
-</p>
-
-</div>
-
-</div>
-
+    </div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================
      FOOTER
-===================================================== -->
+========================= -->
 
 <footer>
 
-<img
-src="LOGO FONDO TRASNPARENTE.png"
-alt="Fonysan">
-
-<p>
-© 2026 Fonysan. Todos los derechos reservados.
-</p>
-
-
-<div class="social">
-
-<a
-href="https://www.instagram.com/fonysan_es/"
-target="_blank">
-IG
-</a>
-
-<a
-href="https://www.facebook.com/profile.php?id=61592791922836"
-target="_blank">
-FB
-</a>
-
-<a
-href="https://wa.me/34677449457"
-target="_blank">
-WA
-</a>
-
-</div>
+    <img
+        class="footer-logo"
+        src="logo.jpg"
+        alt="Fonysan">
 
 </footer>
 
