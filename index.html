@@ -47,7 +47,7 @@ a{
 
 .container{
     width:92%;
-    max-width:1180px;
+    max-width:1250px;
     margin:0 auto;
 }
 
@@ -58,9 +58,9 @@ a{
 
 header{
     width:92%;
-    max-width:1180px;
+    max-width:1250px;
 
-    min-height:96px;
+    min-height:100px;
 
     margin:16px auto 38px;
 
@@ -71,7 +71,7 @@ header{
     display:flex;
     align-items:center;
 
-    padding:0 22px 0 30px;
+    padding:0 25px 0 35px;
 
     box-shadow:
         0 8px 28px rgba(8,65,120,.08);
@@ -94,7 +94,7 @@ header{
 }
 
 .logo-area img{
-    width:155px;
+    width:160px;
     height:auto;
 
     object-fit:contain;
@@ -110,19 +110,19 @@ nav{
     align-items:center;
     justify-content:center;
 
-    gap:18px;
+    gap:22px;
 
-    margin-left:30px;
+    margin-left:35px;
 }
 
 nav a{
-    font-size:13px;
+    font-size:15px;
 
     font-weight:800;
 
     color:#073f7d;
 
-    padding:18px 23px;
+    padding:20px 25px;
 
     border-radius:12px;
 
@@ -142,18 +142,18 @@ nav a.active{
 }
 
 
-/* CONTACTO HEADER */
+/* CONTACTO */
 
 .header-contact{
     border:1.5px solid #12934a;
 
     color:#078d43;
 
-    padding:18px 28px;
+    padding:19px 30px;
 
     border-radius:30px;
 
-    font-size:13px;
+    font-size:14px;
 
     font-weight:900;
 
@@ -169,83 +169,117 @@ nav a.active{
 
 
 /* =====================================================
-   HERO
+   HERO HORIZONTAL
 ===================================================== */
 
 .hero{
-    background:#ffffff;
+    position:relative;
 
-    border-radius:25px;
+    width:100%;
 
-    overflow:hidden;
+    min-height:610px;
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:45% 55%;
 
-    min-height:560px;
+    overflow:hidden;
 
-    margin-bottom:48px;
+    border-radius:28px;
+
+    margin-bottom:55px;
+
+    background:#075bb7;
 
     box-shadow:
-        0 8px 30px rgba(8,65,120,.06);
+        0 12px 40px rgba(8,65,120,.10);
 }
 
 
-/* TEXTO HERO */
+/* =====================================================
+   TEXTO HERO
+===================================================== */
 
 .hero-content{
-    padding:60px 50px;
+    position:relative;
+
+    z-index:3;
+
+    padding:75px 45px 75px 60px;
 
     display:flex;
 
     flex-direction:column;
 
     justify-content:center;
+
+    background:
+        linear-gradient(
+            90deg,
+            #075bb7 0%,
+            #075bb7 68%,
+            rgba(7,91,183,.97) 78%,
+            rgba(7,91,183,0) 100%
+        );
 }
 
-.small-green{
-    color:#079345;
 
-    font-size:13px;
+/* TEXTO VERDE */
+
+.small-green{
+    color:#73d69c;
+
+    font-size:14px;
 
     font-weight:900;
+
+    letter-spacing:.9px;
 
     text-transform:uppercase;
 
-    margin-bottom:18px;
+    margin-bottom:23px;
 }
 
 
-.hero-title{
-    font-size:50px;
+/* TITULAR */
 
-    line-height:1.04;
+.hero-title{
+    position:relative;
+
+    z-index:5;
+
+    max-width:650px;
+
+    margin-bottom:30px;
+
+    color:#ffffff;
+
+    font-size:clamp(42px,4.5vw,68px);
+
+    line-height:.98;
 
     font-weight:900;
 
-    letter-spacing:-2px;
-
-    color:#084482;
-
-    margin-bottom:27px;
+    letter-spacing:-3px;
 }
 
 .hero-title .green{
-    color:#0b9949;
+    color:#73d69c;
 }
 
 
+/* DESCRIPCIÓN */
+
 .hero-description{
-    color:#627b98;
+    max-width:500px;
+
+    color:rgba(255,255,255,.86);
 
     font-size:15px;
 
     line-height:1.7;
 
-    max-width:540px;
-
-    margin-bottom:30px;
+    margin-bottom:34px;
 }
 
 
@@ -255,14 +289,16 @@ nav a.active{
     display:flex;
 
     gap:14px;
+
+    flex-wrap:wrap;
 }
 
 .btn{
-    padding:17px 24px;
+    padding:18px 27px;
 
     border-radius:7px;
 
-    font-size:12px;
+    font-size:11px;
 
     font-weight:900;
 
@@ -272,71 +308,116 @@ nav a.active{
 }
 
 .btn-primary{
-    background:#075bb7;
+    background:#ffffff;
 
-    color:#ffffff;
+    color:#075bb7;
 }
 
 .btn-primary:hover{
-    background:#06498f;
+    background:#eaf4fc;
 }
 
 .btn-secondary{
-    border:1.5px solid #079548;
+    border:1.5px solid #73d69c;
 
-    color:#078f46;
+    color:#ffffff;
 }
 
 .btn-secondary:hover{
-    background:#079548;
+    background:#73d69c;
 
-    color:#ffffff;
+    color:#075bb7;
 }
 
 
 /* =====================================================
-   FOTO LLAVE
-   NO SE RECORTA
+   IMAGEN DE LA LLAVE
 ===================================================== */
 
 .hero-image{
-    display:flex;
+    position:relative;
 
-    align-items:center;
+    min-width:0;
 
-    justify-content:center;
+    overflow:hidden;
 
-    padding:18px;
-
-    background:#f7fbfe;
+    background:#e8f4fa;
 }
 
 
 /*
-   El contenedor sigue siendo cuadrado,
-   pero la imagen utiliza contain.
-   Así se ve COMPLETA la llave y el agua.
+   DEGRADADO QUE UNE EL TEXTO
+   CON LA IMAGEN
 */
 
+.hero-image::before{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            90deg,
+            #075bb7 0%,
+            rgba(7,91,183,.88) 7%,
+            rgba(7,91,183,.48) 16%,
+            rgba(7,91,183,.12) 26%,
+            rgba(7,91,183,0) 34%
+        );
+}
+
+
+/*
+   LIGERO DEGRADADO SUPERIOR
+*/
+
+.hero-image::after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.06) 0%,
+            rgba(255,255,255,0) 30%
+        );
+}
+
+
+/* CONTENEDOR */
+
 .hero-image-inner{
+    position:absolute;
+
+    inset:0;
+
     width:100%;
 
-    aspect-ratio:1 / 1;
-
-    max-height:525px;
-
-    border-radius:22px;
+    height:100%;
 
     overflow:hidden;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:#f7fbfe;
+    background:#e8f4fa;
 }
+
+
+/*
+   CONTAIN:
+   LA LLAVE NO SE CORTA
+*/
 
 .hero-image img{
     width:100%;
@@ -346,6 +427,8 @@ nav a.active{
     object-fit:contain;
 
     object-position:center;
+
+    background:#e8f4fa;
 }
 
 
@@ -358,30 +441,30 @@ nav a.active{
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:16px;
+    gap:18px;
 
-    margin-bottom:60px;
+    margin-bottom:70px;
 }
 
 .quality-card{
     background:#ffffff;
 
-    border-radius:17px;
+    border-radius:18px;
 
-    padding:30px 22px;
+    padding:32px 24px;
 
     text-align:center;
 
-    min-height:165px;
+    min-height:175px;
 
     box-shadow:
         0 7px 24px rgba(8,65,120,.05);
 }
 
 .symbol{
-    width:49px;
+    width:52px;
 
-    height:49px;
+    height:52px;
 
     border:1.5px solid #075bb7;
 
@@ -393,11 +476,11 @@ nav a.active{
 
     justify-content:center;
 
-    margin:0 auto 15px;
+    margin:0 auto 16px;
 
     color:#075bb7;
 
-    font-size:21px;
+    font-size:22px;
 
     font-weight:700;
 }
@@ -422,7 +505,7 @@ nav a.active{
 
 
 /* =====================================================
-   RÁPIDOS LIMPIOS Y EFICIENTES
+   RÁPIDOS, LIMPIOS Y EFICIENTES
 ===================================================== */
 
 .services-intro{
@@ -430,9 +513,9 @@ nav a.active{
 
     grid-template-columns:1fr 1fr;
 
-    min-height:440px;
+    min-height:460px;
 
-    border-radius:24px;
+    border-radius:25px 25px 0 0;
 
     overflow:hidden;
 
@@ -453,33 +536,33 @@ nav a.active{
 
     justify-content:center;
 
-    padding:65px 55px;
+    padding:70px 60px;
 }
 
 .fast-symbol{
-    font-size:38px;
+    font-size:40px;
 
-    margin-bottom:24px;
+    margin-bottom:25px;
 }
 
 
 .fast-title{
-    font-size:43px;
+    font-size:48px;
 
-    line-height:1.02;
+    line-height:1;
 
     font-weight:900;
 
-    letter-spacing:-1.5px;
+    letter-spacing:-2px;
 
-    max-width:450px;
+    max-width:480px;
 
-    margin-bottom:20px;
+    margin-bottom:23px;
 }
 
 
 .fast-description{
-    font-size:15px;
+    font-size:16px;
 
     font-weight:500;
 }
@@ -515,18 +598,18 @@ nav a.active{
 
     background:#124c88;
 
-    border-radius:0 0 24px 24px;
+    border-radius:0 0 25px 25px;
 
     overflow:hidden;
 
-    margin-bottom:70px;
+    margin-bottom:80px;
 }
 
 
 .service-card{
-    min-height:220px;
+    min-height:230px;
 
-    padding:38px 25px;
+    padding:40px 25px;
 
     text-align:center;
 
@@ -549,15 +632,12 @@ nav a.active{
 }
 
 
-/*
-   SÍMBOLOS DE SERVICIOS
-   MUCHO MÁS GRANDES Y CENTRADOS
-*/
+/* SÍMBOLOS GRANDES */
 
 .service-symbol{
-    width:65px;
+    width:72px;
 
-    height:65px;
+    height:72px;
 
     display:flex;
 
@@ -565,7 +645,7 @@ nav a.active{
 
     justify-content:center;
 
-    font-size:42px;
+    font-size:46px;
 
     line-height:1;
 
@@ -592,7 +672,7 @@ nav a.active{
 
     line-height:1.6;
 
-    max-width:220px;
+    max-width:230px;
 
     color:#e5effa;
 
@@ -615,9 +695,9 @@ nav a.active{
 
     grid-template-columns:1fr 1fr;
 
-    min-height:580px;
+    min-height:610px;
 
-    margin-bottom:28px;
+    margin-bottom:35px;
 
     box-shadow:
         0 8px 30px rgba(8,65,120,.06);
@@ -625,7 +705,7 @@ nav a.active{
 
 
 .about-content{
-    padding:60px 55px;
+    padding:65px 60px;
 
     display:flex;
 
@@ -644,22 +724,22 @@ nav a.active{
 
     text-transform:uppercase;
 
-    margin-bottom:20px;
+    margin-bottom:21px;
 }
 
 
 .about-title{
     color:#074481;
 
-    font-size:44px;
+    font-size:48px;
 
-    line-height:1.07;
+    line-height:1.04;
 
     font-weight:900;
 
-    letter-spacing:-1.7px;
+    letter-spacing:-2px;
 
-    margin-bottom:25px;
+    margin-bottom:27px;
 }
 
 .about-title span{
@@ -674,9 +754,9 @@ nav a.active{
 
     line-height:1.75;
 
-    max-width:550px;
+    max-width:570px;
 
-    margin-bottom:45px;
+    margin-bottom:50px;
 }
 
 
@@ -689,7 +769,7 @@ nav a.active{
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:35px;
+    gap:40px;
 
     width:100%;
 }
@@ -708,15 +788,12 @@ nav a.active{
 }
 
 
-/*
-   SÍMBOLOS DE ESTADÍSTICAS
-   MUCHO MÁS GRANDES Y CENTRADOS
-*/
+/* SÍMBOLO GRANDE */
 
 .stat-symbol{
-    width:58px;
+    width:65px;
 
-    height:58px;
+    height:65px;
 
     display:flex;
 
@@ -726,9 +803,9 @@ nav a.active{
 
     color:#075db9;
 
-    font-size:34px;
+    font-size:40px;
 
-    margin:0 auto 15px;
+    margin:0 auto 17px;
 
     font-weight:600;
 }
@@ -737,7 +814,7 @@ nav a.active{
 .stat-number{
     color:#075db9;
 
-    font-size:48px;
+    font-size:52px;
 
     line-height:1;
 
@@ -745,7 +822,7 @@ nav a.active{
 
     letter-spacing:-2px;
 
-    margin-bottom:10px;
+    margin-bottom:11px;
 
     text-align:center;
 }
@@ -788,9 +865,9 @@ nav a.active{
 .contact-box{
     background:#ffffff;
 
-    border-radius:24px;
+    border-radius:25px;
 
-    min-height:205px;
+    min-height:230px;
 
     display:grid;
 
@@ -798,21 +875,17 @@ nav a.active{
 
     align-items:center;
 
-    margin-bottom:25px;
+    margin-bottom:28px;
 
-    padding:32px 34px;
+    padding:38px 38px;
 
     box-shadow:
         0 8px 28px rgba(8,65,120,.05);
 }
 
 
-/*
-   TÍTULO DE CONTACTO MUCHO MÁS GRANDE
-*/
-
 .contact-main{
-    padding-right:25px;
+    padding-right:30px;
 }
 
 
@@ -825,20 +898,20 @@ nav a.active{
 
     font-weight:900;
 
-    margin-bottom:11px;
+    margin-bottom:13px;
 }
 
 
 .contact-main h2{
     color:#084482;
 
-    font-size:31px;
+    font-size:36px;
 
-    line-height:1.1;
+    line-height:1.08;
 
     font-weight:900;
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .contact-main p{
@@ -853,22 +926,22 @@ nav a.active{
 .contact-item{
     border-left:1px solid #dce5ed;
 
-    padding-left:28px;
+    padding-left:30px;
 
-    min-height:90px;
+    min-height:100px;
 
     display:flex;
 
     align-items:center;
 
-    gap:17px;
+    gap:18px;
 }
 
 
 .contact-symbol{
-    width:52px;
+    width:55px;
 
-    height:52px;
+    height:55px;
 
     border:1.5px solid #0a9950;
 
@@ -882,7 +955,7 @@ nav a.active{
 
     color:#0a9950;
 
-    font-size:20px;
+    font-size:21px;
 
     flex-shrink:0;
 }
@@ -910,7 +983,7 @@ nav a.active{
 
     color:#ffffff;
 
-    padding:23px 18px;
+    padding:24px 18px;
 
     border-radius:8px;
 
@@ -933,13 +1006,13 @@ nav a.active{
 ===================================================== */
 
 .final-bar{
-    width:92%;
+    width:100%;
 
-    margin:0 auto 60px;
+    margin:0 auto 65px;
 
     background:#084582;
 
-    border-radius:18px;
+    border-radius:20px;
 
     display:grid;
 
@@ -950,7 +1023,7 @@ nav a.active{
 
 
 .final-item{
-    min-height:145px;
+    min-height:150px;
 
     display:flex;
 
@@ -958,9 +1031,9 @@ nav a.active{
 
     justify-content:center;
 
-    gap:18px;
+    gap:19px;
 
-    padding:28px 30px;
+    padding:30px;
 
     color:#ffffff;
 
@@ -973,14 +1046,10 @@ nav a.active{
 }
 
 
-/*
-   SÍMBOLOS FINALES GRANDES
-*/
-
 .final-symbol{
-    width:52px;
+    width:55px;
 
-    height:52px;
+    height:55px;
 
     display:flex;
 
@@ -988,7 +1057,7 @@ nav a.active{
 
     justify-content:center;
 
-    font-size:34px;
+    font-size:36px;
 
     flex-shrink:0;
 }
@@ -1018,7 +1087,7 @@ nav a.active{
 footer{
     background:#06396f;
 
-    min-height:130px;
+    min-height:145px;
 
     display:flex;
 
@@ -1032,7 +1101,7 @@ footer{
 }
 
 .footer-logo{
-    width:155px;
+    width:160px;
 
     height:auto;
 
@@ -1052,7 +1121,7 @@ footer p{
    TABLET
 ===================================================== */
 
-@media(max-width:950px){
+@media(max-width:1000px){
 
     header{
         height:auto;
@@ -1085,46 +1154,45 @@ footer p{
     }
 
 
-    .hero,
-    .about,
-    .services-intro{
-        grid-template-columns:1fr;
+    .hero{
+        grid-template-columns:46% 54%;
+
+        min-height:560px;
     }
 
 
-    .hero-image{
-        order:-1;
-
-        padding:15px;
+    .hero-content{
+        padding:55px 30px 55px 40px;
     }
 
 
-    .hero-image-inner{
-        max-height:none;
+    .hero-title{
+        font-size:clamp(38px,5vw,55px);
+
+        letter-spacing:-2px;
     }
 
 
-    .quality{
-        grid-template-columns:repeat(2,1fr);
+    .hero-image::before{
+        background:
+            linear-gradient(
+                90deg,
+                #075bb7 0%,
+                rgba(7,91,183,.72) 10%,
+                rgba(7,91,183,0) 30%
+            );
     }
 
 
-    .services{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-
-    .final-bar{
-        width:100%;
-
-        grid-template-columns:repeat(2,1fr);
+    .about{
+        grid-template-columns:1fr 1fr;
     }
 
 
     .contact-box{
         grid-template-columns:1fr 1fr;
 
-        gap:20px;
+        gap:25px;
     }
 
 }
@@ -1145,15 +1213,27 @@ footer p{
     }
 
 
+    .logo-area{
+        margin-left:10px;
+
+        min-width:150px;
+    }
+
+
     .logo-area img{
         width:130px;
     }
 
 
-    nav a{
-        font-size:11px;
+    nav{
+        gap:3px;
+    }
 
-        padding:12px 14px;
+
+    nav a{
+        font-size:10px;
+
+        padding:12px 11px;
     }
 
 
@@ -1164,27 +1244,126 @@ footer p{
     }
 
 
+    /* HERO MÓVIL */
+
+    .hero{
+        display:flex;
+
+        flex-direction:column;
+
+        min-height:auto;
+
+        border-radius:22px;
+
+        margin-bottom:40px;
+    }
+
+
     .hero-content{
-        padding:45px 28px;
+        min-height:500px;
+
+        padding:55px 28px 50px;
+
+        background:
+            linear-gradient(
+                180deg,
+                #075bb7 0%,
+                #075bb7 78%,
+                rgba(7,91,183,.94) 88%,
+                rgba(7,91,183,0) 100%
+            );
+    }
+
+
+    .small-green{
+        font-size:11px;
+
+        margin-bottom:18px;
     }
 
 
     .hero-title{
-        font-size:37px;
+        font-size:42px;
+
+        line-height:1;
+
+        letter-spacing:-2px;
+
+        margin-bottom:25px;
     }
 
 
     .hero-description{
         font-size:13px;
+
+        max-width:100%;
+
+        margin-bottom:28px;
     }
 
+
+    .hero-buttons{
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+
+    .btn{
+        text-align:center;
+
+        width:100%;
+    }
+
+
+    /* FOTO */
+
+    .hero-image{
+        min-height:390px;
+
+        height:390px;
+    }
+
+
+    .hero-image::before{
+        background:
+            linear-gradient(
+                180deg,
+                #075bb7 0%,
+                rgba(7,91,183,.55) 11%,
+                rgba(7,91,183,0) 32%
+            );
+    }
+
+
+    .hero-image-inner{
+        position:absolute;
+
+        inset:0;
+    }
+
+
+    .hero-image img{
+        object-fit:contain;
+
+        object-position:center;
+    }
+
+
+    /* CALIDAD */
 
     .quality{
         grid-template-columns:1fr;
+
+        margin-bottom:45px;
     }
 
 
+    /* RÁPIDOS */
+
     .services-intro{
+        grid-template-columns:1fr;
+
         min-height:auto;
     }
 
@@ -1192,37 +1371,73 @@ footer p{
     .fast-block{
         padding:55px 35px;
 
-        min-height:340px;
+        min-height:350px;
     }
 
 
     .fast-title{
-        font-size:35px;
+        font-size:38px;
     }
 
 
+    .services-image{
+        height:360px;
+    }
+
+
+    /* SERVICIOS */
+
     .services{
         grid-template-columns:1fr;
+
+        margin-bottom:55px;
     }
 
 
     .service-card{
+        min-height:220px;
+
         border-right:none;
 
         border-bottom:
             1px solid rgba(255,255,255,.2);
+    }
 
-        min-height:210px;
+
+    .service-symbol{
+        width:70px;
+
+        height:70px;
+
+        font-size:44px;
+    }
+
+
+    /* SOBRE NOSOTROS */
+
+    .about{
+        grid-template-columns:1fr;
+
+        min-height:auto;
     }
 
 
     .about-content{
-        padding:45px 28px;
+        padding:50px 28px;
     }
 
 
     .about-title{
-        font-size:35px;
+        font-size:36px;
+
+        letter-spacing:-1.5px;
+    }
+
+
+    .about-text{
+        font-size:13px;
+
+        margin-bottom:40px;
     }
 
 
@@ -1231,29 +1446,50 @@ footer p{
     }
 
 
-    .stat-number{
-        font-size:36px;
-    }
-
-
     .stat-symbol{
         width:52px;
 
         height:52px;
 
-        font-size:30px;
+        font-size:31px;
     }
 
+
+    .stat-number{
+        font-size:36px;
+    }
+
+
+    .stat-label{
+        font-size:10px;
+    }
+
+
+    .about-image{
+        height:400px;
+    }
+
+
+    /* CONTACTO */
 
     .contact-box{
         grid-template-columns:1fr;
 
-        padding:30px 25px;
+        min-height:auto;
+
+        padding:35px 25px;
+
+        gap:25px;
+    }
+
+
+    .contact-main{
+        padding-right:0;
     }
 
 
     .contact-main h2{
-        font-size:28px;
+        font-size:29px;
     }
 
 
@@ -1263,20 +1499,31 @@ footer p{
         border-top:
             1px solid #dce5ed;
 
-        padding:20px 0 0;
+        padding:22px 0 0;
     }
 
 
+    /* FINAL */
+
     .final-bar{
         grid-template-columns:1fr;
+
+        margin-bottom:45px;
     }
 
 
     .final-item{
+        min-height:125px;
+
         border-right:none;
 
         border-bottom:
             1px solid rgba(255,255,255,.25);
+    }
+
+
+    .final-item:last-child{
+        border-bottom:none;
     }
 
 }
@@ -1413,7 +1660,7 @@ footer p{
 
 
 
-    <!-- FOTO COMPLETA DE LA LLAVE -->
+    <!-- FOTO LLAVE -->
 
     <div class="hero-image">
 
@@ -1423,7 +1670,7 @@ footer p{
 
             <img
                 src="FOTO LLAVE AGUA PORTADA.png"
-                alt="Llave de agua"
+                alt="Llave de agua Fonysan"
             >
 
 
@@ -1523,7 +1770,7 @@ footer p{
 
 
 <!-- =====================================================
-     RÁPIDOS, LIMPIOS Y EFICIENTES
+     RÁPIDOS LIMPIOS Y EFICIENTES
 ===================================================== -->
 
 <section class="services-intro">
@@ -1725,8 +1972,6 @@ footer p{
 
 
 
-        <!-- ESTADÍSTICAS -->
-
         <div class="stats">
 
 
@@ -1801,8 +2046,6 @@ footer p{
     </div>
 
 
-
-    <!-- FOTO DEL FONTANERO -->
 
     <div class="about-image">
 
@@ -2055,7 +2298,6 @@ footer p{
 
 
 </footer>
-
 
 
 </body>
