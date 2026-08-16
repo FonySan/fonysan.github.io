@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Fonysan | Fontanería Profesional</title>
 
-<meta name="description" content="Fonysan - Fontanería profesional, instalaciones, reparaciones, saneamiento y mantenimiento en Castilla y León.">
+<meta
+name="description"
+content="Fonysan - Fontanería profesional, instalaciones, reparaciones, saneamiento y mantenimiento."
+>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -20,13 +24,20 @@
 ========================================================= */
 
 :root {
+
     --azul: #0754ad;
     --azul-oscuro: #063d80;
+    --azul-profundo: #062f62;
+
     --azul-texto: #103f78;
+
     --verde: #138b45;
     --verde-claro: #eaf7ef;
+
     --fondo: #f4faff;
+
     --gris: #66788e;
+
     --blanco: #ffffff;
 }
 
@@ -46,6 +57,7 @@ html {
 }
 
 body {
+
     margin: 0;
 
     font-family: "Inter", Arial, sans-serif;
@@ -77,7 +89,7 @@ a {
 ========================================================= */
 
 .container {
-    width: min(1240px, 94%);
+    width: min(1380px, 94%);
     margin: auto;
 }
 
@@ -87,100 +99,146 @@ a {
 ========================================================= */
 
 header {
+
     width: 100%;
-    padding: 12px 0 10px;
+
+    padding: 16px 0 12px;
 
     position: relative;
+
     z-index: 100;
 }
 
+
 .navbar {
-    width: min(1240px, 94%);
-    min-height: 76px;
+
+    width: min(1380px, 94%);
+
+    min-height: 84px;
 
     margin: auto;
 
-    padding: 7px 16px 7px 27px;
+    padding: 8px 20px 8px 30px;
 
     background: #ffffff;
 
-    border-radius: 21px;
+    border-radius: 23px;
 
     display: flex;
+
     align-items: center;
 
     box-shadow:
-        0 8px 30px rgba(24, 74, 120, 0.10);
+        0 8px 32px rgba(24, 74, 120, 0.10);
 }
 
 
-/* LOGO */
+/* =========================================================
+   LOGO
+========================================================= */
 
-.logo {LOGO FONDO TRANSPARENTE
-    width: 170px;
+.logo {
+
+    width: 210px;
+
+    height: 62px;
 
     display: flex;
+
     align-items: center;
+
+    justify-content: flex-start;
 
     flex-shrink: 0;
 }
 
-.logo img {LOGO FONDO TRANSPARENTE
-    width: 155px;
-    height: auto;
+.logo img {
+
+    width: 190px;
+
+    height: 58px;
 
     object-fit: contain;
+
+    object-position: left center;
 }
 
 
-/* NAVEGACIÓN */
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
 
 nav {
+
     flex: 1;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    gap: 42px;
+    gap: 10px;
 
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
+
 nav a {
+
     position: relative;
 
     color: #183c67;
 
-    font-size: 11px;
+    font-size: 12px;
+
     font-weight: 700;
 
-    letter-spacing: 0.1px;
+    letter-spacing: .1px;
 
-    padding: 19px 3px;
+    padding: 14px 24px;
 
     white-space: nowrap;
 
-    transition: color .2s ease;
+    border-radius: 10px;
+
+    transition:
+        color .2s ease,
+        background .2s ease,
+        transform .2s ease;
 }
+
 
 nav a:hover {
+
     color: var(--azul);
+
+    background: #f1f7fd;
+
+    transform: translateY(-1px);
 }
+
 
 nav a:first-child {
+
     color: var(--azul);
+
+    background: #f1f7fd;
 }
 
+
 nav a:first-child::after {
+
     content: "";
 
     position: absolute;
 
     left: 50%;
-    bottom: 7px;
 
-    width: 32px;
+    bottom: 4px;
+
+    width: 38px;
+
     height: 3px;
 
     border-radius: 10px;
@@ -191,47 +249,61 @@ nav a:first-child::after {
 }
 
 
-/* BOTÓN CONTACTO */
+/* =========================================================
+   BOTÓN CONTACTO HEADER
+========================================================= */
 
 .header-contact {
-    min-width: 125px;
+
+    min-width: 155px;
+
+    min-height: 48px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    gap: 7px;
+    gap: 8px;
 
-    padding: 11px 17px;
+    padding: 0 22px;
 
     color: var(--verde);
 
     border: 1.5px solid #78bd96;
 
-    border-radius: 22px;
+    border-radius: 25px;
 
     background: #ffffff;
 
-    font-size: 10px;
-    font-weight: 700;
+    font-size: 11px;
+
+    font-weight: 800;
 
     transition: .2s ease;
 
     flex-shrink: 0;
 }
 
+
 .header-contact:hover {
+
     background: var(--verde-claro);
 
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 
-/* WHATSAPP SVG */
+/* =========================================================
+   WHATSAPP
+========================================================= */
 
 .whatsapp-icon {
-    width: 17px;
-    height: 17px;
+
+    width: 18px;
+
+    height: 18px;
 
     fill: none;
 
@@ -240,6 +312,7 @@ nav a:first-child::after {
     stroke-width: 1.8;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
@@ -249,13 +322,14 @@ nav a:first-child::after {
 ========================================================= */
 
 .hero {
-    width: min(1240px, 94%);
 
-    min-height: 480px;
+    width: min(1380px, 94%);
 
-    margin: 20px auto 0;
+    min-height: 525px;
 
-    border-radius: 27px;
+    margin: 24px auto 0;
+
+    border-radius: 28px;
 
     overflow: hidden;
 
@@ -275,123 +349,149 @@ nav a:first-child::after {
         #ffffff;
 
     box-shadow:
-        0 10px 35px rgba(31, 77, 120, 0.08);
+        0 12px 38px rgba(31, 77, 120, 0.09);
 }
 
 
-/* PARTE IZQUIERDA */
+/* =========================================================
+   HERO TEXTO
+========================================================= */
 
 .hero-content {
+
     position: relative;
+
     z-index: 3;
 
-    padding: 58px 30px 48px 55px;
+    padding: 65px 50px 55px 65px;
 
     display: flex;
+
     flex-direction: column;
 
     justify-content: center;
 }
 
+
 .eyebrow {
+
     color: var(--verde);
 
-    font-size: 11px;
+    font-size: 12px;
 
-    font-weight: 800;
+    font-weight: 900;
 
-    letter-spacing: .15px;
+    letter-spacing: .4px;
 
-    margin-bottom: 13px;
+    margin-bottom: 16px;
 }
 
 
-/* TITULAR */
+/* =========================================================
+   TITULAR PRINCIPAL
+========================================================= */
 
 .hero h1 {
-    margin: 0 0 19px;
 
-    max-width: 620px;
+    margin: 0 0 22px;
+
+    max-width: 700px;
 
     color: var(--azul-oscuro);
 
-    font-size: clamp(39px, 4.15vw, 54px);
+    font-family: "Montserrat", Arial, sans-serif;
 
-    line-height: 1.08;
+    font-size: clamp(44px, 4.4vw, 64px);
 
-    letter-spacing: -1.7px;
+    line-height: 1.04;
 
-    font-weight: 700;
+    letter-spacing: -2.3px;
+
+    font-weight: 900;
 }
+
 
 .hero h1 .verde {
+
     color: var(--verde);
 
-    font-weight: 700;
+    font-weight: 900;
 }
 
 
-/* DESCRIPCIÓN */
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
 
 .hero-description {
-    max-width: 485px;
 
-    margin-bottom: 25px;
+    max-width: 520px;
+
+    margin-bottom: 30px;
 
     color: #5d7188;
 
-    font-size: 13px;
+    font-size: 14px;
 
-    line-height: 1.65;
+    line-height: 1.7;
 
     font-weight: 400;
 }
 
 
-/* BOTONES */
+/* =========================================================
+   BOTONES HERO
+========================================================= */
 
 .hero-buttons {
+
     display: flex;
 
     align-items: center;
 
-    gap: 12px;
+    gap: 14px;
 }
 
+
 .btn-services {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
-    min-height: 45px;
+    min-height: 49px;
 
-    padding: 0 22px;
+    padding: 0 25px;
 
-    border-radius: 7px;
+    border-radius: 8px;
 
     background: var(--azul);
 
     color: white;
 
-    font-size: 10px;
+    font-size: 11px;
 
-    font-weight: 700;
+    font-weight: 800;
 
     transition: .2s ease;
 }
 
+
 .btn-services:hover {
+
     background: var(--azul-oscuro);
 
     transform: translateY(-2px);
 }
 
 
-/* ICONO LLAVE */
-
 .wrench-icon {
-    width: 16px;
-    height: 16px;
+
+    width: 17px;
+
+    height: 17px;
 
     margin-right: 8px;
 
@@ -402,24 +502,26 @@ nav a:first-child::after {
     stroke-width: 1.8;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
 
-/* BOTÓN WHATSAPP */
-
 .btn-whatsapp {
-    min-height: 45px;
 
-    padding: 0 22px;
+    min-height: 49px;
+
+    padding: 0 25px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 8px;
 
-    border-radius: 7px;
+    border-radius: 8px;
 
     background: #ffffff;
 
@@ -427,30 +529,40 @@ nav a:first-child::after {
 
     color: var(--verde);
 
-    font-size: 10px;
+    font-size: 11px;
 
-    font-weight: 700;
+    font-weight: 800;
 
     transition: .2s ease;
 }
 
+
 .btn-whatsapp:hover {
+
     background: var(--verde-claro);
+
+    transform: translateY(-2px);
 }
 
 
-/* IMAGEN HERO */
+/* =========================================================
+   IMAGEN HERO
+========================================================= */
 
 .hero-image {
-    min-height: 480px;
+
+    min-height: 525px;
 
     position: relative;
 
     overflow: hidden;
 }
 
+
 .hero-image img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -466,30 +578,35 @@ nav a:first-child::after {
 ========================================================= */
 
 .advantages {
-    width: min(1240px, 94%);
 
-    margin: 18px auto 0;
+    width: min(1380px, 94%);
+
+    margin: 20px auto 0;
 
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 14px;
+    gap: 16px;
 }
 
-.advantage {
-    min-height: 150px;
 
-    padding: 20px 20px;
+.advantage {
+
+    min-height: 155px;
+
+    padding: 23px 22px;
 
     background: #ffffff;
 
-    border-radius: 15px;
+    border-radius: 16px;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -500,7 +617,9 @@ nav a:first-child::after {
     transition: .2s ease;
 }
 
+
 .advantage:hover {
+
     transform: translateY(-3px);
 
     box-shadow:
@@ -508,28 +627,33 @@ nav a:first-child::after {
 }
 
 
-/* ICONOS CIRCULARES */
-
 .circle-icon {
-    width: 46px;
-    height: 46px;
 
-    margin-bottom: 12px;
+    width: 48px;
+
+    height: 48px;
+
+    margin-bottom: 13px;
 
     border: 2px solid var(--azul);
 
     border-radius: 50%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     color: var(--azul);
 }
 
+
 .circle-icon svg {
-    width: 24px;
-    height: 24px;
+
+    width: 25px;
+
+    height: 25px;
 
     fill: none;
 
@@ -538,61 +662,79 @@ nav a:first-child::after {
     stroke-width: 1.65;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
+
 .advantage h3 {
+
     margin-bottom: 7px;
 
     color: #173d6d;
 
-    font-size: 12px;
+    font-family: "Montserrat", Arial, sans-serif;
 
-    font-weight: 700;
+    font-size: 13px;
+
+    font-weight: 800;
 }
 
+
 .advantage p {
-    max-width: 240px;
+
+    max-width: 250px;
 
     color: #75859a;
 
-    font-size: 9px;
+    font-size: 10px;
 
     line-height: 1.55;
 }
 
 
 /* =========================================================
-   BANNER AZUL + BAÑO
+   SEPARACIÓN ANTES DEL BANNER
 ========================================================= */
 
 .blue-banner {
-    width: min(1240px, 94%);
 
-    height: 150px;
+    width: min(1380px, 94%);
 
-    margin: 18px auto 0;
+    height: 175px;
+
+    margin: 34px auto 0;
 
     position: relative;
 
     overflow: hidden;
 
-    border-radius: 15px;
+    border-radius: 17px;
 
     background: var(--azul);
 }
 
+
+/* =========================================================
+   PARTE AZUL DEL BANNER
+========================================================= */
+
 .banner-blue {
+
     position: relative;
+
     z-index: 2;
 
-    width: 55%;
+    width: 56%;
+
     height: 100%;
 
-    padding: 20px 45px;
+    padding: 25px 55px;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 
     color: white;
@@ -607,15 +749,21 @@ nav a:first-child::after {
     );
 }
 
-.drop-icon {
-    width: 29px;
-    height: 29px;
 
-    margin-bottom: 4px;
+.drop-icon {
+
+    width: 32px;
+
+    height: 32px;
+
+    margin-bottom: 6px;
 }
 
+
 .drop-icon svg {
+
     width: 100%;
+
     height: 100%;
 
     fill: none;
@@ -625,37 +773,53 @@ nav a:first-child::after {
     stroke-width: 1.7;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
+
 .banner-blue h2 {
-    margin-bottom: 7px;
 
-    font-size: 18px;
+    margin-bottom: 8px;
 
-    line-height: 1.2;
+    font-family: "Montserrat", Arial, sans-serif;
 
-    font-weight: 700;
+    font-size: 23px;
+
+    line-height: 1.12;
+
+    font-weight: 900;
+
+    letter-spacing: -.4px;
 }
+
 
 .banner-blue p {
+
     color: rgba(255,255,255,.87);
 
-    font-size: 10px;
+    font-size: 11px;
 }
 
+
 .banner-photo {
+
     position: absolute;
 
     right: 0;
+
     top: 0;
 
     width: 52%;
+
     height: 100%;
 }
 
+
 .banner-photo img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -667,9 +831,10 @@ nav a:first-child::after {
 ========================================================= */
 
 .services {
-    width: min(1240px, 94%);
 
-    min-height: 180px;
+    width: min(1380px, 94%);
+
+    min-height: 205px;
 
     margin: 0 auto;
 
@@ -681,12 +846,14 @@ nav a:first-child::after {
 
     grid-template-columns: repeat(4, 1fr);
 
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 18px 18px;
 
     background: #0a396d;
 }
 
+
 .services::before {
+
     content: "";
 
     position: absolute;
@@ -703,16 +870,21 @@ nav a:first-child::after {
     z-index: 0;
 }
 
+
 .service {
-    min-height: 180px;
+
+    min-height: 205px;
 
     position: relative;
+
     z-index: 2;
 
-    padding: 23px 20px 20px;
+    padding: 28px 22px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 
     text-align: center;
@@ -722,29 +894,36 @@ nav a:first-child::after {
     border-right: 1px solid rgba(255,255,255,.18);
 }
 
+
 .service:last-child {
+
     border-right: none;
 }
 
 
-/* ICONOS SERVICIOS */
-
 .service-icon {
-    width: 44px;
-    height: 44px;
 
-    margin-bottom: 8px;
+    width: 48px;
+
+    height: 48px;
+
+    margin-bottom: 11px;
 
     color: #ffffff;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 }
 
+
 .service-icon svg {
-    width: 37px;
-    height: 37px;
+
+    width: 39px;
+
+    height: 39px;
 
     fill: none;
 
@@ -753,25 +932,32 @@ nav a:first-child::after {
     stroke-width: 1.6;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
+
 .service h3 {
-    margin-bottom: 8px;
+
+    margin-bottom: 9px;
 
     color: #ffffff;
 
-    font-size: 11px;
+    font-family: "Montserrat", Arial, sans-serif;
 
-    font-weight: 700;
+    font-size: 13px;
+
+    font-weight: 800;
 }
 
+
 .service p {
-    max-width: 255px;
+
+    max-width: 270px;
 
     color: rgba(255,255,255,.85);
 
-    font-size: 9px;
+    font-size: 10px;
 
     line-height: 1.55;
 }
@@ -782,11 +968,12 @@ nav a:first-child::after {
 ========================================================= */
 
 .about {
-    width: min(1240px, 94%);
 
-    min-height: 320px;
+    width: min(1380px, 94%);
 
-    margin: 40px auto 18px;
+    min-height: 380px;
+
+    margin: 42px auto 22px;
 
     display: grid;
 
@@ -794,7 +981,7 @@ nav a:first-child::after {
 
     overflow: hidden;
 
-    border-radius: 18px;
+    border-radius: 20px;
 
     background: white;
 
@@ -802,76 +989,99 @@ nav a:first-child::after {
         0 7px 28px rgba(25,70,120,.065);
 }
 
+
 .about-content {
-    padding: 43px 45px;
+
+    padding: 55px 58px;
 }
 
+
 .about-label {
-    margin-bottom: 9px;
+
+    margin-bottom: 11px;
 
     color: var(--verde);
 
-    font-size: 10px;
+    font-size: 11px;
 
-    font-weight: 800;
+    font-weight: 900;
 }
 
-.about h2 {
-    margin-bottom: 15px;
 
-    max-width: 540px;
+.about h2 {
+
+    margin-bottom: 17px;
+
+    max-width: 600px;
 
     color: var(--azul-oscuro);
 
-    font-size: 29px;
+    font-family: "Montserrat", Arial, sans-serif;
 
-    line-height: 1.25;
+    font-size: 34px;
 
-    letter-spacing: -.7px;
+    line-height: 1.2;
 
-    font-weight: 700;
+    letter-spacing: -1px;
+
+    font-weight: 900;
 }
 
+
 .about h2 .verde {
+
     color: var(--verde);
 }
 
-.about-text {
-    max-width: 500px;
 
-    margin-bottom: 23px;
+.about-text {
+
+    max-width: 550px;
+
+    margin-bottom: 27px;
 
     color: #6d7d90;
 
-    font-size: 10px;
+    font-size: 11px;
 
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 
-/* ESTADÍSTICAS */
+/* =========================================================
+   ESTADÍSTICAS
+========================================================= */
 
 .stats {
+
     display: flex;
 
-    gap: 34px;
+    gap: 42px;
 }
+
 
 .stat {
-    min-width: 92px;
+
+    min-width: 105px;
 }
 
-.stat-icon {
-    width: 25px;
-    height: 25px;
 
-    margin-bottom: 4px;
+.stat-icon {
+
+    width: 28px;
+
+    height: 28px;
+
+    margin-bottom: 5px;
 
     color: var(--azul);
 }
 
+
 .stat-icon svg {
+
     width: 100%;
+
     height: 100%;
 
     fill: none;
@@ -881,59 +1091,76 @@ nav a:first-child::after {
     stroke-width: 1.7;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
+
 .stat strong {
+
     display: block;
 
     color: var(--azul);
 
-    font-size: 20px;
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 23px;
 
     line-height: 1;
 
-    font-weight: 700;
+    font-weight: 900;
 }
 
+
 .stat span {
+
     display: block;
 
-    margin-top: 4px;
+    margin-top: 5px;
 
     color: #758497;
 
-    font-size: 8px;
+    font-size: 9px;
 }
 
 
-/* FOTO FONTANERO */
+/* =========================================================
+   FOTO FONTANERO
+========================================================= */
 
 .about-image {
+
     position: relative;
 
-    min-height: 320px;
+    min-height: 380px;
 
     overflow: hidden;
 }
 
+
 .about-image img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 }
 
+
 .about-image::before {
+
     content: "";
 
     position: absolute;
 
     left: -46px;
+
     top: 50%;
 
     width: 90px;
-    height: 370px;
+
+    height: 430px;
 
     transform: translateY(-50%);
 
@@ -952,21 +1179,22 @@ nav a:first-child::after {
 ========================================================= */
 
 .contact {
-    width: min(1240px, 94%);
 
-    min-height: 108px;
+    width: min(1380px, 94%);
 
-    margin: 15px auto;
+    min-height: 125px;
+
+    margin: 22px auto 20px;
 
     display: grid;
 
-    grid-template-columns: 1.5fr 1fr 1.3fr 1.2fr;
+    grid-template-columns: 1.6fr 1fr 1.3fr 1.25fr;
 
     align-items: center;
 
     overflow: hidden;
 
-    border-radius: 14px;
+    border-radius: 16px;
 
     background: white;
 
@@ -974,53 +1202,70 @@ nav a:first-child::after {
         0 6px 25px rgba(25,70,120,.06);
 }
 
+
 .contact-intro {
-    padding: 20px 28px;
+
+    padding: 25px 32px;
 }
+
 
 .contact-intro small {
+
     color: var(--verde);
 
-    font-size: 9px;
+    font-size: 10px;
 
-    font-weight: 800;
+    font-weight: 900;
 }
 
+
 .contact-intro h2 {
-    margin: 4px 0;
+
+    margin: 5px 0;
 
     color: var(--azul-oscuro);
 
-    font-size: 18px;
+    font-family: "Montserrat", Arial, sans-serif;
 
-    font-weight: 700;
+    font-size: 21px;
+
+    font-weight: 900;
 }
+
 
 .contact-intro p {
+
     color: #78889a;
 
-    font-size: 8px;
+    font-size: 9px;
 }
 
 
-/* ITEMS */
+/* =========================================================
+   ITEMS CONTACTO
+========================================================= */
 
 .contact-item {
-    min-height: 75px;
 
-    padding: 14px 18px;
+    min-height: 88px;
+
+    padding: 18px 22px;
 
     border-left: 1px solid #e4ebf2;
 
     display: flex;
+
     align-items: center;
 
-    gap: 10px;
+    gap: 12px;
 }
 
+
 .contact-icon {
-    width: 38px;
-    height: 38px;
+
+    width: 42px;
+
+    height: 42px;
 
     flex-shrink: 0;
 
@@ -1031,13 +1276,18 @@ nav a:first-child::after {
     color: var(--verde);
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 }
 
+
 .contact-icon svg {
-    width: 19px;
-    height: 19px;
+
+    width: 20px;
+
+    height: 20px;
 
     fill: none;
 
@@ -1046,48 +1296,70 @@ nav a:first-child::after {
     stroke-width: 1.6;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
+
 .contact-item strong {
+
     display: block;
 
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 
     color: #264362;
+
+    font-size: 10px;
+}
+
+
+.contact-item span {
+
+    color: #7b8b9b;
 
     font-size: 9px;
 }
 
-.contact-item span {
-    color: #7b8b9b;
 
-    font-size: 8px;
-}
-
-
-/* BOTÓN */
+/* =========================================================
+   BOTÓN CONTACTO
+========================================================= */
 
 .contact-button {
-    padding: 18px;
+
+    padding: 22px;
 }
 
+
 .contact-button a {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    min-height: 42px;
+    min-height: 48px;
 
-    border-radius: 6px;
+    border-radius: 7px;
 
     background: var(--verde);
 
     color: white;
 
-    font-size: 9px;
+    font-size: 10px;
 
-    font-weight: 700;
+    font-weight: 800;
+
+    transition: .2s ease;
+}
+
+
+.contact-button a:hover {
+
+    background: #0d7138;
+
+    transform: translateY(-2px);
 }
 
 
@@ -1096,17 +1368,18 @@ nav a:first-child::after {
 ========================================================= */
 
 .trust {
-    width: min(1050px, 80%);
 
-    min-height: 88px;
+    width: min(1150px, 82%);
 
-    margin: 10px auto 30px;
+    min-height: 95px;
+
+    margin: 22px auto 35px;
 
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);
 
-    border-radius: 15px;
+    border-radius: 16px;
 
     overflow: hidden;
 
@@ -1120,30 +1393,41 @@ nav a:first-child::after {
     color: white;
 }
 
+
 .trust-item {
-    padding: 16px 19px;
+
+    padding: 18px 22px;
 
     display: flex;
+
     align-items: center;
 
-    gap: 11px;
+    gap: 12px;
 
     border-right: 1px solid rgba(255,255,255,.2);
 }
 
+
 .trust-item:last-child {
+
     border-right: none;
 }
 
+
 .trust-icon {
-    width: 34px;
-    height: 34px;
+
+    width: 36px;
+
+    height: 36px;
 
     flex-shrink: 0;
 }
 
+
 .trust-icon svg {
+
     width: 100%;
+
     height: 100%;
 
     fill: none;
@@ -1153,23 +1437,28 @@ nav a:first-child::after {
     stroke-width: 1.6;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
+
 .trust-item h3 {
-    margin-bottom: 4px;
 
-    font-size: 8px;
+    margin-bottom: 5px;
 
-    font-weight: 700;
+    font-size: 9px;
+
+    font-weight: 800;
 }
 
+
 .trust-item p {
-    max-width: 130px;
+
+    max-width: 150px;
 
     color: rgba(255,255,255,.78);
 
-    font-size: 7px;
+    font-size: 8px;
 
     line-height: 1.45;
 }
@@ -1180,7 +1469,8 @@ nav a:first-child::after {
 ========================================================= */
 
 footer {
-    padding: 25px 20px;
+
+    padding: 28px 20px;
 
     text-align: center;
 
@@ -1189,33 +1479,45 @@ footer {
     color: white;
 }
 
-footer img {
-    width: 125px;
 
-    margin: 0 auto 10px;
+footer img {
+
+    width: 145px;
+
+    margin: 0 auto 11px;
 }
+
 
 footer p {
+
     color: rgba(255,255,255,.7);
 
-    font-size: 8px;
+    font-size: 9px;
 }
+
 
 .social {
-    margin-top: 12px;
+
+    margin-top: 13px;
 
     display: flex;
+
     justify-content: center;
 
-    gap: 9px;
+    gap: 10px;
 }
 
+
 .social a {
-    width: 29px;
-    height: 29px;
+
+    width: 31px;
+
+    height: 31px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border: 1px solid rgba(255,255,255,.3);
@@ -1224,7 +1526,17 @@ footer p {
 
     color: white;
 
-    font-size: 8px;
+    font-size: 9px;
+
+    transition: .2s ease;
+}
+
+
+.social a:hover {
+
+    background: rgba(255,255,255,.12);
+
+    transform: translateY(-2px);
 }
 
 
@@ -1232,61 +1544,82 @@ footer p {
    TABLET
 ========================================================= */
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
 
     .navbar {
-        padding-left: 18px;
+
+        padding-left: 20px;
     }
 
     nav {
-        gap: 22px;
-        margin-left: 10px;
+
+        gap: 3px;
+
+        margin-left: 12px;
     }
 
     nav a {
-        font-size: 9px;
+
+        padding: 13px 13px;
+
+        font-size: 10px;
     }
 
     .logo {
-        width: 145px;
+
+        width: 170px;
     }
 
     .logo img {
-        width: 135px;
+
+        width: 160px;
     }
 
     .header-contact {
-        min-width: 105px;
 
-        padding: 10px 12px;
+        min-width: 125px;
+
+        padding: 0 14px;
     }
 
     .hero h1 {
-        font-size: 42px;
+
+        font-size: 45px;
     }
 
     .advantages {
+
         grid-template-columns: repeat(2, 1fr);
     }
 
     .about {
+
         grid-template-columns: 1fr;
     }
 
     .about-image {
-        min-height: 340px;
+
+        min-height: 380px;
     }
 
     .contact {
+
         grid-template-columns: 1fr 1fr;
     }
 
     .contact-intro {
+
         grid-column: span 2;
     }
 
     .contact-button {
+
         grid-column: span 2;
+    }
+
+    .trust {
+
+        width: 94%;
     }
 }
 
@@ -1298,13 +1631,15 @@ footer p {
 @media (max-width: 650px) {
 
     header {
+
         padding-top: 8px;
     }
 
     .navbar {
+
         width: 94%;
 
-        min-height: 70px;
+        min-height: 72px;
 
         padding: 8px 12px;
 
@@ -1312,165 +1647,207 @@ footer p {
     }
 
     .logo {
+
         width: 125px;
+
+        height: 50px;
     }
 
     .logo img {
+
         width: 120px;
+
+        height: 48px;
     }
 
     .header-contact {
-        min-width: 110px;
 
-        padding: 9px 12px;
+        min-width: 105px;
+
+        min-height: 40px;
+
+        padding: 0 12px;
 
         font-size: 8px;
     }
 
     nav {
+
         order: 3;
 
         width: 100%;
 
-        margin: 5px 0 0;
+        margin: 8px 0 0;
 
-        padding-top: 7px;
+        padding-top: 8px;
 
         border-top: 1px solid #edf1f5;
 
-        gap: 17px;
+        gap: 4px;
+
+        justify-content: space-between;
     }
 
     nav a {
+
         font-size: 7px;
 
-        padding: 7px 0;
+        padding: 8px 8px;
     }
 
     nav a:first-child::after {
-        bottom: 0;
+
+        bottom: 1px;
     }
 
     .hero {
+
         width: 94%;
 
         grid-template-columns: 1fr;
 
-        margin-top: 12px;
+        margin-top: 14px;
     }
 
     .hero-content {
-        padding: 38px 24px 30px;
+
+        padding: 42px 26px 35px;
     }
 
     .hero h1 {
+
         font-size: 35px;
 
-        letter-spacing: -1.2px;
+        letter-spacing: -1.3px;
     }
 
     .hero-description {
+
         font-size: 10px;
     }
 
     .hero-buttons {
+
         flex-wrap: wrap;
     }
 
     .hero-image {
+
         min-height: 300px;
     }
 
     .advantages {
+
         width: 94%;
 
         grid-template-columns: 1fr 1fr;
 
-        gap: 9px;
+        gap: 10px;
     }
 
     .advantage {
+
         min-height: 145px;
 
-        padding: 15px 8px;
+        padding: 16px 8px;
     }
 
     .circle-icon {
+
         width: 40px;
+
         height: 40px;
     }
 
     .advantage h3 {
+
         font-size: 9px;
     }
 
     .advantage p {
+
         font-size: 7.5px;
     }
 
     .blue-banner {
+
         width: 94%;
 
-        height: 140px;
+        height: 155px;
+
+        margin-top: 28px;
     }
 
     .banner-blue {
+
         width: 68%;
 
-        padding: 17px 20px;
+        padding: 18px 20px;
     }
 
     .banner-blue h2 {
-        font-size: 14px;
+
+        font-size: 16px;
     }
 
     .banner-blue p {
+
         font-size: 8px;
     }
 
     .banner-photo {
+
         width: 48%;
     }
 
     .services {
+
         width: 94%;
 
         grid-template-columns: 1fr 1fr;
     }
 
     .service {
+
         min-height: 165px;
 
-        padding: 19px 9px;
+        padding: 20px 9px;
     }
 
     .service h3 {
+
         font-size: 9px;
     }
 
     .service p {
+
         font-size: 7.5px;
     }
 
     .about {
+
         width: 94%;
 
         margin-top: 30px;
     }
 
     .about-content {
+
         padding: 30px 23px;
     }
 
     .about h2 {
-        font-size: 23px;
+
+        font-size: 24px;
     }
 
     .stats {
+
         gap: 18px;
     }
 
     .contact {
+
         width: 94%;
 
         grid-template-columns: 1fr;
@@ -1478,22 +1855,26 @@ footer p {
 
     .contact-intro,
     .contact-button {
+
         grid-column: span 1;
     }
 
     .contact-item {
+
         border-left: none;
 
         border-top: 1px solid #e4ebf2;
     }
 
     .trust {
+
         width: 94%;
 
         grid-template-columns: 1fr 1fr;
     }
 
     .trust-item {
+
         padding: 13px 9px;
     }
 
@@ -1513,7 +1894,6 @@ footer p {
 <header>
 
 <div class="navbar">
-
 
 <a href="#inicio" class="logo">
 
@@ -1565,7 +1945,6 @@ CONTÁCTANOS
 
 </a>
 
-
 </div>
 
 </header>
@@ -1582,7 +1961,6 @@ id="inicio">
 
 
 <div class="hero-content">
-
 
 <div class="eyebrow">
 SOLUCIONES QUE FLUYEN
@@ -1625,7 +2003,6 @@ con calidad y confianza.
 class="btn-services"
 href="#servicios">
 
-
 <svg
 class="wrench-icon"
 viewBox="0 0 24 24">
@@ -1645,7 +2022,6 @@ href="https://wa.me/34677449457"
 target="_blank"
 rel="noopener">
 
-
 <svg
 class="whatsapp-icon"
 viewBox="0 0 24 24">
@@ -1659,7 +2035,6 @@ viewBox="0 0 24 24">
 677 44 94 57
 
 </a>
-
 
 </div>
 
@@ -1686,8 +2061,6 @@ alt="Llave de agua Fonysan">
 <section class="advantages">
 
 
-<!-- PROFESIONALES -->
-
 <div class="advantage">
 
 <div class="circle-icon">
@@ -1695,9 +2068,7 @@ alt="Llave de agua Fonysan">
 <svg viewBox="0 0 24 24">
 
 <path d="M12 3l3 3-3 3-3-3 3-3z"/>
-
 <path d="M12 9v8"/>
-
 <path d="M8 21h8"/>
 
 </svg>
@@ -1716,7 +2087,6 @@ el mejor servicio.
 </div>
 
 
-<!-- ATENCIÓN -->
 
 <div class="advantage">
 
@@ -1725,7 +2095,6 @@ el mejor servicio.
 <svg viewBox="0 0 24 24">
 
 <circle cx="12" cy="12" r="8.5"/>
-
 <path d="M12 7v5l3 2"/>
 
 </svg>
@@ -1744,7 +2113,6 @@ tu problema cuanto antes.
 </div>
 
 
-<!-- CALIDAD -->
 
 <div class="advantage">
 
@@ -1772,7 +2140,6 @@ para asegurar resultados duraderos.
 </div>
 
 
-<!-- PRECIOS -->
 
 <div class="advantage">
 
@@ -1788,9 +2155,7 @@ height="16"
 rx="2"/>
 
 <path d="M9 8h6"/>
-
 <path d="M9 12h6"/>
-
 <path d="M9 16h4"/>
 
 </svg>
@@ -1821,7 +2186,6 @@ Presupuestos claros.
 
 <div class="banner-blue">
 
-
 <div class="drop-icon">
 
 <svg viewBox="0 0 24 24">
@@ -1834,15 +2198,17 @@ Presupuestos claros.
 
 
 <h2>
-RÁPIDOS, LIMPIOS<br>
+
+RÁPIDOS, LIMPIOS
+<br>
 Y EFICIENTES
+
 </h2>
 
 
 <p>
 Tu tranquilidad es nuestra prioridad.
 </p>
-
 
 </div>
 
@@ -1869,8 +2235,6 @@ class="services"
 id="servicios">
 
 
-<!-- INSTALACIONES -->
-
 <div class="service">
 
 <div class="service-icon">
@@ -1878,28 +2242,20 @@ id="servicios">
 <svg viewBox="0 0 24 24">
 
 <path d="M4 7h7v4H4z"/>
-
 <path d="M11 9h4"/>
-
 <path d="M15 9v5"/>
-
 <path d="M15 14h5"/>
-
 <path d="M20 14v4"/>
-
 <path d="M7 11v7"/>
-
 <path d="M4 18h6"/>
 
 </svg>
 
 </div>
 
-
 <h3>
 INSTALACIONES
 </h3>
-
 
 <p>
 Montaje y renovación de tuberías,
@@ -1909,7 +2265,6 @@ grifos, sanitarios y más.
 </div>
 
 
-<!-- REPARACIONES -->
 
 <div class="service">
 
@@ -1923,11 +2278,9 @@ grifos, sanitarios y más.
 
 </div>
 
-
 <h3>
 REPARACIONES
 </h3>
-
 
 <p>
 Soluciones integrales para fugas,
@@ -1938,7 +2291,6 @@ de instalaciones.
 </div>
 
 
-<!-- SANEAMIENTO -->
 
 <div class="service">
 
@@ -1952,11 +2304,9 @@ de instalaciones.
 
 </div>
 
-
 <h3>
 SANEAMIENTO
 </h3>
-
 
 <p>
 Instalación y renovación
@@ -1966,36 +2316,28 @@ de tuberías.
 </div>
 
 
-<!-- MANTENIMIENTO -->
 
 <div
 class="service"
 id="trabajos">
-
 
 <div class="service-icon">
 
 <svg viewBox="0 0 24 24">
 
 <path d="M3 11h12v7H3z"/>
-
 <path d="M15 13h3l3 3v2h-6z"/>
-
 <circle cx="7" cy="20" r="1.5"/>
-
 <circle cx="18" cy="20" r="1.5"/>
-
 <path d="M6 11V8h5v3"/>
 
 </svg>
 
 </div>
 
-
 <h3>
 MANTENIMIENTO
 </h3>
-
 
 <p>
 Mantenimiento preventivo y correctivo
@@ -2020,7 +2362,6 @@ id="nosotros">
 
 <div class="about-content">
 
-
 <div class="about-label">
 SOBRE NOSOTROS
 </div>
@@ -2030,7 +2371,9 @@ SOBRE NOSOTROS
 
 Atención profesional,
 resultados que inspiran
-<span class="verde">seguridad</span>.
+<span class="verde">
+seguridad
+</span>.
 
 </h2>
 
@@ -2058,11 +2401,8 @@ con la máxima calidad.
 <svg viewBox="0 0 24 24">
 
 <circle cx="12" cy="12" r="8.5"/>
-
 <circle cx="9" cy="10" r=".7"/>
-
 <circle cx="15" cy="10" r=".7"/>
-
 <path d="M8.5 14.5c2 1.7 5 1.7 7 0"/>
 
 </svg>
@@ -2078,6 +2418,7 @@ Clientes satisfechos
 </span>
 
 </div>
+
 
 
 <div class="stat">
@@ -2101,6 +2442,7 @@ Trabajos realizados
 </span>
 
 </div>
+
 
 
 <div class="stat">
@@ -2129,7 +2471,6 @@ Años de experiencia
 
 
 </div>
-
 
 </div>
 
@@ -2171,6 +2512,7 @@ Contacta con Fonysan y cuéntanos qué necesitas.
 </div>
 
 
+
 <div class="contact-item">
 
 <div class="contact-icon">
@@ -2197,6 +2539,7 @@ Llámanos o escríbenos
 </div>
 
 </div>
+
 
 
 <div class="contact-item">
@@ -2234,6 +2577,7 @@ Respondemos a la brevedad
 </div>
 
 
+
 <div class="contact-button">
 
 <a
@@ -2259,8 +2603,6 @@ ESCRÍBENOS POR WHATSAPP
 <section class="trust">
 
 
-<!-- CONFIANZA -->
-
 <div class="trust-item">
 
 <div class="trust-icon">
@@ -2274,7 +2616,6 @@ ESCRÍBENOS POR WHATSAPP
 </svg>
 
 </div>
-
 
 <div>
 
@@ -2292,7 +2633,6 @@ en cada trabajo.
 </div>
 
 
-<!-- DISPONIBILIDAD -->
 
 <div class="trust-item">
 
@@ -2301,13 +2641,11 @@ en cada trabajo.
 <svg viewBox="0 0 24 24">
 
 <circle cx="12" cy="12" r="8.5"/>
-
 <path d="M12 7v5l3 2"/>
 
 </svg>
 
 </div>
-
 
 <div>
 
@@ -2324,7 +2662,6 @@ Atención rápida y disponibilidad flexible.
 </div>
 
 
-<!-- GARANTÍA -->
 
 <div class="trust-item">
 
@@ -2339,7 +2676,6 @@ Atención rápida y disponibilidad flexible.
 </svg>
 
 </div>
-
 
 <div>
 
@@ -2357,7 +2693,6 @@ y con respaldo.
 </div>
 
 
-<!-- COBERTURA -->
 
 <div class="trust-item">
 
@@ -2372,7 +2707,6 @@ y con respaldo.
 </svg>
 
 </div>
-
 
 <div>
 
@@ -2399,7 +2733,6 @@ Castilla y León.
 
 <footer>
 
-
 <img
 src="LOGO TRANSPARENTE.png"
 alt="Fonysan">
@@ -2418,11 +2751,13 @@ target="_blank">
 IG
 </a>
 
+
 <a
 href="https://www.facebook.com/profile.php?id=61592791922836"
 target="_blank">
 FB
 </a>
+
 
 <a
 href="https://wa.me/34677449457"
@@ -2431,7 +2766,6 @@ WA
 </a>
 
 </div>
-
 
 </footer>
 
