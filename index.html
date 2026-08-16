@@ -19,6 +19,7 @@ content="Fonysan - Fontanería profesional, instalaciones, reparaciones, saneami
 href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
 rel="stylesheet">
 
+
 <style>
 
 /* =========================================================
@@ -29,7 +30,6 @@ rel="stylesheet">
     --azul: #0754ad;
     --azul-oscuro: #063d80;
     --azul-profundo: #062f62;
-    --azul-texto: #103f78;
 
     --verde: #138b45;
     --verde-claro: #eaf7ef;
@@ -58,14 +58,18 @@ html {
 
 body {
     margin: 0;
+
     font-family: "Inter", Arial, sans-serif;
+
     background:
         linear-gradient(
             180deg,
             #f4faff 0%,
             #f8fcff 100%
         );
-    color: var(--azul-texto);
+
+    color: var(--azul-oscuro);
+
     overflow-x: hidden;
 }
 
@@ -80,37 +84,36 @@ a {
 
 
 /* =========================================================
-   CONTENEDOR
-========================================================= */
-
-.container {
-    width: min(1380px, 94%);
-    margin: auto;
-}
-
-
-/* =========================================================
-   HEADER
+   CABECERA
 ========================================================= */
 
 header {
     width: 100%;
+
     padding: 16px 0 12px;
+
     position: relative;
+
     z-index: 100;
 }
 
 .navbar {
+
     width: min(1380px, 94%);
-    min-height: 84px;
+
+    /* MÁS ALTA PARA DAR PROTAGONISMO AL LOGO */
+    min-height: 105px;
+
     margin: auto;
-    padding: 8px 20px 8px 30px;
+
+    padding: 8px 25px 8px 30px;
 
     background: #ffffff;
 
     border-radius: 23px;
 
     display: flex;
+
     align-items: center;
 
     box-shadow:
@@ -119,25 +122,32 @@ header {
 
 
 /* =========================================================
-   LOGO
+   LOGO — MUCHO MÁS GRANDE
 ========================================================= */
 
 .logo {
-    width: 210px;
-    height: 62px;
+
+    width: 310px;
+
+    height: 100px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: flex-start;
 
     flex-shrink: 0;
 }
 
 .logo img {
-    width: 190px;
-    height: 58px;
+
+    width: 300px;
+
+    height: 95px;
 
     object-fit: contain;
+
     object-position: left center;
 }
 
@@ -147,25 +157,31 @@ header {
 ========================================================= */
 
 nav {
+
     flex: 1;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    gap: 10px;
-    margin-left: 30px;
+    gap: 8px;
+
+    margin-left: 15px;
 }
 
 nav a {
+
     position: relative;
 
     color: #183c67;
 
-    font-size: 12px;
+    font-size: 11px;
+
     font-weight: 700;
 
-    padding: 14px 24px;
+    padding: 16px 22px;
 
     white-space: nowrap;
 
@@ -178,25 +194,33 @@ nav a {
 }
 
 nav a:hover {
+
     color: var(--azul);
+
     background: #f1f7fd;
+
     transform: translateY(-1px);
 }
 
 nav a:first-child {
+
     color: var(--azul);
+
     background: #f1f7fd;
 }
 
 nav a:first-child::after {
+
     content: "";
 
     position: absolute;
 
     left: 50%;
+
     bottom: 4px;
 
-    width: 38px;
+    width: 40px;
+
     height: 3px;
 
     border-radius: 10px;
@@ -212,11 +236,15 @@ nav a:first-child::after {
 ========================================================= */
 
 .header-contact {
-    min-width: 155px;
+
+    min-width: 160px;
+
     min-height: 48px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 8px;
@@ -226,11 +254,13 @@ nav a:first-child::after {
     color: var(--verde);
 
     border: 1.5px solid #78bd96;
+
     border-radius: 25px;
 
     background: #ffffff;
 
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 800;
 
     transition: .2s ease;
@@ -239,7 +269,9 @@ nav a:first-child::after {
 }
 
 .header-contact:hover {
+
     background: var(--verde-claro);
+
     transform: translateY(-2px);
 }
 
@@ -249,14 +281,19 @@ nav a:first-child::after {
 ========================================================= */
 
 .whatsapp-icon {
+
     width: 18px;
+
     height: 18px;
 
     fill: none;
+
     stroke: currentColor;
+
     stroke-width: 1.8;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
@@ -266,7 +303,9 @@ nav a:first-child::after {
 ========================================================= */
 
 .hero {
+
     width: min(1380px, 94%);
+
     min-height: 525px;
 
     margin: 24px auto 0;
@@ -285,13 +324,13 @@ nav a:first-child::after {
         radial-gradient(
             circle at 73% 48%,
             #d7edff 0%,
-            rgba(235,247,255,0.4) 29%,
+            rgba(235,247,255,.4) 29%,
             transparent 50%
         ),
         #ffffff;
 
     box-shadow:
-        0 12px 38px rgba(31, 77, 120, 0.09);
+        0 12px 38px rgba(31,77,120,.09);
 }
 
 
@@ -300,20 +339,26 @@ nav a:first-child::after {
 ========================================================= */
 
 .hero-content {
+
     position: relative;
+
     z-index: 3;
 
     padding: 65px 50px 55px 65px;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 }
 
 .eyebrow {
+
     color: var(--verde);
 
     font-size: 12px;
+
     font-weight: 900;
 
     letter-spacing: .4px;
@@ -327,6 +372,7 @@ nav a:first-child::after {
 ========================================================= */
 
 .hero h1 {
+
     margin: 0 0 22px;
 
     max-width: 700px;
@@ -345,7 +391,9 @@ nav a:first-child::after {
 }
 
 .hero h1 .verde {
+
     color: var(--verde);
+
     font-weight: 900;
 }
 
@@ -355,6 +403,7 @@ nav a:first-child::after {
 ========================================================= */
 
 .hero-description {
+
     max-width: 520px;
 
     margin-bottom: 30px;
@@ -362,9 +411,8 @@ nav a:first-child::after {
     color: #5d7188;
 
     font-size: 14px;
-    line-height: 1.7;
 
-    font-weight: 400;
+    line-height: 1.7;
 }
 
 
@@ -373,15 +421,20 @@ nav a:first-child::after {
 ========================================================= */
 
 .hero-buttons {
+
     display: flex;
+
     align-items: center;
+
     gap: 14px;
 }
 
 .btn-services {
+
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     min-height: 49px;
@@ -391,34 +444,44 @@ nav a:first-child::after {
     border-radius: 8px;
 
     background: var(--azul);
+
     color: white;
 
     font-size: 11px;
+
     font-weight: 800;
 
     transition: .2s ease;
 }
 
 .btn-services:hover {
+
     background: var(--azul-oscuro);
+
     transform: translateY(-2px);
 }
 
 .wrench-icon {
+
     width: 17px;
+
     height: 17px;
 
     margin-right: 8px;
 
     fill: none;
+
     stroke: currentColor;
+
     stroke-width: 1.8;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
 .btn-whatsapp {
+
     min-height: 49px;
 
     padding: 0 25px;
@@ -426,6 +489,7 @@ nav a:first-child::after {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 8px;
@@ -439,13 +503,16 @@ nav a:first-child::after {
     color: var(--verde);
 
     font-size: 11px;
+
     font-weight: 800;
 
     transition: .2s ease;
 }
 
 .btn-whatsapp:hover {
+
     background: var(--verde-claro);
+
     transform: translateY(-2px);
 }
 
@@ -455,6 +522,7 @@ nav a:first-child::after {
 ========================================================= */
 
 .hero-image {
+
     min-height: 525px;
 
     position: relative;
@@ -463,10 +531,13 @@ nav a:first-child::after {
 }
 
 .hero-image img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
+
     object-position: center;
 
     mix-blend-mode: multiply;
@@ -478,6 +549,7 @@ nav a:first-child::after {
 ========================================================= */
 
 .advantages {
+
     width: min(1380px, 94%);
 
     margin: 20px auto 0;
@@ -490,6 +562,7 @@ nav a:first-child::after {
 }
 
 .advantage {
+
     min-height: 155px;
 
     padding: 23px 22px;
@@ -503,25 +576,26 @@ nav a:first-child::after {
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
 
     box-shadow:
-        0 6px 25px rgba(35, 76, 112, .065);
+        0 6px 25px rgba(35,76,112,.065);
 
     transition: .2s ease;
 }
 
 .advantage:hover {
-    transform: translateY(-3px);
 
-    box-shadow:
-        0 10px 28px rgba(35, 76, 112, .10);
+    transform: translateY(-3px);
 }
 
 .circle-icon {
+
     width: 48px;
+
     height: 48px;
 
     margin-bottom: 13px;
@@ -533,25 +607,31 @@ nav a:first-child::after {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     color: var(--azul);
 }
 
 .circle-icon svg {
+
     width: 25px;
+
     height: 25px;
 
     fill: none;
+
     stroke: currentColor;
 
     stroke-width: 1.65;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
 .advantage h3 {
+
     margin-bottom: 7px;
 
     color: #173d6d;
@@ -559,29 +639,33 @@ nav a:first-child::after {
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 13px;
+
     font-weight: 800;
 }
 
 .advantage p {
+
     max-width: 250px;
 
     color: #75859a;
 
     font-size: 10px;
+
     line-height: 1.55;
 }
 
 
 /* =========================================================
-   BANNER
+   BANNER RÁPIDOS
 ========================================================= */
 
 .blue-banner {
+
     width: min(1380px, 94%);
 
     height: 175px;
 
-    margin: 34px auto 0;
+    margin: 40px auto 0;
 
     position: relative;
 
@@ -593,11 +677,13 @@ nav a:first-child::after {
 }
 
 .banner-blue {
+
     position: relative;
 
     z-index: 2;
 
     width: 56%;
+
     height: 100%;
 
     padding: 25px 55px;
@@ -621,14 +707,18 @@ nav a:first-child::after {
 }
 
 .drop-icon {
+
     width: 32px;
+
     height: 32px;
 
     margin-bottom: 6px;
 }
 
 .drop-icon svg {
+
     width: 100%;
+
     height: 100%;
 
     fill: none;
@@ -638,40 +728,47 @@ nav a:first-child::after {
     stroke-width: 1.7;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
 .banner-blue h2 {
+
     margin-bottom: 8px;
 
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 23px;
+
     line-height: 1.12;
 
     font-weight: 900;
-
-    letter-spacing: -.4px;
 }
 
 .banner-blue p {
+
     color: rgba(255,255,255,.87);
 
     font-size: 11px;
 }
 
 .banner-photo {
+
     position: absolute;
 
     right: 0;
+
     top: 0;
 
     width: 52%;
+
     height: 100%;
 }
 
 .banner-photo img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -683,6 +780,7 @@ nav a:first-child::after {
 ========================================================= */
 
 .services {
+
     width: min(1380px, 94%);
 
     min-height: 205px;
@@ -703,6 +801,7 @@ nav a:first-child::after {
 }
 
 .services::before {
+
     content: "";
 
     position: absolute;
@@ -711,8 +810,8 @@ nav a:first-child::after {
 
     background:
         linear-gradient(
-            rgba(5, 49, 95, .83),
-            rgba(5, 49, 95, .91)
+            rgba(5,49,95,.83),
+            rgba(5,49,95,.91)
         ),
         url("FOTO INFERIOR AGUA.png") center / cover;
 
@@ -720,6 +819,7 @@ nav a:first-child::after {
 }
 
 .service {
+
     min-height: 205px;
 
     position: relative;
@@ -742,11 +842,14 @@ nav a:first-child::after {
 }
 
 .service:last-child {
+
     border-right: none;
 }
 
 .service-icon {
+
     width: 48px;
+
     height: 48px;
 
     margin-bottom: 11px;
@@ -756,11 +859,14 @@ nav a:first-child::after {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 }
 
 .service-icon svg {
+
     width: 39px;
+
     height: 39px;
 
     fill: none;
@@ -770,10 +876,12 @@ nav a:first-child::after {
     stroke-width: 1.6;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
 .service h3 {
+
     margin-bottom: 9px;
 
     color: #ffffff;
@@ -781,10 +889,12 @@ nav a:first-child::after {
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 13px;
+
     font-weight: 800;
 }
 
 .service p {
+
     max-width: 270px;
 
     color: rgba(255,255,255,.85);
@@ -800,6 +910,7 @@ nav a:first-child::after {
 ========================================================= */
 
 .about {
+
     width: min(1380px, 94%);
 
     min-height: 380px;
@@ -821,19 +932,23 @@ nav a:first-child::after {
 }
 
 .about-content {
+
     padding: 55px 58px;
 }
 
 .about-label {
+
     margin-bottom: 11px;
 
     color: var(--verde);
 
     font-size: 11px;
+
     font-weight: 900;
 }
 
 .about h2 {
+
     margin-bottom: 17px;
 
     max-width: 600px;
@@ -852,10 +967,12 @@ nav a:first-child::after {
 }
 
 .about h2 .verde {
+
     color: var(--verde);
 }
 
 .about-text {
+
     max-width: 550px;
 
     margin-bottom: 27px;
@@ -873,6 +990,7 @@ nav a:first-child::after {
 ========================================================= */
 
 .stats {
+
     display: flex;
 
     gap: 55px;
@@ -881,11 +999,14 @@ nav a:first-child::after {
 }
 
 .stat {
+
     min-width: 145px;
 }
 
 .stat-icon {
+
     width: 31px;
+
     height: 31px;
 
     margin-bottom: 7px;
@@ -894,7 +1015,9 @@ nav a:first-child::after {
 }
 
 .stat-icon svg {
+
     width: 100%;
+
     height: 100%;
 
     fill: none;
@@ -904,17 +1027,21 @@ nav a:first-child::after {
     stroke-width: 1.7;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
 .stat strong {
+
     display: block;
 
     color: var(--azul);
 
     font-family: "Montserrat", Arial, sans-serif;
 
-    font-size: 32px;
+    /* MÁS GRANDES */
+
+    font-size: 34px;
 
     line-height: 1;
 
@@ -926,6 +1053,7 @@ nav a:first-child::after {
 }
 
 .stat span {
+
     display: block;
 
     margin-top: 7px;
@@ -941,6 +1069,7 @@ nav a:first-child::after {
 ========================================================= */
 
 .about-image {
+
     position: relative;
 
     min-height: 380px;
@@ -949,21 +1078,26 @@ nav a:first-child::after {
 }
 
 .about-image img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 }
 
 .about-image::before {
+
     content: "";
 
     position: absolute;
 
     left: -46px;
+
     top: 50%;
 
     width: 90px;
+
     height: 430px;
 
     transform: translateY(-50%);
@@ -983,6 +1117,7 @@ nav a:first-child::after {
 ========================================================= */
 
 .contact {
+
     width: min(1380px, 94%);
 
     min-height: 125px;
@@ -1010,17 +1145,21 @@ nav a:first-child::after {
 }
 
 .contact-intro {
+
     padding: 25px 32px;
 }
 
 .contact-intro small {
+
     color: var(--verde);
 
     font-size: 10px;
+
     font-weight: 900;
 }
 
 .contact-intro h2 {
+
     margin: 5px 0;
 
     color: var(--azul-oscuro);
@@ -1033,17 +1172,14 @@ nav a:first-child::after {
 }
 
 .contact-intro p {
+
     color: #78889a;
 
     font-size: 9px;
 }
 
-
-/* =========================================================
-   ITEMS CONTACTO
-========================================================= */
-
 .contact-item {
+
     min-height: 88px;
 
     padding: 18px 22px;
@@ -1058,7 +1194,9 @@ nav a:first-child::after {
 }
 
 .contact-icon {
+
     width: 42px;
+
     height: 42px;
 
     flex-shrink: 0;
@@ -1072,11 +1210,14 @@ nav a:first-child::after {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 }
 
 .contact-icon svg {
+
     width: 20px;
+
     height: 20px;
 
     fill: none;
@@ -1086,10 +1227,12 @@ nav a:first-child::after {
     stroke-width: 1.6;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
 .contact-item strong {
+
     display: block;
 
     margin-bottom: 4px;
@@ -1100,24 +1243,23 @@ nav a:first-child::after {
 }
 
 .contact-item span {
+
     color: #7b8b9b;
 
     font-size: 9px;
 }
 
-
-/* =========================================================
-   BOTÓN CONTACTO
-========================================================= */
-
 .contact-button {
+
     padding: 22px;
 }
 
 .contact-button a {
+
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     min-height: 48px;
@@ -1129,12 +1271,14 @@ nav a:first-child::after {
     color: white;
 
     font-size: 10px;
+
     font-weight: 800;
 
     transition: .2s ease;
 }
 
 .contact-button a:hover {
+
     background: #0d7138;
 
     transform: translateY(-2px);
@@ -1142,10 +1286,11 @@ nav a:first-child::after {
 
 
 /* =========================================================
-   FRANJA FINAL
+   FRANJA FINAL — MÁS GRANDE
 ========================================================= */
 
 .trust {
+
     width: min(1380px, 94%);
 
     min-height: 135px;
@@ -1170,10 +1315,11 @@ nav a:first-child::after {
     color: white;
 
     box-shadow:
-        0 8px 28px rgba(25, 70, 120, .10);
+        0 8px 28px rgba(25,70,120,.10);
 }
 
 .trust-item {
+
     min-height: 135px;
 
     padding: 25px 38px;
@@ -1188,18 +1334,23 @@ nav a:first-child::after {
 }
 
 .trust-item:last-child {
+
     border-right: none;
 }
 
 .trust-icon {
+
     width: 48px;
+
     height: 48px;
 
     flex-shrink: 0;
 }
 
 .trust-icon svg {
+
     width: 100%;
+
     height: 100%;
 
     fill: none;
@@ -1209,10 +1360,12 @@ nav a:first-child::after {
     stroke-width: 1.6;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
 .trust-item h3 {
+
     margin-bottom: 7px;
 
     font-family: "Montserrat", Arial, sans-serif;
@@ -1225,6 +1378,7 @@ nav a:first-child::after {
 }
 
 .trust-item p {
+
     max-width: 210px;
 
     color: rgba(255,255,255,.82);
@@ -1240,6 +1394,7 @@ nav a:first-child::after {
 ========================================================= */
 
 footer {
+
     padding: 28px 20px;
 
     text-align: center;
@@ -1250,18 +1405,21 @@ footer {
 }
 
 footer img {
-    width: 145px;
+
+    width: 180px;
 
     margin: 0 auto 11px;
 }
 
 footer p {
+
     color: rgba(255,255,255,.7);
 
     font-size: 9px;
 }
 
 .social {
+
     margin-top: 13px;
 
     display: flex;
@@ -1272,12 +1430,15 @@ footer p {
 }
 
 .social a {
+
     width: 31px;
+
     height: 31px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     border: 1px solid rgba(255,255,255,.3);
@@ -1292,6 +1453,7 @@ footer p {
 }
 
 .social a:hover {
+
     background: rgba(255,255,255,.12);
 
     transform: translateY(-2px);
@@ -1302,71 +1464,89 @@ footer p {
    TABLET
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 
     .navbar {
-        padding-left: 20px;
-    }
 
-    nav {
-        gap: 3px;
-        margin-left: 12px;
-    }
+        min-height: 95px;
 
-    nav a {
-        padding: 13px 13px;
-        font-size: 10px;
+        padding-left: 22px;
     }
 
     .logo {
-        width: 170px;
+
+        width: 240px;
+
+        height: 85px;
     }
 
     .logo img {
-        width: 160px;
+
+        width: 230px;
+
+        height: 82px;
+    }
+
+    nav {
+
+        gap: 2px;
+
+        margin-left: 5px;
+    }
+
+    nav a {
+
+        padding: 13px 11px;
+
+        font-size: 9px;
     }
 
     .header-contact {
-        min-width: 125px;
+
+        min-width: 130px;
+
         padding: 0 14px;
     }
 
     .hero h1 {
+
         font-size: 45px;
     }
 
     .advantages {
+
         grid-template-columns: repeat(2, 1fr);
     }
 
     .about {
+
         grid-template-columns: 1fr;
     }
 
     .about-image {
+
         min-height: 380px;
     }
 
     .contact {
+
         grid-template-columns: 1fr 1fr;
     }
 
     .contact-intro {
+
         grid-column: span 2;
     }
 
     .contact-button {
+
         grid-column: span 2;
     }
 
-    .trust {
-        width: 94%;
-    }
-
     .trust-item {
+
         padding: 22px 20px;
     }
-
 }
 
 
@@ -1377,40 +1557,48 @@ footer p {
 @media (max-width: 650px) {
 
     header {
+
         padding-top: 8px;
     }
 
     .navbar {
+
         width: 94%;
 
-        min-height: 72px;
+        min-height: 75px;
 
-        padding: 8px 12px;
+        padding: 7px 12px;
 
         flex-wrap: wrap;
     }
 
     .logo {
-        width: 125px;
-        height: 50px;
+
+        width: 155px;
+
+        height: 58px;
     }
 
     .logo img {
-        width: 120px;
-        height: 48px;
+
+        width: 150px;
+
+        height: 55px;
     }
 
     .header-contact {
+
         min-width: 105px;
 
         min-height: 40px;
 
-        padding: 0 12px;
+        padding: 0 10px;
 
         font-size: 8px;
     }
 
     nav {
+
         order: 3;
 
         width: 100%;
@@ -1427,15 +1615,14 @@ footer p {
     }
 
     nav a {
+
         font-size: 7px;
+
         padding: 8px 8px;
     }
 
-    nav a:first-child::after {
-        bottom: 1px;
-    }
-
     .hero {
+
         width: 94%;
 
         grid-template-columns: 1fr;
@@ -1444,28 +1631,34 @@ footer p {
     }
 
     .hero-content {
+
         padding: 42px 26px 35px;
     }
 
     .hero h1 {
+
         font-size: 35px;
 
         letter-spacing: -1.3px;
     }
 
     .hero-description {
+
         font-size: 10px;
     }
 
     .hero-buttons {
+
         flex-wrap: wrap;
     }
 
     .hero-image {
+
         min-height: 300px;
     }
 
     .advantages {
+
         width: 94%;
 
         grid-template-columns: 1fr 1fr;
@@ -1474,24 +1667,31 @@ footer p {
     }
 
     .advantage {
+
         min-height: 145px;
+
         padding: 16px 8px;
     }
 
     .circle-icon {
+
         width: 40px;
+
         height: 40px;
     }
 
     .advantage h3 {
+
         font-size: 9px;
     }
 
     .advantage p {
+
         font-size: 7.5px;
     }
 
     .blue-banner {
+
         width: 94%;
 
         height: 155px;
@@ -1500,71 +1700,87 @@ footer p {
     }
 
     .banner-blue {
+
         width: 68%;
 
         padding: 18px 20px;
     }
 
     .banner-blue h2 {
+
         font-size: 16px;
     }
 
     .banner-blue p {
+
         font-size: 8px;
     }
 
     .banner-photo {
+
         width: 48%;
     }
 
     .services {
+
         width: 94%;
 
         grid-template-columns: 1fr 1fr;
     }
 
     .service {
+
         min-height: 165px;
 
         padding: 20px 9px;
     }
 
     .service h3 {
+
         font-size: 9px;
     }
 
     .service p {
+
         font-size: 7.5px;
     }
 
     .about {
+
         width: 94%;
 
         margin-top: 30px;
     }
 
     .about-content {
+
         padding: 30px 23px;
     }
 
     .about h2 {
+
         font-size: 24px;
     }
 
     .stats {
+
         gap: 18px;
+
         flex-wrap: wrap;
     }
 
     .stat {
+
         min-width: 100px;
     }
 
     .stat strong {
+
         font-size: 27px;
     }
 
     .contact {
+
         width: 94%;
 
         grid-template-columns: 1fr;
@@ -1572,15 +1788,19 @@ footer p {
 
     .contact-intro,
     .contact-button {
+
         grid-column: span 1;
     }
 
     .contact-item {
+
         border-left: none;
+
         border-top: 1px solid #e4ebf2;
     }
 
     .trust {
+
         width: 94%;
 
         min-height: auto;
@@ -1591,6 +1811,7 @@ footer p {
     }
 
     .trust-item {
+
         min-height: 120px;
 
         padding: 18px 12px;
@@ -1599,18 +1820,21 @@ footer p {
     }
 
     .trust-icon {
+
         width: 36px;
+
         height: 36px;
     }
 
     .trust-item h3 {
+
         font-size: 9px;
     }
 
     .trust-item p {
+
         font-size: 7px;
     }
-
 }
 
 
@@ -1620,33 +1844,53 @@ footer p {
 
 @media (max-width: 430px) {
 
+    .logo {
+
+        width: 140px;
+
+        height: 55px;
+    }
+
+    .logo img {
+
+        width: 138px;
+
+        height: 52px;
+    }
+
     .hero h1 {
+
         font-size: 30px;
     }
 
     .stats {
+
         gap: 12px;
     }
 
     .stat {
+
         min-width: 85px;
     }
 
     .stat strong {
+
         font-size: 24px;
     }
 
     .trust {
+
         grid-template-columns: 1fr;
     }
 
     .trust-item {
+
         min-height: 90px;
     }
-
 }
 
 </style>
+
 </head>
 
 
@@ -1654,7 +1898,7 @@ footer p {
 
 
 <!-- =====================================================
-     CABECERA
+     HEADER
 ===================================================== -->
 
 <header>
@@ -1854,7 +2098,6 @@ el mejor servicio.
 </div>
 
 
-
 <div class="advantage">
 
 <div class="circle-icon">
@@ -1878,7 +2121,6 @@ tu problema cuanto antes.
 </p>
 
 </div>
-
 
 
 <div class="advantage">
@@ -1905,7 +2147,6 @@ para asegurar resultados duraderos.
 </p>
 
 </div>
-
 
 
 <div class="advantage">
@@ -2032,7 +2273,6 @@ grifos, sanitarios y más.
 </div>
 
 
-
 <div class="service">
 
 <div class="service-icon">
@@ -2058,7 +2298,6 @@ de instalaciones.
 </div>
 
 
-
 <div class="service">
 
 <div class="service-icon">
@@ -2081,7 +2320,6 @@ de tuberías.
 </p>
 
 </div>
-
 
 
 <div
@@ -2187,7 +2425,6 @@ Clientes satisfechos
 </div>
 
 
-
 <div class="stat">
 
 <div class="stat-icon">
@@ -2209,7 +2446,6 @@ Trabajos realizados
 </span>
 
 </div>
-
 
 
 <div class="stat">
@@ -2279,7 +2515,6 @@ Contacta con Fonysan y cuéntanos qué necesitas.
 </div>
 
 
-
 <div class="contact-item">
 
 <div class="contact-icon">
@@ -2306,7 +2541,6 @@ Llámanos o escríbenos
 </div>
 
 </div>
-
 
 
 <div class="contact-item">
@@ -2342,7 +2576,6 @@ Respondemos a la brevedad
 </div>
 
 </div>
-
 
 
 <div class="contact-button">
@@ -2400,7 +2633,6 @@ en cada trabajo.
 </div>
 
 
-
 <div class="trust-item">
 
 <div class="trust-icon">
@@ -2408,6 +2640,7 @@ en cada trabajo.
 <svg viewBox="0 0 24 24">
 
 <circle cx="12" cy="12" r="8.5"/>
+
 <path d="M12 7v5l3 2"/>
 
 </svg>
@@ -2428,7 +2661,6 @@ flexible.
 </div>
 
 </div>
-
 
 
 <div class="trust-item">
@@ -2459,7 +2691,6 @@ y con respaldo.
 </div>
 
 </div>
-
 
 
 <div class="trust-item">
