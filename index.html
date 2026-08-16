@@ -7,17 +7,13 @@
 
 <title>Fonysan | Fontanería Profesional</title>
 
-<meta
-name="description"
-content="Fonysan - Fontanería profesional, instalaciones, reparaciones, saneamiento y mantenimiento."
->
+<meta name="description"
+content="Fonysan - Fontanería profesional, instalaciones, reparaciones, saneamiento y mantenimiento.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
 
 
 <style>
@@ -89,11 +85,9 @@ a {
 
 header {
     width: 100%;
-
-    padding: 16px 0 12px;
+    padding: 10px 0 8px;
 
     position: relative;
-
     z-index: 100;
 }
 
@@ -101,54 +95,57 @@ header {
 
     width: min(1380px, 94%);
 
-    /* MÁS ALTA PARA DAR PROTAGONISMO AL LOGO */
-    min-height: 105px;
+    /* MÁS COMPACTA */
+    height: 92px;
 
     margin: auto;
 
-    padding: 8px 25px 8px 30px;
+    /* MENOS ESPACIO INTERIOR */
+    padding: 5px 20px 5px 25px;
 
     background: #ffffff;
 
-    border-radius: 23px;
+    border-radius: 21px;
 
     display: flex;
-
     align-items: center;
 
     box-shadow:
-        0 8px 32px rgba(24, 74, 120, 0.10);
+        0 7px 28px rgba(24, 74, 120, 0.09);
 }
 
 
 /* =========================================================
-   LOGO — MUCHO MÁS GRANDE
+   LOGO
 ========================================================= */
 
 .logo {
 
-    width: 310px;
-
-    height: 100px;
+    width: 350px;
+    height: 86px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: flex-start;
 
     flex-shrink: 0;
+
+    overflow: visible;
 }
 
 .logo img {
 
-    width: 300px;
+    /*
+       LOGO MUCHO MÁS ALARGADO
+    */
 
-    height: 95px;
+    width: 340px;
+    height: 86px;
 
     object-fit: contain;
-
     object-position: left center;
+
+    transform: scale(1.05);
 }
 
 
@@ -161,27 +158,27 @@ nav {
     flex: 1;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
-    gap: 8px;
+    gap: 4px;
 
-    margin-left: 15px;
+    margin-left: 8px;
 }
 
 nav a {
 
     position: relative;
 
-    color: #183c67;
+    color: #173d67;
 
-    font-size: 11px;
+    /* LETRA MÁS GRANDE */
+    font-size: 12px;
 
-    font-weight: 700;
+    font-weight: 800;
 
-    padding: 16px 22px;
+    /* BOTONES MÁS GRANDES */
+    padding: 16px 20px;
 
     white-space: nowrap;
 
@@ -202,6 +199,9 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
+
+/* INICIO */
+
 nav a:first-child {
 
     color: var(--azul);
@@ -216,11 +216,9 @@ nav a:first-child::after {
     position: absolute;
 
     left: 50%;
+    bottom: 5px;
 
-    bottom: 4px;
-
-    width: 40px;
-
+    width: 42px;
     height: 3px;
 
     border-radius: 10px;
@@ -232,40 +230,43 @@ nav a:first-child::after {
 
 
 /* =========================================================
-   BOTÓN CONTACTO HEADER
+   BOTÓN CONTACTO
 ========================================================= */
 
 .header-contact {
 
-    min-width: 160px;
+    /*
+       MÁS GRANDE
+    */
 
-    min-height: 48px;
+    width: 185px;
+    height: 52px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
-    gap: 8px;
+    gap: 9px;
 
-    padding: 0 22px;
+    padding: 0 20px;
 
     color: var(--verde);
 
-    border: 1.5px solid #78bd96;
+    border: 1.5px solid #72b991;
 
-    border-radius: 25px;
+    border-radius: 28px;
 
     background: #ffffff;
 
-    font-size: 10px;
+    font-size: 11px;
 
-    font-weight: 800;
+    font-weight: 900;
 
-    transition: .2s ease;
+    white-space: nowrap;
 
     flex-shrink: 0;
+
+    transition: .2s ease;
 }
 
 .header-contact:hover {
@@ -275,15 +276,9 @@ nav a:first-child::after {
     transform: translateY(-2px);
 }
 
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
 .whatsapp-icon {
 
     width: 18px;
-
     height: 18px;
 
     fill: none;
@@ -308,7 +303,7 @@ nav a:first-child::after {
 
     min-height: 525px;
 
-    margin: 24px auto 0;
+    margin: 22px auto 0;
 
     border-radius: 28px;
 
@@ -344,7 +339,7 @@ nav a:first-child::after {
 
     z-index: 3;
 
-    padding: 65px 50px 55px 65px;
+    padding: 60px 50px 55px 65px;
 
     display: flex;
 
@@ -464,7 +459,6 @@ nav a:first-child::after {
 .wrench-icon {
 
     width: 17px;
-
     height: 17px;
 
     margin-right: 8px;
@@ -539,8 +533,6 @@ nav a:first-child::after {
     object-fit: cover;
 
     object-position: center;
-
-    mix-blend-mode: multiply;
 }
 
 
@@ -588,14 +580,12 @@ nav a:first-child::after {
 }
 
 .advantage:hover {
-
     transform: translateY(-3px);
 }
 
 .circle-icon {
 
     width: 48px;
-
     height: 48px;
 
     margin-bottom: 13px;
@@ -607,7 +597,6 @@ nav a:first-child::after {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     color: var(--azul);
@@ -616,7 +605,6 @@ nav a:first-child::after {
 .circle-icon svg {
 
     width: 25px;
-
     height: 25px;
 
     fill: none;
@@ -709,7 +697,6 @@ nav a:first-child::after {
 .drop-icon {
 
     width: 32px;
-
     height: 32px;
 
     margin-bottom: 6px;
@@ -718,7 +705,6 @@ nav a:first-child::after {
 .drop-icon svg {
 
     width: 100%;
-
     height: 100%;
 
     fill: none;
@@ -757,18 +743,15 @@ nav a:first-child::after {
     position: absolute;
 
     right: 0;
-
     top: 0;
 
     width: 52%;
-
     height: 100%;
 }
 
 .banner-photo img {
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -842,14 +825,12 @@ nav a:first-child::after {
 }
 
 .service:last-child {
-
     border-right: none;
 }
 
 .service-icon {
 
     width: 48px;
-
     height: 48px;
 
     margin-bottom: 11px;
@@ -859,14 +840,12 @@ nav a:first-child::after {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 }
 
 .service-icon svg {
 
     width: 39px;
-
     height: 39px;
 
     fill: none;
@@ -967,7 +946,6 @@ nav a:first-child::after {
 }
 
 .about h2 .verde {
-
     color: var(--verde);
 }
 
@@ -1006,7 +984,6 @@ nav a:first-child::after {
 .stat-icon {
 
     width: 31px;
-
     height: 31px;
 
     margin-bottom: 7px;
@@ -1017,7 +994,6 @@ nav a:first-child::after {
 .stat-icon svg {
 
     width: 100%;
-
     height: 100%;
 
     fill: none;
@@ -1038,8 +1014,6 @@ nav a:first-child::after {
     color: var(--azul);
 
     font-family: "Montserrat", Arial, sans-serif;
-
-    /* MÁS GRANDES */
 
     font-size: 34px;
 
@@ -1080,7 +1054,6 @@ nav a:first-child::after {
 .about-image img {
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -1093,11 +1066,9 @@ nav a:first-child::after {
     position: absolute;
 
     left: -46px;
-
     top: 50%;
 
     width: 90px;
-
     height: 430px;
 
     transform: translateY(-50%);
@@ -1196,7 +1167,6 @@ nav a:first-child::after {
 .contact-icon {
 
     width: 42px;
-
     height: 42px;
 
     flex-shrink: 0;
@@ -1210,14 +1180,12 @@ nav a:first-child::after {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 }
 
 .contact-icon svg {
 
     width: 20px;
-
     height: 20px;
 
     fill: none;
@@ -1286,7 +1254,7 @@ nav a:first-child::after {
 
 
 /* =========================================================
-   FRANJA FINAL — MÁS GRANDE
+   FRANJA FINAL
 ========================================================= */
 
 .trust {
@@ -1334,14 +1302,12 @@ nav a:first-child::after {
 }
 
 .trust-item:last-child {
-
     border-right: none;
 }
 
 .trust-icon {
 
     width: 48px;
-
     height: 48px;
 
     flex-shrink: 0;
@@ -1350,7 +1316,6 @@ nav a:first-child::after {
 .trust-icon svg {
 
     width: 100%;
-
     height: 100%;
 
     fill: none;
@@ -1406,7 +1371,7 @@ footer {
 
 footer img {
 
-    width: 180px;
+    width: 200px;
 
     margin: 0 auto 11px;
 }
@@ -1432,13 +1397,11 @@ footer p {
 .social a {
 
     width: 31px;
-
     height: 31px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border: 1px solid rgba(255,255,255,.3);
@@ -1467,84 +1430,65 @@ footer p {
 @media (max-width: 1100px) {
 
     .navbar {
-
-        min-height: 95px;
-
-        padding-left: 22px;
+        height: 88px;
+        padding-left: 18px;
     }
 
     .logo {
-
-        width: 240px;
-
-        height: 85px;
+        width: 250px;
+        height: 80px;
     }
 
     .logo img {
-
-        width: 230px;
-
-        height: 82px;
+        width: 245px;
+        height: 78px;
     }
 
     nav {
-
-        gap: 2px;
-
-        margin-left: 5px;
+        gap: 1px;
+        margin-left: 0;
     }
 
     nav a {
-
-        padding: 13px 11px;
-
-        font-size: 9px;
+        padding: 13px 10px;
+        font-size: 10px;
     }
 
     .header-contact {
-
-        min-width: 130px;
-
-        padding: 0 14px;
+        width: 145px;
+        height: 48px;
+        font-size: 9px;
     }
 
     .hero h1 {
-
         font-size: 45px;
     }
 
     .advantages {
-
         grid-template-columns: repeat(2, 1fr);
     }
 
     .about {
-
         grid-template-columns: 1fr;
     }
 
     .about-image {
-
         min-height: 380px;
     }
 
     .contact {
-
         grid-template-columns: 1fr 1fr;
     }
 
     .contact-intro {
-
         grid-column: span 2;
     }
 
     .contact-button {
-
         grid-column: span 2;
     }
 
     .trust-item {
-
         padding: 22px 20px;
     }
 }
@@ -1557,7 +1501,6 @@ footer p {
 @media (max-width: 650px) {
 
     header {
-
         padding-top: 8px;
     }
 
@@ -1565,6 +1508,7 @@ footer p {
 
         width: 94%;
 
+        height: auto;
         min-height: 75px;
 
         padding: 7px 12px;
@@ -1574,23 +1518,20 @@ footer p {
 
     .logo {
 
-        width: 155px;
-
-        height: 58px;
+        width: 165px;
+        height: 60px;
     }
 
     .logo img {
 
-        width: 150px;
-
-        height: 55px;
+        width: 160px;
+        height: 57px;
     }
 
     .header-contact {
 
-        min-width: 105px;
-
-        min-height: 40px;
+        width: 115px;
+        height: 42px;
 
         padding: 0 10px;
 
@@ -1609,7 +1550,7 @@ footer p {
 
         border-top: 1px solid #edf1f5;
 
-        gap: 4px;
+        gap: 3px;
 
         justify-content: space-between;
     }
@@ -1618,7 +1559,7 @@ footer p {
 
         font-size: 7px;
 
-        padding: 8px 8px;
+        padding: 8px 7px;
     }
 
     .hero {
@@ -1631,7 +1572,6 @@ footer p {
     }
 
     .hero-content {
-
         padding: 42px 26px 35px;
     }
 
@@ -1643,17 +1583,14 @@ footer p {
     }
 
     .hero-description {
-
         font-size: 10px;
     }
 
     .hero-buttons {
-
         flex-wrap: wrap;
     }
 
     .hero-image {
-
         min-height: 300px;
     }
 
@@ -1676,17 +1613,14 @@ footer p {
     .circle-icon {
 
         width: 40px;
-
         height: 40px;
     }
 
     .advantage h3 {
-
         font-size: 9px;
     }
 
     .advantage p {
-
         font-size: 7.5px;
     }
 
@@ -1707,17 +1641,14 @@ footer p {
     }
 
     .banner-blue h2 {
-
         font-size: 16px;
     }
 
     .banner-blue p {
-
         font-size: 8px;
     }
 
     .banner-photo {
-
         width: 48%;
     }
 
@@ -1736,12 +1667,10 @@ footer p {
     }
 
     .service h3 {
-
         font-size: 9px;
     }
 
     .service p {
-
         font-size: 7.5px;
     }
 
@@ -1753,12 +1682,10 @@ footer p {
     }
 
     .about-content {
-
         padding: 30px 23px;
     }
 
     .about h2 {
-
         font-size: 24px;
     }
 
@@ -1770,12 +1697,10 @@ footer p {
     }
 
     .stat {
-
         min-width: 100px;
     }
 
     .stat strong {
-
         font-size: 27px;
     }
 
@@ -1788,7 +1713,6 @@ footer p {
 
     .contact-intro,
     .contact-button {
-
         grid-column: span 1;
     }
 
@@ -1822,17 +1746,14 @@ footer p {
     .trust-icon {
 
         width: 36px;
-
         height: 36px;
     }
 
     .trust-item h3 {
-
         font-size: 9px;
     }
 
     .trust-item p {
-
         font-size: 7px;
     }
 }
@@ -1845,52 +1766,46 @@ footer p {
 @media (max-width: 430px) {
 
     .logo {
-
-        width: 140px;
-
+        width: 145px;
         height: 55px;
     }
 
     .logo img {
-
-        width: 138px;
-
+        width: 142px;
         height: 52px;
     }
 
-    .hero h1 {
+    .header-contact {
+        width: 105px;
+        height: 40px;
+    }
 
+    .hero h1 {
         font-size: 30px;
     }
 
     .stats {
-
         gap: 12px;
     }
 
     .stat {
-
         min-width: 85px;
     }
 
     .stat strong {
-
         font-size: 24px;
     }
 
     .trust {
-
         grid-template-columns: 1fr;
     }
 
     .trust-item {
-
         min-height: 90px;
     }
 }
 
 </style>
-
 </head>
 
 
@@ -1898,7 +1813,7 @@ footer p {
 
 
 <!-- =====================================================
-     HEADER
+     CABECERA
 ===================================================== -->
 
 <header>
@@ -1966,9 +1881,7 @@ CONTÁCTANOS
      HERO
 ===================================================== -->
 
-<section
-class="hero"
-id="inicio">
+<section class="hero" id="inicio">
 
 
 <div class="hero-content">
@@ -2009,14 +1922,9 @@ con calidad y confianza.
 
 <div class="hero-buttons">
 
+<a class="btn-services" href="#servicios">
 
-<a
-class="btn-services"
-href="#servicios">
-
-<svg
-class="wrench-icon"
-viewBox="0 0 24 24">
+<svg class="wrench-icon" viewBox="0 0 24 24">
 
 <path d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
 
@@ -2033,9 +1941,7 @@ href="https://wa.me/34677449457"
 target="_blank"
 rel="noopener">
 
-<svg
-class="whatsapp-icon"
-viewBox="0 0 24 24">
+<svg class="whatsapp-icon" viewBox="0 0 24 24">
 
 <path d="M20 11.5a8 8 0 0 1-11.8 7l-3.2.9.9-3.1A8 8 0 1 1 20 11.5z"/>
 
@@ -2059,7 +1965,6 @@ src="FOTO LLAVE AGUA PORTADA.png"
 alt="Llave de agua Fonysan">
 
 </div>
-
 
 </section>
 
@@ -2155,12 +2060,7 @@ para asegurar resultados duraderos.
 
 <svg viewBox="0 0 24 24">
 
-<rect
-x="6.5"
-y="4"
-width="11"
-height="16"
-rx="2"/>
+<rect x="6.5" y="4" width="11" height="16" rx="2"/>
 
 <path d="M9 8h6"/>
 <path d="M9 12h6"/>
@@ -2180,17 +2080,15 @@ Presupuestos claros.
 
 </div>
 
-
 </section>
 
 
 
 <!-- =====================================================
-     BANNER
+     RÁPIDOS, LIMPIOS Y EFICIENTES
 ===================================================== -->
 
 <section class="blue-banner">
-
 
 <div class="banner-blue">
 
@@ -2206,11 +2104,9 @@ Presupuestos claros.
 
 
 <h2>
-
 RÁPIDOS, LIMPIOS
 <br>
 Y EFICIENTES
-
 </h2>
 
 
@@ -2229,7 +2125,6 @@ alt="Baño">
 
 </div>
 
-
 </section>
 
 
@@ -2238,9 +2133,7 @@ alt="Baño">
      SERVICIOS
 ===================================================== -->
 
-<section
-class="services"
-id="servicios">
+<section class="services" id="servicios">
 
 
 <div class="service">
@@ -2322,9 +2215,7 @@ de tuberías.
 </div>
 
 
-<div
-class="service"
-id="trabajos">
+<div class="service" id="trabajos">
 
 <div class="service-icon">
 
@@ -2351,7 +2242,6 @@ de instalaciones de fontanería.
 
 </div>
 
-
 </section>
 
 
@@ -2360,9 +2250,7 @@ de instalaciones de fontanería.
      SOBRE NOSOTROS
 ===================================================== -->
 
-<section
-class="about"
-id="nosotros">
+<section class="about" id="nosotros">
 
 
 <div class="about-content">
@@ -2486,7 +2374,6 @@ alt="Fontanero trabajando">
 
 </div>
 
-
 </section>
 
 
@@ -2495,7 +2382,7 @@ alt="Fontanero trabajando">
      CONTACTO
 ===================================================== -->
 
-<section class="contact">
+<section class="contact" id="contacto">
 
 
 <div class="contact-intro">
@@ -2590,7 +2477,6 @@ ESCRÍBENOS POR WHATSAPP
 </a>
 
 </div>
-
 
 </section>
 
@@ -2720,7 +2606,6 @@ Castilla y León.
 </div>
 
 </div>
-
 
 </section>
 
