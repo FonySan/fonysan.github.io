@@ -8,22 +8,20 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-    --blue:#0752a5;
-    --blue-dark:#063d7d;
-    --blue-light:#0b63c9;
-    --green:#0b9447;
-    --green-light:#16a05a;
-    --text:#0c315e;
-    --gray:#637896;
-    --bg:#f2f8fc;
+    --blue:#0754a6;
+    --blue-dark:#063b78;
+    --green:#079447;
+    --green-light:#11a957;
     --white:#ffffff;
-    --line:#dbe7f1;
+    --text:#123e6f;
+    --muted:#6d8299;
+    --bg:#f3f9fd;
+    --line:#dce8f2;
 }
 
 *{
@@ -37,7 +35,7 @@ html{
 }
 
 body{
-    font-family:"Inter",Arial,sans-serif;
+    font-family:'Montserrat',Arial,sans-serif;
     background:var(--bg);
     color:var(--text);
     overflow-x:hidden;
@@ -54,73 +52,70 @@ a{
 }
 
 /* =========================
-   CONTENEDOR
+   CONTENEDOR GENERAL
 ========================= */
 
 .container{
-    width:min(1380px,94%);
-    margin:auto;
+    width:min(1440px,94%);
+    margin:0 auto;
 }
 
 /* =========================
-   NAVBAR
+   HEADER
 ========================= */
 
 header{
-    width:100%;
-    padding:18px 0;
     background:#fff;
+    padding:20px 0;
     position:relative;
     z-index:20;
 }
 
 .navbar{
-    width:min(1380px,94%);
-    min-height:88px;
-    margin:auto;
-
+    min-height:105px;
+    background:#fff;
+    border-radius:20px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-
-    padding:12px 24px;
-
-    background:#fff;
-    border-radius:20px;
-
-    box-shadow:0 12px 35px rgba(20,70,110,.08);
+    padding:15px 28px 15px 42px;
+    box-shadow:0 8px 30px rgba(8,63,113,.08);
 }
 
 /* LOGO */
 
 .logo{
-    width:185px;
-    flex-shrink:0;
     display:flex;
     align-items:center;
+    justify-content:flex-start;
+    width:235px;
+    flex-shrink:0;
 }
 
 .logo img{
-    width:100%;
+    width:190px;
     height:auto;
     object-fit:contain;
 }
 
-/* MENU */
+/* NAV */
 
 .nav-links{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:58px;
+    gap:55px;
     margin-left:auto;
-    margin-right:55px;
+    margin-right:50px;
 }
 
 .nav-links a{
-    font-size:16px;
+    font-size:15px;
     font-weight:800;
-    color:#082f5d;
+    color:#12395f;
+    position:relative;
+    padding:18px 5px;
+    white-space:nowrap;
     transition:.25s ease;
 }
 
@@ -128,29 +123,38 @@ header{
     color:var(--blue);
 }
 
-/* CONTACTO */
-
-.nav-contact{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-
-    padding:17px 27px;
-
-    border:1.8px solid var(--green);
-    border-radius:40px;
-
-    color:var(--green);
-    font-size:15px;
-    font-weight:800;
-
-    white-space:nowrap;
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    height:3px;
+    width:0;
+    left:50%;
+    bottom:7px;
+    background:var(--green);
+    transform:translateX(-50%);
+    transition:.25s ease;
 }
 
-.nav-contact svg{
-    width:19px;
-    height:19px;
+.nav-links a:hover::after{
+    width:75%;
+}
+
+/* CONTACT BUTTON */
+
+.nav-contact{
+    border:2px solid var(--green);
+    color:var(--green);
+    padding:18px 30px;
+    border-radius:40px;
+    font-size:14px;
+    font-weight:900;
+    white-space:nowrap;
+    transition:.25s ease;
+}
+
+.nav-contact:hover{
+    background:var(--green);
+    color:#fff;
 }
 
 /* =========================
@@ -158,51 +162,46 @@ header{
 ========================= */
 
 .hero{
-    margin-top:24px;
-}
-
-.hero-box{
-    min-height:570px;
-
-    display:grid;
-    grid-template-columns:48% 52%;
-
-    background:white;
-    border-radius:25px;
+    position:relative;
+    min-height:650px;
+    background:#fff;
+    border-radius:24px;
     overflow:hidden;
-
-    box-shadow:0 12px 35px rgba(20,70,110,.07);
+    display:grid;
+    grid-template-columns:47% 53%;
+    margin-top:20px;
+    box-shadow:0 12px 35px rgba(8,63,113,.08);
 }
 
 /* TEXTO */
 
 .hero-content{
-    padding:65px 55px 60px;
-
+    position:relative;
+    z-index:3;
+    padding:75px 55px 65px 70px;
     display:flex;
     flex-direction:column;
     justify-content:center;
-
-    position:relative;
-    z-index:2;
+    background:#fff;
 }
 
-.eyebrow{
-    font-size:14px;
-    font-weight:900;
+.hero-small{
     color:var(--green);
+    font-size:13px;
+    font-weight:900;
     text-transform:uppercase;
     letter-spacing:.2px;
-    margin-bottom:20px;
+    margin-bottom:23px;
 }
 
 .hero-title{
-    font-size:clamp(48px,4.4vw,78px);
+    font-size:clamp(46px,4.4vw,76px);
     line-height:.98;
-    letter-spacing:-2.7px;
     font-weight:900;
-    text-transform:uppercase;
+    letter-spacing:-2.5px;
     color:var(--blue-dark);
+    text-transform:uppercase;
+    max-width:700px;
 }
 
 .hero-title .green{
@@ -210,39 +209,32 @@ header{
 }
 
 .hero-description{
-    max-width:620px;
     margin-top:30px;
-
-    font-size:18px;
-    line-height:1.65;
-    color:var(--gray);
+    max-width:650px;
+    font-size:17px;
+    line-height:1.8;
+    font-weight:500;
+    color:#67809a;
 }
 
 .hero-buttons{
     display:flex;
-    gap:15px;
-    margin-top:32px;
+    gap:18px;
+    margin-top:35px;
 }
 
 .btn{
-    min-height:54px;
-    padding:0 27px;
-
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
+    padding:19px 28px;
     border-radius:8px;
-
-    font-size:14px;
+    font-size:13px;
     font-weight:900;
-
+    text-transform:uppercase;
     transition:.25s ease;
 }
 
 .btn-primary{
-    color:#fff;
     background:var(--blue);
+    color:#fff;
 }
 
 .btn-primary:hover{
@@ -252,22 +244,22 @@ header{
 
 .btn-secondary{
     color:var(--green);
-    border:1.5px solid var(--green);
+    border:2px solid var(--green);
     background:#fff;
 }
 
-/* FOTO LLAVE */
+.btn-secondary:hover{
+    background:var(--green);
+    color:#fff;
+}
+
+/* IMAGEN HERO */
 
 .hero-image{
     position:relative;
-    min-height:570px;
+    min-height:650px;
     overflow:hidden;
 }
-
-/*
-   La imagen queda completa dentro de su zona.
-   No se fuerza un recorte agresivo.
-*/
 
 .hero-image img{
     width:100%;
@@ -276,23 +268,24 @@ header{
     object-position:center center;
 }
 
-/* DEGRADADO SOBRE LA IMAGEN */
+/* DEGRADADO */
 
 .hero-image::before{
     content:"";
     position:absolute;
-    inset:0;
-    z-index:1;
-    pointer-events:none;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.92) 0%,
-            rgba(255,255,255,.58) 9%,
-            rgba(255,255,255,.12) 25%,
-            rgba(255,255,255,0) 42%
-        );
+    left:-1px;
+    top:0;
+    bottom:0;
+    width:32%;
+    z-index:2;
+    background:linear-gradient(
+        90deg,
+        #fff 0%,
+        rgba(255,255,255,.96) 10%,
+        rgba(255,255,255,.75) 30%,
+        rgba(255,255,255,.28) 65%,
+        rgba(255,255,255,0) 100%
+    );
 }
 
 /* =========================
@@ -300,205 +293,181 @@ header{
 ========================= */
 
 .benefits{
-    margin-top:25px;
-}
-
-.benefits-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:18px;
+    margin-top:25px;
 }
 
 .benefit{
-    min-height:180px;
-
     background:#fff;
-    border-radius:17px;
-
+    border-radius:18px;
+    min-height:170px;
+    padding:27px 22px;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-
     text-align:center;
-
-    padding:25px;
-
-    box-shadow:0 8px 25px rgba(20,70,110,.05);
+    box-shadow:0 8px 25px rgba(8,63,113,.06);
 }
 
-.benefit-icon{
-    width:58px;
-    height:58px;
-
+.symbol{
+    width:60px;
+    height:60px;
     border:2px solid var(--blue);
     border-radius:50%;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     color:var(--blue);
-
-    margin-bottom:15px;
-}
-
-.benefit-icon svg{
-    width:29px;
-    height:29px;
+    font-size:29px;
+    font-weight:500;
+    margin-bottom:16px;
 }
 
 .benefit h3{
-    font-size:17px;
-    font-weight:900;
     color:var(--blue-dark);
+    font-size:16px;
+    font-weight:900;
+    margin-bottom:8px;
 }
 
 .benefit p{
-    max-width:230px;
-    margin-top:8px;
-
-    color:#71839a;
-    font-size:12px;
+    color:#7589a0;
+    font-size:11px;
     line-height:1.5;
+    max-width:240px;
 }
 
 /* =========================
-   SERVICIOS DESTACADOS
+   RAPIDOS LIMPIOS EFICIENTES
 ========================= */
 
-.services-highlight{
-    margin-top:28px;
-}
-
-.services-top{
-    min-height:280px;
-
-    display:grid;
-    grid-template-columns:44% 56%;
-
-    overflow:hidden;
+.fast-section{
+    margin-top:38px;
+    min-height:390px;
     border-radius:22px;
-
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:45% 55%;
     background:var(--blue);
 }
 
-.services-intro{
-    padding:45px;
-
+.fast-content{
+    background:var(--blue);
+    color:#fff;
+    padding:65px 65px;
     display:flex;
     flex-direction:column;
     justify-content:center;
-
-    color:white;
+    position:relative;
 }
 
-.services-symbol{
-    width:42px;
-    height:42px;
-    margin-bottom:20px;
-}
-
-.services-symbol svg{
-    width:100%;
+.fast-content::after{
+    content:"";
+    position:absolute;
+    right:-80px;
+    top:0;
+    width:150px;
     height:100%;
+    background:var(--blue);
+    clip-path:polygon(53% 0,100% 0,100% 100%,0 100%);
 }
 
-.services-intro h2{
-    font-size:36px;
-    line-height:1.02;
+.fast-symbol{
+    font-size:46px;
+    margin-bottom:24px;
+    position:relative;
+    z-index:2;
+}
+
+.fast-content h2{
+    font-size:clamp(38px,3.4vw,60px);
+    line-height:.98;
     font-weight:900;
     text-transform:uppercase;
-    letter-spacing:-1px;
+    color:#fff;
+    max-width:540px;
+    position:relative;
+    z-index:2;
 }
 
-.services-intro p{
-    margin-top:14px;
+.fast-content p{
+    margin-top:20px;
     font-size:15px;
-    color:#e5f1ff;
+    font-weight:600;
+    position:relative;
+    z-index:2;
 }
 
-.services-photo{
-    min-height:280px;
+.fast-image{
+    min-height:390px;
 }
 
-.services-photo img{
+.fast-image img{
     width:100%;
     height:100%;
     object-fit:cover;
     object-position:center;
 }
 
-/* SERVICIOS */
+/* =========================
+   SERVICIOS
+========================= */
 
-.services-grid{
+.services{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-
+    background:linear-gradient(
+        120deg,
+        #0a477f,
+        #145a96
+    );
+    border-radius:0 0 22px 22px;
     overflow:hidden;
-
-    background:
-        linear-gradient(
-            rgba(5,57,113,.92),
-            rgba(5,57,113,.92)
-        );
-
-    border-radius:0 0 20px 20px;
 }
 
 .service{
-    min-height:205px;
-
-    padding:32px 25px;
-
+    min-height:225px;
+    padding:35px 25px;
+    text-align:center;
+    color:#fff;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-
-    text-align:center;
-
-    color:white;
-
     border-right:1px solid rgba(255,255,255,.2);
+    position:relative;
 }
 
 .service:last-child{
     border-right:none;
 }
 
-.service-icon{
-    width:64px;
-    height:64px;
-
-    margin-bottom:18px;
-
+.service-symbol{
+    width:70px;
+    height:70px;
     display:flex;
     align-items:center;
     justify-content:center;
-}
-
-.service-icon svg{
-    width:58px;
-    height:58px;
-    stroke-width:1.8;
+    font-size:42px;
+    margin-bottom:20px;
+    color:#fff;
 }
 
 .service h3{
-    font-size:18px;
+    font-size:17px;
     font-weight:900;
     text-transform:uppercase;
+    margin-bottom:12px;
 }
 
 .service p{
-    margin-top:9px;
-
-    max-width:245px;
-
-    font-size:12px;
-    line-height:1.5;
-
-    color:#e7f2ff;
+    max-width:260px;
+    font-size:11px;
+    line-height:1.55;
+    font-weight:500;
 }
 
 /* =========================
@@ -507,113 +476,86 @@ header{
 
 .about{
     margin-top:38px;
-}
-
-.about-box{
-    min-height:590px;
-
-    display:grid;
-    grid-template-columns:50% 50%;
-
+    background:#fff;
+    border-radius:24px;
     overflow:hidden;
-
-    background:white;
-    border-radius:25px;
-
-    box-shadow:0 12px 35px rgba(20,70,110,.07);
+    min-height:590px;
+    display:grid;
+    grid-template-columns:52% 48%;
+    box-shadow:0 10px 30px rgba(8,63,113,.07);
 }
 
 .about-content{
-    padding:55px;
-
+    padding:65px 65px;
     display:flex;
     flex-direction:column;
     justify-content:center;
 }
 
-.about-label{
-    font-size:14px;
-    font-weight:900;
+.section-label{
     color:var(--green);
+    font-size:13px;
+    font-weight:900;
     text-transform:uppercase;
-
-    margin-bottom:17px;
+    margin-bottom:20px;
 }
 
-.about-title{
-    font-size:clamp(40px,3.5vw,61px);
+.about h2{
+    font-size:clamp(42px,4vw,65px);
     line-height:1.02;
-    letter-spacing:-2px;
     font-weight:900;
-
     color:var(--blue-dark);
+    letter-spacing:-2px;
 }
 
-.about-title span{
+.about h2 span{
     color:var(--green);
 }
 
-.about-description{
-    max-width:670px;
-
+.about-text{
     margin-top:28px;
-
-    font-size:17px;
-    line-height:1.7;
-
-    color:#657d98;
+    max-width:680px;
+    color:#667f98;
+    font-size:16px;
+    line-height:1.8;
+    font-weight:500;
 }
 
-/* ESTADÍSTICAS */
+/* ESTADISTICAS */
 
 .stats{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:30px;
-
-    margin-top:42px;
+    margin-top:45px;
 }
 
 .stat{
     text-align:left;
 }
 
-.stat-icon{
-    width:55px;
+.stat-symbol{
+    color:var(--blue);
+    font-size:45px;
+    margin-bottom:15px;
     height:55px;
-
     display:flex;
     align-items:center;
-    justify-content:flex-start;
-
-    color:var(--blue);
-
-    margin-bottom:8px;
-}
-
-.stat-icon svg{
-    width:46px;
-    height:46px;
-    stroke-width:2;
 }
 
 .stat-number{
-    font-size:47px;
-    line-height:1;
-
-    font-weight:900;
-    letter-spacing:-2px;
-
     color:var(--blue);
+    font-size:clamp(42px,4vw,65px);
+    font-weight:900;
+    line-height:1;
+    letter-spacing:-2px;
 }
 
 .stat-label{
-    margin-top:9px;
-
-    font-size:14px;
+    color:#688099;
+    font-size:13px;
     font-weight:600;
-
-    color:#647993;
+    margin-top:10px;
 }
 
 /* FOTO FONTANERO */
@@ -630,243 +572,148 @@ header{
 }
 
 /* =========================
-   BLOQUE DE CONTACTO
+   CONTACTO
 ========================= */
 
-.contact-area{
-    margin-top:28px;
-}
-
-/* INFORMACION DE CONTACTO */
-
-.contact-info{
-    min-height:165px;
-
-    background:white;
-
-    border-radius:20px;
-
+.contact{
+    margin-top:25px;
+    background:#fff;
+    border-radius:22px;
+    min-height:190px;
+    padding:35px 45px;
     display:grid;
-    grid-template-columns:1fr 1fr;
-
-    box-shadow:0 10px 30px rgba(20,70,110,.05);
+    grid-template-columns:1fr 1fr 1fr;
+    align-items:center;
+    gap:40px;
+    box-shadow:0 8px 28px rgba(8,63,113,.06);
 }
+
+.contact-intro{
+    padding-right:35px;
+}
+
+.contact-label{
+    color:var(--green);
+    font-size:12px;
+    font-weight:900;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.contact-intro h2{
+    color:var(--blue-dark);
+    font-size:27px;
+    font-weight:900;
+}
+
+.contact-intro p{
+    margin-top:7px;
+    color:#8292a5;
+    font-size:12px;
+}
+
+/* CADA CONTACTO */
 
 .contact-item{
-    padding:30px 40px;
-
+    min-height:95px;
+    padding-left:35px;
+    border-left:1px solid #d8e3ec;
     display:flex;
     align-items:center;
-    gap:23px;
-
-    border-right:1px solid var(--line);
-}
-
-.contact-item:last-child{
-    border-right:none;
+    gap:22px;
 }
 
 .contact-icon{
     width:58px;
     height:58px;
-
     flex-shrink:0;
-
-    border:1.8px solid var(--green);
+    border:2px solid var(--green);
+    color:var(--green);
     border-radius:50%;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
-    color:var(--green);
+    font-size:25px;
 }
 
-.contact-icon svg{
-    width:27px;
-    height:27px;
-}
-
-.contact-item strong{
+.contact-info strong{
     display:block;
-
-    font-size:21px;
-    font-weight:900;
-
     color:var(--blue-dark);
-    word-break:break-word;
+    font-size:18px;
+    font-weight:900;
+    line-height:1.3;
+    white-space:nowrap;
 }
 
-.contact-item span{
+.contact-info span{
     display:block;
-
+    color:#8190a3;
+    font-size:11px;
     margin-top:7px;
-
-    font-size:14px;
-    color:#778ba4;
-}
-
-/* =========================
-   CONFIANZA / DISPONIBILIDAD /
-   GARANTIA / COBERTURA
-========================= */
-
-.values{
-    margin-top:25px;
-}
-
-.values-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-
-    background:var(--blue-dark);
-
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.value{
-    min-height:175px;
-
-    padding:30px;
-
-    display:flex;
-    align-items:center;
-    gap:20px;
-
-    color:white;
-
-    border-right:1px solid rgba(255,255,255,.22);
-}
-
-.value:last-child{
-    border-right:none;
-}
-
-.value-icon{
-    width:62px;
-    height:62px;
-
-    flex-shrink:0;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:white;
-}
-
-.value-icon svg{
-    width:48px;
-    height:48px;
-    stroke-width:1.8;
-}
-
-.value h3{
-    font-size:18px;
-    font-weight:900;
-    text-transform:uppercase;
-}
-
-.value p{
-    margin-top:8px;
-
-    font-size:12px;
-    line-height:1.45;
-
-    color:#e6f1ff;
-}
-
-/* =========================
-   ESTAMOS LISTOS
-========================= */
-
-.ready{
-    margin-top:25px;
-}
-
-.ready-box{
-    min-height:165px;
-
-    padding:30px 40px;
-
-    background:#fff;
-
-    border-radius:20px;
-
-    display:grid;
-    grid-template-columns:1.3fr 1fr 1fr 1fr;
-
-    align-items:center;
-
-    box-shadow:0 10px 30px rgba(20,70,110,.05);
-}
-
-.ready-title small{
-    display:block;
-
-    color:var(--green);
-
-    font-size:12px;
-    font-weight:900;
-    text-transform:uppercase;
-
-    margin-bottom:8px;
-}
-
-.ready-title h2{
-    font-size:27px;
-    line-height:1.05;
-
-    font-weight:900;
-
-    color:var(--blue-dark);
-}
-
-.ready-title p{
-    margin-top:8px;
-
-    color:#71839a;
-    font-size:12px;
-}
-
-.ready-contact{
-    padding-left:28px;
-    border-left:1px solid var(--line);
-}
-
-.ready-contact strong{
-    font-size:18px;
-    font-weight:900;
-    color:var(--blue-dark);
-}
-
-.ready-contact span{
-    display:block;
-
-    margin-top:6px;
-
-    font-size:12px;
-    color:#74879e;
 }
 
 .whatsapp{
+    background:var(--green);
+    color:#fff;
+    padding:21px 25px;
+    border-radius:8px;
+    text-align:center;
+    font-size:12px;
+    font-weight:900;
+    transition:.25s ease;
+    white-space:nowrap;
+}
+
+.whatsapp:hover{
+    background:#087d3d;
+    transform:translateY(-2px);
+}
+
+/* =========================
+   CONFIANZA / GARANTIA
+========================= */
+
+.final-features{
+    margin:25px auto 55px;
+    width:92%;
+    max-width:1250px;
+    background:#08427e;
+    border-radius:18px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.final-feature{
+    min-height:150px;
+    color:#fff;
+    padding:28px 25px;
     display:flex;
     align-items:center;
-    justify-content:center;
+    gap:20px;
+    border-right:1px solid rgba(255,255,255,.2);
+}
 
-    min-height:52px;
+.final-feature:last-child{
+    border-right:none;
+}
 
-    padding:0 20px;
+.final-icon{
+    font-size:42px;
+    flex-shrink:0;
+}
 
-    border-radius:7px;
-
-    background:var(--green);
-
-    color:white;
-
-    font-size:13px;
+.final-feature h3{
+    font-size:15px;
     font-weight:900;
+    text-transform:uppercase;
+    margin-bottom:8px;
+}
+
+.final-feature p{
+    font-size:10px;
+    line-height:1.5;
+    color:#d8e7f5;
 }
 
 /* =========================
@@ -874,34 +721,24 @@ header{
 ========================= */
 
 footer{
-    margin-top:38px;
-
-    background:#06396f;
-
-    min-height:130px;
-
+    background:#07386e;
+    min-height:100px;
     display:flex;
     align-items:center;
     justify-content:center;
+    padding:25px;
 }
 
 .footer-logo{
-    width:180px;
+    width:130px;
+    filter:brightness(0) invert(1);
 }
 
-.footer-logo img{
-    width:100%;
-}
-
-/* =========================
-   SVG
-========================= */
-
-svg{
-    fill:none;
-    stroke:currentColor;
-    stroke-linecap:round;
-    stroke-linejoin:round;
+.footer-text{
+    color:#fff;
+    font-size:10px;
+    margin-top:8px;
+    text-align:center;
 }
 
 /* =========================
@@ -911,83 +748,8 @@ svg{
 @media(max-width:1100px){
 
     .nav-links{
-        gap:30px;
+        gap:25px;
         margin-right:25px;
-    }
-
-    .hero-title{
-        font-size:50px;
-    }
-
-    .hero-content{
-        padding:45px;
-    }
-
-    .about-title{
-        font-size:45px;
-    }
-
-    .value{
-        padding:25px 18px;
-        gap:12px;
-    }
-
-    .value-icon{
-        width:50px;
-    }
-
-    .value h3{
-        font-size:14px;
-    }
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:800px){
-
-    body{
-        background:#f4f9fc;
-    }
-
-    .container,
-    .navbar{
-        width:94%;
-    }
-
-    header{
-        padding:12px 0;
-    }
-
-    .navbar{
-        min-height:auto;
-
-        flex-direction:column;
-        gap:20px;
-
-        padding:20px 18px;
-    }
-
-    /* LOGO CENTRADO EN MOVIL */
-
-    .logo{
-        width:210px;
-        justify-content:center;
-        margin:auto;
-    }
-
-    .nav-links{
-        width:100%;
-
-        margin:0;
-
-        display:flex;
-        justify-content:center;
-
-        gap:17px;
-        flex-wrap:wrap;
     }
 
     .nav-links a{
@@ -995,146 +757,242 @@ svg{
     }
 
     .nav-contact{
+        padding:15px 20px;
+        font-size:11px;
+    }
+
+    .hero{
+        grid-template-columns:48% 52%;
+    }
+
+    .hero-content{
+        padding-left:45px;
+        padding-right:30px;
+    }
+
+    .hero-title{
+        font-size:50px;
+    }
+
+    .contact{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-intro{
+        grid-column:1/-1;
+        border-bottom:1px solid #dce6ee;
+        padding-bottom:20px;
+    }
+
+    .final-features{
+        width:94%;
+    }
+}
+
+/* =========================
+   MOVIL
+========================= */
+
+@media(max-width:800px){
+
+    body{
+        background:#f5faff;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    header{
+        padding:10px 0;
+    }
+
+    .navbar{
+        min-height:auto;
+        padding:18px 18px 22px;
+        flex-direction:column;
+        gap:18px;
+        border-radius:18px;
+    }
+
+    .logo{
         width:100%;
-        min-height:50px;
-        font-size:13px;
+        justify-content:center;
+    }
+
+    .logo img{
+        width:190px;
+    }
+
+    .nav-links{
+        width:100%;
+        margin:0;
+        gap:15px;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .nav-links a{
+        font-size:10px;
+        padding:8px 3px;
+    }
+
+    .nav-contact{
+        width:100%;
+        text-align:center;
+        font-size:11px;
+        padding:15px;
     }
 
     /* HERO */
 
     .hero{
-        margin-top:18px;
-    }
-
-    .hero-box{
-        grid-template-columns:1fr;
+        display:flex;
+        flex-direction:column;
         min-height:auto;
+        margin-top:15px;
     }
 
     .hero-content{
-        padding:38px 25px;
+        padding:45px 28px 35px;
         order:1;
     }
 
+    .hero-small{
+        font-size:10px;
+        margin-bottom:15px;
+    }
+
     .hero-title{
-        font-size:43px;
-        line-height:1;
-        letter-spacing:-1.8px;
+        font-size:clamp(39px,11vw,58px);
+        letter-spacing:-1.5px;
     }
 
     .hero-description{
-        font-size:15px;
+        font-size:13px;
+        line-height:1.65;
+        margin-top:22px;
     }
 
     .hero-buttons{
         flex-direction:column;
+        margin-top:25px;
     }
 
     .btn{
         width:100%;
+        text-align:center;
     }
 
     .hero-image{
         order:2;
-        min-height:330px;
+        min-height:350px;
+        height:350px;
     }
 
     .hero-image img{
-        object-fit:cover;
-        object-position:center;
+        object-fit:contain;
+        background:#eef6fb;
     }
 
     .hero-image::before{
-        background:
-            linear-gradient(
-                180deg,
-                rgba(255,255,255,.05),
-                rgba(255,255,255,0)
-            );
+        top:0;
+        left:0;
+        width:100%;
+        height:30%;
+        bottom:auto;
+        background:linear-gradient(
+            180deg,
+            #fff 0%,
+            rgba(255,255,255,.65) 45%,
+            rgba(255,255,255,0) 100%
+        );
     }
 
     /* BENEFICIOS */
 
-    .benefits-grid{
+    .benefits{
         grid-template-columns:1fr 1fr;
         gap:12px;
     }
 
     .benefit{
         min-height:160px;
-        padding:18px 10px;
     }
 
-    .benefit h3{
-        font-size:14px;
+    /* FAST */
+
+    .fast-section{
+        display:flex;
+        flex-direction:column;
     }
 
-    /* SERVICIOS */
-
-    .services-top{
-        grid-template-columns:1fr;
+    .fast-content{
+        min-height:300px;
+        padding:45px 30px;
     }
 
-    .services-intro{
-        min-height:240px;
-        padding:35px 28px;
+    .fast-content::after{
+        display:none;
     }
 
-    .services-intro h2{
-        font-size:38px;
+    .fast-content h2{
+        font-size:43px;
     }
 
-    .services-photo{
+    .fast-image{
+        height:300px;
         min-height:300px;
     }
 
-    .services-grid{
+    /* SERVICES */
+
+    .services{
         grid-template-columns:1fr 1fr;
     }
 
     .service{
         min-height:190px;
-        padding:22px 10px;
+        padding:25px 15px;
     }
 
-    .service:nth-child(2){
-        border-right:none;
-    }
-
-    .service-icon{
-        width:55px;
-        height:55px;
-    }
-
-    .service-icon svg{
-        width:48px;
-        height:48px;
+    .service-symbol{
+        font-size:36px;
+        margin-bottom:12px;
     }
 
     .service h3{
-        font-size:14px;
+        font-size:13px;
+    }
+
+    .service p{
+        font-size:9px;
     }
 
     /* ABOUT */
 
-    .about-box{
-        grid-template-columns:1fr;
+    .about{
+        display:flex;
+        flex-direction:column;
     }
 
     .about-content{
-        padding:40px 25px;
+        padding:45px 28px;
     }
 
-    .about-title{
-        font-size:39px;
+    .about h2{
+        font-size:42px;
+        letter-spacing:-1.5px;
     }
 
-    .about-description{
-        font-size:15px;
+    .about-text{
+        font-size:13px;
+        line-height:1.7;
     }
 
     .stats{
-        gap:15px;
+        grid-template-columns:1fr 1fr 1fr;
+        gap:10px;
         margin-top:35px;
     }
 
@@ -1142,189 +1000,155 @@ svg{
         text-align:center;
     }
 
-    .stat-icon{
+    .stat-symbol{
         justify-content:center;
-        margin:auto auto 8px;
+        font-size:38px;
     }
 
     .stat-number{
+        font-size:34px;
+        letter-spacing:-1px;
+    }
+
+    .stat-label{
+        font-size:9px;
+    }
+
+    .about-image{
+        min-height:350px;
+        height:350px;
+    }
+
+    /* CONTACTO */
+
+    .contact{
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:28px 22px;
+    }
+
+    .contact-intro{
+        padding:0 0 22px;
+    }
+
+    .contact-intro h2{
+        font-size:25px;
+    }
+
+    .contact-item{
+        border-left:none;
+        border-top:1px solid #dce6ee;
+        padding:22px 0;
+    }
+
+    .contact-info strong{
+        font-size:16px;
+        white-space:normal;
+        word-break:break-word;
+    }
+
+    .whatsapp{
+        margin-top:10px;
+        width:100%;
+    }
+
+    /* FINAL */
+
+    .final-features{
+        width:94%;
+        grid-template-columns:1fr 1fr;
+    }
+
+    .final-feature{
+        min-height:150px;
+        padding:22px 15px;
+        gap:12px;
+        border-bottom:1px solid rgba(255,255,255,.2);
+    }
+
+    .final-feature:nth-child(2){
+        border-right:none;
+    }
+
+    .final-feature:nth-child(3),
+    .final-feature:nth-child(4){
+        border-bottom:none;
+    }
+
+    .final-icon{
+        font-size:32px;
+    }
+
+    .final-feature h3{
+        font-size:11px;
+    }
+
+    .final-feature p{
+        font-size:8px;
+    }
+}
+
+/* =========================
+   MOVIL PEQUEÑO
+========================= */
+
+@media(max-width:480px){
+
+    .hero-title{
         font-size:37px;
+    }
+
+    .benefits{
+        grid-template-columns:1fr;
+    }
+
+    .fast-content h2{
+        font-size:38px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .service{
+        min-height:170px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .stat{
+        text-align:center;
+    }
+
+    .stat-symbol{
+        justify-content:center;
+    }
+
+    .stat-number{
+        font-size:48px;
     }
 
     .stat-label{
         font-size:11px;
     }
 
-    .about-image{
-        min-height:360px;
-    }
-
-    /* CONTACT */
-
-    .contact-info{
+    .final-features{
         grid-template-columns:1fr;
     }
 
-    .contact-item{
-        min-height:125px;
-        padding:25px;
-        border-right:none;
-        border-bottom:1px solid var(--line);
+    .final-feature{
+        border-right:none!important;
+        border-bottom:1px solid rgba(255,255,255,.2)!important;
     }
 
-    .contact-item:last-child{
-        border-bottom:none;
+    .final-feature:last-child{
+        border-bottom:none!important;
     }
-
-    .contact-item strong{
-        font-size:18px;
-    }
-
-    /* VALUES */
-
-    .values-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .value{
-        min-height:165px;
-
-        padding:22px 15px;
-
-        flex-direction:column;
-
-        text-align:center;
-
-        justify-content:center;
-
-        border-right:1px solid rgba(255,255,255,.22);
-        border-bottom:1px solid rgba(255,255,255,.22);
-    }
-
-    .value:nth-child(2){
-        border-right:none;
-    }
-
-    .value:nth-child(3),
-    .value:nth-child(4){
-        border-bottom:none;
-    }
-
-    .value-icon{
-        width:55px;
-        height:55px;
-    }
-
-    .value-icon svg{
-        width:43px;
-        height:43px;
-    }
-
-    .value h3{
-        font-size:14px;
-    }
-
-    .value p{
-        font-size:10px;
-    }
-
-    /* READY */
-
-    .ready-box{
-        grid-template-columns:1fr;
-        gap:20px;
-
-        padding:28px 25px;
-    }
-
-    .ready-title h2{
-        font-size:25px;
-    }
-
-    .ready-contact{
-        padding:18px 0 0;
-        border-left:none;
-        border-top:1px solid var(--line);
-    }
-
-    .whatsapp{
-        width:100%;
-    }
-
-    footer{
-        min-height:100px;
-    }
-
-    .footer-logo{
-        width:145px;
-    }
-
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media(max-width:480px){
-
-    .hero-title{
-        font-size:36px;
-    }
-
-    .benefits-grid{
-        grid-template-columns:1fr;
-    }
-
-    .benefit{
-        min-height:145px;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-    .service,
-    .service:nth-child(3){
-        border-right:none;
-        border-bottom:1px solid rgba(255,255,255,.2);
-    }
-
-    .service:last-child{
-        border-bottom:none;
-    }
-
-    .about-title{
-        font-size:34px;
-    }
-
-    .stats{
-        grid-template-columns:1fr;
-        gap:28px;
-    }
-
-    .stat-number{
-        font-size:43px;
-    }
-
-    .values-grid{
-        grid-template-columns:1fr;
-    }
-
-    .value,
-    .value:nth-child(2),
-    .value:nth-child(3){
-        border-right:none;
-        border-bottom:1px solid rgba(255,255,255,.22);
-    }
-
-    .value:last-child{
-        border-bottom:none;
-    }
-
-    .contact-item strong{
-        font-size:16px;
-    }
-
 }
 
 </style>
@@ -1332,703 +1156,508 @@ svg{
 
 <body>
 
-<!-- =========================================================
-     NAVBAR
-========================================================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
+<div class="container">
+
 <nav class="navbar">
 
-    <a href="#inicio" class="logo">
-        <img src="LOGO FONDO TRASNPARENTE.png" alt="Fonysan">
-    </a>
+<a href="#inicio" class="logo">
+    <img src="LOGO FONDO TRASNPARENTE.png" alt="Fonysan">
+</a>
 
-    <div class="nav-links">
-        <a href="#inicio">INICIO</a>
-        <a href="#servicios">SERVICIOS</a>
-        <a href="#sobre-nosotros">SOBRE NOSOTROS</a>
-        <a href="#contacto">CONTACTO</a>
-    </div>
+<div class="nav-links">
+    <a href="#inicio">INICIO</a>
+    <a href="#servicios">SERVICIOS</a>
+    <a href="#nosotros">SOBRE NOSOTROS</a>
+    <a href="#contacto">CONTACTO</a>
+</div>
 
-    <a href="#contacto" class="nav-contact">
-
-        <svg viewBox="0 0 24 24">
-            <path d="M20 11.5a8 8 0 0 1-8 8 8.5 8.5 0 0 1-4.1-1.05L4 19l.8-3.5A8 8 0 1 1 20 11.5Z"/>
-            <path d="M8.5 9.5c.3 1.7 2.3 3.7 4 4l1.2-1.2c.2-.2.5-.2.7-.1l1.7.8c.3.1.4.4.3.7-.2.8-.9 1.4-1.7 1.5-3.2.2-6.7-3.3-6.5-6.5.1-.8.7-1.5 1.5-1.7.3-.1.6 0 .7.3l.8 1.7c.1.2.1.5-.1.7Z"/>
-        </svg>
-
-        CONTÁCTANOS
-
-    </a>
+<a href="#contacto" class="nav-contact">
+    CONTACTAR
+</a>
 
 </nav>
+
+</div>
 
 </header>
 
 
 <main>
 
-<!-- =========================================================
+<!-- =========================
      HERO
-========================================================= -->
+========================= -->
 
-<section class="hero container" id="inicio">
+<section class="container" id="inicio">
 
-<div class="hero-box">
+<div class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="eyebrow">
-            SOLUCIONES QUE FLUYEN
-        </div>
+<div class="hero-small">
+    SOLUCIONES QUE FLUYEN
+</div>
 
-        <h1 class="hero-title">
+<h1 class="hero-title">
+    PRECISIÓN EN CADA<br>
+    INSTALACIÓN.<br>
+    <span class="green">
+        EXCELENCIA EN CADA SERVICIO.
+    </span>
+</h1>
 
-            PRECISIÓN EN<br>
-            CADA INSTALACIÓN.<br>
+<p class="hero-description">
+    Ofrecemos soluciones profesionales de fontanería y saneamiento
+    con calidad, precisión y confianza.
+</p>
 
-            <span class="green">
-                EXCELENCIA EN<br>
-                CADA SERVICIO.
-            </span>
+<div class="hero-buttons">
 
-        </h1>
+<a href="#contacto" class="btn btn-primary">
+    SOLICITAR PRESUPUESTO
+</a>
 
-        <p class="hero-description">
-            Ofrecemos soluciones profesionales de fontanería y
-            saneamiento con calidad, precisión y confianza.
-        </p>
+<a href="#servicios" class="btn btn-secondary">
+    VER SERVICIOS
+</a>
 
-        <div class="hero-buttons">
+</div>
 
-            <a href="#contacto" class="btn btn-primary">
-                SOLICITAR PRESUPUESTO
-            </a>
+</div>
 
-            <a href="#servicios" class="btn btn-secondary">
-                VER SERVICIOS
-            </a>
+<div class="hero-image">
 
-        </div>
+<img src="FOTO LLAVE AGUA PORTADA.png"
+     alt="Fontanería Fonysan">
 
-    </div>
-
-
-    <div class="hero-image">
-
-        <img
-            src="FOTO LLAVE AGUA PORTADA.png"
-            alt="Fontanería Fonysan"
-        >
-
-    </div>
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =========================
      BENEFICIOS
-========================================================= -->
+========================= -->
 
-<section class="benefits container">
+<section class="container">
 
-<div class="benefits-grid">
+<div class="benefits">
 
-    <article class="benefit">
+<div class="benefit">
 
-        <div class="benefit-icon">
+<div class="symbol">◉</div>
 
-            <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M8 14c1.1 1.2 2.5 1.8 4 1.8s2.9-.6 4-1.8"/>
-                <path d="M8.5 10h.01M15.5 10h.01"/>
-            </svg>
+<h3>Profesionales cualificados</h3>
 
-        </div>
+<p>
+Experiencia y formación para garantizar el mejor servicio.
+</p>
 
-        <h3>Profesionales cualificados</h3>
-
-        <p>
-            Experiencia y formación para garantizar el mejor servicio.
-        </p>
-
-    </article>
+</div>
 
 
-    <article class="benefit">
+<div class="benefit">
 
-        <div class="benefit-icon">
+<div class="symbol">◷</div>
 
-            <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M12 7v5l3 2"/>
-            </svg>
+<h3>Atención rápida</h3>
 
-        </div>
+<p>
+Respondemos rápido para resolver tu problema cuanto antes.
+</p>
 
-        <h3>Atención rápida</h3>
-
-        <p>
-            Respondemos rápido para resolver tu problema cuanto antes.
-        </p>
-
-    </article>
+</div>
 
 
-    <article class="benefit">
+<div class="benefit">
 
-        <div class="benefit-icon">
+<div class="symbol">◇</div>
 
-            <svg viewBox="0 0 24 24">
-                <path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L12 3Z"/>
-            </svg>
+<h3>Calidad garantizada</h3>
 
-        </div>
+<p>
+Trabajamos con materiales de primera para asegurar resultados duraderos.
+</p>
 
-        <h3>Calidad garantizada</h3>
-
-        <p>
-            Trabajamos con materiales de primera para asegurar resultados duraderos.
-        </p>
-
-    </article>
+</div>
 
 
-    <article class="benefit">
+<div class="benefit">
 
-        <div class="benefit-icon">
+<div class="symbol">▤</div>
 
-            <svg viewBox="0 0 24 24">
-                <rect x="5" y="3" width="14" height="18" rx="2"/>
-                <path d="M8 7h8M8 11h8M8 15h5"/>
-            </svg>
+<h3>Presupuestos claros</h3>
 
-        </div>
+<p>
+Presupuestos claros y sin sorpresas.
+</p>
 
-        <h3>Precios justos</h3>
-
-        <p>
-            Presupuestos claros.
-        </p>
-
-    </article>
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
-     SERVICIOS
-========================================================= -->
+<!-- =========================
+     RAPIDOS LIMPIOS
+========================= -->
 
-<section class="services-highlight container" id="servicios">
+<section class="container">
 
-    <div class="services-top">
+<div class="fast-section">
 
-        <div class="services-intro">
+<div class="fast-content">
 
-            <div class="services-symbol">
+<div class="fast-symbol">◇</div>
 
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3c0 0-5 5.5-5 9a5 5 0 0 0 10 0c0-3.5-5-9-5-9Z"/>
-                </svg>
+<h2>
+    RÁPIDOS,<br>
+    LIMPIOS<br>
+    Y EFICIENTES
+</h2>
 
-            </div>
+<p>
+    Tu tranquilidad es nuestra prioridad.
+</p>
 
-            <h2>
-                RÁPIDOS,<br>
-                LIMPIOS<br>
-                Y EFICIENTES
-            </h2>
+</div>
 
-            <p>
-                Tu tranquilidad es nuestra prioridad.
-            </p>
+<div class="fast-image">
 
-        </div>
+<img src="FOTO BAÑO IZQ.png"
+     alt="Baño Fonysan">
 
+</div>
 
-        <div class="services-photo">
-
-            <img
-                src="FOTO BAÑO IZQ.png"
-                alt="Baño realizado por Fonysan"
-            >
-
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="services-grid">
+<!-- SERVICIOS -->
 
-        <!-- INSTALACIONES -->
+<div class="services" id="servicios">
 
-        <article class="service">
+<div class="service">
 
-            <div class="service-icon">
+<div class="service-symbol">⌘</div>
 
-                <svg viewBox="0 0 24 24">
-                    <path d="M4 6h7v5h4v7"/>
-                    <path d="M11 6v-2M4 6V4"/>
-                    <path d="M15 18h5"/>
-                    <path d="M18 15v6"/>
-                </svg>
+<h3>Instalaciones</h3>
 
-            </div>
+<p>
+Montaje y renovación de tuberías, grifos, sanitarios y más.
+</p>
 
-            <h3>Instalaciones</h3>
-
-            <p>
-                Montaje y renovación de tuberías, grifos,
-                sanitarios y más.
-            </p>
-
-        </article>
+</div>
 
 
-        <!-- REPARACIONES -->
+<div class="service">
 
-        <article class="service">
+<div class="service-symbol">⚒</div>
 
-            <div class="service-icon">
+<h3>Reparaciones</h3>
 
-                <svg viewBox="0 0 24 24">
-                    <path d="m14.5 5.5 4 4"/>
-                    <path d="M3 21l6.2-1.5L20 8.7a2.1 2.1 0 0 0-3-3L6.2 16.5 3 21Z"/>
-                    <path d="m13 7 4 4"/>
-                </svg>
+<p>
+Soluciones integrales para fugas, atascos, averías y renovación.
+</p>
 
-            </div>
-
-            <h3>Reparaciones</h3>
-
-            <p>
-                Soluciones integrales para fugas, atascos,
-                averías y renovación.
-            </p>
-
-        </article>
+</div>
 
 
-        <!-- SANEAMIENTO -->
+<div class="service">
 
-        <article class="service">
+<div class="service-symbol">♢</div>
 
-            <div class="service-icon">
+<h3>Saneamiento</h3>
 
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 3c0 0-5 5.5-5 9a5 5 0 0 0 10 0c0-3.5-5-9-5-9Z"/>
-                    <path d="M8 19h8"/>
-                </svg>
+<p>
+Instalación y renovación de tuberías.
+</p>
 
-            </div>
-
-            <h3>Saneamiento</h3>
-
-            <p>
-                Instalación y renovación de tuberías.
-            </p>
-
-        </article>
+</div>
 
 
-        <!-- MANTENIMIENTO -->
+<div class="service">
 
-        <article class="service">
+<div class="service-symbol">▣</div>
 
-            <div class="service-icon">
+<h3>Mantenimiento</h3>
 
-                <svg viewBox="0 0 24 24">
-                    <path d="M14 6a4 4 0 0 0 4 4"/>
-                    <path d="M17 3l4 4-4 4"/>
-                    <path d="M10 14 4 20"/>
-                    <path d="m7 13 4 4"/>
-                    <circle cx="5" cy="19" r="2"/>
-                </svg>
+<p>
+Mantenimiento preventivo y correctivo de instalaciones de fontanería.
+</p>
 
-            </div>
+</div>
 
-            <h3>Mantenimiento</h3>
-
-            <p>
-                Mantenimiento preventivo y correctivo
-                de instalaciones de fontanería.
-            </p>
-
-        </article>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =========================
      SOBRE NOSOTROS
-========================================================= -->
+========================= -->
 
-<section class="about container" id="sobre-nosotros">
+<section class="container" id="nosotros">
 
-<div class="about-box">
+<div class="about">
 
-    <div class="about-content">
+<div class="about-content">
 
-        <div class="about-label">
-            SOBRE NOSOTROS
-        </div>
+<div class="section-label">
+    SOBRE NOSOTROS
+</div>
 
-        <h2 class="about-title">
+<h2>
+    Atención profesional,<br>
+    resultados que inspiran
+    <span>seguridad.</span>
+</h2>
 
-            Atención profesional,<br>
-            resultados que inspiran<br>
-            <span>seguridad.</span>
-
-        </h2>
-
-        <p class="about-description">
-
-            En Fonysan trabajamos para ofrecer soluciones
-            profesionales de fontanería con precisión,
-            compromiso y atención al detalle. Nuestro objetivo
-            es que cada instalación, reparación o mantenimiento
-            quede realizado con la máxima calidad.
-
-        </p>
+<p class="about-text">
+    En Fonysan trabajamos para ofrecer soluciones profesionales de
+    fontanería con precisión, compromiso y atención al detalle.
+    Nuestro objetivo es que cada instalación, reparación o
+    mantenimiento quede realizado con la máxima calidad.
+</p>
 
 
-        <div class="stats">
+<div class="stats">
 
-            <!-- CLIENTES -->
+<div class="stat">
 
-            <div class="stat">
+<div class="stat-symbol">☺</div>
 
-                <div class="stat-icon">
+<div class="stat-number">+500</div>
 
-                    <svg viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="9"/>
-                        <path d="M8 14c1.1 1.2 2.5 1.8 4 1.8s2.9-.6 4-1.8"/>
-                        <path d="M8.5 10h.01M15.5 10h.01"/>
-                    </svg>
+<div class="stat-label">
+    Clientes satisfechos
+</div>
 
-                </div>
-
-                <div class="stat-number">
-                    +500
-                </div>
-
-                <div class="stat-label">
-                    Clientes satisfechos
-                </div>
-
-            </div>
+</div>
 
 
-            <!-- TRABAJOS -->
+<div class="stat">
 
-            <div class="stat">
+<div class="stat-symbol">⌁</div>
 
-                <div class="stat-icon">
+<div class="stat-number">+1.000</div>
 
-                    <svg viewBox="0 0 24 24">
-                        <path d="m14.5 5.5 4 4"/>
-                        <path d="M3 21l6.2-1.5L20 8.7a2.1 2.1 0 0 0-3-3L6.2 16.5 3 21Z"/>
-                        <path d="m13 7 4 4"/>
-                    </svg>
+<div class="stat-label">
+    Trabajos realizados
+</div>
 
-                </div>
-
-                <div class="stat-number">
-                    +1.000
-                </div>
-
-                <div class="stat-label">
-                    Trabajos realizados
-                </div>
-
-            </div>
+</div>
 
 
-            <!-- EXPERIENCIA -->
+<div class="stat">
 
-            <div class="stat">
+<div class="stat-symbol">⌖</div>
 
-                <div class="stat-icon">
+<div class="stat-number">+10</div>
 
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 3v18"/>
-                        <path d="M5 8h14"/>
-                        <path d="M7 8c0 3-1.5 5-3 6"/>
-                        <path d="M17 8c0 3 1.5 5 3 6"/>
-                        <path d="M7 20h10"/>
-                    </svg>
+<div class="stat-label">
+    Años de experiencia
+</div>
 
-                </div>
+</div>
 
-                <div class="stat-number">
-                    +10
-                </div>
+</div>
 
-                <div class="stat-label">
-                    Años de experiencia
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="about-image">
+<div class="about-image">
 
-        <img
-            src="FOTO FONTANERO.png"
-            alt="Fontanero trabajando"
-        >
+<img src="FOTO FONTANERO.png"
+     alt="Fontanero trabajando">
 
-    </div>
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =========================
      CONTACTO
-========================================================= -->
+========================= -->
 
-<section class="contact-area container" id="contacto">
+<section class="container" id="contacto">
+
+<div class="contact">
+
+<div class="contact-intro">
+
+<div class="contact-label">
+    ¿NECESITAS AYUDA?
+</div>
+
+<h2>
+    Estamos listos para ayudarte
+</h2>
+
+<p>
+    Contacta con Fonysan y cuéntanos qué necesitas.
+</p>
+
+</div>
 
 
-<!-- TELEFONO / EMAIL -->
+<!-- TELEFONO -->
+
+<div class="contact-item">
+
+<div class="contact-icon">
+    ☎
+</div>
 
 <div class="contact-info">
 
-    <div class="contact-item">
+<strong>
+    677 44 94 57
+</strong>
 
-        <div class="contact-icon">
-
-            <svg viewBox="0 0 24 24">
-                <path d="M6.5 4.5 9 3l2 4-2 1.5c.9 2 2.5 3.6 4.5 4.5L15 11l4 2-1.5 2.5c-.5.9-1.5 1.5-2.5 1.5C9.5 17 7 14.5 5 11s-2-5.5-1-6.5c.5-.5 1.5-.5 2.5 0Z"/>
-            </svg>
-
-        </div>
-
-        <div>
-
-            <strong>
-                677 44 94 57
-            </strong>
-
-            <span>
-                Llámanos o escríbenos
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="contact-item">
-
-        <div class="contact-icon">
-
-            <svg viewBox="0 0 24 24">
-                <rect x="3" y="5" width="18" height="14" rx="2"/>
-                <path d="m4 7 8 6 8-6"/>
-            </svg>
-
-        </div>
-
-        <div>
-
-            <strong>
-                fonysan.comercial@outlook.es
-            </strong>
-
-            <span>
-                Respondemos a la brevedad
-            </span>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =========================================================
-     VALORES
-========================================================= -->
-
-<div class="values">
-
-<div class="values-grid">
-
-    <article class="value">
-
-        <div class="value-icon">
-
-            <svg viewBox="0 0 24 24">
-                <path d="M12 3 20 6v6c0 4.5-3 7.8-8 9-5-1.2-8-4.5-8-9V6l8-3Z"/>
-                <path d="m8 12 2.5 2.5L16 9"/>
-            </svg>
-
-        </div>
-
-        <div>
-
-            <h3>Confianza</h3>
-
-            <p>
-                Transparentes y honestos en cada trabajo.
-            </p>
-
-        </div>
-
-    </article>
-
-
-    <article class="value">
-
-        <div class="value-icon">
-
-            <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M12 7v5l3 2"/>
-            </svg>
-
-        </div>
-
-        <div>
-
-            <h3>Disponibilidad</h3>
-
-            <p>
-                Atención rápida y disponibilidad flexible.
-            </p>
-
-        </div>
-
-    </article>
-
-
-    <article class="value">
-
-        <div class="value-icon">
-
-            <svg viewBox="0 0 24 24">
-                <path d="M12 3 20 6v6c0 4.5-3 7.8-8 9-5-1.2-8-4.5-8-9V6l8-3Z"/>
-                <path d="m8 12 2.5 2.5L16 9"/>
-            </svg>
-
-        </div>
-
-        <div>
-
-            <h3>Garantía</h3>
-
-            <p>
-                Trabajos garantizados y con respaldo.
-            </p>
-
-        </div>
-
-    </article>
-
-
-    <article class="value">
-
-        <div class="value-icon">
-
-            <svg viewBox="0 0 24 24">
-                <path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z"/>
-                <circle cx="12" cy="10" r="2.3"/>
-            </svg>
-
-        </div>
-
-        <div>
-
-            <h3>Cobertura</h3>
-
-            <p>
-                Servicio en Castilla y León.
-            </p>
-
-        </div>
-
-    </article>
+<span>
+    Llámanos o escríbenos
+</span>
 
 </div>
 
 </div>
 
 
-<!-- =========================================================
-     ESTAMOS LISTOS
-========================================================= -->
+<!-- CORREO -->
 
-<div class="ready">
+<div class="contact-item">
 
-<div class="ready-box">
+<div class="contact-icon">
+    ✉
+</div>
 
-    <div class="ready-title">
+<div class="contact-info">
 
-        <small>
-            ¿NECESITAS AYUDA?
-        </small>
+<strong>
+    fonysan.comercial@outlook.es
+</strong>
 
-        <h2>
-            Estamos listos para ayudarte
-        </h2>
-
-        <p>
-            Contacta con Fonysan y cuéntanos qué necesitas.
-        </p>
-
-    </div>
-
-
-    <div class="ready-contact">
-
-        <strong>
-            677 44 94 57
-        </strong>
-
-        <span>
-            Llámanos o escríbenos
-        </span>
-
-    </div>
-
-
-    <div class="ready-contact">
-
-        <strong>
-            fonysan.comercial@outlook.es
-        </strong>
-
-        <span>
-            Respondemos a la brevedad
-        </span>
-
-    </div>
-
-
-    <a
-        href="https://wa.me/34677449457"
-        class="whatsapp"
-        target="_blank"
-    >
-        ESCRÍBENOS POR WHATSAPP
-    </a>
+<span>
+    Respondemos a la brevedad
+</span>
 
 </div>
+
+</div>
+
+
+</div>
+
+
+<!-- WHATSAPP SEPARADO -->
+
+<div style="
+    margin-top:22px;
+    display:flex;
+    justify-content:flex-end;
+">
+
+<a
+href="https://wa.me/34677449457"
+target="_blank"
+class="whatsapp"
+style="width:320px;"
+>
+    ESCRÍBENOS POR WHATSAPP
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONFIANZA
+========================= -->
+
+<section class="container">
+
+<div class="final-features">
+
+
+<div class="final-feature">
+
+<div class="final-icon">◇</div>
+
+<div>
+
+<h3>Confianza</h3>
+
+<p>
+Transparentes y honestos en cada trabajo.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="final-feature">
+
+<div class="final-icon">◷</div>
+
+<div>
+
+<h3>Disponibilidad</h3>
+
+<p>
+Atención rápida y disponibilidad flexible.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="final-feature">
+
+<div class="final-icon">◇</div>
+
+<div>
+
+<h3>Garantía</h3>
+
+<p>
+Trabajos garantizados y con respaldo.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="final-feature">
+
+<div class="final-icon">⌖</div>
+
+<div>
+
+<h3>Cobertura</h3>
+
+<p>
+Servicio en Castilla y León.
+</p>
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -2037,20 +1666,25 @@ svg{
 </main>
 
 
-<!-- =========================================================
+<!-- =========================
      FOOTER
-========================================================= -->
+========================= -->
 
 <footer>
 
-    <div class="footer-logo">
+<div>
 
-        <img
-            src="logo.jpg"
-            alt="Fonysan"
-        >
+<img
+src="logo.jpg"
+alt="Fonysan"
+class="footer-logo"
+>
 
-    </div>
+<div class="footer-text">
+    © 2026 Fonysan. Todos los derechos reservados.
+</div>
+
+</div>
 
 </footer>
 
