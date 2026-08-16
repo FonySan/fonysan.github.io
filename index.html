@@ -23,12 +23,12 @@ content="Fonysan - Fontanería profesional, instalaciones, reparaciones, saneami
 :root{
     --azul:#0754ad;
     --azul-oscuro:#063d80;
-    --azul-profundo:#052f63;
+    --azul-texto:#123f76;
     --verde:#138b45;
     --verde-claro:#eaf7ef;
     --fondo:#f4faff;
-    --gris:#657991;
-    --blanco:#ffffff;
+    --gris:#64788f;
+    --blanco:#fff;
 }
 
 
@@ -47,10 +47,14 @@ html{
 }
 
 body{
-    margin:0;
     font-family:"Inter",Arial,sans-serif;
-    color:var(--azul-oscuro);
-    background:var(--fondo);
+    background:
+        linear-gradient(
+            180deg,
+            #f3faff 0%,
+            #f8fcff 100%
+        );
+    color:var(--azul-texto);
     overflow-x:hidden;
 }
 
@@ -61,6 +65,7 @@ img{
 
 a{
     text-decoration:none;
+    color:inherit;
 }
 
 
@@ -70,44 +75,47 @@ a{
 
 header{
     width:100%;
-    background:#ffffff;
+    padding:12px 0 8px;
     position:relative;
     z-index:100;
-    border-bottom:1px solid #edf2f7;
 }
 
 .navbar{
-    width:100%;
-    min-height:96px;
+    width:min(1240px,94%);
+    min-height:76px;
+    margin:auto;
 
-    padding:0 4vw;
+    padding:7px 18px 7px 28px;
+
+    background:#fff;
+    border-radius:20px;
 
     display:flex;
     align-items:center;
 
-    background:#ffffff;
+    box-shadow:
+        0 8px 30px rgba(24,74,120,.09);
 }
 
 
 /* LOGO */
 
 .logo{
-    width:220px;
+    width:180px;
     flex-shrink:0;
 
     display:flex;
     align-items:center;
-    justify-content:flex-start;
 }
 
 .logo img{
-    width:175px;
+    width:165px;
     height:auto;
     object-fit:contain;
 }
 
 
-/* NAVEGACIÓN */
+/* NAV */
 
 nav{
     flex:1;
@@ -116,18 +124,21 @@ nav{
     align-items:center;
     justify-content:center;
 
-    gap:52px;
+    gap:48px;
+    margin-left:30px;
 }
 
 nav a{
     position:relative;
 
-    color:#102f52;
+    color:#183c67;
 
-    font-size:15px;
+    font-size:12px;
     font-weight:800;
 
-    padding:38px 3px;
+    letter-spacing:.1px;
+
+    padding:19px 3px;
 
     white-space:nowrap;
 
@@ -148,9 +159,9 @@ nav a:first-child::after{
     position:absolute;
 
     left:50%;
-    bottom:25px;
+    bottom:7px;
 
-    width:38px;
+    width:34px;
     height:3px;
 
     border-radius:10px;
@@ -161,50 +172,47 @@ nav a:first-child::after{
 }
 
 
-/* CONTACTO HEADER */
+/* BOTÓN HEADER */
 
 .header-contact{
-    min-width:190px;
+    min-width:145px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    gap:9px;
+    gap:8px;
 
-    padding:15px 22px;
+    padding:13px 18px;
 
     color:var(--verde);
 
-    border:1.5px solid #69b68d;
-    border-radius:30px;
+    border:1.5px solid #78bd96;
+    border-radius:25px;
 
-    background:white;
+    background:#fff;
 
-    font-size:13px;
+    font-size:11px;
     font-weight:800;
 
-    flex-shrink:0;
-
     transition:.2s ease;
+
+    flex-shrink:0;
 }
 
 .header-contact:hover{
     background:var(--verde-claro);
-    transform:translateY(-2px);
+    transform:translateY(-1px);
 }
 
 
-/* WHATSAPP */
+/* =========================================================
+   ICONOS SVG
+========================================================= */
 
-.whatsapp-icon{
-    width:19px;
-    height:19px;
-
+svg{
     fill:none;
     stroke:currentColor;
-    stroke-width:1.8;
-
     stroke-linecap:round;
     stroke-linejoin:round;
 }
@@ -215,30 +223,33 @@ nav a:first-child::after{
 ========================================================= */
 
 .hero{
-    width:100%;
-    min-height:690px;
+    width:min(1240px,94%);
+    height:500px;
 
-    display:grid;
-    grid-template-columns:46% 54%;
+    margin:18px auto 0;
 
-    position:relative;
+    border-radius:24px;
     overflow:hidden;
 
-    background:#ffffff;
+    position:relative;
+
+    display:grid;
+    grid-template-columns:52% 48%;
+
+    background:#fff;
+
+    box-shadow:
+        0 10px 35px rgba(31,77,120,.08);
 }
 
 
-/* TEXTO HERO */
+/* CONTENIDO */
 
 .hero-content{
     position:relative;
-    z-index:5;
+    z-index:3;
 
-    padding:
-        80px
-        5vw
-        75px
-        7vw;
+    padding:55px 45px 45px 55px;
 
     display:flex;
     flex-direction:column;
@@ -248,41 +259,37 @@ nav a:first-child::after{
         linear-gradient(
             100deg,
             #ffffff 0%,
-            #ffffff 55%,
-            #f8fcff 78%,
-            rgba(248,252,255,.2) 100%
+            #ffffff 70%,
+            rgba(255,255,255,.96) 100%
         );
 }
-
-
-/* PEQUEÑO TEXTO */
 
 .eyebrow{
     color:var(--verde);
 
-    font-size:15px;
+    font-size:11px;
     font-weight:900;
 
-    letter-spacing:.4px;
+    letter-spacing:.15px;
 
-    margin-bottom:25px;
+    margin-bottom:14px;
 }
 
 
-/* TITULAR PRINCIPAL */
+/* TITULAR */
 
 .hero h1{
-    max-width:760px;
+    max-width:610px;
 
-    margin:0 0 28px;
+    margin-bottom:20px;
 
     color:var(--azul-oscuro);
 
-    font-size:clamp(50px,5vw,82px);
+    font-size:clamp(42px,4.2vw,58px);
 
-    line-height:.98;
+    line-height:1.02;
 
-    letter-spacing:-3.2px;
+    letter-spacing:-2px;
 
     font-weight:900;
 }
@@ -295,14 +302,13 @@ nav a:first-child::after{
 /* DESCRIPCIÓN */
 
 .hero-description{
-    max-width:620px;
+    max-width:510px;
 
-    margin-bottom:35px;
+    margin-bottom:25px;
 
-    color:#61768e;
+    color:#60758c;
 
-    font-size:18px;
-
+    font-size:13px;
     line-height:1.65;
 
     font-weight:500;
@@ -314,24 +320,22 @@ nav a:first-child::after{
 .hero-buttons{
     display:flex;
     align-items:center;
-    gap:16px;
-
-    flex-wrap:wrap;
+    gap:12px;
 }
 
 .btn-services,
 .btn-whatsapp{
-    min-height:58px;
-
-    padding:0 29px;
+    min-height:45px;
 
     display:inline-flex;
     align-items:center;
     justify-content:center;
 
-    border-radius:8px;
+    padding:0 22px;
 
-    font-size:14px;
+    border-radius:7px;
+
+    font-size:10px;
     font-weight:900;
 
     transition:.2s ease;
@@ -339,7 +343,7 @@ nav a:first-child::after{
 
 .btn-services{
     background:var(--azul);
-    color:white;
+    color:#fff;
 }
 
 .btn-services:hover{
@@ -348,101 +352,61 @@ nav a:first-child::after{
 }
 
 .btn-whatsapp{
-    background:white;
-    color:var(--verde);
+    gap:8px;
 
-    border:1.5px solid #6db88e;
+    background:#fff;
+
+    border:1.5px solid #73ba92;
+
+    color:var(--verde);
 }
 
 .btn-whatsapp:hover{
     background:var(--verde-claro);
 }
 
+.btn-whatsapp svg{
+    width:16px;
+    height:16px;
 
-/* ICONO BOTÓN */
-
-.wrench-icon{
-    width:19px;
-    height:19px;
-
-    margin-right:9px;
-
-    fill:none;
-    stroke:currentColor;
     stroke-width:1.8;
-
-    stroke-linecap:round;
-    stroke-linejoin:round;
 }
 
 
-/* =========================================================
-   IMAGEN LLAVE
-========================================================= */
+/* IMAGEN HERO */
 
 .hero-image{
-    min-height:690px;
-
     position:relative;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    height:100%;
 
     overflow:hidden;
-
-    background:
-        linear-gradient(
-            90deg,
-            #f8fcff 0%,
-            #edf7ff 18%,
-            #d9efff 100%
-        );
 }
 
-
-/*
-   DEGRADADO SOBRE LA IMAGEN.
-   Hace que el texto y la fotografía se integren.
-*/
-
-.hero-image::before{
+.hero-image::after{
     content:"";
 
     position:absolute;
     inset:0;
 
-    z-index:2;
-
-    pointer-events:none;
-
     background:
         linear-gradient(
             90deg,
-            rgba(255,255,255,1) 0%,
-            rgba(255,255,255,.72) 8%,
-            rgba(255,255,255,.08) 38%,
-            rgba(255,255,255,0) 65%
+            rgba(255,255,255,.95) 0%,
+            rgba(255,255,255,.55) 6%,
+            rgba(255,255,255,0) 25%
         );
+
+    pointer-events:none;
 }
 
-
-/*
-   IMAGEN COMPLETA.
-   Se utiliza contain para evitar cortar la llave.
-*/
-
 .hero-image img{
-    position:relative;
-    z-index:1;
-
     width:100%;
     height:100%;
 
-    object-fit:contain;
-    object-position:center;
+    object-fit:cover;
 
-    mix-blend-mode:multiply;
+    object-position:center center;
 }
 
 
@@ -451,25 +415,24 @@ nav a:first-child::after{
 ========================================================= */
 
 .advantages{
-    width:92%;
-    max-width:1500px;
+    width:min(1240px,94%);
 
-    margin:30px auto;
+    margin:14px auto 0;
 
     display:grid;
     grid-template-columns:repeat(4,1fr);
 
-    gap:18px;
+    gap:12px;
 }
 
 .advantage{
-    min-height:190px;
+    min-height:125px;
 
-    padding:28px 25px;
+    padding:18px 18px;
 
-    background:white;
+    background:#fff;
 
-    border-radius:18px;
+    border-radius:14px;
 
     display:flex;
     flex-direction:column;
@@ -478,26 +441,17 @@ nav a:first-child::after{
 
     text-align:center;
 
-    box-shadow:0 8px 28px rgba(35,76,112,.07);
-
-    transition:.2s ease;
+    box-shadow:
+        0 6px 24px rgba(35,76,112,.06);
 }
-
-.advantage:hover{
-    transform:translateY(-4px);
-}
-
-
-/* ICONOS */
 
 .circle-icon{
-    width:66px;
-    height:66px;
+    width:42px;
+    height:42px;
 
-    margin-bottom:18px;
+    margin-bottom:9px;
 
     border:2px solid var(--azul);
-
     border-radius:50%;
 
     display:flex;
@@ -508,35 +462,28 @@ nav a:first-child::after{
 }
 
 .circle-icon svg{
-    width:34px;
-    height:34px;
+    width:21px;
+    height:21px;
 
-    fill:none;
-
-    stroke:currentColor;
-    stroke-width:1.65;
-
-    stroke-linecap:round;
-    stroke-linejoin:round;
+    stroke-width:1.7;
 }
 
 .advantage h3{
-    margin-bottom:8px;
+    margin-bottom:5px;
 
     color:#173d6d;
 
-    font-size:16px;
-    font-weight:900;
+    font-size:11px;
+    font-weight:800;
 }
 
 .advantage p{
-    max-width:270px;
+    max-width:230px;
 
-    color:#75859a;
+    color:#78899c;
 
-    font-size:12px;
-
-    line-height:1.55;
+    font-size:8.5px;
+    line-height:1.5;
 }
 
 
@@ -545,100 +492,77 @@ nav a:first-child::after{
 ========================================================= */
 
 .blue-banner{
-    width:92%;
-    max-width:1500px;
+    width:min(1240px,94%);
+    height:155px;
 
-    min-height:270px;
-
-    margin:35px auto 0;
+    margin:16px auto 0;
 
     position:relative;
 
     overflow:hidden;
 
-    border-radius:20px;
+    border-radius:16px;
 
     background:var(--azul);
 }
 
-
-/* AZUL IZQUIERDO */
-
 .banner-blue{
     position:relative;
-    z-index:3;
+    z-index:2;
 
     width:55%;
     height:100%;
 
-    min-height:270px;
-
-    padding:45px 65px;
+    padding:20px 45px;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
 
-    color:white;
+    color:#fff;
 
     background:var(--azul);
 
     clip-path:polygon(
         0 0,
-        92% 0,
-        80% 100%,
+        93% 0,
+        81% 100%,
         0 100%
     );
 }
 
-
-/* SÍMBOLO */
-
 .drop-icon{
-    width:45px;
-    height:45px;
+    width:27px;
+    height:27px;
 
-    margin-bottom:12px;
+    margin-bottom:5px;
 }
 
 .drop-icon svg{
     width:100%;
     height:100%;
 
-    fill:none;
-
-    stroke:white;
+    stroke:#fff;
     stroke-width:1.7;
-
-    stroke-linecap:round;
-    stroke-linejoin:round;
 }
 
-
-/* TEXTO */
-
 .banner-blue h2{
-    margin-bottom:12px;
+    margin-bottom:6px;
 
-    font-size:32px;
-
-    line-height:1.03;
+    font-size:22px;
+    line-height:1.05;
 
     font-weight:900;
 
-    letter-spacing:-1px;
+    letter-spacing:-.5px;
 }
 
 .banner-blue p{
-    color:rgba(255,255,255,.9);
+    color:rgba(255,255,255,.88);
 
-    font-size:14px;
-
+    font-size:9px;
     font-weight:500;
 }
-
-
-/* FOTO */
 
 .banner-photo{
     position:absolute;
@@ -646,7 +570,7 @@ nav a:first-child::after{
     right:0;
     top:0;
 
-    width:53%;
+    width:56%;
     height:100%;
 }
 
@@ -664,21 +588,20 @@ nav a:first-child::after{
 ========================================================= */
 
 .services{
-    width:92%;
-    max-width:1500px;
+    width:min(1240px,94%);
 
-    min-height:250px;
+    min-height:170px;
 
     margin:0 auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
 
     position:relative;
 
     overflow:hidden;
 
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-
-    border-radius:0 0 20px 20px;
+    border-radius:0 0 16px 16px;
 
     background:#0a396d;
 }
@@ -700,24 +623,23 @@ nav a:first-child::after{
 }
 
 .service{
-    min-height:250px;
+    min-height:170px;
 
     position:relative;
     z-index:2;
 
-    padding:35px 25px;
+    padding:20px 18px;
 
     display:flex;
     flex-direction:column;
-
     align-items:center;
     justify-content:center;
 
     text-align:center;
 
-    color:white;
+    color:#fff;
 
-    border-right:1px solid rgba(255,255,255,.2);
+    border-right:1px solid rgba(255,255,255,.18);
 }
 
 .service:last-child{
@@ -728,49 +650,41 @@ nav a:first-child::after{
 /* ICONOS SERVICIOS */
 
 .service-icon{
-    width:70px;
-    height:70px;
+    width:58px;
+    height:58px;
 
-    margin-bottom:18px;
-
-    color:white;
+    margin-bottom:9px;
 
     display:flex;
     align-items:center;
     justify-content:center;
+
+    color:#fff;
 }
 
 .service-icon svg{
-    width:58px;
-    height:58px;
+    width:48px;
+    height:48px;
 
-    fill:none;
-
-    stroke:currentColor;
-    stroke-width:1.7;
-
-    stroke-linecap:round;
-    stroke-linejoin:round;
+    stroke-width:1.65;
 }
 
 .service h3{
-    margin-bottom:10px;
+    margin-bottom:7px;
 
-    color:white;
+    color:#fff;
 
-    font-size:17px;
-
+    font-size:12px;
     font-weight:900;
 }
 
 .service p{
-    max-width:290px;
+    max-width:245px;
 
-    color:rgba(255,255,255,.88);
+    color:rgba(255,255,255,.86);
 
-    font-size:12px;
-
-    line-height:1.6;
+    font-size:8.5px;
+    line-height:1.5;
 }
 
 
@@ -779,30 +693,27 @@ nav a:first-child::after{
 ========================================================= */
 
 .about{
-    width:92%;
-    max-width:1500px;
+    width:min(1240px,94%);
 
-    min-height:570px;
+    min-height:390px;
 
-    margin:65px auto 25px;
+    margin:28px auto 14px;
 
     display:grid;
     grid-template-columns:50% 50%;
 
     overflow:hidden;
 
-    border-radius:22px;
+    border-radius:20px;
 
-    background:white;
+    background:#fff;
 
-    box-shadow:0 10px 35px rgba(25,70,120,.07);
+    box-shadow:
+        0 7px 28px rgba(25,70,120,.06);
 }
 
-
-/* TEXTO */
-
 .about-content{
-    padding:70px 70px;
+    padding:42px 45px;
 
     display:flex;
     flex-direction:column;
@@ -810,26 +721,26 @@ nav a:first-child::after{
 }
 
 .about-label{
-    margin-bottom:15px;
+    margin-bottom:8px;
 
     color:var(--verde);
 
-    font-size:13px;
+    font-size:10px;
     font-weight:900;
 }
 
 .about h2{
-    max-width:680px;
+    max-width:560px;
 
-    margin-bottom:25px;
+    margin-bottom:16px;
 
     color:var(--azul-oscuro);
 
-    font-size:clamp(38px,4vw,62px);
+    font-size:31px;
 
-    line-height:1.02;
+    line-height:1.15;
 
-    letter-spacing:-2.5px;
+    letter-spacing:-.8px;
 
     font-weight:900;
 }
@@ -839,15 +750,17 @@ nav a:first-child::after{
 }
 
 .about-text{
-    max-width:650px;
+    max-width:530px;
 
-    margin-bottom:42px;
+    margin-bottom:26px;
 
-    color:#6b7e93;
+    color:#687c92;
 
-    font-size:16px;
+    font-size:11px;
 
-    line-height:1.75;
+    line-height:1.7;
+
+    font-weight:500;
 }
 
 
@@ -857,20 +770,20 @@ nav a:first-child::after{
     display:grid;
     grid-template-columns:repeat(3,1fr);
 
-    gap:35px;
-
-    width:100%;
+    gap:28px;
 }
 
 .stat{
-    text-align:left;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
 }
 
 .stat-icon{
-    width:55px;
-    height:55px;
+    width:40px;
+    height:40px;
 
-    margin-bottom:13px;
+    margin-bottom:5px;
 
     color:var(--azul);
 }
@@ -879,13 +792,7 @@ nav a:first-child::after{
     width:100%;
     height:100%;
 
-    fill:none;
-
-    stroke:currentColor;
     stroke-width:1.7;
-
-    stroke-linecap:round;
-    stroke-linejoin:round;
 }
 
 .stat strong{
@@ -893,23 +800,23 @@ nav a:first-child::after{
 
     color:var(--azul);
 
-    font-size:42px;
+    font-size:35px;
 
     line-height:1;
 
     font-weight:900;
 
-    letter-spacing:-1.5px;
+    letter-spacing:-1px;
 }
 
 .stat span{
     display:block;
 
-    margin-top:9px;
+    margin-top:6px;
 
-    color:#758497;
+    color:#6d8095;
 
-    font-size:13px;
+    font-size:9px;
 
     font-weight:600;
 }
@@ -918,9 +825,9 @@ nav a:first-child::after{
 /* FOTO FONTANERO */
 
 .about-image{
-    min-height:570px;
-
     position:relative;
+
+    min-height:390px;
 
     overflow:hidden;
 }
@@ -930,28 +837,26 @@ nav a:first-child::after{
     height:100%;
 
     object-fit:cover;
+
     object-position:center;
 }
-
-
-/* BORDE VERDE CURVO */
 
 .about-image::before{
     content:"";
 
     position:absolute;
 
-    left:-55px;
+    left:-45px;
     top:50%;
 
-    width:110px;
-    height:600px;
+    width:88px;
+    height:430px;
 
     transform:translateY(-50%);
 
     border-radius:50%;
 
-    background:white;
+    background:#fff;
 
     border-right:5px solid var(--verde);
 
@@ -960,178 +865,81 @@ nav a:first-child::after{
 
 
 /* =========================================================
-   FRANJA CONFIANZA
-========================================================= */
-
-.trust{
-    width:88%;
-    max-width:1250px;
-
-    min-height:135px;
-
-    margin:35px auto 25px;
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            110deg,
-            #0752ad,
-            #073d80
-        );
-
-    color:white;
-}
-
-.trust-item{
-    padding:28px 25px;
-
-    display:flex;
-    align-items:center;
-
-    gap:20px;
-
-    border-right:1px solid rgba(255,255,255,.2);
-}
-
-.trust-item:last-child{
-    border-right:none;
-}
-
-.trust-icon{
-    width:52px;
-    height:52px;
-
-    flex-shrink:0;
-}
-
-.trust-icon svg{
-    width:100%;
-    height:100%;
-
-    fill:none;
-
-    stroke:white;
-    stroke-width:1.6;
-
-    stroke-linecap:round;
-    stroke-linejoin:round;
-}
-
-.trust-item h3{
-    margin-bottom:7px;
-
-    font-size:14px;
-
-    font-weight:900;
-}
-
-.trust-item p{
-    max-width:190px;
-
-    color:rgba(255,255,255,.82);
-
-    font-size:11px;
-
-    line-height:1.5;
-}
-
-
-/* =========================================================
    CONTACTO
 ========================================================= */
 
 .contact{
-    width:92%;
-    max-width:1500px;
+    width:min(1240px,94%);
 
-    min-height:150px;
+    min-height:110px;
 
-    margin:30px auto;
-
-    padding:0 20px;
+    margin:0 auto 12px;
 
     display:grid;
 
-    grid-template-columns:
-        1.25fr
-        .95fr
-        1.45fr
-        .95fr;
+    grid-template-columns:1.35fr 1fr 1.45fr 1.05fr;
 
     align-items:center;
 
-    column-gap:30px;
+    overflow:hidden;
 
-    border-radius:20px;
+    border-radius:15px;
 
-    background:white;
+    background:#fff;
 
-    box-shadow:0 8px 30px rgba(25,70,120,.07);
+    box-shadow:
+        0 6px 25px rgba(25,70,120,.055);
 }
 
-
-/* INTRO */
-
 .contact-intro{
-    padding:25px 20px;
+    padding:18px 25px;
 }
 
 .contact-intro small{
     color:var(--verde);
 
-    font-size:12px;
+    font-size:8px;
     font-weight:900;
 }
 
 .contact-intro h2{
-    margin:7px 0;
+    margin:4px 0;
 
     color:var(--azul-oscuro);
 
-    font-size:24px;
-
+    font-size:18px;
     font-weight:900;
 }
 
 .contact-intro p{
-    color:#78889a;
+    color:#7a8b9c;
 
-    font-size:11px;
+    font-size:8px;
 }
 
 
-/* DATOS */
+/* CONTACT ITEMS */
 
 .contact-item{
-    min-height:90px;
+    min-height:75px;
 
-    padding:20px 25px;
+    padding:14px 22px;
 
-    border-left:1px solid #e1e8ef;
+    border-left:1px solid #e3eaf0;
 
     display:flex;
     align-items:center;
 
-    gap:18px;
+    gap:12px;
 }
 
-
-/* ICONOS CONTACTO */
-
 .contact-icon{
-    width:52px;
-    height:52px;
+    width:42px;
+    height:42px;
 
     flex-shrink:0;
 
     border:1.5px solid #70b991;
-
     border-radius:50%;
 
     color:var(--verde);
@@ -1142,29 +950,20 @@ nav a:first-child::after{
 }
 
 .contact-icon svg{
-    width:25px;
-    height:25px;
+    width:20px;
+    height:20px;
 
-    fill:none;
-
-    stroke:currentColor;
-    stroke-width:1.6;
-
-    stroke-linecap:round;
-    stroke-linejoin:round;
+    stroke-width:1.7;
 }
-
-
-/* TEXTO CONTACTO */
 
 .contact-item strong{
     display:block;
 
-    margin-bottom:6px;
+    margin-bottom:4px;
 
-    color:#173d6d;
+    color:#183f6c;
 
-    font-size:16px;
+    font-size:11px;
 
     font-weight:900;
 
@@ -1174,43 +973,115 @@ nav a:first-child::after{
 .contact-item span{
     color:#7b8b9b;
 
-    font-size:11px;
+    font-size:8px;
 }
 
 
-/* BOTÓN */
+/* WHATSAPP */
 
 .contact-button{
-    padding:20px 5px 20px 20px;
+    padding:18px 20px;
+
+    border-left:1px solid #e3eaf0;
 }
 
 .contact-button a{
-    min-height:55px;
+    min-height:44px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    padding:0 18px;
-
     border-radius:7px;
 
     background:var(--verde);
 
-    color:white;
+    color:#fff;
 
-    font-size:12px;
-
+    font-size:9px;
     font-weight:900;
-
-    text-align:center;
 
     transition:.2s ease;
 }
 
 .contact-button a:hover{
-    background:#0c783a;
-    transform:translateY(-2px);
+    background:#0d783a;
+}
+
+
+/* =========================================================
+   FRANJA FINAL
+========================================================= */
+
+.trust{
+    width:min(1120px,88%);
+
+    min-height:100px;
+
+    margin:0 auto 25px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            110deg,
+            #0752ad,
+            #073d80
+        );
+
+    color:#fff;
+}
+
+.trust-item{
+    padding:18px 22px;
+
+    display:flex;
+    align-items:center;
+
+    gap:14px;
+
+    border-right:1px solid rgba(255,255,255,.2);
+}
+
+.trust-item:last-child{
+    border-right:none;
+}
+
+.trust-icon{
+    width:42px;
+    height:42px;
+
+    flex-shrink:0;
+}
+
+.trust-icon svg{
+    width:100%;
+    height:100%;
+
+    stroke:#fff;
+
+    stroke-width:1.6;
+}
+
+.trust-item h3{
+    margin-bottom:4px;
+
+    font-size:10px;
+    font-weight:900;
+}
+
+.trust-item p{
+    max-width:160px;
+
+    color:rgba(255,255,255,.82);
+
+    font-size:8px;
+    line-height:1.45;
 }
 
 
@@ -1219,53 +1090,51 @@ nav a:first-child::after{
 ========================================================= */
 
 footer{
-    margin-top:55px;
-
-    padding:45px 20px;
+    padding:25px 20px;
 
     text-align:center;
 
     background:#062f62;
 
-    color:white;
+    color:#fff;
 }
 
 footer img{
-    width:160px;
+    width:125px;
 
-    margin:0 auto 15px;
+    margin:0 auto 10px;
 }
 
 footer p{
     color:rgba(255,255,255,.7);
 
-    font-size:11px;
+    font-size:8px;
 }
 
 .social{
-    margin-top:18px;
+    margin-top:12px;
 
     display:flex;
     justify-content:center;
 
-    gap:12px;
+    gap:9px;
 }
 
 .social a{
-    width:38px;
-    height:38px;
+    width:29px;
+    height:29px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    border:1px solid rgba(255,255,255,.35);
+    border:1px solid rgba(255,255,255,.3);
 
     border-radius:50%;
 
-    color:white;
+    color:#fff;
 
-    font-size:11px;
+    font-size:8px;
 }
 
 
@@ -1273,71 +1142,14 @@ footer p{
    TABLET
 ========================================================= */
 
-@media(max-width:1100px){
-
-    nav{
-        gap:30px;
-    }
-
-    nav a{
-        font-size:12px;
-    }
-
-    .logo{
-        width:180px;
-    }
-
-    .logo img{
-        width:150px;
-    }
-
-    .header-contact{
-        min-width:150px;
-        font-size:11px;
-    }
-
-    .hero{
-        grid-template-columns:48% 52%;
-    }
-
-    .hero-content{
-        padding-left:5vw;
-    }
-
-    .hero h1{
-        font-size:clamp(42px,5vw,64px);
-    }
-
-    .contact{
-        grid-template-columns:1fr 1fr;
-        row-gap:0;
-        padding:10px;
-    }
-
-    .contact-intro{
-        grid-column:span 2;
-    }
-
-    .contact-button{
-        padding-right:20px;
-    }
-
-}
-
-
-/* =========================================================
-   TABLET PEQUEÑA
-========================================================= */
-
-@media(max-width:850px){
+@media(max-width:1000px){
 
     .navbar{
-        min-height:85px;
-        padding:0 25px;
+        padding-left:18px;
     }
 
     .logo{
-        width:155px;
+        width:150px;
     }
 
     .logo img{
@@ -1345,68 +1157,51 @@ footer p{
     }
 
     nav{
-        gap:20px;
+        gap:24px;
+        margin-left:12px;
     }
 
     nav a{
-        font-size:10px;
+        font-size:9px;
     }
 
     .header-contact{
-        min-width:125px;
-        padding:12px;
+        min-width:115px;
+        padding:10px 12px;
         font-size:9px;
     }
 
     .hero{
-        min-height:600px;
+        height:460px;
     }
 
-    .hero-image{
-        min-height:600px;
+    .hero-content{
+        padding-left:40px;
     }
 
     .hero h1{
-        font-size:45px;
+        font-size:42px;
     }
 
-    .advantages{
-        grid-template-columns:repeat(2,1fr);
+    .about h2{
+        font-size:27px;
     }
 
-    .about{
-        grid-template-columns:1fr;
+    .stats{
+        gap:15px;
     }
 
-    .about-content{
-        min-height:550px;
+    .stat strong{
+        font-size:29px;
     }
 
-    .about-image{
-        min-height:500px;
+    .contact{
+        grid-template-columns:1.2fr 1fr 1.3fr;
     }
 
-    .about-image::before{
-        display:none;
+    .contact-button{
+        grid-column:3;
     }
-
-    .trust{
-        width:92%;
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .trust-item:nth-child(2){
-        border-right:none;
-    }
-
-    .services{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .service:nth-child(2){
-        border-right:none;
-    }
-
 }
 
 
@@ -1414,35 +1209,44 @@ footer p{
    MÓVIL
 ========================================================= */
 
-@media(max-width:650px){
+@media(max-width:700px){
 
     header{
-        padding:0;
+        padding-top:7px;
     }
 
     .navbar{
-        width:100%;
-        min-height:auto;
+        width:94%;
 
-        padding:15px 20px;
+        min-height:68px;
+
+        padding:8px 12px;
 
         flex-wrap:wrap;
 
         justify-content:center;
     }
 
-    /* LOGO CENTRADO EN MÓVIL */
-
     .logo{
         width:100%;
 
         justify-content:center;
 
-        margin-bottom:12px;
+        order:1;
     }
 
     .logo img{
-        width:155px;
+        width:145px;
+    }
+
+    .header-contact{
+        order:2;
+
+        min-width:125px;
+
+        padding:9px 12px;
+
+        font-size:8px;
     }
 
     nav{
@@ -1450,127 +1254,103 @@ footer p{
 
         width:100%;
 
-        margin:8px 0 0;
+        margin:5px 0 0;
 
-        padding-top:12px;
+        padding-top:7px;
 
         border-top:1px solid #edf1f5;
 
-        gap:22px;
+        gap:18px;
 
         justify-content:center;
     }
 
     nav a{
-        font-size:9px;
-
-        padding:8px 0;
+        font-size:8px;
+        padding:6px 0;
     }
 
     nav a:first-child::after{
         bottom:0;
     }
 
-    .header-contact{
-        display:none;
-    }
-
 
     /* HERO */
 
     .hero{
-        width:100%;
+        width:94%;
 
-        min-height:auto;
+        height:auto;
+
+        min-height:0;
+
+        margin-top:12px;
 
         display:flex;
-
         flex-direction:column;
 
-        border-radius:0;
+        border-radius:18px;
     }
 
     .hero-content{
-        min-height:560px;
+        order:1;
 
-        padding:55px 25px 45px;
-
-        background:
-            linear-gradient(
-                180deg,
-                #ffffff 0%,
-                #ffffff 80%,
-                #f5fbff 100%
-            );
+        padding:35px 25px 30px;
     }
 
     .eyebrow{
-        font-size:12px;
-        margin-bottom:18px;
+        font-size:9px;
+        margin-bottom:10px;
     }
 
     .hero h1{
-        max-width:none;
+        max-width:100%;
 
-        font-size:clamp(42px,12vw,58px);
+        font-size:36px;
 
-        line-height:1;
+        line-height:1.04;
 
-        letter-spacing:-2px;
+        letter-spacing:-1.3px;
     }
 
     .hero-description{
-        font-size:14px;
-
-        margin-bottom:28px;
+        font-size:10px;
+        margin-bottom:18px;
     }
 
     .hero-buttons{
-        width:100%;
-
-        flex-direction:column;
-
-        align-items:stretch;
+        flex-wrap:wrap;
     }
 
     .btn-services,
     .btn-whatsapp{
-        width:100%;
+        min-height:42px;
+
+        padding:0 16px;
+
+        font-size:9px;
     }
-
-
-    /* FOTO LLAVE */
 
     .hero-image{
-        width:100%;
+        order:2;
 
-        min-height:380px;
+        height:290px;
 
-        height:380px;
-
-        background:
-            linear-gradient(
-                180deg,
-                #f5fbff 0%,
-                #dcefff 100%
-            );
-    }
-
-    .hero-image::before{
-        background:
-            linear-gradient(
-                180deg,
-                rgba(255,255,255,.95) 0%,
-                rgba(255,255,255,.15) 25%,
-                rgba(255,255,255,0) 55%
-            );
+        min-height:290px;
     }
 
     .hero-image img{
-        width:100%;
-        height:100%;
+        object-fit:cover;
+        object-position:center;
+    }
 
-        object-fit:contain;
+    .hero-image::after{
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,255,255,.08),
+                transparent 25%
+            );
     }
 
 
@@ -1579,37 +1359,35 @@ footer p{
     .advantages{
         width:94%;
 
-        margin:20px auto;
-
         grid-template-columns:1fr 1fr;
 
-        gap:10px;
+        gap:8px;
+
+        margin-top:10px;
     }
 
     .advantage{
-        min-height:175px;
+        min-height:125px;
 
-        padding:20px 10px;
+        padding:14px 8px;
     }
 
     .circle-icon{
-        width:56px;
-        height:56px;
-
-        margin-bottom:12px;
+        width:38px;
+        height:38px;
     }
 
     .circle-icon svg{
-        width:29px;
-        height:29px;
+        width:19px;
+        height:19px;
     }
 
     .advantage h3{
-        font-size:12px;
+        font-size:9px;
     }
 
     .advantage p{
-        font-size:9px;
+        font-size:7px;
     }
 
 
@@ -1618,42 +1396,27 @@ footer p{
     .blue-banner{
         width:94%;
 
-        min-height:430px;
+        height:145px;
 
-        display:flex;
-        flex-direction:column;
-
-        border-radius:18px;
+        margin-top:12px;
     }
 
     .banner-blue{
-        width:100%;
+        width:65%;
 
-        min-height:220px;
-
-        padding:35px 25px;
-
-        clip-path:none;
-
-        justify-content:center;
+        padding:15px 20px;
     }
 
     .banner-blue h2{
-        font-size:31px;
+        font-size:17px;
     }
 
     .banner-blue p{
-        font-size:12px;
+        font-size:7.5px;
     }
 
     .banner-photo{
-        position:relative;
-
-        width:100%;
-
-        height:210px;
-
-        min-height:210px;
+        width:53%;
     }
 
 
@@ -1664,33 +1427,39 @@ footer p{
 
         grid-template-columns:1fr 1fr;
 
-        min-height:auto;
-
-        border-radius:0 0 18px 18px;
+        min-height:300px;
     }
 
     .service{
-        min-height:210px;
+        min-height:150px;
 
-        padding:25px 12px;
+        padding:17px 8px;
+    }
+
+    .service:nth-child(2){
+        border-right:none;
+    }
+
+    .service:nth-child(-n+2){
+        border-bottom:1px solid rgba(255,255,255,.18);
     }
 
     .service-icon{
-        width:60px;
-        height:60px;
+        width:48px;
+        height:48px;
     }
 
     .service-icon svg{
-        width:50px;
-        height:50px;
+        width:40px;
+        height:40px;
     }
 
     .service h3{
-        font-size:12px;
+        font-size:9px;
     }
 
     .service p{
-        font-size:9px;
+        font-size:7px;
     }
 
 
@@ -1699,33 +1468,31 @@ footer p{
     .about{
         width:94%;
 
-        margin-top:35px;
+        margin-top:18px;
 
-        border-radius:18px;
+        grid-template-columns:1fr;
+
+        min-height:0;
     }
 
     .about-content{
-        min-height:auto;
-
-        padding:45px 25px;
+        padding:30px 23px;
     }
 
     .about-label{
-        font-size:11px;
+        font-size:8px;
     }
 
     .about h2{
-        font-size:34px;
+        font-size:25px;
 
-        letter-spacing:-1.4px;
+        line-height:1.15;
     }
 
     .about-text{
-        font-size:13px;
+        font-size:9px;
 
-        line-height:1.65;
-
-        margin-bottom:35px;
+        margin-bottom:22px;
     }
 
     .stats{
@@ -1733,80 +1500,30 @@ footer p{
     }
 
     .stat{
+        align-items:center;
         text-align:center;
     }
 
     .stat-icon{
-        width:48px;
-        height:48px;
-
-        margin:0 auto 10px;
+        width:37px;
+        height:37px;
     }
 
     .stat strong{
-        font-size:30px;
+        font-size:27px;
     }
 
     .stat span{
-        font-size:9px;
+        font-size:7px;
     }
 
     .about-image{
-        min-height:350px;
-        height:350px;
+        min-height:270px;
+        height:270px;
     }
 
-
-    /* CONFIANZA */
-
-    .trust{
-        width:94%;
-
-        grid-template-columns:1fr 1fr;
-
-        min-height:auto;
-
-        border-radius:15px;
-    }
-
-    .trust-item{
-        min-height:150px;
-
-        padding:20px 12px;
-
-        flex-direction:column;
-
-        justify-content:center;
-
-        text-align:center;
-
-        gap:10px;
-    }
-
-    .trust-item:nth-child(2){
-        border-right:none;
-    }
-
-    .trust-item:nth-child(3){
-        border-top:1px solid rgba(255,255,255,.2);
-    }
-
-    .trust-item:nth-child(4){
-        border-top:1px solid rgba(255,255,255,.2);
-        border-right:none;
-    }
-
-    .trust-icon{
-        width:45px;
-        height:45px;
-    }
-
-    .trust-item h3{
-        font-size:11px;
-    }
-
-    .trust-item p{
-        font-size:9px;
+    .about-image::before{
+        display:none;
     }
 
 
@@ -1815,74 +1532,145 @@ footer p{
     .contact{
         width:94%;
 
-        display:flex;
-        flex-direction:column;
+        margin-top:12px;
 
-        padding:0;
+        grid-template-columns:1fr;
 
-        margin-top:25px;
-
-        border-radius:17px;
+        min-height:0;
     }
 
     .contact-intro{
-        width:100%;
-
-        padding:30px 25px;
-
-        text-align:center;
+        padding:20px;
     }
 
     .contact-intro h2{
-        font-size:25px;
+        font-size:18px;
     }
 
     .contact-intro p{
-        font-size:10px;
+        font-size:8px;
     }
 
     .contact-item{
-        width:100%;
-
-        min-height:100px;
-
-        padding:20px 25px;
+        min-height:75px;
 
         border-left:none;
 
         border-top:1px solid #e4ebf2;
 
-        justify-content:center;
+        padding:14px 20px;
     }
 
     .contact-item strong{
-        font-size:15px;
+        font-size:10px;
 
         white-space:normal;
-        word-break:break-word;
-    }
-
-    .contact-item span{
-        font-size:10px;
     }
 
     .contact-button{
-        width:100%;
+        border-left:none;
 
-        padding:20px 25px 25px;
+        border-top:1px solid #e4ebf2;
+
+        padding:15px 20px;
     }
 
-    .contact-button a{
-        min-height:55px;
+
+    /* FRANJA */
+
+    .trust{
+        width:94%;
+
+        grid-template-columns:1fr 1fr;
+
+        min-height:0;
+
+        margin-top:12px;
     }
 
+    .trust-item{
+        min-height:95px;
 
-    /* FOOTER */
+        padding:14px 12px;
+
+        gap:9px;
+    }
+
+    .trust-item:nth-child(2){
+        border-right:none;
+    }
+
+    .trust-item:nth-child(-n+2){
+        border-bottom:1px solid rgba(255,255,255,.2);
+    }
+
+    .trust-icon{
+        width:34px;
+        height:34px;
+    }
+
+    .trust-item h3{
+        font-size:8px;
+    }
+
+    .trust-item p{
+        font-size:6.5px;
+    }
+
 
     footer{
-        margin-top:35px;
+        padding:20px;
+    }
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+========================================================= */
+
+@media(max-width:420px){
+
+    .logo img{
+        width:135px;
     }
 
+    nav{
+        gap:13px;
+    }
+
+    nav a{
+        font-size:7px;
+    }
+
+    .hero h1{
+        font-size:31px;
+    }
+
+    .hero-image{
+        height:245px;
+        min-height:245px;
+    }
+
+    .banner-blue h2{
+        font-size:15px;
+    }
+
+    .service{
+        min-height:145px;
+    }
+
+    .about h2{
+        font-size:22px;
+    }
+
+    .stat strong{
+        font-size:24px;
+    }
+
+    .trust-item{
+        min-height:100px;
+        padding:12px 8px;
+    }
 }
 
 </style>
@@ -1898,59 +1686,60 @@ footer p{
 
 <header>
 
-    <div class="navbar">
+<div class="navbar">
 
-        <a href="#inicio" class="logo">
-
-            <img
-                src="LOGO FONDO TRANSPARENTE.png"
-                alt="Fonysan">
-
-        </a>
+<a href="#inicio" class="logo">
+    <img
+        src="LOGO FONDO TRASNPARENTE.png"
+        alt="Fonysan">
+</a>
 
 
-        <nav>
+<nav>
 
-            <a href="#inicio">
-                INICIO
-            </a>
+<a href="#inicio">
+    INICIO
+</a>
 
-            <a href="#servicios">
-                SERVICIOS
-            </a>
+<a href="#servicios">
+    SERVICIOS
+</a>
 
-            <a href="#nosotros">
-                SOBRE NOSOTROS
-            </a>
+<a href="#nosotros">
+    SOBRE NOSOTROS
+</a>
 
-            <a href="#trabajos">
-                TRABAJOS
-            </a>
+<a href="#trabajos">
+    TRABAJOS
+</a>
 
-        </nav>
+</nav>
 
 
-        <a
-            class="header-contact"
-            href="https://wa.me/34677449457"
-            target="_blank"
-            rel="noopener">
+<a
+class="header-contact"
+href="https://wa.me/34677449457"
+target="_blank"
+rel="noopener">
 
-            <svg
-                class="whatsapp-icon"
-                viewBox="0 0 24 24">
+<svg
+viewBox="0 0 24 24"
+width="16"
+height="16">
 
-                <path d="M20 11.5a8 8 0 0 1-11.8 7l-3.2.9.9-3.1A8 8 0 1 1 20 11.5z"/>
+<path
+d="M20 11.5a8 8 0 1 1-15 4l-.9 3.1 3.2-.9A8 8 0 0 1 20 11.5z"/>
 
-                <path d="M8.8 8.4c.2-.3.4-.3.7-.3h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.7 1.2 1.6 2.1 2.8 2.8l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3-.1.5-.3.7-.3.3-.8.5-1.3.5-2.5-.2-5.2-2.8-6.7-4.5-.8-.9-1.7-2.2-1.8-3.5-.1-.5.1-1 .4-1.4z"/>
+<path
+d="M8.8 8.4h.8l.8 1.8-.6.7a7 7 0 0 0 2.9 2.8l.6-.5 1.8.7v.8c0 .5-.4.9-.9.9-2.9-.2-6.3-3.4-6.5-6.3 0-.5.4-.9.9-.9z"/>
 
-            </svg>
+</svg>
 
-            CONTÁCTANOS
+CONTÁCTANOS
 
-        </a>
+</a>
 
-    </div>
+</div>
 
 </header>
 
@@ -1960,98 +1749,91 @@ footer p{
      HERO
 ===================================================== -->
 
-<section class="hero" id="inicio">
+<section
+class="hero"
+id="inicio">
 
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="eyebrow">
-            SOLUCIONES QUE FLUYEN
-        </div>
-
-
-        <h1>
-
-            <span class="verde">
-                PRECISIÓN
-            </span>
-
-            EN CADA
-            INSTALACIÓN.
-
-            <br>
-
-            <span class="verde">
-                EXCELENCIA
-            </span>
-
-            EN CADA
-            SERVICIO.
-
-        </h1>
+<div class="eyebrow">
+    SOLUCIONES QUE FLUYEN
+</div>
 
 
-        <p class="hero-description">
+<h1>
 
-            Ofrecemos soluciones profesionales de
-            fontanería y saneamiento con calidad
-            y confianza.
+<span class="verde">
+    PRECISIÓN
+</span>
 
-        </p>
+EN CADA<br>
 
+INSTALACIÓN.
 
-        <div class="hero-buttons">
+<br>
 
-            <a
-                class="btn-services"
-                href="#servicios">
+<span class="verde">
+    EXCELENCIA
+</span>
 
-                <svg
-                    class="wrench-icon"
-                    viewBox="0 0 24 24">
+EN CADA<br>
 
-                    <path d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
+SERVICIO.
 
-                </svg>
-
-                NUESTROS SERVICIOS
-
-            </a>
+</h1>
 
 
-            <a
-                class="btn-whatsapp"
-                href="https://wa.me/34677449457"
-                target="_blank"
-                rel="noopener">
+<p class="hero-description">
 
-                <svg
-                    class="whatsapp-icon"
-                    viewBox="0 0 24 24">
+Ofrecemos soluciones profesionales de
+fontanería y saneamiento con calidad,
+precisión y confianza.
 
-                    <path d="M20 11.5a8 8 0 0 1-11.8 7l-3.2.9.9-3.1A8 8 0 1 1 20 11.5z"/>
-
-                    <path d="M8.8 8.4c.2-.3.4-.3.7-.3h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.7 1.2 1.6 2.1 2.8 2.8l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3-.1.5-.3.7-.3.3-.8.5-1.3.5-2.5-.2-5.2-2.8-6.7-4.5-.8-.9-1.7-2.2-1.8-3.5-.1-.5.1-1 .4-1.4z"/>
-
-                </svg>
-
-                677 44 94 57
-
-            </a>
-
-        </div>
-
-    </div>
+</p>
 
 
+<div class="hero-buttons">
 
-    <div class="hero-image">
+<a
+class="btn-services"
+href="#servicios">
 
-        <img
-            src="FOTO LLAVE AGUA PORTADA.png"
-            alt="Llave de agua Fonysan">
+NUESTROS SERVICIOS
 
-    </div>
+</a>
+
+
+<a
+class="btn-whatsapp"
+href="https://wa.me/34677449457"
+target="_blank"
+rel="noopener">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M20 11.5a8 8 0 1 1-15 4l-.9 3.1 3.2-.9A8 8 0 0 1 20 11.5z"/>
+
+<path d="M8.8 8.4h.8l.8 1.8-.6.7a7 7 0 0 0 2.9 2.8l.6-.5 1.8.7v.8c0 .5-.4.9-.9.9-2.9-.2-6.3-3.4-6.5-6.3 0-.5.4-.9.9-.9z"/>
+
+</svg>
+
+677 44 94 57
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-image">
+
+<img
+src="FOTO LLAVE AGUA PORTADA.png"
+alt="Llave de agua Fonysan">
+
+</div>
 
 </section>
 
@@ -2064,110 +1846,112 @@ footer p{
 <section class="advantages">
 
 
-    <div class="advantage">
+<div class="advantage">
 
-        <div class="circle-icon">
+<div class="circle-icon">
 
-            <svg viewBox="0 0 24 24">
+<svg viewBox="0 0 24 24">
 
-                <path d="M12 3l3 3-3 3-3-3 3-3z"/>
-                <path d="M12 9v8"/>
-                <path d="M8 21h8"/>
+<circle cx="12" cy="12" r="8.5"/>
+<circle cx="9" cy="10" r=".7"/>
+<circle cx="15" cy="10" r=".7"/>
+<path d="M8.5 14.5c2 1.7 5 1.7 7 0"/>
 
-            </svg>
+</svg>
 
-        </div>
+</div>
 
-        <h3>
-            Profesionales cualificados
-        </h3>
+<h3>
+PROFESIONALES CUALIFICADOS
+</h3>
 
-        <p>
-            Experiencia y formación para garantizar
-            el mejor servicio.
-        </p>
+<p>
+Experiencia y formación para garantizar
+el mejor servicio.
+</p>
 
-    </div>
-
-
-
-    <div class="advantage">
-
-        <div class="circle-icon">
-
-            <svg viewBox="0 0 24 24">
-
-                <circle cx="12" cy="12" r="8.5"/>
-                <path d="M12 7v5l3 2"/>
-
-            </svg>
-
-        </div>
-
-        <h3>
-            Atención rápida
-        </h3>
-
-        <p>
-            Respondemos rápido para resolver
-            tu problema cuanto antes.
-        </p>
-
-    </div>
+</div>
 
 
 
-    <div class="advantage">
+<div class="advantage">
 
-        <div class="circle-icon">
+<div class="circle-icon">
 
-            <svg viewBox="0 0 24 24">
+<svg viewBox="0 0 24 24">
 
-                <path d="M12 3l2 2.2 3-.2.7 3 2.3 2-1.4 2.7.4 3-3 .4-2.3-1.8-2.7 1.8-3-.4.4-3-1.4-2.7 2.3-2 .7-3 3 .2L12 3z"/>
+<circle cx="12" cy="12" r="8.5"/>
+<path d="M12 7v5l3 2"/>
 
-                <path d="M9 12l2 2 4-4"/>
+</svg>
 
-            </svg>
+</div>
 
-        </div>
+<h3>
+ATENCIÓN RÁPIDA
+</h3>
 
-        <h3>
-            Calidad garantizada
-        </h3>
+<p>
+Respondemos rápido para resolver
+tu problema cuanto antes.
+</p>
 
-        <p>
-            Trabajamos con materiales de primera
-            para asegurar resultados duraderos.
-        </p>
-
-    </div>
-
+</div>
 
 
-    <div class="advantage">
 
-        <div class="circle-icon">
+<div class="advantage">
 
-            <svg viewBox="0 0 24 24">
+<div class="circle-icon">
 
-                <rect x="6.5" y="4" width="11" height="16" rx="2"/>
-                <path d="M9 8h6"/>
-                <path d="M9 12h6"/>
-                <path d="M9 16h4"/>
+<svg viewBox="0 0 24 24">
 
-            </svg>
+<path d="M12 3l2 2.2 3-.2.7 3 2.3 2-1.4 2.7 1.8 3-.4.4-3-1.4-2.7 1.8-3-.4-3 .7-2.7-2-2.3 2.3-2 .7-3 3 .2L12 3z"/>
 
-        </div>
+<path d="M9 12l2 2 4-4"/>
 
-        <h3>
-            Precios justos
-        </h3>
+</svg>
 
-        <p>
-            Presupuestos claros.
-        </p>
+</div>
 
-    </div>
+<h3>
+CALIDAD GARANTIZADA
+</h3>
+
+<p>
+Trabajamos con materiales de primera
+para asegurar resultados duraderos.
+</p>
+
+</div>
+
+
+
+<div class="advantage">
+
+<div class="circle-icon">
+
+<svg viewBox="0 0 24 24">
+
+<rect x="6.5" y="4" width="11" height="16" rx="2"/>
+
+<path d="M9 8h6"/>
+<path d="M9 12h6"/>
+<path d="M9 16h4"/>
+
+</svg>
+
+</div>
+
+<h3>
+PRECIOS JUSTOS
+</h3>
+
+<p>
+Presupuestos claros.
+</p>
+
+</div>
 
 </section>
 
@@ -2180,39 +1964,40 @@ footer p{
 <section class="blue-banner">
 
 
-    <div class="banner-blue">
+<div class="banner-blue">
 
-        <div class="drop-icon">
+<div class="drop-icon">
 
-            <svg viewBox="0 0 24 24">
+<svg viewBox="0 0 24 24">
 
-                <path d="M12 3s-5 6.2-5 10a5 5 0 0 0 10 0c0-3.8-5-10-5-10z"/>
+<path
+d="M12 3s-5 6.2-5 10a5 5 0 0 0 10 0c0-3.8-5-10-5-10z"/>
 
-            </svg>
+</svg>
 
-        </div>
-
-
-        <h2>
-            RÁPIDOS, LIMPIOS<br>
-            Y EFICIENTES
-        </h2>
+</div>
 
 
-        <p>
-            Tu tranquilidad es nuestra prioridad.
-        </p>
+<h2>
+RÁPIDOS, LIMPIOS<br>
+Y EFICIENTES
+</h2>
 
-    </div>
+
+<p>
+Tu tranquilidad es nuestra prioridad.
+</p>
+
+</div>
 
 
-    <div class="banner-photo">
+<div class="banner-photo">
 
-        <img
-            src="FOTO BAÑO IZQ.png"
-            alt="Baño">
+<img
+src="FOTO BAÑO IZQ.png"
+alt="Baño">
 
-    </div>
+</div>
 
 </section>
 
@@ -2223,144 +2008,133 @@ footer p{
 ===================================================== -->
 
 <section
-    class="services"
-    id="servicios">
+class="services"
+id="servicios">
 
 
-    <!-- INSTALACIONES -->
+<!-- INSTALACIONES -->
 
-    <div class="service">
+<div class="service">
 
-        <div class="service-icon">
+<div class="service-icon">
 
-            <svg viewBox="0 0 24 24">
+<svg viewBox="0 0 24 24">
 
-                <path d="M4 7h7v4H4z"/>
-                <path d="M11 9h4"/>
-                <path d="M15 9v5"/>
-                <path d="M15 14h5"/>
-                <path d="M20 14v4"/>
-                <path d="M7 11v7"/>
-                <path d="M4 18h6"/>
+<path d="M4 7h7v4H4z"/>
+<path d="M11 9h4"/>
+<path d="M15 9v5"/>
+<path d="M15 14h5"/>
+<path d="M20 14v4"/>
+<path d="M7 11v7"/>
+<path d="M4 18h6"/>
 
-            </svg>
+</svg>
 
-        </div>
+</div>
 
+<h3>
+INSTALACIONES
+</h3>
 
-        <h3>
-            INSTALACIONES
-        </h3>
+<p>
+Montaje y renovación de tuberías,
+grifos, sanitarios y más.
+</p>
 
-
-        <p>
-            Montaje y renovación de tuberías,
-            grifos, sanitarios y más.
-        </p>
-
-    </div>
-
-
-
-    <!-- REPARACIONES -->
-
-    <div class="service">
-
-        <div class="service-icon">
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
-
-            </svg>
-
-        </div>
-
-
-        <h3>
-            REPARACIONES
-        </h3>
-
-
-        <p>
-            Soluciones integrales para fugas,
-            atascos, averías y renovación
-            de instalaciones.
-        </p>
-
-    </div>
+</div>
 
 
 
-    <!-- SANEAMIENTO -->
+<!-- REPARACIONES -->
 
-    <div class="service">
+<div class="service">
 
-        <div class="service-icon">
+<div class="service-icon">
 
-            <svg viewBox="0 0 24 24">
+<svg viewBox="0 0 24 24">
 
-                <!-- TUBERÍA / DESAGÜE -->
+<path
+d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
 
-                <path d="M5 6h8"/>
-                <path d="M13 6v5"/>
-                <path d="M13 11h6"/>
-                <path d="M19 11v7"/>
-                <path d="M16 18h6"/>
+</svg>
 
-                <circle cx="6" cy="6" r="2"/>
+</div>
 
-            </svg>
+<h3>
+REPARACIONES
+</h3>
 
-        </div>
+<p>
+Soluciones integrales para fugas,
+atascos, averías y renovación
+de instalaciones.
+</p>
 
-
-        <h3>
-            SANEAMIENTO
-        </h3>
-
-
-        <p>
-            Instalación y renovación
-            de tuberías.
-        </p>
-
-    </div>
+</div>
 
 
 
-    <!-- MANTENIMIENTO -->
+<!-- SANEAMIENTO -->
 
-    <div
-        class="service"
-        id="trabajos">
+<div class="service">
 
-        <div class="service-icon">
+<div class="service-icon">
 
-            <svg viewBox="0 0 24 24">
+<svg viewBox="0 0 24 24">
 
-                <!-- LLAVE / MANTENIMIENTO -->
+<path
+d="M12 3s-5 6.2-5 10a5 5 0 0 0 10 0c0-3.8-5-10-5-10z"/>
 
-                <path d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
+<path
+d="M8 17h8"/>
 
-                <path d="M17 14l4 4"/>
+</svg>
 
-            </svg>
+</div>
 
-        </div>
+<h3>
+SANEAMIENTO
+</h3>
+
+<p>
+Instalación y renovación
+de tuberías.
+</p>
+
+</div>
 
 
-        <h3>
-            MANTENIMIENTO
-        </h3>
 
+<!-- MANTENIMIENTO -->
 
-        <p>
-            Mantenimiento preventivo y correctivo
-            de instalaciones de fontanería.
-        </p>
+<div
+class="service"
+id="trabajos">
 
-    </div>
+<div class="service-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 3a7 7 0 0 0 0 14"/>
+<path d="M12 7v5l3 2"/>
+<path d="M18 15l3 3"/>
+<path d="M19 18l-2 2"/>
+<path d="M20 13h2"/>
+
+</svg>
+
+</div>
+
+<h3>
+MANTENIMIENTO
+</h3>
+
+<p>
+Mantenimiento preventivo y correctivo
+de instalaciones de fontanería.
+</p>
+
+</div>
 
 </section>
 
@@ -2371,277 +2145,132 @@ footer p{
 ===================================================== -->
 
 <section
-    class="about"
-    id="nosotros">
+class="about"
+id="nosotros">
 
 
-    <div class="about-content">
+<div class="about-content">
 
-        <div class="about-label">
-            SOBRE NOSOTROS
-        </div>
+<div class="about-label">
+SOBRE NOSOTROS
+</div>
 
 
-        <h2>
+<h2>
 
-            Atención profesional,
-            resultados que inspiran
+Atención profesional,
+resultados que inspiran
+<span class="verde">seguridad</span>.
 
-            <span class="verde">
-                seguridad
-            </span>.
+</h2>
 
-        </h2>
 
+<p class="about-text">
 
-        <p class="about-text">
+En Fonysan trabajamos para ofrecer soluciones
+profesionales de fontanería con precisión,
+compromiso y atención al detalle.
 
-            En Fonysan trabajamos para ofrecer soluciones
-            profesionales de fontanería con precisión,
-            compromiso y atención al detalle.
+Nuestro objetivo es que cada instalación,
+reparación o mantenimiento quede realizado
+con la máxima calidad.
 
-            Nuestro objetivo es que cada instalación,
-            reparación o mantenimiento quede realizado
-            con la máxima calidad.
+</p>
 
-        </p>
 
+<div class="stats">
 
-        <div class="stats">
 
+<div class="stat">
 
-            <div class="stat">
+<div class="stat-icon">
 
-                <div class="stat-icon">
+<svg viewBox="0 0 24 24">
 
-                    <svg viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="8.5"/>
+<circle cx="9" cy="10" r=".7"/>
+<circle cx="15" cy="10" r=".7"/>
+<path d="M8.5 14.5c2 1.7 5 1.7 7 0"/>
 
-                        <circle cx="12" cy="12" r="8.5"/>
-                        <circle cx="9" cy="10" r=".7"/>
-                        <circle cx="15" cy="10" r=".7"/>
-                        <path d="M8.5 14.5c2 1.7 5 1.7 7 0"/>
+</svg>
 
-                    </svg>
+</div>
 
-                </div>
+<strong>
++500
+</strong>
 
-                <strong>
-                    +500
-                </strong>
+<span>
+Clientes satisfechos
+</span>
 
-                <span>
-                    Clientes satisfechos
-                </span>
+</div>
 
-            </div>
 
 
+<div class="stat">
 
-            <div class="stat">
+<div class="stat-icon">
 
-                <div class="stat-icon">
+<svg viewBox="0 0 24 24">
 
-                    <svg viewBox="0 0 24 24">
+<path
+d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
 
-                        <path d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a2 2 0 0 0 3 3l5-5a4 4 0 0 0 5-5l-3 3-2-2 3-3z"/>
+</svg>
 
-                    </svg>
+</div>
 
-                </div>
+<strong>
++1.000
+</strong>
 
-                <strong>
-                    +1.000
-                </strong>
+<span>
+Trabajos realizados
+</span>
 
-                <span>
-                    Trabajos realizados
-                </span>
+</div>
 
-            </div>
 
 
+<div class="stat">
 
-            <div class="stat">
+<div class="stat-icon">
 
-                <div class="stat-icon">
+<svg viewBox="0 0 24 24">
 
-                    <svg viewBox="0 0 24 24">
+<path
+d="M12 3l2 2.2 3-.2.7 3 2.3 2-1.4 2.7 1.8 3-.4-3-.4.4-3-1.4-2.7 1.8-3-.4-3 .7-2.7-2-2.3 2.3-2 .7-3 3 .2L12 3z"/>
 
-                        <path d="M12 3l2 2.2 3-.2.7 3 2.3 2-1.4 2.7.4 3-3 .4-2.3-1.8-2.7 1.8-3-.4.4-3-1.4-2.7 2.3-2 .7-3 3 .2L12 3z"/>
+<path d="M9 12l2 2 4-4"/>
 
-                        <path d="M9 12l2 2 4-4"/>
+</svg>
 
-                    </svg>
+</div>
 
-                </div>
+<strong>
++10
+</strong>
 
-                <strong>
-                    +10
-                </strong>
+<span>
+Años de experiencia
+</span>
 
-                <span>
-                    Años de experiencia
-                </span>
+</div>
 
-            </div>
 
+</div>
 
-        </div>
+</div>
 
-    </div>
 
+<div class="about-image">
 
-    <div class="about-image">
+<img
+src="FOTO FONTANERO.png"
+alt="Fontanero trabajando">
 
-        <img
-            src="FOTO FONTANERO.png"
-            alt="Fontanero trabajando">
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CONFIANZA
-===================================================== -->
-
-<section class="trust">
-
-
-    <!-- CONFIANZA -->
-
-    <div class="trust-item">
-
-        <div class="trust-icon">
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M12 3l8 3v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3z"/>
-
-                <path d="M8.5 12l2.3 2.3 4.7-5"/>
-
-            </svg>
-
-        </div>
-
-
-        <div>
-
-            <h3>
-                CONFIANZA
-            </h3>
-
-            <p>
-                Transparentes y honestos
-                en cada trabajo.
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- DISPONIBILIDAD -->
-
-    <div class="trust-item">
-
-        <div class="trust-icon">
-
-            <svg viewBox="0 0 24 24">
-
-                <circle cx="12" cy="12" r="8.5"/>
-
-                <path d="M12 7v5l3 2"/>
-
-            </svg>
-
-        </div>
-
-
-        <div>
-
-            <h3>
-                DISPONIBILIDAD
-            </h3>
-
-            <p>
-                Atención rápida y
-                disponibilidad flexible.
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- GARANTÍA -->
-
-    <div class="trust-item">
-
-        <div class="trust-icon">
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M12 3l7 3v5c0 4.5-2.7 7.7-7 10-4.3-2.3-7-5.5-7-10V6l7-3z"/>
-
-                <path d="M9 12l2 2 4-4"/>
-
-            </svg>
-
-        </div>
-
-
-        <div>
-
-            <h3>
-                GARANTÍA
-            </h3>
-
-            <p>
-                Trabajos garantizados
-                y con respaldo.
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- COBERTURA -->
-
-    <div class="trust-item">
-
-        <div class="trust-icon">
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z"/>
-
-                <circle cx="12" cy="10" r="2.5"/>
-
-            </svg>
-
-        </div>
-
-
-        <div>
-
-            <h3>
-                COBERTURA
-            </h3>
-
-            <p>
-                Servicio en Castilla y León.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -2651,110 +2280,265 @@ footer p{
      CONTACTO
 ===================================================== -->
 
-<section class="contact">
+<section
+class="contact"
+id="contacto">
 
 
-    <div class="contact-intro">
+<div class="contact-intro">
 
-        <small>
-            ¿NECESITAS AYUDA?
-        </small>
+<small>
+¿NECESITAS AYUDA?
+</small>
 
-        <h2>
-            Estamos listos para ayudarte
-        </h2>
+<h2>
+Estamos listos para ayudarte
+</h2>
 
-        <p>
-            Contacta con Fonysan y cuéntanos qué necesitas.
-        </p>
+<p>
+Contacta con Fonysan y cuéntanos qué necesitas.
+</p>
 
-    </div>
-
-
-
-    <!-- TELÉFONO -->
-
-    <div class="contact-item">
-
-        <div class="contact-icon">
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M5 4h3l2 5-2 2a15 15 0 0 0 5 5l2-2 5 2v3c0 1-1 2-2 2C10 20 4 14 4 6c0-1 0-2 1-2z"/>
-
-            </svg>
-
-        </div>
-
-
-        <div>
-
-            <strong>
-                677 44 94 57
-            </strong>
-
-            <span>
-                Llámanos o escríbenos
-            </span>
-
-        </div>
-
-    </div>
+</div>
 
 
 
-    <!-- EMAIL -->
+<!-- TELÉFONO -->
 
-    <div class="contact-item">
+<div class="contact-item">
 
-        <div class="contact-icon">
+<div class="contact-icon">
 
-            <svg viewBox="0 0 24 24">
+<svg viewBox="0 0 24 24">
 
-                <rect
-                    x="3"
-                    y="5"
-                    width="18"
-                    height="14"
-                    rx="2"/>
+<path
+d="M5 4h3l2 5-2 2a15 15 0 0 0 5 5l2-2 5 2v3c0 1-1 2-2 2C10 20 4 14 4 6c0-1 0-2 1-2z"/>
 
-                <path d="M4 7l8 6 8-6"/>
+</svg>
 
-            </svg>
-
-        </div>
+</div>
 
 
-        <div>
+<div>
 
-            <strong>
-                fonysan.comercial@outlook.es
-            </strong>
+<strong>
+677 44 94 57
+</strong>
 
-            <span>
-                Respondemos a la brevedad
-            </span>
+<span>
+Llámanos o escríbenos
+</span>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 
 
-    <!-- WHATSAPP -->
+<!-- EMAIL -->
 
-    <div class="contact-button">
+<div class="contact-item">
 
-        <a
-            href="https://wa.me/34677449457"
-            target="_blank"
-            rel="noopener">
+<div class="contact-icon">
 
-            ESCRÍBENOS POR WHATSAPP
+<svg viewBox="0 0 24 24">
 
-        </a>
+<rect
+x="3"
+y="5"
+width="18"
+height="14"
+rx="2"/>
 
-    </div>
+<path
+d="M4 7l8 6 8-6"/>
+
+</svg>
+
+</div>
+
+
+<div>
+
+<strong>
+fonysan.comercial@outlook.es
+</strong>
+
+<span>
+Respondemos a la brevedad
+</span>
+
+</div>
+
+</div>
+
+
+
+<!-- WHATSAPP -->
+
+<div class="contact-button">
+
+<a
+href="https://wa.me/34677449457"
+target="_blank"
+rel="noopener">
+
+ESCRÍBENOS POR WHATSAPP
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONFIANZA / DISPONIBILIDAD / GARANTÍA / COBERTURA
+===================================================== -->
+
+<section class="trust">
+
+
+<!-- CONFIANZA -->
+
+<div class="trust-item">
+
+<div class="trust-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path
+d="M12 3l8 3v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3z"/>
+
+<path
+d="M8.5 12l2.3 2.3 4.7-5"/>
+
+</svg>
+
+</div>
+
+
+<div>
+
+<h3>
+CONFIANZA
+</h3>
+
+<p>
+Transparentes y honestos
+en cada trabajo.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- DISPONIBILIDAD -->
+
+<div class="trust-item">
+
+<div class="trust-icon">
+
+<svg viewBox="0 0 24 24">
+
+<circle cx="12" cy="12" r="8.5"/>
+
+<path d="M12 7v5l3 2"/>
+
+</svg>
+
+</div>
+
+
+<div>
+
+<h3>
+DISPONIBILIDAD
+</h3>
+
+<p>
+Atención rápida y disponibilidad flexible.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- GARANTÍA -->
+
+<div class="trust-item">
+
+<div class="trust-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path
+d="M12 3l7 3v5c0 4.5-2.7 7.7-7 10-4.3-2.3-7-5.5-7-10V6l7-3z"/>
+
+<path
+d="M9 12l2 2 4-4"/>
+
+</svg>
+
+</div>
+
+
+<div>
+
+<h3>
+GARANTÍA
+</h3>
+
+<p>
+Trabajos garantizados
+y con respaldo.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- COBERTURA -->
+
+<div class="trust-item">
+
+<div class="trust-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path
+d="M12 21s7-6.1 7-11a7 7 0 0 0-14 0c0 4.9 7 11 7 11z"/>
+
+<circle
+cx="12"
+cy="10"
+r="2.5"/>
+
+</svg>
+
+</div>
+
+
+<div>
+
+<h3>
+COBERTURA
+</h3>
+
+<p>
+Servicio en Castilla y León.
+</p>
+
+</div>
+
+</div>
 
 
 </section>
@@ -2767,37 +2551,36 @@ footer p{
 
 <footer>
 
-    <!-- LOGO BLANCO -->
-    <img
-        src="logo.jpg"
-        alt="Fonysan">
+<img
+src="LOGO FONDO TRASNPARENTE.png"
+alt="Fonysan">
 
-    <p>
-        © 2026 Fonysan. Todos los derechos reservados.
-    </p>
+<p>
+© 2026 Fonysan. Todos los derechos reservados.
+</p>
 
 
-    <div class="social">
+<div class="social">
 
-        <a
-            href="https://www.instagram.com/fonysan_es/"
-            target="_blank">
-            IG
-        </a>
+<a
+href="https://www.instagram.com/fonysan_es/"
+target="_blank">
+IG
+</a>
 
-        <a
-            href="https://www.facebook.com/profile.php?id=61592791922836"
-            target="_blank">
-            FB
-        </a>
+<a
+href="https://www.facebook.com/profile.php?id=61592791922836"
+target="_blank">
+FB
+</a>
 
-        <a
-            href="https://wa.me/34677449457"
-            target="_blank">
-            WA
-        </a>
+<a
+href="https://wa.me/34677449457"
+target="_blank">
+WA
+</a>
 
-    </div>
+</div>
 
 </footer>
 
