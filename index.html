@@ -75,9 +75,6 @@ header{
     gap:45px;
 }
 
-
-/* LOGO */
-
 .logo{
     width:230px;
     flex-shrink:0;
@@ -88,9 +85,6 @@ header{
     height:auto;
     object-fit:contain;
 }
-
-
-/* MENU */
 
 .nav-menu{
     display:flex;
@@ -130,9 +124,6 @@ header{
     width:100%;
 }
 
-
-/* BOTÓN */
-
 .nav-button{
     flex-shrink:0;
     padding:21px 36px;
@@ -166,9 +157,6 @@ header{
     background:#fff;
 }
 
-
-/* IMAGEN */
-
 .hero-image{
     position:absolute;
     inset:0;
@@ -181,9 +169,6 @@ header{
     object-fit:cover;
     object-position:center center;
 }
-
-
-/* DEGRADADO */
 
 .hero-image::after{
     content:"";
@@ -202,18 +187,12 @@ header{
     );
 }
 
-
-/* CONTENIDO */
-
 .hero-content{
     position:relative;
     z-index:2;
     width:100%;
     padding:90px 7%;
 }
-
-
-/* PEQUEÑO ENCABEZADO */
 
 .hero-small{
     display:flex;
@@ -235,9 +214,6 @@ header{
     letter-spacing:1.4px;
 }
 
-
-/* TITULO */
-
 .hero h1{
     max-width:720px;
     font-size:clamp(52px,5.1vw,86px);
@@ -256,9 +232,6 @@ header{
     color:var(--green);
 }
 
-
-/* DESCRIPCIÓN */
-
 .hero-description{
     max-width:650px;
     font-size:20px;
@@ -267,9 +240,6 @@ header{
     font-weight:500;
     margin-bottom:42px;
 }
-
-
-/* BOTONES */
 
 .hero-buttons{
     display:flex;
@@ -379,9 +349,6 @@ header{
     overflow:hidden;
 }
 
-
-/* PARTE SUPERIOR */
-
 .services-top{
     min-height:410px;
 
@@ -393,9 +360,6 @@ header{
 
     background:var(--blue);
 }
-
-
-/* FOTO */
 
 .services-top-image{
     position:absolute;
@@ -412,9 +376,6 @@ header{
     object-fit:cover;
 }
 
-
-/* DEGRADADO */
-
 .services-top-image::after{
     content:"";
     position:absolute;
@@ -429,9 +390,6 @@ header{
         rgba(7,87,184,0) 100%
     );
 }
-
-
-/* TEXTO */
 
 .services-intro{
     position:relative;
@@ -466,9 +424,6 @@ header{
     font-weight:600;
     line-height:1.6;
 }
-
-
-/* SERVICIOS INDIVIDUALES */
 
 .services-grid{
     display:grid;
@@ -581,9 +536,6 @@ header{
     margin-bottom:50px;
 }
 
-
-/* ESTADÍSTICAS */
-
 .stats{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -621,9 +573,6 @@ header{
     font-size:14px;
     font-weight:600;
 }
-
-
-/* FOTO FONTANERO */
 
 .about-image{
     position:relative;
@@ -687,9 +636,6 @@ header{
     font-size:13px;
 }
 
-
-/* REDES SOCIALES */
-
 .contact-socials{
     display:flex;
     align-items:center;
@@ -734,9 +680,6 @@ header{
     fill:currentColor;
 }
 
-
-/* CONTACTO ITEMS */
-
 .contact-item{
     min-height:90px;
 
@@ -772,9 +715,6 @@ header{
     font-size:12px;
 }
 
-
-/* WHATSAPP */
-
 .contact-button{
     background:var(--green);
     color:#fff;
@@ -798,7 +738,7 @@ header{
 
 
 /* =====================================================
-   CONFIANZA / GARANTÍAS
+   GARANTÍAS
 ===================================================== */
 
 .guarantees{
@@ -943,21 +883,17 @@ footer p{
 
 @media(max-width:800px){
 
-    /* HEADER */
-
     .navbar{
         min-height:auto;
-
-        padding:20px 22px;
-
+        padding:22px 20px 18px;
         flex-wrap:wrap;
-
         justify-content:center;
+        gap:12px;
     }
 
     .logo{
-        width:190px;
-        margin:0 auto;
+        width:185px;
+        margin:0 auto 4px;
     }
 
     .nav-button{
@@ -966,30 +902,24 @@ footer p{
 
     .nav-menu{
         width:100%;
-
         order:3;
-
-        gap:24px;
-
-        justify-content:space-between;
-
+        gap:26px;
+        justify-content:center;
         overflow-x:auto;
-
-        padding-top:15px;
-
+        padding:15px 4px 4px;
         border-top:1px solid #edf1f5;
     }
 
     .nav-menu a{
         white-space:nowrap;
-        font-size:12px;
+        font-size:11px;
     }
 
 
     /* HERO */
 
     .hero{
-        min-height:730px;
+        min-height:760px;
         align-items:flex-start;
     }
 
@@ -1002,19 +932,19 @@ footer p{
         linear-gradient(
             180deg,
             rgba(255,255,255,.98) 0%,
-            rgba(255,255,255,.94) 39%,
-            rgba(255,255,255,.55) 68%,
+            rgba(255,255,255,.95) 40%,
+            rgba(255,255,255,.62) 70%,
             rgba(255,255,255,.08) 100%
         );
     }
 
     .hero-content{
-        padding:55px 22px 45px;
+        padding:64px 25px 55px;
         width:100%;
     }
 
     .hero-small{
-        margin-bottom:22px;
+        margin-bottom:27px;
         gap:10px;
     }
 
@@ -1024,91 +954,94 @@ footer p{
     }
 
     .hero-small span{
-        font-size:11px;
-        letter-spacing:.8px;
-        line-height:1.35;
+        font-size:10px;
+        letter-spacing:.7px;
+        line-height:1.5;
     }
 
     .hero h1{
-        font-size:38px;
-        line-height:1.02;
-        letter-spacing:-1.5px;
+        font-size:35px;
+        line-height:1.08;
+        letter-spacing:-1.2px;
         max-width:100%;
-        margin-bottom:24px;
+        margin-bottom:27px;
     }
 
     .hero-description{
         font-size:14px;
-        line-height:1.6;
-        max-width:100%;
-        margin-bottom:28px;
+        line-height:1.75;
+        max-width:330px;
+        margin-bottom:34px;
     }
 
     .hero-buttons{
         flex-direction:column;
         align-items:stretch;
-        gap:12px;
+        gap:14px;
         width:100%;
+        max-width:360px;
     }
 
     .btn-primary,
     .btn-secondary{
         width:100%;
         text-align:center;
-        padding:17px 18px;
+        padding:18px 18px;
     }
 
 
     /* BENEFICIOS */
 
     .benefits{
-        padding:38px 15px 45px;
+        padding:48px 18px 58px;
     }
 
     .benefits-grid{
         grid-template-columns:1fr;
-        gap:14px;
+        gap:18px;
         width:100%;
+        max-width:500px;
+        margin:0 auto;
     }
 
     .benefit{
         width:100%;
-        min-height:165px;
-        padding:24px 20px;
+        min-height:185px;
+        padding:29px 24px;
+        border-radius:16px;
         overflow:hidden;
     }
 
     .symbol{
-        width:52px;
-        height:52px;
-        font-size:22px;
-        margin-bottom:14px;
-        flex-shrink:0;
+        width:56px;
+        height:56px;
+        font-size:23px;
+        margin-bottom:17px;
     }
 
     .benefit h3{
-        font-size:15px;
-        line-height:1.25;
-        max-width:100%;
+        font-size:16px;
+        line-height:1.35;
+        margin-bottom:9px;
     }
 
     .benefit p{
-        font-size:11px;
-        line-height:1.5;
-        max-width:280px;
+        font-size:12px;
+        line-height:1.65;
+        max-width:290px;
     }
 
 
     /* SERVICIOS */
 
     .services{
-        width:calc(100% - 24px);
-        margin:0 auto 45px;
-        border-radius:16px;
+        width:calc(100% - 30px);
+        margin:0 auto 58px;
+        border-radius:18px;
     }
 
     .services-top{
-        min-height:520px;
+        min-height:555px;
         align-items:flex-end;
     }
 
@@ -1121,37 +1054,37 @@ footer p{
         background:
         linear-gradient(
             180deg,
-            rgba(7,87,184,.04) 0%,
-            rgba(7,87,184,.20) 32%,
-            rgba(7,87,184,.92) 72%,
+            rgba(7,87,184,.03) 0%,
+            rgba(7,87,184,.15) 30%,
+            rgba(7,87,184,.82) 67%,
             rgba(7,87,184,1) 100%
         );
     }
 
     .services-intro{
         width:100%;
-        padding:32px 22px 38px;
+        padding:40px 25px 46px;
         text-align:center;
     }
 
     .services-intro-symbol{
-        font-size:34px;
-        margin-bottom:14px;
+        font-size:36px;
+        margin-bottom:17px;
     }
 
     .services-intro h2{
-        font-size:clamp(31px,9.5vw,40px);
-        line-height:1.02;
-        letter-spacing:-1px;
-        max-width:100%;
-        margin:0 auto 15px;
+        font-size:36px;
+        line-height:1.08;
+        letter-spacing:-.8px;
+        max-width:310px;
+        margin:0 auto 18px;
         white-space:normal;
         overflow-wrap:break-word;
     }
 
     .services-intro p{
         font-size:13px;
-        line-height:1.5;
+        line-height:1.6;
         max-width:260px;
         margin:0 auto;
     }
@@ -1162,8 +1095,8 @@ footer p{
 
     .service{
         width:100%;
-        min-height:185px;
-        padding:27px 20px;
+        min-height:210px;
+        padding:34px 25px;
         border-right:none;
         border-bottom:1px solid rgba(255,255,255,.18);
         overflow:hidden;
@@ -1174,20 +1107,20 @@ footer p{
     }
 
     .service-symbol{
-        font-size:42px;
-        margin-bottom:14px;
+        font-size:44px;
+        margin-bottom:17px;
     }
 
     .service h3{
-        font-size:15px;
-        line-height:1.25;
-        margin-bottom:9px;
+        font-size:16px;
+        line-height:1.3;
+        margin-bottom:10px;
     }
 
     .service p{
-        font-size:11px;
-        line-height:1.5;
-        max-width:270px;
+        font-size:12px;
+        line-height:1.65;
+        max-width:280px;
         overflow-wrap:anywhere;
     }
 
@@ -1195,30 +1128,39 @@ footer p{
     /* SOBRE NOSOTROS */
 
     .about{
-        width:calc(100% - 24px);
+        width:calc(100% - 30px);
         grid-template-columns:1fr;
         min-height:auto;
-        margin-bottom:45px;
+        margin-bottom:58px;
     }
 
     .about-content{
-        padding:40px 20px 45px;
+        padding:48px 25px 52px;
         text-align:center;
     }
 
+    .section-label{
+        font-size:11px;
+        margin-bottom:19px;
+    }
+
     .about h2{
-        font-size:43px;
-        margin-bottom:25px;
+        font-size:36px;
+        line-height:1.08;
+        letter-spacing:-1.2px;
+        margin-bottom:27px;
     }
 
     .about-text{
-        font-size:15px;
-        margin-bottom:38px;
+        font-size:14px;
+        line-height:1.75;
+        margin:0 auto 44px;
+        max-width:430px;
     }
 
     .stats{
         width:100%;
-        gap:28px;
+        gap:15px;
         grid-template-columns:repeat(3, minmax(0,1fr));
         justify-items:center;
     }
@@ -1231,34 +1173,37 @@ footer p{
     }
 
     .stat-symbol{
-        font-size:42px;
+        font-size:38px;
+        margin-bottom:12px;
     }
 
     .stat-number{
-        font-size:clamp(31px,8vw,43px);
-        letter-spacing:-1.5px;
+        font-size:clamp(29px,8vw,42px);
+        letter-spacing:-1.4px;
         white-space:nowrap;
+        margin-bottom:9px;
     }
 
     .stat-label{
         font-size:10px;
-        line-height:1.3;
-        max-width:95px;
+        line-height:1.4;
+        max-width:100px;
     }
 
     .about-image{
-        min-height:420px;
+        min-height:390px;
     }
 
 
     /* CONTACTO */
 
     .contact{
-        width:calc(100% - 24px);
-        padding:32px 18px;
+        width:calc(100% - 30px);
+        padding:42px 23px 30px;
         grid-template-columns:1fr;
-        gap:18px;
+        gap:0;
         overflow:hidden;
+        margin-bottom:55px;
     }
 
     .contact-title{
@@ -1266,37 +1211,45 @@ footer p{
         width:100%;
         text-align:center;
         min-width:0;
+        padding-bottom:28px;
     }
 
     .contact-title small{
-        font-size:11px;
-        line-height:1.3;
+        font-size:10px;
+        line-height:1.4;
     }
 
     .contact-title h2{
-        font-size:clamp(23px,7vw,28px);
-        line-height:1.15;
+        font-size:26px;
+        line-height:1.2;
         overflow-wrap:anywhere;
-        margin-bottom:9px;
+        margin:9px auto 12px;
+        max-width:310px;
     }
 
     .contact-title p{
         font-size:12px;
-        line-height:1.5;
-        max-width:280px;
+        line-height:1.65;
+        max-width:285px;
         margin:0 auto;
     }
 
     .contact-socials{
         justify-content:center;
-        margin-top:18px;
+        margin-top:20px;
+        gap:13px;
+    }
+
+    .contact-social{
+        width:45px;
+        height:45px;
     }
 
     .contact-item{
         width:100%;
         border-left:none;
         border-top:1px solid #e4ebf2;
-        padding:18px 0 0;
+        padding:25px 5px;
         min-height:auto;
         align-items:center;
         text-align:center;
@@ -1304,51 +1257,56 @@ footer p{
     }
 
     .contact-symbol{
-        font-size:28px;
-        margin-bottom:7px;
+        font-size:29px;
+        margin-bottom:9px;
     }
 
     .contact-item strong{
         display:block;
         width:100%;
         font-size:15px;
-        line-height:1.4;
+        line-height:1.5;
         overflow-wrap:anywhere;
         word-break:break-word;
     }
 
     .contact-item span{
         font-size:10px;
-        line-height:1.4;
-        margin-top:5px;
+        line-height:1.5;
+        margin-top:6px;
     }
 
     .contact-button{
         display:block;
         width:100%;
-        max-width:100%;
-        padding:17px 12px;
-        font-size:12px;
-        line-height:1.3;
+        max-width:330px;
+        margin:22px auto 0;
+        padding:18px 14px;
+        font-size:11px;
+        line-height:1.4;
         overflow-wrap:anywhere;
         white-space:normal;
+        border-radius:8px;
     }
 
 
     /* GARANTÍAS */
 
     .guarantees{
-        width:calc(100% - 24px);
+        width:calc(100% - 30px);
         grid-template-columns:1fr 1fr;
-        margin-bottom:45px;
+        margin-bottom:55px;
     }
 
     .guarantee{
-        min-height:140px;
-        padding:22px 14px;
-        gap:10px;
+        min-height:155px;
+        padding:25px 16px;
+        gap:11px;
         border-bottom:1px solid rgba(255,255,255,.18);
         overflow:hidden;
+        text-align:center;
+        flex-direction:column;
+        justify-content:center;
     }
 
     .guarantee:nth-child(2){
@@ -1361,12 +1319,32 @@ footer p{
 
     .guarantee h3{
         font-size:11px;
-        line-height:1.25;
+        line-height:1.3;
+        margin-bottom:7px;
     }
 
     .guarantee p{
         font-size:9px;
-        line-height:1.4;
+        line-height:1.5;
+        max-width:130px;
+        margin:0 auto;
+    }
+
+
+    /* FOOTER */
+
+    footer{
+        padding:42px 22px;
+    }
+
+    .footer-logo{
+        width:175px;
+        margin-bottom:18px;
+    }
+
+    footer p{
+        font-size:11px;
+        line-height:1.5;
     }
 
 }
@@ -1387,76 +1365,58 @@ footer p{
     }
 
     .hero{
-        min-height:700px;
+        min-height:720px;
     }
 
     .hero-content{
-        padding:55px 22px;
+        padding:58px 22px 52px;
     }
 
     .hero h1{
-        font-size:38px;
+        font-size:34px;
     }
 
     .hero-description{
-        font-size:14px;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .btn-primary,
-    .btn-secondary{
-        width:100%;
-        text-align:center;
-    }
-
-    .benefits-grid{
-        grid-template-columns:1fr;
+        font-size:13.5px;
+        line-height:1.75;
     }
 
     .benefit{
-        min-height:190px;
+        min-height:185px;
     }
 
     .services-top{
         min-height:540px;
     }
 
-    .services-intro h2{
-        font-size:40px;
+    .services-intro{
+        padding-left:22px;
+        padding-right:22px;
     }
 
-    .services-grid{
-        grid-template-columns:1fr;
+    .services-intro h2{
+        font-size:34px;
     }
 
     .service{
-        min-height:200px;
-        border-right:none;
+        min-height:205px;
     }
 
     .about h2{
-        font-size:39px;
+        font-size:34px;
     }
 
     .stats{
-        grid-template-columns:repeat(3, minmax(0,1fr));
-        gap:8px;
-        width:100%;
+        gap:7px;
     }
 
     .stat-number{
-        font-size:clamp(28px,8.5vw,40px);
-        letter-spacing:-1.5px;
+        font-size:clamp(27px,8.3vw,38px);
     }
 
     .stat-label{
         font-size:9px;
-        line-height:1.3;
-        max-width:90px;
+        max-width:88px;
     }
 
     .about-image{
@@ -1464,19 +1424,17 @@ footer p{
     }
 
     .contact{
-        grid-template-columns:1fr;
+        width:calc(100% - 24px);
+        padding-left:18px;
+        padding-right:18px;
     }
 
-    .contact-socials{
-        justify-content:center;
+    .contact-title h2{
+        font-size:24px;
     }
 
     .guarantees{
-        grid-template-columns:1fr;
-    }
-
-    .guarantee{
-        border-right:none;
+        width:calc(100% - 24px);
     }
 
 }
@@ -1936,8 +1894,6 @@ footer p{
 <section class="contact" id="contacto">
 
 
-<!-- NECESITAS AYUDA -->
-
 <div class="contact-title">
 
     <small>
@@ -1953,12 +1909,8 @@ footer p{
     </p>
 
 
-    <!-- REDES SOCIALES -->
-
     <div class="contact-socials">
 
-
-        <!-- INSTAGRAM -->
 
         <a
             class="contact-social"
@@ -1979,8 +1931,6 @@ footer p{
 
         </a>
 
-
-        <!-- FACEBOOK -->
 
         <a
             class="contact-social"
@@ -2007,8 +1957,6 @@ footer p{
 </div>
 
 
-<!-- TELÉFONO -->
-
 <div class="contact-item">
 
     <div class="contact-symbol">
@@ -2025,8 +1973,6 @@ footer p{
 
 </div>
 
-
-<!-- EMAIL -->
 
 <div class="contact-item">
 
@@ -2045,8 +1991,6 @@ footer p{
 </div>
 
 
-<!-- WHATSAPP -->
-
 <a
     class="contact-button"
     href="https://wa.me/34677449457"
@@ -2063,7 +2007,7 @@ footer p{
 
 
 <!-- =====================================================
-     CONFIANZA
+     GARANTÍAS
 ===================================================== -->
 
 <section class="guarantees">
