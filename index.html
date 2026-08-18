@@ -1009,72 +1009,106 @@ footer p{
     }
 
     .hero-content{
-        padding:65px 25px;
+        padding:55px 22px 45px;
+        width:100%;
     }
 
     .hero-small{
-        margin-bottom:25px;
+        margin-bottom:22px;
+        gap:10px;
+    }
+
+    .hero-small-line{
+        width:30px;
+        flex-shrink:0;
     }
 
     .hero-small span{
-        font-size:12px;
+        font-size:11px;
+        letter-spacing:.8px;
+        line-height:1.35;
     }
 
     .hero h1{
-        font-size:46px;
-        letter-spacing:-2px;
+        font-size:38px;
+        line-height:1.02;
+        letter-spacing:-1.5px;
         max-width:100%;
-        margin-bottom:30px;
+        margin-bottom:24px;
     }
 
     .hero-description{
-        font-size:16px;
+        font-size:14px;
+        line-height:1.6;
         max-width:100%;
-        margin-bottom:32px;
+        margin-bottom:28px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+        gap:12px;
+        width:100%;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+        text-align:center;
+        padding:17px 18px;
     }
 
 
     /* BENEFICIOS */
 
     .benefits{
-        padding:45px 20px 50px;
+        padding:38px 15px 45px;
     }
 
     .benefits-grid{
-        grid-template-columns:1fr 1fr;
-        gap:18px;
+        grid-template-columns:1fr;
+        gap:14px;
+        width:100%;
     }
 
     .benefit{
-        min-height:205px;
-        padding:30px 18px;
+        width:100%;
+        min-height:165px;
+        padding:24px 20px;
+        overflow:hidden;
     }
 
     .symbol{
-        width:58px;
-        height:58px;
-        font-size:24px;
-        margin-bottom:18px;
+        width:52px;
+        height:52px;
+        font-size:22px;
+        margin-bottom:14px;
+        flex-shrink:0;
     }
 
     .benefit h3{
         font-size:15px;
+        line-height:1.25;
+        max-width:100%;
     }
 
     .benefit p{
         font-size:11px;
+        line-height:1.5;
+        max-width:280px;
     }
 
 
     /* SERVICIOS */
 
     .services{
-        width:calc(100% - 30px);
-        margin-bottom:55px;
+        width:calc(100% - 24px);
+        margin:0 auto 45px;
+        border-radius:16px;
     }
 
     .services-top{
-        min-height:560px;
+        min-height:520px;
         align-items:flex-end;
     }
 
@@ -1088,62 +1122,88 @@ footer p{
         linear-gradient(
             180deg,
             rgba(7,87,184,.04) 0%,
-            rgba(7,87,184,.20) 35%,
-            rgba(7,87,184,.94) 78%,
+            rgba(7,87,184,.20) 32%,
+            rgba(7,87,184,.92) 72%,
             rgba(7,87,184,1) 100%
         );
     }
 
     .services-intro{
         width:100%;
-        padding:40px 30px 48px;
+        padding:32px 22px 38px;
+        text-align:center;
     }
 
     .services-intro-symbol{
-        font-size:40px;
-        margin-bottom:20px;
+        font-size:34px;
+        margin-bottom:14px;
     }
 
     .services-intro h2{
-        font-size:46px;
+        font-size:clamp(31px,9.5vw,40px);
+        line-height:1.02;
+        letter-spacing:-1px;
+        max-width:100%;
+        margin:0 auto 15px;
+        white-space:normal;
+        overflow-wrap:break-word;
+    }
+
+    .services-intro p{
+        font-size:13px;
+        line-height:1.5;
+        max-width:260px;
+        margin:0 auto;
     }
 
     .services-grid{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:1fr;
     }
 
     .service{
-        min-height:210px;
-        padding:32px 18px;
+        width:100%;
+        min-height:185px;
+        padding:27px 20px;
+        border-right:none;
+        border-bottom:1px solid rgba(255,255,255,.18);
+        overflow:hidden;
+    }
+
+    .service:last-child{
+        border-bottom:none;
     }
 
     .service-symbol{
-        font-size:48px;
+        font-size:42px;
+        margin-bottom:14px;
     }
 
     .service h3{
         font-size:15px;
+        line-height:1.25;
+        margin-bottom:9px;
     }
 
     .service p{
         font-size:11px;
+        line-height:1.5;
+        max-width:270px;
+        overflow-wrap:anywhere;
     }
 
 
     /* SOBRE NOSOTROS */
 
     .about{
-        width:calc(100% - 30px);
-
+        width:calc(100% - 24px);
         grid-template-columns:1fr;
-
         min-height:auto;
-
-        margin-bottom:50px;
+        margin-bottom:45px;
     }
 
     .about-content{
-        padding:45px 30px 50px;
+        padding:40px 20px 45px;
+        text-align:center;
     }
 
     .about h2{
@@ -1157,10 +1217,15 @@ footer p{
     }
 
     .stats{
-        gap:25px;
+        width:100%;
+        gap:28px;
+        grid-template-columns:repeat(3, minmax(0,1fr));
+        justify-items:center;
     }
 
     .stat{
+        width:100%;
+        min-width:0;
         align-items:center;
         text-align:center;
     }
@@ -1170,11 +1235,15 @@ footer p{
     }
 
     .stat-number{
-        font-size:48px;
+        font-size:clamp(31px,8vw,43px);
+        letter-spacing:-1.5px;
+        white-space:nowrap;
     }
 
     .stat-label{
-        font-size:11px;
+        font-size:10px;
+        line-height:1.3;
+        max-width:95px;
     }
 
     .about-image{
@@ -1185,62 +1254,101 @@ footer p{
     /* CONTACTO */
 
     .contact{
-        width:calc(100% - 30px);
-
-        padding:38px 25px;
-
+        width:calc(100% - 24px);
+        padding:32px 18px;
         grid-template-columns:1fr;
-
-        gap:25px;
+        gap:18px;
+        overflow:hidden;
     }
 
     .contact-title{
         grid-column:auto;
+        width:100%;
         text-align:center;
+        min-width:0;
+    }
+
+    .contact-title small{
+        font-size:11px;
+        line-height:1.3;
     }
 
     .contact-title h2{
-        font-size:28px;
+        font-size:clamp(23px,7vw,28px);
+        line-height:1.15;
+        overflow-wrap:anywhere;
+        margin-bottom:9px;
+    }
+
+    .contact-title p{
+        font-size:12px;
+        line-height:1.5;
+        max-width:280px;
+        margin:0 auto;
     }
 
     .contact-socials{
         justify-content:center;
-        margin-top:22px;
+        margin-top:18px;
     }
 
     .contact-item{
+        width:100%;
         border-left:none;
-
         border-top:1px solid #e4ebf2;
-
-        padding:22px 0 0;
-
+        padding:18px 0 0;
         min-height:auto;
+        align-items:center;
+        text-align:center;
+        overflow:hidden;
+    }
+
+    .contact-symbol{
+        font-size:28px;
+        margin-bottom:7px;
+    }
+
+    .contact-item strong{
+        display:block;
+        width:100%;
+        font-size:15px;
+        line-height:1.4;
+        overflow-wrap:anywhere;
+        word-break:break-word;
+    }
+
+    .contact-item span{
+        font-size:10px;
+        line-height:1.4;
+        margin-top:5px;
     }
 
     .contact-button{
+        display:block;
         width:100%;
+        max-width:100%;
+        padding:17px 12px;
+        font-size:12px;
+        line-height:1.3;
+        overflow-wrap:anywhere;
+        white-space:normal;
     }
 
 
     /* GARANTÍAS */
 
     .guarantees{
-        width:calc(100% - 30px);
-
+        width:calc(100% - 24px);
         grid-template-columns:1fr 1fr;
-
-        margin-bottom:50px;
+        margin-bottom:45px;
     }
 
     .guarantee{
-        min-height:150px;
-
-        padding:25px 18px;
-
-        gap:15px;
-
+        min-height:140px;
+        padding:22px 14px;
+        gap:10px;
         border-bottom:1px solid rgba(255,255,255,.18);
+        overflow:hidden;
     }
 
     .guarantee:nth-child(2){
@@ -1248,15 +1356,17 @@ footer p{
     }
 
     .guarantee-symbol{
-        font-size:34px;
+        font-size:30px;
     }
 
     .guarantee h3{
-        font-size:12px;
+        font-size:11px;
+        line-height:1.25;
     }
 
     .guarantee p{
         font-size:9px;
+        line-height:1.4;
     }
 
 }
@@ -1294,7 +1404,7 @@ footer p{
 
     .hero-buttons{
         flex-direction:column;
-        align-items:flex-start;
+        align-items:stretch;
     }
 
     .btn-primary,
@@ -1333,12 +1443,20 @@ footer p{
     }
 
     .stats{
-        grid-template-columns:1fr;
-        gap:32px;
+        grid-template-columns:repeat(3, minmax(0,1fr));
+        gap:8px;
+        width:100%;
     }
 
     .stat-number{
-        font-size:52px;
+        font-size:clamp(28px,8.5vw,40px);
+        letter-spacing:-1.5px;
+    }
+
+    .stat-label{
+        font-size:9px;
+        line-height:1.3;
+        max-width:90px;
     }
 
     .about-image{
@@ -1366,7 +1484,6 @@ footer p{
 </style>
 </head>
 
-
 <body>
 
 
@@ -1378,40 +1495,40 @@ footer p{
 
 <nav class="navbar">
 
-    <a href="#inicio" class="logo">
+<a href="#inicio" class="logo">
 
-        <img
-            src="LOGO FONDO TRASNPARENTE.png"
-            alt="Fonysan"
-        >
+    <img
+        src="LOGO FONDO TRASNPARENTE.png"
+        alt="Fonysan"
+    >
 
+</a>
+
+
+<div class="nav-menu">
+
+    <a href="#inicio">
+        INICIO
     </a>
 
-
-    <div class="nav-menu">
-
-        <a href="#inicio">
-            INICIO
-        </a>
-
-        <a href="#servicios">
-            SERVICIOS
-        </a>
-
-        <a href="#sobre-nosotros">
-            SOBRE NOSOTROS
-        </a>
-
-        <a href="#contacto">
-            CONTACTO
-        </a>
-
-    </div>
-
-
-    <a href="#contacto" class="nav-button">
-        SOLICITAR PRESUPUESTO
+    <a href="#servicios">
+        SERVICIOS
     </a>
+
+    <a href="#sobre-nosotros">
+        SOBRE NOSOTROS
+    </a>
+
+    <a href="#contacto">
+        CONTACTO
+    </a>
+
+</div>
+
+
+<a href="#contacto" class="nav-button">
+    SOLICITAR PRESUPUESTO
+</a>
 
 </nav>
 
@@ -1425,70 +1542,70 @@ footer p{
 <section class="hero" id="inicio">
 
 
-    <div class="hero-image">
+<div class="hero-image">
 
-        <img
-            src="FOTO LLAVE AGUA PORTADA.png"
-            alt="Llave de agua Fonysan"
-        >
+    <img
+        src="FOTO LLAVE AGUA PORTADA.png"
+        alt="Llave de agua Fonysan"
+    >
 
-    </div>
-
-
-    <div class="hero-content">
+</div>
 
 
-        <div class="hero-small">
-
-            <div class="hero-small-line"></div>
-
-            <span>
-                FONTANERÍA · SANEAMIENTO · MANTENIMIENTO
-            </span>
-
-        </div>
+<div class="hero-content">
 
 
-        <h1>
+<div class="hero-small">
 
-            PRECISIÓN EN<br>
+    <div class="hero-small-line"></div>
 
-            <span class="blue">
-                CADA INSTALACIÓN.
-            </span>
+    <span>
+        FONTANERÍA · SANEAMIENTO · MANTENIMIENTO
+    </span>
 
-            <br>
-
-            <span class="green">
-                EXCELENCIA EN<br>
-                CADA SERVICIO.
-            </span>
-
-        </h1>
+</div>
 
 
-        <p class="hero-description">
+<h1>
 
-            Ofrecemos soluciones profesionales de fontanería
-            y saneamiento con calidad, precisión y confianza.
+    PRECISIÓN EN<br>
 
-        </p>
+    <span class="blue">
+        CADA INSTALACIÓN.
+    </span>
 
+    <br>
 
-        <div class="hero-buttons">
+    <span class="green">
+        EXCELENCIA EN<br>
+        CADA SERVICIO.
+    </span>
 
-            <a href="#contacto" class="btn-primary">
-                SOLICITAR PRESUPUESTO
-            </a>
-
-            <a href="#servicios" class="btn-secondary">
-                VER SERVICIOS
-            </a>
-
-        </div>
+</h1>
 
 
-    </div>
+<p class="hero-description">
+
+    Ofrecemos soluciones profesionales de fontanería
+    y saneamiento con calidad, precisión y confianza.
+
+</p>
+
+
+<div class="hero-buttons">
+
+    <a href="#contacto" class="btn-primary">
+        SOLICITAR PRESUPUESTO
+    </a>
+
+    <a href="#servicios" class="btn-secondary">
+        VER SERVICIOS
+    </a>
+
+</div>
+
+
+</div>
 
 </section>
 
@@ -1499,82 +1616,82 @@ footer p{
 
 <section class="benefits">
 
-    <div class="benefits-grid">
+<div class="benefits-grid">
 
 
-        <div class="benefit">
+<div class="benefit">
 
-            <div class="symbol">
-                ◉
-            </div>
-
-            <h3>
-                Profesionales cualificados
-            </h3>
-
-            <p>
-                Experiencia y formación para garantizar
-                el mejor servicio.
-            </p>
-
-        </div>
-
-
-        <div class="benefit">
-
-            <div class="symbol">
-                ◷
-            </div>
-
-            <h3>
-                Atención rápida
-            </h3>
-
-            <p>
-                Respondemos rápido para resolver
-                tu problema cuanto antes.
-            </p>
-
-        </div>
-
-
-        <div class="benefit">
-
-            <div class="symbol">
-                ◇
-            </div>
-
-            <h3>
-                Calidad garantizada
-            </h3>
-
-            <p>
-                Trabajamos con materiales de primera
-                para asegurar resultados duraderos.
-            </p>
-
-        </div>
-
-
-        <div class="benefit">
-
-            <div class="symbol">
-                ▤
-            </div>
-
-            <h3>
-                Precios justos
-            </h3>
-
-            <p>
-                Presupuestos claros y adaptados
-                a cada necesidad.
-            </p>
-
-        </div>
-
-
+    <div class="symbol">
+        ◉
     </div>
+
+    <h3>
+        Profesionales cualificados
+    </h3>
+
+    <p>
+        Experiencia y formación para garantizar
+        el mejor servicio.
+    </p>
+
+</div>
+
+
+<div class="benefit">
+
+    <div class="symbol">
+        ◷
+    </div>
+
+    <h3>
+        Atención rápida
+    </h3>
+
+    <p>
+        Respondemos rápido para resolver
+        tu problema cuanto antes.
+    </p>
+
+</div>
+
+
+<div class="benefit">
+
+    <div class="symbol">
+        ◇
+    </div>
+
+    <h3>
+        Calidad garantizada
+    </h3>
+
+    <p>
+        Trabajamos con materiales de primera
+        para asegurar resultados duraderos.
+    </p>
+
+</div>
+
+
+<div class="benefit">
+
+    <div class="symbol">
+        ▤
+    </div>
+
+    <h3>
+        Precios justos
+    </h3>
+
+    <p>
+        Presupuestos claros y adaptados
+        a cada necesidad.
+    </p>
+
+</div>
+
+
+</div>
 
 </section>
 
@@ -1586,116 +1703,116 @@ footer p{
 <section class="services" id="servicios">
 
 
-    <div class="services-top">
+<div class="services-top">
 
 
-        <div class="services-top-image">
+<div class="services-top-image">
 
-            <img
-                src="FOTO BAÑO IZQ.png"
-                alt="Servicios de fontanería"
-            >
+    <img
+        src="FOTO BAÑO IZQ.png"
+        alt="Servicios de fontanería"
+    >
 
-        </div>
-
-
-        <div class="services-intro">
-
-            <div class="services-intro-symbol">
-                ◇
-            </div>
-
-            <h2>
-                RÁPIDOS,<br>
-                LIMPIOS<br>
-                Y EFICIENTES
-            </h2>
-
-            <p>
-                Tu tranquilidad es nuestra prioridad.
-            </p>
-
-        </div>
+</div>
 
 
+<div class="services-intro">
+
+    <div class="services-intro-symbol">
+        ◇
     </div>
 
+    <h2>
+        RÁPIDOS,<br>
+        LIMPIOS<br>
+        Y EFICIENTES
+    </h2>
 
-    <div class="services-grid">
+    <p>
+        Tu tranquilidad es nuestra prioridad.
+    </p>
 
-
-        <div class="service">
-
-            <div class="service-symbol">
-                ⚒
-            </div>
-
-            <h3>
-                Instalaciones
-            </h3>
-
-            <p>
-                Montaje y renovación de tuberías,
-                grifos, sanitarios y más.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="service">
-
-            <div class="service-symbol">
-                ⌁
-            </div>
-
-            <h3>
-                Reparaciones
-            </h3>
-
-            <p>
-                Soluciones integrales para fugas,
-                atascos, averías y renovación.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="service">
-
-            <div class="service-symbol">
-                ◇
-            </div>
-
-            <h3>
-                Saneamiento
-            </h3>
-
-            <p>
-                Instalación y renovación de tuberías.
-            </p>
-
-        </div>
+<div class="services-grid">
 
 
-        <div class="service">
+<div class="service">
 
-            <div class="service-symbol">
-                ▣
-            </div>
-
-            <h3>
-                Mantenimiento
-            </h3>
-
-            <p>
-                Mantenimiento preventivo y correctivo
-                de instalaciones.
-            </p>
-
-        </div>
-
-
+    <div class="service-symbol">
+        ⚒
     </div>
+
+    <h3>
+        Instalaciones
+    </h3>
+
+    <p>
+        Montaje y renovación de tuberías,
+        grifos, sanitarios y más.
+    </p>
+
+</div>
+
+
+<div class="service">
+
+    <div class="service-symbol">
+        ⌁
+    </div>
+
+    <h3>
+        Reparaciones
+    </h3>
+
+    <p>
+        Soluciones integrales para fugas,
+        atascos, averías y renovación.
+    </p>
+
+</div>
+
+
+<div class="service">
+
+    <div class="service-symbol">
+        ◇
+    </div>
+
+    <h3>
+        Saneamiento
+    </h3>
+
+    <p>
+        Instalación y renovación de tuberías.
+    </p>
+
+</div>
+
+
+<div class="service">
+
+    <div class="service-symbol">
+        ▣
+    </div>
+
+    <h3>
+        Mantenimiento
+    </h3>
+
+    <p>
+        Mantenimiento preventivo y correctivo
+        de instalaciones.
+    </p>
+
+</div>
+
+
+</div>
 
 </section>
 
@@ -1707,105 +1824,106 @@ footer p{
 <section class="about" id="sobre-nosotros">
 
 
-    <div class="about-content">
+<div class="about-content">
 
 
-        <div class="section-label">
-            SOBRE NOSOTROS
-        </div>
+<div class="section-label">
+    SOBRE NOSOTROS
+</div>
 
 
-        <h2>
+<h2>
 
-            Atención profesional,<br>
+    Atención profesional,<br>
 
-            resultados que inspiran
+    resultados que inspiran
 
-            <span>
-                seguridad.
-            </span>
+    <span>
+        seguridad.
+    </span>
 
-        </h2>
-
-
-        <p class="about-text">
-
-            En Fonysan trabajamos para ofrecer soluciones
-            profesionales de fontanería con precisión,
-            compromiso y atención al detalle. Nuestro objetivo
-            es que cada instalación, reparación o mantenimiento
-            quede realizado con la máxima calidad.
-
-        </p>
+</h2>
 
 
-        <div class="stats">
+<p class="about-text">
+
+    En Fonysan trabajamos para ofrecer soluciones
+    profesionales de fontanería con precisión,
+    compromiso y atención al detalle. Nuestro objetivo
+    es que cada instalación, reparación o mantenimiento
+    quede realizado con la máxima calidad.
+
+</p>
 
 
-            <div class="stat">
-
-                <div class="stat-symbol">
-                    ◉
-                </div>
-
-                <div class="stat-number">
-                    +500
-                </div>
-
-                <div class="stat-label">
-                    Clientes satisfechos
-                </div>
-
-            </div>
+<div class="stats">
 
 
-            <div class="stat">
+<div class="stat">
 
-                <div class="stat-symbol">
-                    ⌁
-                </div>
-
-                <div class="stat-number">
-                    +1.000
-                </div>
-
-                <div class="stat-label">
-                    Trabajos realizados
-                </div>
-
-            </div>
-
-
-            <div class="stat">
-
-                <div class="stat-symbol">
-                    ◇
-                </div>
-
-                <div class="stat-number">
-                    +10
-                </div>
-
-                <div class="stat-label">
-                    Años de experiencia
-                </div>
-
-            </div>
-
-
-        </div>
-
+    <div class="stat-symbol">
+        ◉
     </div>
 
-
-    <div class="about-image">
-
-        <img
-            src="FOTO FONTANERO.png"
-            alt="Fontanero trabajando"
-        >
-
+    <div class="stat-number">
+        +500
     </div>
+
+    <div class="stat-label">
+        Clientes satisfechos
+    </div>
+
+</div>
+
+
+<div class="stat">
+
+    <div class="stat-symbol">
+        ⌁
+    </div>
+
+    <div class="stat-number">
+        +1.000
+    </div>
+
+    <div class="stat-label">
+        Trabajos realizados
+    </div>
+
+</div>
+
+
+<div class="stat">
+
+    <div class="stat-symbol">
+        ◇
+    </div>
+
+    <div class="stat-number">
+        +15
+    </div>
+
+    <div class="stat-label">
+        Años de experiencia
+    </div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<div class="about-image">
+
+    <img
+        src="FOTO FONTANERO.png"
+        alt="Fontanero trabajando"
+    >
+
+</div>
 
 
 </section>
@@ -1818,127 +1936,127 @@ footer p{
 <section class="contact" id="contacto">
 
 
-    <!-- NECESITAS AYUDA -->
+<!-- NECESITAS AYUDA -->
 
-    <div class="contact-title">
+<div class="contact-title">
 
-        <small>
-            ¿NECESITAS AYUDA?
-        </small>
+    <small>
+        ¿NECESITAS AYUDA?
+    </small>
 
-        <h2>
-            Estamos listos para ayudarte
-        </h2>
+    <h2>
+        Estamos listos para ayudarte
+    </h2>
 
-        <p>
-            Contacta con Fonysan y cuéntanos qué necesitas.
-        </p>
-
-
-        <!-- REDES SOCIALES -->
-
-        <div class="contact-socials">
+    <p>
+        Contacta con Fonysan y cuéntanos qué necesitas.
+    </p>
 
 
-            <!-- INSTAGRAM -->
+    <!-- REDES SOCIALES -->
 
-            <a
-                class="contact-social"
-                href="https://www.instagram.com/fonysan_es"
-                target="_blank"
-                rel="noopener"
-                aria-label="Instagram de Fonysan"
+    <div class="contact-socials">
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            class="contact-social"
+            href="https://www.instagram.com/fonysan_es"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram de Fonysan"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
             >
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5Zm8.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0-6 0 3 3 0 0 0 6 0Z"/>
 
-                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5Zm8.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+            </svg>
 
-                </svg>
-
-            </a>
+        </a>
 
 
-            <!-- FACEBOOK -->
+        <!-- FACEBOOK -->
 
-            <a
-                class="contact-social"
-                href="https://www.facebook.com/share/19B6wTSkCg/"
-                target="_blank"
-                rel="noopener"
-                aria-label="Facebook de Fonysan"
+        <a
+            class="contact-social"
+            href="https://www.facebook.com/share/19B6wTSkCg/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook de Fonysan"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
             >
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
+                <path d="M13.5 22v-8h2.75l.5-3h-3.25V9.05c0-.87.29-1.55 1.65-1.55H17V4.82c-.32-.04-1.42-.14-2.48-.14-2.45 0-4.12 1.5-4.12 4.27V11H7.65v3h2.75v8h3.1Z"/>
 
-                    <path d="M13.5 22v-8h2.75l.5-3h-3.25V9.05c0-.87.29-1.55 1.65-1.55H17V4.82c-.32-.04-1.42-.14-2.48-.14-2.45 0-4.12 1.5-4.12 4.27V11H7.65v3h2.75v8h3.1Z"/>
+            </svg>
 
-                </svg>
+        </a>
 
-            </a>
-
-
-        </div>
 
     </div>
 
+</div>
 
-    <!-- TELÉFONO -->
 
-    <div class="contact-item">
+<!-- TELÉFONO -->
 
-        <div class="contact-symbol">
-            ☎
-        </div>
+<div class="contact-item">
 
-        <strong>
-            677 44 94 57
-        </strong>
-
-        <span>
-            Llámanos o escríbenos
-        </span>
-
+    <div class="contact-symbol">
+        ☎
     </div>
 
+    <strong>
+        677 44 94 57
+    </strong>
 
-    <!-- EMAIL -->
+    <span>
+        Llámanos o escríbenos
+    </span>
 
-    <div class="contact-item">
+</div>
 
-        <div class="contact-symbol">
-            ✉
-        </div>
 
-        <strong>
-            fonysan.comercial@outlook.es
-        </strong>
+<!-- EMAIL -->
 
-        <span>
-            Respondemos a la brevedad
-        </span>
+<div class="contact-item">
 
+    <div class="contact-symbol">
+        ✉
     </div>
 
+    <strong>
+        fonysan.comercial@outlook.es
+    </strong>
 
-    <!-- WHATSAPP -->
+    <span>
+        Respondemos a la brevedad
+    </span>
 
-    <a
-        class="contact-button"
-        href="https://wa.me/34677449457"
-        target="_blank"
-        rel="noopener"
-    >
+</div>
 
-        ESCRÍBENOS POR WHATSAPP
 
-    </a>
+<!-- WHATSAPP -->
+
+<a
+    class="contact-button"
+    href="https://wa.me/34677449457"
+    target="_blank"
+    rel="noopener"
+>
+
+    ESCRÍBENOS POR WHATSAPP
+
+</a>
 
 
 </section>
@@ -1951,88 +2069,88 @@ footer p{
 <section class="guarantees">
 
 
-    <div class="guarantee">
+<div class="guarantee">
 
-        <div class="guarantee-symbol">
-            ◇
-        </div>
+    <div class="guarantee-symbol">
+        ◇
+    </div>
 
-        <div>
+    <div>
 
-            <h3>
-                Confianza
-            </h3>
+        <h3>
+            Confianza
+        </h3>
 
-            <p>
-                Transparentes y honestos en cada trabajo.
-            </p>
-
-        </div>
+        <p>
+            Transparentes y honestos en cada trabajo.
+        </p>
 
     </div>
 
+</div>
 
-    <div class="guarantee">
 
-        <div class="guarantee-symbol">
-            ◷
-        </div>
+<div class="guarantee">
 
-        <div>
+    <div class="guarantee-symbol">
+        ◷
+    </div>
 
-            <h3>
-                Disponibilidad
-            </h3>
+    <div>
 
-            <p>
-                Atención rápida y disponibilidad flexible.
-            </p>
+        <h3>
+            Disponibilidad
+        </h3>
 
-        </div>
+        <p>
+            Atención rápida y disponibilidad flexible.
+        </p>
 
     </div>
 
+</div>
 
-    <div class="guarantee">
 
-        <div class="guarantee-symbol">
-            ◇
-        </div>
+<div class="guarantee">
 
-        <div>
+    <div class="guarantee-symbol">
+        ◇
+    </div>
 
-            <h3>
-                Garantía
-            </h3>
+    <div>
 
-            <p>
-                Trabajos garantizados y con respaldo.
-            </p>
+        <h3>
+            Garantía
+        </h3>
 
-        </div>
+        <p>
+            Trabajos garantizados y con respaldo.
+        </p>
 
     </div>
 
+</div>
 
-    <div class="guarantee">
 
-        <div class="guarantee-symbol">
-            ⌖
-        </div>
+<div class="guarantee">
 
-        <div>
+    <div class="guarantee-symbol">
+        ⌖
+    </div>
 
-            <h3>
-                Cobertura
-            </h3>
+    <div>
 
-            <p>
-                Servicio en Castilla y León.
-            </p>
+        <h3>
+            Cobertura
+        </h3>
 
-        </div>
+        <p>
+            Servicio en Valladolid y Castilla y León.
+        </p>
 
     </div>
+
+</div>
 
 
 </section>
@@ -2044,18 +2162,18 @@ footer p{
 
 <footer>
 
-    <div class="footer-logo">
+<div class="footer-logo">
 
-        <img
-            src="logo.jpg"
-            alt="Fonysan"
-        >
+    <img
+        src="logo.jpg"
+        alt="Fonysan"
+    >
 
-    </div>
+</div>
 
-    <p>
-        © 2026 Fonysan. Todos los derechos reservados.
-    </p>
+<p>
+    © 2026 Fonysan. Todos los derechos reservados.
+</p>
 
 </footer>
 
